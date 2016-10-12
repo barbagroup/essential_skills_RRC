@@ -4,7 +4,56 @@
 
 `git config` to set editor, colors, email, name, etc... (use `nano`)
 
-## First commands
+### User settings
+
+The first time we use `git` on a new computer we need to configure a few details.
+We want `git` to know who we are and how to reach us (we'll see why later!).
+
+We're also going to specify a text editor to use with `git` and we want git
+output to be colorized.
+
+```console
+$ git config --global user.name "Gil Forsyth"
+$ git config --global user.email "gilforsyth@gmail.com"
+$ git config --global color.ui "auto"
+$ git config --global core.editor "nano -w"
+```
+
+## Create
+
+Let's create a directory for our work and then move into that directory:
+
+```console
+$ mkdir cocktails
+$ cd cocktails
+```
+
+Now we tell `git` to make `cocktails` a repository--a place where `git` can
+store versions of our files:
+
+```console
+$ git init
+```
+
+If we use `ls` to check the directory's contents, it appears that nothing has
+changed:
+
+```console
+$ ls
+```
+
+But if we add the `-a` flag to show everything, we can see that `git` has
+created a hidden directory called `.git`
+
+```console
+$ ls -a
+```
+
+```console
+.    ..    .git
+```
+
+
 
 ### Making commits
 `add`, `status`, `init`, `commit`
