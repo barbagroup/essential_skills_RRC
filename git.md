@@ -6,11 +6,19 @@
 
 ## First commands
 
-`add`, `status`, `init`, `commit`, `log`, `checkout`
+### Making commits
+`add`, `status`, `init`, `commit`
 
-## Remotes
+Not necessarily at the beginning, but I want to emphasize that multiple files
+can be added to a commit. This is often glossed over in tutorials and it's
+important and powerful.
 
-`clone`, `push`, `pull`
+### Viewing commits
+`log`, `checkout`, `diff`
+
+### Collaborating
+
+`clone`, `push`, `pull`, `remote` (note `fetch` and `merge` but do not dwell)
 
 ## GitHub add collaborator
 
@@ -20,3 +28,8 @@ push)
 ## Branching and Pull Requests
 
 This might be presented as a demonstration with a followup assignment.
+
+## Advanced `git` features demo
+
+`bisect` for finding bugs
+(ideally an automatic bisect for demo purposes)
