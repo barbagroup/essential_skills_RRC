@@ -82,3 +82,6 @@ This might be presented as a demonstration with a followup assignment.
 
 `bisect` for finding bugs
 (ideally an automatic bisect for demo purposes)
+
+Portions of this lesson were adapted from [Software Carpentry](http://swcarpentry.github.io )
+Copyright © Software Carpentry under [CC-BY](https://creativecommons.org/licenses/by/4.0/ )
