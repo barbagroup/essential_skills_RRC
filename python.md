@@ -18,6 +18,13 @@ Type in a terminal :
 
 `ipython`
 
+## Python is awesome! 
+
+```
+import this 
+import antigravity
+```
+
 ## Variable assignment, types and  duck typing
 
 In Python is perfectly legal to do:
