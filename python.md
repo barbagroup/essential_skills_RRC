@@ -107,11 +107,35 @@ In [17]: print(my_string)
 hello world
 ```
 
-Notes: 
+### Special variables
+
+Python has a special type of variables that are built into the language: namely `True`, `False`, `None` and `NotImplemented`. 
+
+**Boolean variables**
+
+`True` and `False`. 
+
+In general, if the value is zero or empty, the it's converted to `False`. Otherwise, it'll be converted to `True`. 
+
+
+```
+In [1]: bool(0)
+Out[1]: False
+
+In [2]: bool("Do we need oxygen?")
+Out[2]: True
+```
+
+**None is not Zero**
+
+It is used to indicate that no value was given or behaviour was defined. This is different than zero, an empty string, or some other nil value. 
+
+
+Notes:
 
 * Variables names can be upper or lower letters, and we can put digits (0-9) and underscores. However, they can not start with a digit.
 
-* Variables are mutable. 
+* Variables are mutable.
 
 
 ## Data structures
