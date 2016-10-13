@@ -49,16 +49,22 @@ In [4]: type(x)
 Out[4]: int
 ```
 
+
 ```
-In [5]: complex(x)
-Out[5]: (3+0j)
+In [5]: float(x)
+Out[5]: 3.0
 ```
 
 ```
-In [6]: z = complex(x)
-In [7]: z = z + 1j
-In [8]: print(z)
-Out[8]: (3+1j)
+In [6]: complex(x)
+Out[6]: (3+0j)
+```
+
+```
+In [7]: z = complex(x)
+In [8]: z = z + 1j
+In [9]: print(z)
+Out[9]: (3+1j)
 ```
 
 Regular arithmetic symbols are preserved except for the "power".
@@ -100,6 +106,12 @@ In [16]: my_string = y +' '+ s
 In [17]: print(my_string)
 hello world
 ```
+
+Notes: 
+
+* Variables names can be upper or lower letters, and we can put digits (0-9) and underscores. However, they can not start with a digit.
+
+* Variables are mutable. 
 
 
 ## Data structures
