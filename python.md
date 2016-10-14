@@ -298,6 +298,59 @@ Out[52]: True
 ```
 Note: This operators does NOT modify the list.
 
+* A **list** is an ordered sequence. We can change the order by sorting a list. 
+```
+In [53]: names = ['Naty','Gil','Lorena','Chris']
+
+In [54]: names.sort()
+
+In [55]: print(names)
+['Chris', 'Gil', 'Lorena', 'Naty']
+```
+
+* **Strings** and **lists**. The `split()` function.
+```
+In [56]: string = 'Just three words'
+
+In [57]: str_list = string.split()
+
+In [58]: print(str_list)
+['Just', 'three', 'words']
+```
+Python takes care of long spaces, for example:
+```
+In [59]: line = 'A lot of       space'
+
+In [60]: stuff = line.split()
+
+In [61]: print(stuff)
+['A', 'lot', 'of', 'space']
+```
+If we specify the delimiter (it can be a space `' '`, a `;`, a `:`, what ever you want).
+```
+In [62]: line = 'A lot of       space'
+
+In [63]: stuff = line.split(' ')
+
+In [64]: print(stuff)
+['A', 'lot', 'of', '', '', '', '', '', '', 'space']
+```
+`;` and many other characters are not delimiters by default:
+
+```
+In [65]: s = 'a;b;c'
+
+In [66]: thing  = s.split()
+
+In [67]: print(thing)
+a;b;c
+
+In [68]: thing = s.split(';')
+
+In [81]: print(thing)
+['a', 'b', 'c']
+```
+
 
 
 ### Dictionaries
