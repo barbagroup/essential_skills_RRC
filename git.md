@@ -130,6 +130,72 @@ begin tracking, we have to `add` the file to the repository:
 git add script.py
 ```
 
+Did anything happen? Let's check! What command should we use?
+
+```console
+git status
+```
+
+```console
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   script.py
+```
+
+Again, let's review the information that `git` gives us:
+
+* We are still `On branch master` (and still ignoring this)
+* It is still the `Initial commit` (which makes sense, we haven't made any
+  commits yet...)
+* There are `Changes to be committed`
+
+Note that we haven't actually made a commit yet. We haven't finalized the
+snapshot of the repo. Right now, we have a file called `script.py` located in
+what is called the "Staging Area".
+
+The "Staging Area" is where we stage changes. It's a place to gather changes
+before committing those changes to the permanent history of the repository.
+
+We'll talk more about the staging area later, but for now, let's finalize the addition of our new file by creating our first commit!
+
+#### `git commit`
+
+It's time!  Let's commit the changes to the repo history.
+
+```console
+git commit
+```
+
+This command will open up your text editor (`nano`) with the following text.
+Again, `git` has a bunch of helpful information. We can enter a commit message
+on the first line and then save and quit.
+
+```console
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#       new file:   script.py
+#
+```
+
+You should see something like the following:
+  
+```console
+[master (root-commit) c4aa605] Initial commit - add script.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 script.py
+``` 
+
 Not necessarily at the beginning, but I want to emphasize that multiple files
 can be added to a commit. This is often glossed over in tutorials and it's
 important and powerful.
