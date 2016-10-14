@@ -128,14 +128,27 @@ Out[2]: True
 
 **None is not Zero**
 
-It is used to indicate that no value was given or behaviour was defined. This is different than zero, an empty string, or some other nil value. 
+It is used to indicate that no value was given or behaviour was defined. This is different than zero, an empty string, or some other nil value.
 
 
-Notes:
+**NotImplemented is not None**
+
+`NotImplemented` is used to indicate that a behaviour is not defined or that the action we are trying to execute is impossible. For example, `NotImplemented` is used under the covers when you try to devide a string by a float. We will end up with a `TypeError`. (Try it on the shell)
+
+
+*Important notes*:
 
 * Variables names can be upper or lower letters, and we can put digits (0-9) and underscores. However, they can not start with a digit.
 
+* There are reserved words you can't use and you can find them in this [link](https://docs.python.org/2.5/ref/keywords.html).
+
 * Variables are mutable.
+
+* Standard data types: Numerical, String, **List**, Tuple, Dictionaries. (list are the default in python)
+
+* Numerical types: `int`, `long` (long integers), `float` and `complex`.
+
+
 
 
 ## Data structures
