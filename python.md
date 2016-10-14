@@ -129,6 +129,29 @@ In [23]: my_string[1:-1]
 Out[23]: 'ello worl'
 ```
 
+Strings has different methods that we can applied to them, for example:
+
+Make all uppercase:
+
+```
+In [24]: my_string.upper()
+Out[24]: 'HELLO WORLD'
+```
+Find where a character is or start:
+
+```
+In [25]: my_string.find('hello')
+Out[25]: 0
+
+In [26]: my_string.find('l')
+Out[26]: 2
+```
+
+If you want to know all what you can do to a certain object, there is a magic command that will give you that information:
+
+`dir(my_string)`
+
+
 
 ### Special variables
 
@@ -136,18 +159,34 @@ Python has a special type of variables that are built into the language: namely 
 
 **Boolean variables**
 
-`True` and `False`. 
+`True` and `False`.
 
 In general, if the value is zero or empty, the it's converted to `False`. Otherwise, it'll be converted to `True`. 
 
 
 ```
-In [1]: bool(0)
-Out[1]: False
+In [27]: bool(0)
+Out[27]: False
 
-In [2]: bool("Do we need oxygen?")
-Out[2]: True
+In [28]: bool("Do we need oxygen?")
+Out[28]: True
 ```
+
+It also applies to logic statements, for example:
+
+```
+In [28]: x=3
+In [29]: y=5
+In [30]: z=x>y
+
+In [31]: z
+Out[31]: False
+
+In [32]: type(z)
+Out[32]: bool
+
+```
+
 
 **None is not Zero**
 
@@ -176,8 +215,18 @@ It is used to indicate that no value was given or behaviour was defined. This is
 
 ## Data structures
 
-* Lists
-* Dicts
+Lists, dictionaries and tuples are kinds of *Collections*
+
+- A *collection* allows us to put many values ina a single "variable". 
+- They are convinient because we can carry all many values around in one convinient package.
+- Simple variables are not collections.
+
+### Lists
+
+
+### Dictionaries
+
+
 
 ## Control Flow
 
