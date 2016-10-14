@@ -107,7 +107,7 @@ In [17]: print(my_string)
 hello world
 ```
 
-We can access the diferent elements of a string, for example:
+We can access the different elements of a string, for example:
 
 ```
 In [18]: my_string[0]
@@ -195,7 +195,7 @@ It is used to indicate that no value was given or behaviour was defined. This is
 
 **NotImplemented is not None**
 
-`NotImplemented` is used to indicate that a behaviour is not defined or that the action we are trying to execute is impossible. For example, `NotImplemented` is used under the covers when you try to devide a string by a float. We will end up with a `TypeError`. (Try it on the shell)
+`NotImplemented` is used to indicate that a behavior is not defined or that the action we are trying to execute is impossible. For example, `NotImplemented` is used under the covers when you try to divide a string by a float. We will end up with a `TypeError`. (Try it on the shell)
 
 
 *Important notes*:
@@ -217,11 +217,87 @@ It is used to indicate that no value was given or behaviour was defined. This is
 
 Lists, dictionaries and tuples are kinds of *Collections*
 
-- A *collection* allows us to put many values ina a single "variable". 
-- They are convinient because we can carry all many values around in one convinient package.
+- A *collection* allows us to put many values in a a single "variable". 
+- They are convenient because we can carry all many values around in one convenient package.
 - Simple variables are not collections.
 
 ### Lists
+
+* The beginning and end of a list is denoted by square brackets `[]` and it's elements separated by commas. 
+* A list element can be any Python object, even another list.
+* List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called replace for strings but it creates a copy)
+
+```
+In [33]: my_list = [2,50,4,61]
+In [34]: print (my_list)
+[2, 50, 4, 61]
+
+In [35]: my_list[1] = 1
+
+In [36]: print (my_list)
+[2, 1, 4, 61]                 #Now we have a 1 instead of a 50 in the second place.
+```
+
+* `len()` function fives as the number of elements of the list.
+
+* We can *concatenate* lists by using the operator `+`: 
+
+```
+In [37]: lst1 = [0,1,2,3]
+
+In [38]: lst2 = ['a','b','c']
+
+In [39]: conc = lst1 + lst2
+
+In [40]: print(conc)
+[0, 1, 2, 3, 'a', 'b', 'c']
+
+```
+
+* There are different methods to apply to a list (check them by typing `dir(lst1)`), an example is `append()`.
+
+```
+In [41]: lst1.append(4)
+
+In [42]: print(lst1)
+[0, 1, 2, 3, 4]
+
+In [43]: lst1.append('five')
+
+In [44]: lst1
+Out[38]: [0, 1, 2, 3, 4, 'five']
+
+In [45]: lst1.append([6,7,8])
+
+In [46]: lst1
+Out[46]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
+```
+* Similar to strings we can access elements of a list by doing `list[i]` and also we can do slices.
+
+```
+In [47]: lst1[-1]
+Out[47]: [6, 7, 8]
+
+In [48]: lst1[6:]
+Out[48]: [[], [6, 7, 8]]
+```
+
+* We can check if something is or not in a list.
+
+```
+In [49]: my_numbers = [3,17,27,19]
+
+In [50]: 17 in my_numbers
+Out[50]: True
+
+In [51]: 2 in my_numbers
+Out[51]: False
+
+In [52]: 13 not in my_numbers
+Out[52]: True
+```
+Note: This operators does NOT modify the list.
+
 
 
 ### Dictionaries
