@@ -107,6 +107,29 @@ In [17]: print(my_string)
 hello world
 ```
 
+We can access the diferent elements of a string, for example:
+
+```
+In [18]: my_string[0]
+Out[18]: 'h'
+
+In [19]: my_string[8]
+Out[19]: 'r'
+
+In [20]: my_string[-1]
+Out[20]: 'd'
+
+In [21]: my_string[2:5]
+Out[21]: 'llo'
+
+In [22]: my_string[2:]
+Out[22]: 'llo world'
+
+In [23]: my_string[1:-1]
+Out[23]: 'ello worl'
+```
+
+
 ### Special variables
 
 Python has a special type of variables that are built into the language: namely `True`, `False`, `None` and `NotImplemented`. 
