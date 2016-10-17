@@ -426,6 +426,37 @@ There are other tow types of data structures tuples and sets, you can read about
 * **Sets** are collections that have no order, no duplicate elements and their elements are [hashable](https://docs.python.org/3/glossary.html#term-hashable) what saves time in accessing memory. We can do operation like union, intersection, difference, and symmetric difference. (Syntax `{element1, element2, ...}` and an empty set is created by doing `set()`)
 
 
+** Example: look for an element in a list and in a set (%timeit)**
+
+```
+In [128]: rg = range(50000)
+
+In [129]: lst = list(rg)
+
+In [130]: %time (40035 in lst)
+CPU times: user 4 ms, sys: 0 ns, total: 4 ms
+Wall time: 1.91 ms
+Out[130]: True
+
+In [131]: st = set(rg)
+
+In [132]: %time (40035 in st)
+CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 14.3 µs
+Out[132]: True
+
+In [133]: %time (51000 in lst)
+CPU times: user 4 ms, sys: 0 ns, total: 4 ms
+Wall time: 2.36 ms
+Out[133]: False
+
+In [134]: %time (51000 in st)
+CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 12.9 µs
+Out[134]: False
+
+```
+
 
 ## Control Flow
 
