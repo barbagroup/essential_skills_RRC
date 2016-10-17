@@ -355,7 +355,7 @@ In [69]: print(thing)
 
 * Dictionaries are also a type of collections and they are MUTABLE too. 
 
-### Difference between lists and dictionaries:
+**Difference between lists and dictionaries:**
 
 * List: a linear collection of values that stay in order.
 * Dictionary: A "bag" of values, each with it's own label (key).
@@ -418,6 +418,12 @@ dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
 * Dictionaries are good for counting how often do we "see" something. (**This can be an exercise after we show them for loops**)
 
 
+There are other tow types of data structures tuples and sets, you can read about them in the python [documentation](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences). 
+
+*A quick insight into them:*
+
+* **Tuples** are like lists but they are IMMUTABLE, what saves time in accessing memory. (Syntax `(element1, element2, ...)`)
+* **Sets** are collections that have no order, no duplicate elements and their elements are [hashable](https://docs.python.org/3/glossary.html#term-hashable) what saves time in accessing memory. We can do operation like union, intersection, difference, and symmetric difference. (Syntax `{element1, element2, ...}` and an empty set is created by doing `set()`)
 
 
 
@@ -431,3 +437,7 @@ dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
 `%hist -n`
 `%edit`
 `%run`
+
+
+
+
