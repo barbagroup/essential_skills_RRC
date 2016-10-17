@@ -2,7 +2,7 @@
 
 ## Why version control?
 
-![][./phdcomics.1531.png] 
+![](./phdcomics.1531.png)
 
 
 ## Initial configuration
