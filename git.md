@@ -1,5 +1,10 @@
 # Intro to `git` and GitHub
 
+## Why version control?
+
+![phd comics 1531][./phdcomics.1531.gif] 
+
+
 ## Initial configuration
 
 `git config` to set editor, colors, email, name, etc... (use `nano`)
@@ -21,7 +26,7 @@ $ git config --global core.editor "nano -w"
 
 ## Create
 
-Let's create a directory for our work and then move into that directory:
+Let's create a directory for our work and then move into that directory
 
 ```console
 $ mkdir cocktails
@@ -147,7 +152,7 @@ Changes to be committed:
 	new file:   script.py
 ```
 
-Again, let's review the information that `git` gives us:
+Again, let's review the information that `git status` gives us:
 
 * We are still `On branch master` (and still ignoring this)
 * It is still the `Initial commit` (which makes sense, we haven't made any
@@ -161,7 +166,8 @@ what is called the "Staging Area".
 The "Staging Area" is where we stage changes. It's a place to gather changes
 before committing those changes to the permanent history of the repository.
 
-We'll talk more about the staging area later, but for now, let's finalize the addition of our new file by creating our first commit!
+We'll talk more about the staging area later, but for now, let's finalize the
+addition of our new file by creating our first commit!
 
 #### `git commit`
 
@@ -196,11 +202,19 @@ You should see something like the following:
  create mode 100644 script.py
 ``` 
 
-Not necessarily at the beginning, but I want to emphasize that multiple files
-can be added to a commit. This is often glossed over in tutorials and it's
-important and powerful.
+Great! We have created a snapshot of our file in the repo history. Now, even if
+we make changes, we'll be able to roll them back if we don't like them.
+
+What does that mean?  Let's make some changes and find out!
 
 ### Viewing commits
+
+Before we look at the next set of `git` commands, let's first make some changes
+to `script.py`, but don't commit them yet!
+
+#### `git diff`
+
+
 `log`, `checkout`, `diff`
 
 ### Collaborating
