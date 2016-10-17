@@ -347,13 +347,77 @@ a;b;c
 
 In [68]: thing = s.split(';')
 
-In [81]: print(thing)
+In [69]: print(thing)
 ['a', 'b', 'c']
 ```
 
-
-
 ### Dictionaries
+
+* Dictionaries are also a type of collections and they are MUTABLE too. 
+
+### Difference between lists and dictionaries:
+
+* List: a linear collection of values that stay in order.
+* Dictionary: A "bag" of values, each with it's own label (key).
+* Dictionaries don't maintain order, we index the the things we put in the dictionary with a "look up" tag. For example:
+
+```
+In [70]: bag = {}
+
+In [71]: bag['money'] = 12
+
+In [72]: bag['candy'] = 5 
+
+In [73]: bag['tissues'] = 7 
+
+In [74]: print(bag)
+{'tissues': 7, 'money': 12, 'candy': 5}
+
+In [75]: print(bag['money'])
+12
+
+In [76]: bag['money'] += 2
+
+In [77]: print(bag)
+{'tissues': 7, 'money': 14, 'candy': 5}
+
+```
+
+* We can use the operators `in` and `not in` to check if a key is or not in a dictionary.
+
+```
+In [78]: 'book' in bag
+Out[78]: False
+
+In [79]: 'candy' in bag
+Out[79]: True
+
+In [80]: 'cigarette' not in bag
+Out[80]: True
+```
+
+* Retrieving keys and values.
+
+```
+In [90]: ages = {'John': 30, 'Maria': 28, 'Lucas': 23}
+
+In [91]: print(ages.keys())
+dict_keys(['Maria', 'Lucas', 'John'])
+
+In [92]: print(ages.values())
+dict_values([28, 23, 30])
+```
+*Note*: If we din't change the dictionary in between these operations, the keys and values correspond each other in order.
+
+* We can get a list with pairs (key, value) by doing:
+```
+In [93]: print(ages.items())
+dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
+```
+
+* Dictionaries are good for counting how often do we "see" something. (**This can be an exercise after we show them for loops**)
+
+
 
 
 
