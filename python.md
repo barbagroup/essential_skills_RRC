@@ -521,9 +521,31 @@ In [104]: if a > b:
      ...:
 a is smaller than b.
 ```
+*Note:* We can have as many `elif` as we want.
 
 
 ### Loops
+
+Loops are useful for executing the same block multiple times. In python we have multiple looping formats: `while` loops, `for` loops, and comprehensions.
+
+**While loops**
+
+They are related to an `if` statement, they will compute **while** a condition is true.
+
+```
+In [105]: sec = 5
+In [106]: while 0 < sec :
+     ...:     print('You have {} seconds'.format(sec))
+     ...:     sec -= 1
+     ...: print('Boom!!!')
+You have 5 seconds
+You have 4 seconds
+You have 3 seconds
+You have 2 seconds
+You have 1 seconds
+Boom!!!
+
+```
 
 
 
