@@ -107,7 +107,7 @@ In [17]: print(my_string)
 hello world
 ```
 
-We can access the different elements of a string, for example:
+We can access the different elements of a string and slices of it, for example:
 
 ```
 In [18]: my_string[0]
@@ -129,22 +129,40 @@ In [23]: my_string[1:-1]
 Out[23]: 'ello worl'
 ```
 
+Slices also allow us to pick specific elements from specific slices, for example:
+
+```
+In [24]: my_string[::2]
+Out[24]: 'hlowrd'
+
+In [25]: my_string[1:-1:2]
+Out[25]: 'el ol'
+
+In [26]: my_string[2::3]
+Out[26]: 'l r'
+
+In [27]: my_string[::-1]
+Out[27]: 'dlrow olleh'
+
+```
+
+
 Strings has different methods that we can applied to them, for example:
 
 Make all uppercase:
 
 ```
-In [24]: my_string.upper()
-Out[24]: 'HELLO WORLD'
+In [28]: my_string.upper()
+Out[28]: 'HELLO WORLD'
 ```
 Find where a character is or start:
 
 ```
-In [25]: my_string.find('hello')
-Out[25]: 0
+In [29]: my_string.find('hello')
+Out[29]: 0
 
-In [26]: my_string.find('l')
-Out[26]: 2
+In [30]: my_string.find('l')
+Out[30]: 2
 ```
 
 If you want to know all what you can do to a certain object, there is a magic command that will give you that information:
@@ -165,28 +183,27 @@ In general, if the value is zero or empty, the it's converted to `False`. Otherw
 
 
 ```
-In [27]: bool(0)
-Out[27]: False
+In [31]: bool(0)
+Out[31]: False
 
-In [28]: bool("Do we need oxygen?")
-Out[28]: True
+In [32]: bool("Do we need oxygen?")
+Out[32]: True
 ```
 
 It also applies to logic statements, for example:
 
 ```
-In [28]: x=3
-In [29]: y=5
-In [30]: z=x>y
+In [33]: x=3
+In [34]: y=5
+In [35]: z=x>y
 
-In [31]: z
-Out[31]: False
+In [36]: z
+Out[36]: False
 
-In [32]: type(z)
-Out[32]: bool
+In [37]: type(z)
+Out[37]: bool
 
 ```
-
 
 **None is not Zero**
 
@@ -228,13 +245,13 @@ Lists, dictionaries and tuples are kinds of *Collections*
 * List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called replace for strings but it creates a copy)
 
 ```
-In [33]: my_list = [2,50,4,61]
-In [34]: print (my_list)
+In [38]: my_list = [2,50,4,61]
+In [39]: print (my_list)
 [2, 50, 4, 61]
 
-In [35]: my_list[1] = 1
+In [40]: my_list[1] = 1
 
-In [36]: print (my_list)
+In [41]: print (my_list)
 [2, 1, 4, 61]                 #Now we have a 1 instead of a 50 in the second place.
 ```
 
@@ -243,13 +260,13 @@ In [36]: print (my_list)
 * We can *concatenate* lists by using the operator `+`: 
 
 ```
-In [37]: lst1 = [0,1,2,3]
+In [42]: lst1 = [0,1,2,3]
 
-In [38]: lst2 = ['a','b','c']
+In [43]: lst2 = ['a','b','c']
 
-In [39]: conc = lst1 + lst2
+In [44]: conc = lst1 + lst2
 
-In [40]: print(conc)
+In [45]: print(conc)
 [0, 1, 2, 3, 'a', 'b', 'c']
 
 ```
@@ -257,97 +274,97 @@ In [40]: print(conc)
 * There are different methods to apply to a list (check them by typing `dir(lst1)`), an example is `append()`.
 
 ```
-In [41]: lst1.append(4)
+In [46]: lst1.append(4)
 
-In [42]: print(lst1)
+In [47]: print(lst1)
 [0, 1, 2, 3, 4]
 
-In [43]: lst1.append('five')
+In [48]: lst1.append('five')
 
-In [44]: lst1
-Out[38]: [0, 1, 2, 3, 4, 'five']
+In [49]: lst1
+Out[49]: [0, 1, 2, 3, 4, 'five']
 
-In [45]: lst1.append([6,7,8])
+In [50]: lst1.append([6,7,8])
 
-In [46]: lst1
-Out[46]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
+In [51]: lst1
+Out[51]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
 ```
 * Similar to strings we can access elements of a list by doing `list[i]` and also we can do slices.
 
 ```
-In [47]: lst1[-1]
-Out[47]: [6, 7, 8]
+In [52]: lst1[-1]
+Out[52]: [6, 7, 8]
 
-In [48]: lst1[6:]
-Out[48]: [[], [6, 7, 8]]
+In [53]: lst1[6:]
+Out[53]: [[], [6, 7, 8]]
 ```
 
 * We can check if something is or not in a list.
 
 ```
-In [49]: my_numbers = [3,17,27,19]
+In [54]: my_numbers = [3,17,27,19]
 
-In [50]: 17 in my_numbers
-Out[50]: True
+In [55]: 17 in my_numbers
+Out[55]: True
 
-In [51]: 2 in my_numbers
-Out[51]: False
+In [56]: 2 in my_numbers
+Out[56]: False
 
-In [52]: 13 not in my_numbers
-Out[52]: True
+In [57]: 13 not in my_numbers
+Out[57]: True
 ```
 Note: This operators does NOT modify the list.
 
 * A **list** is an ordered sequence. We can change the order by sorting a list. 
 ```
-In [53]: names = ['Naty','Gil','Lorena','Chris']
+In [58]: names = ['Naty','Gil','Lorena','Chris']
 
-In [54]: names.sort()
+In [59]: names.sort()
 
-In [55]: print(names)
+In [60]: print(names)
 ['Chris', 'Gil', 'Lorena', 'Naty']
 ```
 
 * **Strings** and **lists**. The `split()` function.
 ```
-In [56]: string = 'Just three words'
+In [61]: string = 'Just three words'
 
-In [57]: str_list = string.split()
+In [62]: str_list = string.split()
 
-In [58]: print(str_list)
+In [63]: print(str_list)
 ['Just', 'three', 'words']
 ```
 Python takes care of long spaces, for example:
 ```
-In [59]: line = 'A lot of       space'
+In [64]: line = 'A lot of       space'
 
-In [60]: stuff = line.split()
+In [65]: stuff = line.split()
 
-In [61]: print(stuff)
+In [66]: print(stuff)
 ['A', 'lot', 'of', 'space']
 ```
 If we specify the delimiter (it can be a space `' '`, a `;`, a `:`, what ever you want).
 ```
-In [62]: line = 'A lot of       space'
+In [67]: line = 'A lot of       space'
 
-In [63]: stuff = line.split(' ')
+In [68]: stuff = line.split(' ')
 
-In [64]: print(stuff)
+In [69]: print(stuff)
 ['A', 'lot', 'of', '', '', '', '', '', '', 'space']
 ```
 `;` and many other characters are not delimiters by default:
 
 ```
-In [65]: s = 'a;b;c'
+In [70]: s = 'a;b;c'
 
-In [66]: thing  = s.split()
+In [71]: thing  = s.split()
 
-In [67]: print(thing)
+In [72]: print(thing)
 a;b;c
 
-In [68]: thing = s.split(';')
+In [73]: thing = s.split(';')
 
-In [69]: print(thing)
+In [74]: print(thing)
 ['a', 'b', 'c']
 ```
 
@@ -362,23 +379,23 @@ In [69]: print(thing)
 * Dictionaries don't maintain order, we index the the things we put in the dictionary with a "look up" tag. For example:
 
 ```
-In [70]: bag = {}
+In [75]: bag = {}
 
-In [71]: bag['money'] = 12
+In [76]: bag['money'] = 12
 
-In [72]: bag['candy'] = 5 
+In [77]: bag['candy'] = 5 
 
-In [73]: bag['tissues'] = 7 
+In [78]: bag['tissues'] = 7 
 
-In [74]: print(bag)
+In [79]: print(bag)
 {'tissues': 7, 'money': 12, 'candy': 5}
 
-In [75]: print(bag['money'])
+In [80]: print(bag['money'])
 12
 
-In [76]: bag['money'] += 2
+In [81]: bag['money'] += 2
 
-In [77]: print(bag)
+In [82]: print(bag)
 {'tissues': 7, 'money': 14, 'candy': 5}
 
 ```
@@ -386,32 +403,32 @@ In [77]: print(bag)
 * We can use the operators `in` and `not in` to check if a key is or not in a dictionary.
 
 ```
-In [78]: 'book' in bag
-Out[78]: False
+In [83]: 'book' in bag
+Out[83]: False
 
-In [79]: 'candy' in bag
-Out[79]: True
+In [84]: 'candy' in bag
+Out[84]: True
 
-In [80]: 'cigarette' not in bag
-Out[80]: True
+In [85]: 'cigarette' not in bag
+Out[85]: True
 ```
 
 * Retrieving keys and values.
 
 ```
-In [90]: ages = {'John': 30, 'Maria': 28, 'Lucas': 23}
+In [86]: ages = {'John': 30, 'Maria': 28, 'Lucas': 23}
 
-In [91]: print(ages.keys())
+In [87]: print(ages.keys())
 dict_keys(['Maria', 'Lucas', 'John'])
 
-In [92]: print(ages.values())
+In [88]: print(ages.values())
 dict_values([28, 23, 30])
 ```
 *Note*: If we din't change the dictionary in between these operations, the keys and values correspond each other in order.
 
 * We can get a list with pairs (key, value) by doing:
 ```
-In [93]: print(ages.items())
+In [89]: print(ages.items())
 dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
 ```
 
@@ -429,32 +446,31 @@ There are other tow types of data structures tuples and sets, you can read about
 ** Example: look for an element in a list and in a set (%timeit)**
 
 ```
-In [128]: rg = range(50000)
+In [90]: rg = range(50000)
 
-In [129]: lst = list(rg)
+In [91]: lst = list(rg)
 
-In [130]: %time (40035 in lst)
+In [92]: %time (40035 in lst)
 CPU times: user 4 ms, sys: 0 ns, total: 4 ms
 Wall time: 1.91 ms
-Out[130]: True
+Out[92]: True
 
-In [131]: st = set(rg)
+In [93]: st = set(rg)
 
-In [132]: %time (40035 in st)
+In [94]: %time (40035 in st)
 CPU times: user 0 ns, sys: 0 ns, total: 0 ns
 Wall time: 14.3 µs
-Out[132]: True
+Out[94]: True
 
-In [133]: %time (51000 in lst)
+In [95]: %time (51000 in lst)
 CPU times: user 4 ms, sys: 0 ns, total: 4 ms
 Wall time: 2.36 ms
-Out[133]: False
+Out[95]: False
 
-In [134]: %time (51000 in st)
+In [96]: %time (51000 in st)
 CPU times: user 0 ns, sys: 0 ns, total: 0 ns
 Wall time: 12.9 µs
-Out[134]: False
-
+Out[96]: False
 ```
 
 
