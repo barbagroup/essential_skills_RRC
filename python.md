@@ -538,13 +538,50 @@ In [106]: while 0 < sec :
      ...:     print('You have {} seconds'.format(sec))
      ...:     sec -= 1
      ...: print('Boom!!!')
+    ...:
 You have 5 seconds
 You have 4 seconds
 You have 3 seconds
 You have 2 seconds
 You have 1 seconds
 Boom!!!
+```
+*Note:* You have to be careful in not generating an infinite loop. 
 
+**For loops**
+It is usually more useful to iterate over a certain group of things or "iterable".
+
+```
+In [107]: for i in range(5,0,-1):
+    ...:     print('You have {} seconds'.format(i))
+    ...: print('Boom!!!')
+    ...: 
+You have 5 seconds
+You have 4 seconds
+You have 3 seconds
+You have 2 seconds
+You have 1 seconds
+Boom!!!
+```
+
+Another example:
+```
+In [108]: name = input('Insert your name: ')
+Insert your name: Naty
+
+In [109]: name
+Out[109]: 'Naty'
+
+In [110]: count = 1
+
+In [111]: for letter in name:
+    ...:     print('The {} letter is {}'.format(count,letter))
+    ...:     count +=1
+    ...:
+The 1 letter is N
+The 2 letter is a
+The 3 letter is t
+The 4 letter is y
 ```
 
 
