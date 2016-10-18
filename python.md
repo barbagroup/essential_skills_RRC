@@ -473,11 +473,59 @@ Wall time: 12.9 µs
 Out[96]: False
 ```
 
-
 ## Control Flow
 
-* Loops
-* Conditionals
+### Conditionals
+
+The syntax is "If `x` true, then do something; otherwise, do something else."
+
+**If** statement on its own:
+
+```
+In [97]: a = 8
+
+In [98]: b = 3 
+
+In [99]: if a > b :
+    ...:     print('a is bigger than b')
+    ...:
+a is bigger than b
+```
+
+**If-else** statement: 
+```
+In [100]: x = float(input('Insert your number:'))
+Insert your number:711457
+
+In [101]: if x%17 == 0:
+     ...:     print('Your number is multiple of 17.')
+     ...: else :
+     ...:     print('Your number is not multiple of 17.')
+
+Your number is not multiple of 17.
+```
+
+**If-elif-else** statement:
+
+```
+In [102]: a = 3
+
+In [103]: b = 5
+
+In [104]: if a > b:
+     ...:     print('a is bigger than b.')
+     ...: elif a < b:
+     ...:     print('a is smaller than b.')
+     ...: else:
+     ...:     print('a is equal to b.')
+     ...:
+a is smaller than b.
+```
+
+
+### Loops
+
+
 
 ## Magics
 
