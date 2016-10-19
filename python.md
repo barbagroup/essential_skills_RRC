@@ -603,6 +603,51 @@ name Lionel
 last_name Messi
 ```
 
+**Comprehensions**
+
+`for` and `while` loops are really useful but they take at least "two lines", and if you need to save the result in of each loop iteration in a list, set, etc. This take at leas "three lines". Thankfully, Python is so great that in some cases we can reduce these cases to just ONE line! Let's see this with an example:
+
+*Normal loop:*
+
+```
+In [114]: fruits = ['apple', 'orange', 'grape', 'banana', 'pineapple', 'strawberry', 'watermelon']
+
+In [115]: upper_fruits = []
+
+In [116]: for fruit in fruits:
+    ...:     upper_fruits.append(fruit.upper())
+
+In [117]: upper_fruits
+Out[117]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WATERMELON']
+```
+
+*Pythonic way:*
+
+```
+In [118]: upper_pythonic = [fruit.upper() for fruit in fruits]
+
+In [119]: upper_pythonic
+Out[119]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WATERMELON']
+```
+
+We can add a filter, for example:
+
+```
+In [120]: entries = [2, 11, 49, 3, 57, 33, 9]
+
+In [121]: entries
+Out[121]: [2, 11, 49, 3, 57, 33, 9]
+
+In [122]: some = [x**2 for x in entries if x%3==0]
+
+In [123]: some
+Out[123]: [9, 3249, 1089, 81]
+
+In [124]: orig = [int(x**(1/2)) for x in some]
+
+In [125]: orig
+Out[125]: [3, 57, 33, 9]
+```
 
 ## Magics
 
