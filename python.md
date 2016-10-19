@@ -583,7 +583,25 @@ The 2 letter is a
 The 3 letter is t
 The 4 letter is y
 ```
+We can do loops in dictionaries too:
 
+```
+In [112]: d = {"name":"Lionel", "last_name": "Messi", "birthday": [6, 24, 1987]}
+
+In [113]: for item in d.items():
+     ...:     print(item)
+     ...:
+('birthday', [6, 24, 1987])
+('name', 'Lionel')
+('last_name', 'Messi')
+
+In [114]: for key, value in d.items():
+     ...:     print(key, value)
+     ...:
+birthday [6, 24, 1987]
+name Lionel
+last_name Messi
+```
 
 
 ## Magics
