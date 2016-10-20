@@ -284,7 +284,7 @@ In [48]: lst1.append('five')
 In [49]: lst1
 Out[49]: [0, 1, 2, 3, 4, 'five']
 
-In [50]: lst1.append([6,7,8])
+In [50]: lst1.append([6, 7, 8])
 
 In [51]: lst1
 Out[51]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
