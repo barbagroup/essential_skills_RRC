@@ -649,12 +649,21 @@ In [125]: orig
 Out[125]: [3, 57, 33, 9]
 ```
 
-## Magics
+## IPython Magics
+
+Sometimes when we are working on IPython we would like to select certain lines and save them into a python script. In IPython we can do that! 
+
+We can check the history of what we've done in the current session of IPython by doing:
 
 `%hist -n`
-`%edit`
-`%run`
 
+If we want to select certain lines and put them into a script, the command `%edit` allow us to do this. Let's suppose we want the lines 1, 3 and from 5-10 the we should do:
 
+`%edit 1 3 5-10`
 
+and this will open the default editor with the lines we want. 
+
+Once we have that script saved if we want to run it we can use the command `%run`: 
+
+`%run my_script.py`
 
