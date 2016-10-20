@@ -432,8 +432,7 @@ In [89]: print(ages.items())
 dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
 ```
 
-* Dictionaries are good for counting how often do we "see" something. (**This can be an exercise after we show them for loops**)
-
+* Dictionaries are good for counting how often do we "see" something. 
 
 There are other tow types of data structures tuples and sets, you can read about them in the python [documentation](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences). 
 
@@ -669,10 +668,10 @@ Once we have that script saved if we want to run it we can use the command `%run
 
 ## Exercises
 
-**Slicing** (took from Dr.chuck course on data structure)
+**Slicing** 
 
 1- Write code using find() and string slicing to extract the number at the end of the line below. Convert the extracted value to
-a floating point number and print it out.
+a floating point number and print it out. (took from Dr.chuck course on data structure)
 
 ```
 text = "X-DSPAM-Confidence:    0.8475"
@@ -692,6 +691,7 @@ In [130]: print(num_float)
 0.8475
 ```
 
+**Slicing and for loop**
 2- Write a code that grabs, from each word, all the letters except 'ball' at the end of each one. Save the output in a list and print it out. 
 
 The original list is:
@@ -721,5 +721,68 @@ In [134]: print(random)
 ['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
 
 ```
+
+**Dictionaries for counting**
+
+3- Write a code that counts the amount of each letter that we have in the phrase provided.
+
+Tips: split the text and put the words in a list, use a dictionary to count the repetitions. 
+
+
+```
+happy = "I felt happy because I saw the others were happy and because I knew I should feel happy but I was not really happy"
+```
+
+Your output should look like:
+
+{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
+
+
+Remember that dictionaries don't preserve order, therefore the items in your output might be in a different order. However, you can still check if your output is equal to the one we provide by doing a logical comparison using the `==` operation, which should return `True` if you get it right.
+
+**Optional**: Rewrite the exercise 3 using the method `get()`. 
+
+*Solution*
+
+```
+In [135]: happy = "I felt happy because I saw the others were happy and because I knew I should feel happy
+    ...:  but I was not really happy"
+
+In [136]: words = happy.split()
+
+In [137]: counts = {}
+
+In [138]: for word in words:
+     ...:     if word not in counts:
+     ...:         counts[word] = 1
+     ...:     else:
+     ...:         counts[word] += 1
+     ...: 
+
+In [139]: print(counts)
+{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
+
+```
+*Solution using `get()`*
+
+```
+In [140]: happy = "I felt happy because I saw the others were happy and because I knew I should feel happy
+    ...:  but I was not really happy"
+
+In [141]: words = happy.split()
+
+In [142]: counts = {}
+In [143]: for word in words:
+     ...:     counts[word] = counts.get(word, 0) +1 
+     ...:
+
+In [144]: print(counts)
+{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
+
+```
+
+
+
+
 
 
