@@ -671,7 +671,7 @@ Once we have that script saved if we want to run it we can use the command `%run
 
 **Slicing** (took from Dr.chuck course on data structure)
 
-Write code using find() and string slicing to extract the number at the end of the line below. Convert the extracted value to
+1- Write code using find() and string slicing to extract the number at the end of the line below. Convert the extracted value to
 a floating point number and print it out.
 
 ```
@@ -683,14 +683,42 @@ text = "X-DSPAM-Confidence:    0.8475"
 ```
 In [126]: text = "X-DSPAM-Confidence:    0.8475"
 
-In [127]: pos0 = text.find(':')  #They can also look for '0' but this is more problem dependent.  
-
-In [128]: str_num = text[pos0+1:]    
+In [127]: pos0 = text.find(':')  #They can also look for '0' but this is more problem dependent.
+In [128]: str_num = text[pos0+1:]
 
 In [129]: num_float = float(str_num)
 
 In [130]: print(num_float)
 0.8475
+```
+
+2- Write a code that grabs, from each word, all the letters except 'ball' at the end of each one. Save the output in a list and print it out. 
+
+The original list is:
+
+```
+sports = ['Football', 'Volleyball', 'Basketball', 'Baseball', 'Handball', 'Softball']
+```
+
+And your output should look like:
+
+```
+['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
+```
+
+*Solution*:
+```
+In [131]: sports = ['Football', 'Volleyball', 'Basketball', 'Baseball', 'Handball', 'Softball']
+
+In [132]: random = []
+
+In [133]: for sport in sports:
+     ...:     word = sport[:-4]
+     ...:     random.append(word)
+     ...:
+
+In [134]: print(random)
+['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
 
 ```
 
