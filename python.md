@@ -671,7 +671,7 @@ Once we have that script saved if we want to run it we can use the command `%run
 **Slicing** 
 
 1- Write code using find() and string slicing to extract the number at the end of the line below. Convert the extracted value to
-a floating point number and print it out. (took from Dr.chuck course on data structure)
+a floating point number and print it out. (Content took from online course "Python Data Structures" by Dr. Charles Severance)
 
 ```
 text = "X-DSPAM-Confidence:    0.8475"
@@ -726,7 +726,9 @@ In [134]: print(random)
 
 3- Write a code that counts the amount of each letter that we have in the phrase provided.
 
-Tips: split the text and put the words in a list, use a dictionary to count the repetitions. 
+Tips: split the text and put the words in a list, use a dictionary to count the repetitions.
+
+(The idea of the following two exercises was inspired in content from online course "Python Data Structures" by Dr. Charles Severance)
 
 
 ```
