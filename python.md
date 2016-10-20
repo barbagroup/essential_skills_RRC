@@ -494,8 +494,8 @@ a is bigger than b
 
 **If-else** statement: 
 ```
-In [100]: x = float(input('Insert your number:'))
-Insert your number:711457
+In [100]: x = float(input('Insert your number: '))
+Insert your number: 711457
 
 In [101]: if x%17 == 0:
      ...:     print('Your number is multiple of 17.')
