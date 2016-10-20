@@ -245,7 +245,7 @@ Lists, dictionaries and tuples are kinds of *Collections*
 * List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called replace for strings but it creates a copy)
 
 ```
-In [38]: my_list = [2,50,4,61]
+In [38]: my_list = [2, 50, 4, 61]
 In [39]: print (my_list)
 [2, 50, 4, 61]
 
