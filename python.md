@@ -128,6 +128,7 @@ Out[22]: 'llo world'
 In [23]: my_string[1:-1]
 Out[23]: 'ello worl'
 ```
+** Note that the start index is inclusive and the end one is exclusive!!**
 
 Slices also allow us to pick specific elements from specific slices, for example:
 
@@ -145,7 +146,6 @@ In [27]: my_string[::-1]
 Out[27]: 'dlrow olleh'
 
 ```
-
 
 Strings has different methods that we can applied to them, for example:
 
