@@ -295,8 +295,8 @@ Out[51]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
 In [52]: lst1[-1]
 Out[52]: [6, 7, 8]
 
-In [53]: lst1[6:]
-Out[53]: [[], [6, 7, 8]]
+In [53]: lst1[5:]
+Out[53]: ['five', [6, 7, 8]]
 ```
 
 * We can check if something is or not in a list.
