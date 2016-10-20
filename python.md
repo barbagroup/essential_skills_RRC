@@ -64,7 +64,7 @@ Out[6]: (3+0j)
 In [7]: z = complex(x)
 In [8]: z = z + 1j
 In [9]: print(z)
-Out[9]: (3+1j)
+(3+1j)
 ```
 
 Regular arithmetic symbols are preserved except for the "power".
