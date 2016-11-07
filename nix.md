@@ -5,6 +5,9 @@ Not in order
 `ls`, `cp`, `mv`, `cat`, `rm`, `rmdir`, `echo`, `touch`, `head`, `tail`,
 `whoami`, `pwd`, `cd`
 
+# Environment Variables
+## `PATH`
+
 # Pipes
 
 Introduce `wc`, `uniq`, `sort`, `less`, `grep`, `xargs`
@@ -13,14 +16,27 @@ Introduce `wc`, `uniq`, `sort`, `less`, `grep`, `xargs`
 
 Use `nano` (probably) or `exofrills`
 
-# Use SC style lesson plan
+# `vi` movement commands
 
-Exercises / challenges that involve downloading an existing data set and then
-searching for something (be it NaNs or whatever)
+`vi` or `vim` is a popular and powerful command line text editor. It's also
+notoriously difficult for beginners. It's too much to try to learn `vi` on top
+of everything else we're going to look at, but we do need to look at a few `vi`
+commands.
+
+Why? Because a lot of *nix programs inherited parts of their interface from `vi`
+and you'll need to know how to interact with them.
+
+| Command         | Action       |
+|-----------------|--------------|
+| j or Down Arrow | Down         |
+| k or Up Arrow   | Up           |
+| q               | Quit         |
+| g or <          | Go to top    |
+| G or >          | Go to bottom |
 
 # uber example
 
-Download and unzip file from here: 
+Download and unzip file from here:
 
 Should have folder `uber-trip-data`.  `cd` to that directory and take a look.
 
@@ -305,11 +321,35 @@ that file `test.csv`.
 $ head -n 500 uber-raw-data-janjune-15.csv > test.csv
 ```
 
+Now it's time to figure out how to sort this data. We can use `sort` the way we
+did with `wc` because the information we want to use as the sort key (the date
+and time) are embedded in the middle of every line.
+
+Here's one line from `test.csv`:
+
+`B02598,2015-01-18 14:03:01,B02598,37`
+
+We already looked at using `sort` with `fields` and the `-k` flag. Let's try it
+here:
+
+We're going to `cat` all of `test.csv`, pipe that into `sort` and then use the
+`-k2` flag, which will sort the lines of `test.csv` based on the first character
+of the _second_ field/column.
+
+```console
+$ cat test.csv | sort -k2 | less
+```
+
+That... didn't work. The default field delimiter in `sort` is whitespace, so the
+previous command sorted everything based on pickup time, but ignored pickup
+date.
+
+How can we change the delimiter character that `sort` uses? Let's check the
+`man` page.
 
 ```console
 $ man sort
 ```
-
 
 ```console
 $ cat test.csv | sort -t "," -k2 | less
@@ -347,18 +387,4 @@ B02598,2015-01-18 00:45:16,,48
 
 B02598,2015-01-18 00:47:08,B02617,68
 
-```
-
-```console
-$ $XONSH_STORE_STDOUT=False
-```
-
-
-```console
-$ history file
-```
-
-
-```console
-$ exit
 ```
