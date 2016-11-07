@@ -4,7 +4,6 @@
 
 ![](./phdcomics.1531.png)
 
-
 ## Initial configuration
 
 `git config` to set editor, colors, email, name, etc... (use `nano`)
@@ -207,12 +206,27 @@ we make changes, we'll be able to roll them back if we don't like them.
 
 What does that mean?  Let's make some changes and find out!
 
+make at least 2 more commits...
+
 ### Viewing commits
 
-Before we look at the next set of `git` commands, let's first make some changes
-to `script.py`, but don't commit them yet!
+#### `git log`
 
 #### `git diff`
+
+`git diff` (by default) shows the _difference_ between the current state of the
+repo and the most recent commit. Once you have made a change to `script.py` and
+saved it, run `git diff` to see what the changes look like.
+
+```console
+$ git diff
+```
+
+```console
+git diff output
+```
+
+The output of `git diff` shows added lines in green and removed lines in red.
 
 
 `log`, `checkout`, `diff`
