@@ -336,6 +336,13 @@ If you don't pass a target to `cd` it will always take you back to your home
 directory by default. This is a nice option if you're looking around in a very
 deep directory tree.
 
+# Tab completion
+
+Before we go any further, let's take a look at one of the most useful features
+of the *nix command line: tab completion
+
+
+
 
 # Environment Variables
 ## `PATH`
