@@ -34,6 +34,10 @@ and you'll need to know how to interact with them.
 | g or <          | Go to top    |
 | G or >          | Go to bottom |
 
+# copa america goals example
+
+use this for cat, sort, grep, head, tail and pipes and redirects
+
 # uber example
 
 Download and unzip file from here:
