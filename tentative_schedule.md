@@ -63,3 +63,7 @@
 * Continuous integration
 * xonsh
 * advanced profiling
+
+Portions of this text adapted from
+the [Software Carpentry Foundation](http://swcarpentry.github.io/shell-novice/)
+© 2016 [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
