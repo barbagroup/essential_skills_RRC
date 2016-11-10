@@ -679,17 +679,7 @@ text = "X-DSPAM-Confidence:    0.8475"
 
 *Solution:*
 
-```
-In [126]: text = "X-DSPAM-Confidence:    0.8475"
-
-In [127]: pos0 = text.find(':')  #They can also look for '0' but this is more problem dependent.
-In [128]: str_num = text[pos0+1:]
-
-In [129]: num_float = float(str_num)
-
-In [130]: print(num_float)
-0.8475
-```
+[solu](/solutions/python.slicing.soln.md)
 
 **Slicing and for loop**
 2- Write a code that grabs, from each word, all the letters except 'ball' at the end of each one. Save the output in a list and print it out. 
