@@ -383,6 +383,9 @@ $ cd Documents/
 Much better.
 
 
+# Next up...
+* `touch`
+* `rm`
 
 
 # Environment Variables
@@ -394,7 +397,7 @@ Introduce `wc`, `uniq`, `sort`, `less`, `grep`, `xargs`
 
 # Editor
 
-Use `nano` (probably) or `exofrills`
+Use `nano`
 
 # `vi` movement commands
 
