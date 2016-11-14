@@ -21,7 +21,7 @@ $ whoami
 gil
 ```
 
-That's my username! 
+That's my username!
 Now that we know who we are, time to figure out _where_ we are.  To do that, we ask the terminal to `print working directory` or `pwd`
 
 ```console
@@ -183,7 +183,7 @@ Full documentation at: <http://www.gnu.org/software/coreutils/ls>
 or available locally via: info '(coreutils) ls invocation'
 ```
 
-Oh...  lots... but we aren't going to worry about that. 
+Oh...  lots... but we aren't going to worry about that.
 
 For now, let's look inside the `Desktop/` folder where we downloaded that zip
 file at the beginning of the workshop.
@@ -266,7 +266,7 @@ $ pwd
 ```
 
 We're in the same spot. The `.` directory is a special directory in every folder
-on the filesystem and it points to the current working directory. 
+on the filesystem and it points to the current working directory.
 
 ```console
 $ cd ..
@@ -318,7 +318,7 @@ $ pwd
 
 We can't go back any further because we are at the _root_ of the file _tree_.
 
-Now that we've had a look around, time to go back to the home directory. 
+Now that we've had a look around, time to go back to the home directory.
 Let's use a little shortcut:
 
 ```console
@@ -340,6 +340,47 @@ deep directory tree.
 
 Before we go any further, let's take a look at one of the most useful features
 of the *nix command line: tab completion
+
+Return to the home directory if you aren't there already.
+```console
+$ cd
+```
+
+Type
+```console
+$ cd T
+```
+then hit the TAB key. Pretty cool, huh?
+
+Whenever you hit the TAB key, the shell will try to complete the remainder of
+the line for you! It can't read minds, though. Since `Templates` is the only
+directory beginning with `T`, the shell knew what to do. Let's try a different
+example.
+
+Type
+```console
+$ cd Do
+```
+then hit the TAB key.
+
+Nothing. But hit it again
+```console
+Documents/  Downloads/
+```
+
+There are two possible answers based on a prefix `Do`. In this case, tab
+completion will only complete up to the common prefix, which is just `Do`. It
+needs a little more information to finish the completion. Try adding a `c` and
+hitting TAB again.
+
+```console
+$ cd Doc
+```
+```console
+$ cd Documents/
+```
+
+Much better.
 
 
 
@@ -550,9 +591,9 @@ $ unzip uber-raw-data-janjune-15.csv.zip
 
 ```console
 Archive:  uber-raw-data-janjune-15.csv.zip
-  inflating: uber-raw-data-janjune-15.csv  
+  inflating: uber-raw-data-janjune-15.csv
    creating: __MACOSX/
-  inflating: __MACOSX/._uber-raw-data-janjune-15.csv  
+  inflating: __MACOSX/._uber-raw-data-janjune-15.csv
 ```
 
 Now we know that whoever created this zip file uses a Mac. But that's not really
@@ -575,7 +616,7 @@ $ wc -l *.csv | sort -n
 ```
 
 Wow! 14+ million rides! Impressive! But this data layout is different from the
-2014 data. The six months are all in the same file. Not cool. So what now? 
+2014 data. The six months are all in the same file. Not cool. So what now?
 
 First, let's see what the data looks like in the combined file.
 
@@ -601,7 +642,7 @@ looked at. Worse, the first pickup listed is in May? Either the file is
 mislabeled (bad) or it isn't even sorted (bad).
 
 Let's look at a few more lines to see if we can figure out which bad scenario we
-have. 
+have.
 
 We can use `tail` to peek at the _last_ 10 lines in the file. How do those look?
 
@@ -654,7 +695,7 @@ Ok. 500 lines in, we can see some January pickups. It looks like we have bad
 option #2. The data is labeled correctly but isn't sorted. Time to sort it!
 
 Sorting can be expensive, so rather than trying to sort the whole file at once,
-let's copy a portion of the big file into a separate file. 
+let's copy a portion of the big file into a separate file.
 
 Use the same `head` command we just used, but now, instead of writing it to the
 screen, we can _redirect_ that output to another file using `>`. We'll just call
@@ -705,7 +746,7 @@ $ cat test.csv | sort -t "," -k2 > test_sort.csv
 
 
 ```console
-$ head test_sort.csv 
+$ head test_sort.csv
 ```
 
 
