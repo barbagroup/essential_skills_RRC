@@ -199,9 +199,9 @@ $ ls -F Desktop/
 workshop_data.zip
 ```
 
-There it is! 
+There it is!
 
-## `cd` 
+## `cd`
 
 Ok, we know where the zip file is, time to _change directory_ to the folder `Desktop/`.  To do this, we use the `cd` command:
 
@@ -392,13 +392,13 @@ $ cd Documents/
 ## Use a text editor
 
 There are a *lot* of different text editors and a *lot* of strong
-feelings about which of them is the best. 
+feelings about which of them is the best.
 
 You can use any editor you like, but you _must_ know how to use at least one
 terminal-friendly editor. In this workshop we are going to use `nano`. It's
 simple and easy to use.
 
-Make sure you're in your home directory (use `cd` and `pwd` to confirm) then type 
+Make sure you're in your home directory (use `cd` and `pwd` to confirm) then type
 
 ```console
 $ nano
@@ -418,7 +418,7 @@ with only two of them: `Write Out` (save) and `Exit`.
 
 The caret (`^`) means the Control key. To save the TODO list, hit `Ctrl+o`, type
 in a name (how about "TODO") and then hit `Enter`. `nano` will report that it
-wrote some number of lines. 
+wrote some number of lines.
 
 Now exit `nano` by typing `Ctrl+x`.
 
@@ -443,14 +443,88 @@ that when you hit `Ctrl+o` to save an existing file, `nano` will automatically
 fill in the name of the existing file. If you wanted to "Save As...", you can
 simply change the name in the `Write Out` bar.
 
+## Create an empty file
 
+There are a few ways to create files on the command line. If you want to create
+an "empty" file, you can use `touch`. Try it!
 
+```console
+$ touch newfile
+```
+```console
+Desktop/    Downloads/  Pictures/  TODO        Videos/
+Documents/  Music/      Public/    Templates/  newfile
+```
 
+You can open `newfile` in `nano` to confirm that it's empty. Then just exit out
+using `Ctrl+x` since there's nothing to save!
 
+## Create a directory
 
+To create a new directory, use the `mkdir` command. We can create a `Research/`
+folder in the home directory.
 
-* `touch`
-* `rm`
+```console
+$ mkdir Research
+```
+```console
+$ ls -F
+```
+```console
+Desktop/    Downloads/  Pictures/  Research/  Templates/  newfile
+Documents/  Music/      Public/    TODO       Videos/
+```
+
+## Remove a file
+
+We don't need that empty file sitting around, we can remove it. To remove a
+file, use the `rm` command:
+
+```console
+$ rm newfile
+```
+
+Did anything happen?
+
+```console
+$ ls -F
+```
+```console
+Desktop/    Downloads/  Pictures/  Research/  Templates/
+Documents/  Music/      Public/    TODO       Videos/
+```
+
+Yes, `newfile` is gone. And this is something to be aware of: there is no
+"Recycle Bin". There is no "Undo". That file is gone.
+
+## Remove a directory
+
+Let's try to remove the `Research` directory we created earlier.
+
+```console
+$ rm Research
+```
+```console
+rm: cannot remove 'Research': Is a directory
+```
+
+`rm` only works with files by default. If you want to remove the directory you
+need to use the `-r` flag to specify a _recursive_ removal.
+
+**This will delete the directory and ALL of its contents. BE CAREFUL**
+
+```console
+$ rm -r Research
+```
+```console
+$ ls -F
+```
+```console
+Desktop/    Downloads/  Pictures/  TODO        Videos/
+Documents/  Music/      Public/    Templates/  newfile
+```
+
+## Move/Rename a file
 
 
 # Redirection
