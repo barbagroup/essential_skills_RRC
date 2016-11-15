@@ -1,15 +1,12 @@
-# First Commands
-
-Not in order
-
-`ls`, `cp`, `mv`, `cat`, `rm`, `echo`, `touch`, `head`, `tail`,
-`whoami`, `pwd`, `cd`
+# Navigating the Command Line
 
 Welcome!
 
 The command line can be a little intimidating at first, but it is a powerful and
 efficient way of interacting with your computer. It's also the lingua franca
 when dealing with computing clusters and remote machines.
+
+## `whoami`
 
 Before we do anything else, let's figure out who we are. We can ask on the
 command line:
@@ -22,6 +19,9 @@ gil
 ```
 
 That's my username!
+
+## `pwd`
+
 Now that we know who we are, time to figure out _where_ we are.  To do that, we ask the terminal to `print working directory` or `pwd`
 
 ```console
@@ -36,6 +36,7 @@ let's take a brief moment to look at how the file system is organized.
 
 **Inverted tree diagram a la software carpentry**
 
+## `ls`
 
 Let's look around
 
@@ -198,7 +199,11 @@ $ ls -F Desktop/
 workshop_data.zip
 ```
 
-There it is! Ok, we know where the zip file is, time to _change directory_ to the folder `Desktop/`.  To do this, we use the `cd` command:
+There it is! 
+
+## `cd` 
+
+Ok, we know where the zip file is, time to _change directory_ to the folder `Desktop/`.  To do this, we use the `cd` command:
 
 ```console
 $ cd Desktop
@@ -380,12 +385,75 @@ $ cd Doc
 $ cd Documents/
 ```
 
-Much better.
 
 
-# Next up...
+# Creating, editing, removing files
+
+## Use a text editor
+
+There are a *lot* of different text editors and a *lot* of strong
+feelings about which of them is the best. 
+
+You can use any editor you like, but you _must_ know how to use at least one
+terminal-friendly editor. In this workshop we are going to use `nano`. It's
+simple and easy to use.
+
+Make sure you're in your home directory (use `cd` and `pwd` to confirm) then type 
+
+```console
+$ nano
+```
+
+This is a no-frills editor. Type something! How about a TODO list?
+
+```console
+TODO
+* [x] Learn how to navigate using the terminal
+* [ ] Learn how to create files
+* [ ] Learn about pipes and redirects
+```
+
+At the bottom you'll notice a bunch of different options but we are concerned
+with only two of them: `Write Out` (save) and `Exit`.
+
+The caret (`^`) means the Control key. To save the TODO list, hit `Ctrl+o`, type
+in a name (how about "TODO") and then hit `Enter`. `nano` will report that it
+wrote some number of lines. 
+
+Now exit `nano` by typing `Ctrl+x`.
+
+Use `ls` to see what happened:
+
+```console
+$ ls -F
+```
+```console
+Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  TODO  Templates/  Videos/
+```
+
+There's the TODO list! If you want to edit the todo list, you can open it up in
+`nano` (you can use tab completion for the filename, too!)
+
+```console
+$ nano TODO
+```
+
+Check off the second item on the todo list and then save and exit `nano`. Notice
+that when you hit `Ctrl+o` to save an existing file, `nano` will automatically
+fill in the name of the existing file. If you wanted to "Save As...", you can
+simply change the name in the `Write Out` bar.
+
+
+
+
+
+
+
 * `touch`
 * `rm`
+
+
+# Redirection
 
 
 # Environment Variables
