@@ -1,0 +1,9 @@
+site_name: Foundations in Scientific Computing
+pages:
+    - Home: index.md
+    - Schedule: tentative_schedule.md
+    - nix command line: nix.md
+    - (I)Python: 
+        - Python: python.md
+        - Solution 1: solutions/python.slicing.soln.md
+    - git: git.md
