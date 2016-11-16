@@ -16,7 +16,7 @@ We want `git` to know who we are and how to reach us (we'll see why later!).
 We're also going to specify a text editor to use with `git` and we want git
 output to be colorized.
 
-```console
+```bash
 $ git config --global user.name "Gil Forsyth"
 $ git config --global user.email "gilforsyth@gmail.com"
 $ git config --global color.ui "auto"
@@ -27,7 +27,7 @@ $ git config --global core.editor "nano -w"
 
 Let's create a directory for our work and then move into that directory
 
-```console
+```bash
 $ mkdir cocktails
 $ cd cocktails
 ```
@@ -35,25 +35,25 @@ $ cd cocktails
 Now we tell `git` to make `cocktails` a repository--a place where `git` can
 store versions of our files:
 
-```console
+```bash
 $ git init
 ```
 
 If we use `ls` to check the directory's contents, it appears that nothing has
 changed:
 
-```console
+```bash
 $ ls
 ```
 
 But if we add the `-a` flag to show everything, we can see that `git` has
 created a hidden directory called `.git`
 
-```console
+```bash
 $ ls -a
 ```
 
-```console
+```bash
 .    ..    .git
 ```
 
@@ -69,11 +69,11 @@ also means that if you delete the `.git` folder, your history is gone.
 
 This is the most used command in `git`.  Let's try it out!
 
-```console
+```bash
 git status
 ```
 
-```console
+```diff
 $ git status
 On branch master
 
@@ -102,11 +102,11 @@ Use `nano` to create something...
 Now that there's a file in the repository, let's take another look at `git
 status` and see what it reports.
 
-```console
-git status
+```bash
+$ git status
 ```
 
-```console
+```diff
 On branch master
 
 Initial commit
@@ -130,17 +130,17 @@ Now that we have a file in the new repo we want to start tracking any changes
 made to that file. `git` ignores files until you tell it to look after them. To
 begin tracking, we have to `add` the file to the repository:
 
-```console
-git add script.py
+```bash
+$ git add script.py
 ```
 
 Did anything happen? Let's check! What command should we use?
 
-```console
-git status
+```bash
+$ git status
 ```
 
-```console
+```diff
 On branch master
 
 Initial commit
