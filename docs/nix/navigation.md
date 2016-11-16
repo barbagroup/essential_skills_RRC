@@ -11,10 +11,10 @@ when dealing with computing clusters and remote machines.
 Before we do anything else, let's figure out who we are. We can ask on the
 command line:
 
-```console
+```bash
 $ whoami
 ```
-```console
+```bash
 gil
 ```
 
@@ -24,10 +24,10 @@ That's my username!
 
 Now that we know who we are, time to figure out _where_ we are.  To do that, we ask the terminal to `print working directory` or `pwd`
 
-```console
+```bash
 $ pwd
 ```
-```console
+```bash
 /home/gil/
 ```
 
@@ -40,32 +40,32 @@ let's take a brief moment to look at how the file system is organized.
 
 Let's look around
 
-```console
+```bash
 $ ls
 ```
 
-```console
+```bash
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 ```
 
 I think those are folders?  How can we tell? Use the `-F` flag
 
-```console
+```bash
 $ ls -F
 ```
 
-```console
+```bash
 Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
 ```
 
 They all have a trailing slash, so they're all folders.
 What other options does `ls` have?
 
-```console
+```bash
 $ ls --help
 ```
 
-```console
+```bash
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
@@ -192,10 +192,10 @@ file at the beginning of the workshop.
 If we want to use `ls` on a different folder than the _current_ folder, just
 pass the name of the folder you want to look in:
 
-```console
+```bash
 $ ls -F Desktop/
 ```
-```console
+```bash
 workshop_data.zip
 ```
 
@@ -205,26 +205,26 @@ There it is!
 
 Ok, we know where the zip file is, time to _change directory_ to the folder `Desktop/`.  To do this, we use the `cd` command:
 
-```console
+```bash
 $ cd Desktop
 ```
 
 Now let's check in with `pwd` again:
 
-```console
+```bash
 $ pwd
 ```
 
-```console
+```bash
 /home/gil/Desktop
 ```
 
 Ok! Cool! We moved! Now if we run `ls` we should see the zip file in here.
 
-```console
+```bash
 $ ls -F
 ```
-```console
+```bash
 workshop_data.zip
 ```
 
@@ -235,10 +235,10 @@ How do we do that...?
 
 The home directory has the same name as our username. Let's try that!
 
-```console
+```bash
 $ cd gil
 ```
-```console
+```bash
 cd: no such file or directory: gil
 ```
 
@@ -247,40 +247,40 @@ filesystem. There has to be a way to go back -- what are we missing?
 
 Let's use `ls` again, but this time add in the `-a` flag for "show all"
 
-```console
+```bash
 $ ls -a
 ```
 
-```console
+```bash
 .  ..  workshop_data.zip
 ```
 
 AHA! There are two more entries that we didn't see before: `.` and `..`
 What are those? Learn by doing, I say:
 
-```console
+```bash
 $ cd .
 ```
 
-```console
+```bash
 $ pwd
 ```
 
-```console
+```bash
 /home/gil/Desktop
 ```
 
 We're in the same spot. The `.` directory is a special directory in every folder
 on the filesystem and it points to the current working directory.
 
-```console
+```bash
 $ cd ..
 ```
 
-```console
+```bash
 $ pwd
 ```
-```console
+```bash
 /home/gil/
 ```
 
@@ -288,36 +288,36 @@ We made it back _home_! The `..` directory is another special directory, but thi
 
 Let's try moving up a few more times!
 
-```console
+```bash
 $ cd ..
 ```
 
-```console
+```bash
 $ pwd
 ```
-```console
+```bash
 /home
 ```
 
-```console
+```bash
 $ cd ..
 ```
 
-```console
+```bash
 $ pwd
 ```
-```console
+```bash
 /
 ```
 
-```console
+```bash
 $ cd ..
 ```
 
-```console
+```bash
 $ pwd
 ```
-```console
+```bash
 /
 ```
 
@@ -326,14 +326,14 @@ We can't go back any further because we are at the _root_ of the file _tree_.
 Now that we've had a look around, time to go back to the home directory.
 Let's use a little shortcut:
 
-```console
+```bash
 $ cd
 ```
 
-```console
+```bash
 $ pwd
 ```
-```console
+```bash
 /home/gil/
 ```
 
@@ -347,12 +347,12 @@ Before we go any further, let's take a look at one of the most useful features
 of the *nix command line: tab completion
 
 Return to the home directory if you aren't there already.
-```console
+```bash
 $ cd
 ```
 
 Type
-```console
+```bash
 $ cd T
 ```
 then hit the TAB key. Pretty cool, huh?
@@ -363,13 +363,13 @@ directory beginning with `T`, the shell knew what to do. Let's try a different
 example.
 
 Type
-```console
+```bash
 $ cd Do
 ```
 then hit the TAB key.
 
 Nothing. But hit it again
-```console
+```bash
 Documents/  Downloads/
 ```
 
@@ -378,9 +378,9 @@ completion will only complete up to the common prefix, which is just `Do`. It
 needs a little more information to finish the completion. Try adding a `c` and
 hitting TAB again.
 
-```console
+```bash
 $ cd Doc
 ```
-```console
+```bash
 $ cd Documents/
 ```
