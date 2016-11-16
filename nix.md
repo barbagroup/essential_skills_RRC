@@ -511,7 +511,8 @@ rm: cannot remove 'Research': Is a directory
 `rm` only works with files by default. If you want to remove the directory you
 need to use the `-r` flag to specify a _recursive_ removal.
 
-**This will delete the directory and ALL of its contents. BE CAREFUL**
+**This will delete the directory and ALL of its contents. BE CAREFUL WHEN USING
+THIS**
 
 ```console
 $ rm -r Research
@@ -521,10 +522,63 @@ $ ls -F
 ```
 ```console
 Desktop/    Downloads/  Pictures/  TODO        Videos/
-Documents/  Music/      Public/    Templates/  newfile
+Documents/  Music/      Public/    Templates/
 ```
 
 ## Move/Rename a file
+
+We know how to create and delete files and folders now. What about renaming a
+file?
+
+To rename a file, we use the `mv` command, which is short for "move". This may
+seem a little bit odd at first, but renaming a file is the same as moving it to
+a different location.
+
+To start, let's make the file `TODO` lowercase. The syntax is `mv <old location>
+<new location>`
+
+```console
+$ mv TODO todo
+```
+```console
+$ ls -F
+```
+```console
+Desktop/    Downloads/  Pictures/  Templates/  todo
+Documents/  Music/      Public/    Videos/
+```
+
+We _moved_ the file `TODO` from `/home/<user>/TODO` to a new location, called
+`/home/<user>/todo`. Since the directory doesn't change, the result is a
+_renamed_ file. 
+
+We can also move the `todo` list to a different folder:
+
+```console
+$ mv todo Desktop/
+```
+```console
+$ ls -F
+```
+```console
+Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
+```
+
+We specified `Desktop/` as the `<new location>` in the `mv` command. Since
+`Desktop/` is a folder, `todo` will move inside that folder. 
+
+```console
+$ ls -F Desktop/
+```
+```console
+todo workshop_data.zip
+```
+
+**Note:** As we see, if `<new location>` is a folder, then the file is moved
+inside the folder. However, if `<new location>` is an existing _file_, then that
+file will be overwritten.
+
+
 
 
 # Redirection
