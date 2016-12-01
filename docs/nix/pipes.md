@@ -119,12 +119,147 @@ But what if there were hundreds? How can we count the number of results from a
 Use `ls`, `grep` and any tools we've already learned about to get the command
 line to spit out the number of files/folders that contain `Do` in their title.
 
+## `sort`
+
+#TODO: get the copa america goals list using wget
 
 
+```bash
+$ cat copa_america_goals 
+```
+```bash
+1 Miku
+1 Neymar
+1 Robinho
+3 Sergio Aguero
+2 Charles Aranguiz
+3 Lucas Barrios
+1 Edgar Benitez
+2 Miller Bolanos
+1 Andrew Carrillo
+1 Douglas Costa
+1 Christian Cueva
+2 Angel Di Maria
+1 Roberto Firmino
+1 Jose Gimenez
+1 Derlis Gonzalez
+4 Paolo Guerrero
+1 Nelson Haedo Valdez
+2 Gonzalo Higuain
+1 Mauricio Isla
+2 Raul Jimenez
+2 Marcelo Martins Moreno
+1 Gary Medel
+1 Lionel Messi
+1 Jeison Murillo
+1 Javier pastore
+1 Claudio Pizarro
+1 Ronald Raldes
+1 Cristian Rodriguez
+1 Marcos Rojo
+1 Salomon Rondon
+1 Alexis Sanchez
+1 Thiago Silva
+1 Martis Smedberg-Dalence
+2 Enner Valencia
+4 Eduardo Vargas
+3 Arturo Vidal
+2 Matias Vuoso
+```
 
-Use `>` for redirecting to files, but use `|` to _intercept_ and perform further
-transformations.
+```bash
+$ cat copa_america_goals | sort
+```
+```bash
+1 Alexis Sanchez
+1 Andrew Carrillo
+1 Christian Cueva
+1 Claudio Pizarro
+1 Cristian Rodriguez
+1 Derlis Gonzalez
+1 Douglas Costa
+1 Edgar Benitez
+1 Gary Medel
+1 Javier pastore
+1 Jeison Murillo
+1 Jose Gimenez
+1 Lionel Messi
+1 Marcos Rojo
+1 Martis Smedberg-Dalence
+1 Mauricio Isla
+1 Miku
+1 Nelson Haedo Valdez
+1 Neymar
+1 Roberto Firmino
+1 Robinho
+1 Ronald Raldes
+1 Salomon Rondon
+1 Thiago Silva
+2 Angel Di Maria
+2 Charles Aranguiz
+2 Enner Valencia
+2 Gonzalo Higuain
+2 Marcelo Martins Moreno
+2 Matias Vuoso
+2 Miller Bolanos
+2 Raul Jimenez
+3 Arturo Vidal
+3 Lucas Barrios
+3 Sergio Aguero
+4 Eduardo Vargas
+4 Paolo Guerrero
+```
 
-Introduce `wc`, `uniq`, `sort`, `less`, `grep`, `xargs`
+```bash
+$ cat copa_america_goals | sort > copa_goals_sorted
+```
 
-Not pipes, but important
+```bash
+$ cat copa_goals_sorted 
+```
+```bash
+1 Alexis Sanchez
+1 Andrew Carrillo
+1 Christian Cueva
+1 Claudio Pizarro
+1 Cristian Rodriguez
+1 Derlis Gonzalez
+1 Douglas Costa
+1 Edgar Benitez
+1 Gary Medel
+1 Javier pastore
+1 Jeison Murillo
+1 Jose Gimenez
+1 Lionel Messi
+1 Marcos Rojo
+1 Martis Smedberg-Dalence
+1 Mauricio Isla
+1 Miku
+1 Nelson Haedo Valdez
+1 Neymar
+1 Roberto Firmino
+1 Robinho
+1 Ronald Raldes
+1 Salomon Rondon
+1 Thiago Silva
+2 Angel Di Maria
+2 Charles Aranguiz
+2 Enner Valencia
+2 Gonzalo Higuain
+2 Marcelo Martins Moreno
+2 Matias Vuoso
+2 Miller Bolanos
+2 Raul Jimenez
+3 Arturo Vidal
+3 Lucas Barrios
+3 Sergio Aguero
+4 Eduardo Vargas
+4 Paolo Guerrero
+```
+
+```bash
+$ cat copa_goals_sorted | grep Alexis
+```
+```bash
+1 Alexis Sanchez
+```
