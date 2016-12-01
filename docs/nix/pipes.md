@@ -87,6 +87,37 @@ ls -F | wc -l
 
 Any output can be piped to (nearly) any other program. 
 
+### Quick exercise:
+
+Why does `cat filelist | wc -l` return `8` while `ls -F | wc -l` return `9`?
+
+## `grep`
+
+`grep` is your best friend, you just don't know it yet. `grep` does stand for
+something, but it's long and confusing, so just accept that `grep` is `grep`. 
+
+`grep` searches through text files and streams for matches. It is one of the
+most powerful tools in the UNIX toolbox. It's also _42 years old_. And we still
+use it. It's that good.
+
+Try it out by piping the contents of `ls -F` and `grep`ping for "Do"
+
+```bash
+$ ls -F | grep Do
+```
+```bash
+Documents/
+Downloads/
+```
+
+### Exercise
+
+There are obviously two files/folders that contain `Do` that `grep` has matched.
+But what if there were hundreds? How can we count the number of results from a
+`grep`? 
+
+Use `ls`, `grep` and any tools we've already learned about to get the command
+line to spit out the number of files/folders that contain `Do` in their title.
 
 
 
