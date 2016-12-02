@@ -4,6 +4,8 @@
 
 *Offered for the first time 2–6 January, 2016, at Universidad Técnica Federico Santa María, Valparaíso, Chile.*
 
+---
+
 Every student today (graduate or undergraduate) is using computers on a daily basis.
 But to be proficient with computers as a tool for science, you need professional-grade skills.
 This workshop teaches the computing skills that we—as a research group in computational science and engineering—think everyone should have.
@@ -26,3 +28,15 @@ Two unifying ideas run through the "ten simple rules":
 (1) that automation is a key device for reproducibility, and
 (2) that version control is the core technology for dealing with software as a living, changing thing.
 These ideas justify insisting that command-line skills are a must.
+
+The skeleton for our practice of reproducible research is the pledge ["Reproducibility PI Manifesto"](http://lorenabarba.com/gallery/reproducibility-pi-manifesto/) (2012).
+It consists of a commitment to:
+http://lorenabarba.com/gallery/reproducibility-pi-manifesto/
+(1) teach group members about reproducibility; 
+(2) keep all code and writing under version-control; 
+(3) complete code verification and validation, and publish openly the results; 
+(4) for main results in a publication, share data, plotting scripts, and figures under CC-BY; 
+(5) upload preprints to arXiv at the time of submission of a paper; 
+(6) release code no later than the time of submission of a paper; 
+(7) add a "Reproducibility" statement to each publication; 
+(8) keep an up-to-date web presence.
