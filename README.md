@@ -31,7 +31,6 @@ These ideas justify insisting that command-line skills are a must.
 
 The skeleton for our practice of reproducible research is the pledge ["Reproducibility PI Manifesto"](http://lorenabarba.com/gallery/reproducibility-pi-manifesto/) (2012).
 It consists of a commitment to:
-http://lorenabarba.com/gallery/reproducibility-pi-manifesto/
 (1) teach group members about reproducibility; 
 (2) keep all code and writing under version-control; 
 (3) complete code verification and validation, and publish openly the results; 
