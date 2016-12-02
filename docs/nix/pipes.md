@@ -123,6 +123,8 @@ line to spit out the number of files/folders that contain `Do` in their title.
 
 #TODO: get the copa america goals list using wget
 
+Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
+take a look at what the file contains:
 
 ```bash
 $ cat copa_america_goals 
@@ -167,6 +169,11 @@ $ cat copa_america_goals
 2 Matias Vuoso
 ```
 
+The first column is goals, then first names, then last names. And of course,
+some players only have one name. How many players scored 4 goals? We can `grep`
+for that, which will definitely work, but we can also sort the list easily using
+the `sort` command.  Try it out!
+
 ```bash
 $ cat copa_america_goals | sort
 ```
@@ -210,9 +217,19 @@ $ cat copa_america_goals | sort
 4 Paolo Guerrero
 ```
 
+And we see that at the bottom of the sorted list there are two players who
+scored 4 goals in the Copa. 
+
+Now, sorting goal scorers by last name seems a little strange if we care about
+the number of goals scored. Let's save the list of goals but sort it by the
+number of goals. How should we do that?
+
 ```bash
 $ cat copa_america_goals | sort > copa_goals_sorted
 ```
+
+And remember, there's no output to the screen (`stdout`) because we _redirected_
+it to a new file. We can `cat` the new file to make sure it worked as we expect.
 
 ```bash
 $ cat copa_goals_sorted 
