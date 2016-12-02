@@ -39,3 +39,9 @@ It consists of a commitment to:
 (6) release code no later than the time of submission of a paper; 
 (7) add a "Reproducibility" statement to each publication; 
 (8) keep an up-to-date web presence.
+
+#### Definitions
+
+**Reproducible research:**  Authors provide all the necessary data and the computer codes to run the analysis again, re-creating the results.
+
+**Replication:** Arriving at the same scientific findings as another study, collecting new data (possibly with different methods) and completing new analyses. A full replication study is sometimes impossible to do, but reproducible research is only limited by the time and effort we are willing to invest.
