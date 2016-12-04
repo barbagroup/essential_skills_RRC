@@ -1,8 +1,8 @@
 # Foundations in Scientific Computing
 
-**A five-day, intensive, hands-on workshop on the foundational skills that everyone using computers in the pursuit of science should have.**
+**A five-day, intensive, hands-on workshop on the foundational skills that everyone using computers in the pursuit of scientific research should have.**
 
-*Offered for the first time 2–6 January, 2016, at Universidad Técnica Federico Santa María, Valparaíso, Chile.*
+*Offered for the first time 2–6 January 2017, at Universidad Técnica Federico Santa María, Valparaíso, Chile.*
 
 ---
 
