@@ -22,6 +22,8 @@ This course provides an introduction to the tools and techniques that we conside
 4. good practices for scientific software development: code hygiene and testing
 5. knowledge of licensing options for sharing software 
 
+## Reproducible Computational Research
+
 The weeklong workshop also includes a presentation and discussion of the ["Barba-group Reproducibility Syllabus"](https://hackernoon.com/barba-group-reproducibility-syllabus-e3757ee635cf#.wn9brj30m)—an annotated bibliography of our Top-10 readings in the topic of reproducibility.
 Number 7 in the list of readings is an article titled "Ten simple rules for reproducible research" (Sandve et al., 2013).
 Two unifying ideas run through the "ten simple rules":
@@ -35,12 +37,12 @@ It consists of a commitment to:
 (2) keep all code and writing under version-control; 
 (3) complete code verification and validation, and publish openly the results; 
 (4) for main results in a publication, share data, plotting scripts, and figures under CC-BY; 
-(5) upload preprints to arXiv at the time of submission of a paper; 
+(5) upload preprints to [arXiv](https://arxiv.org) at the time of submission of a paper; 
 (6) release code no later than the time of submission of a paper; 
 (7) add a "Reproducibility" statement to each publication; 
 (8) keep an up-to-date web presence.
 
-#### Definitions
+### Definitions
 
 **Reproducible research:**  Authors provide all the necessary data and the computer codes to run the analysis again, re-creating the results.
 
