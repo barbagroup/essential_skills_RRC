@@ -47,17 +47,23 @@ we take responsibility for not only teaching our group members, but broadly diss
 The second commitment helps for what University of Washington professor Randall LeVeque<sup>1</sup> called _"private reproducibility"_: 
 we can rebuild our own past research results from the precise version of the code that was used to create them.
 Private reproducibility also demands fully automating the analysis and visualization of data.
-Stanford professor Jon Claerbout said:
-“I’ve learned that interactive programs are slavery (unless they include the ability to arrive in any previous state by means of a script).”
+Stanford professor Jon Claerbout<sup>2</sup> said:
+_“I’ve learned that interactive programs are slavery (unless they include the ability to arrive in any previous state by means of a script).”_
 With this in mind, two technologies are enemies of reproducible research:
 GUI-based image manipulation, and spreadsheets.
 Figures that visualize data, or image processing applied to photographs, can only be reproducible if made with scripts.
-And spreadsheets impair reproducibility because they conflate input, output and code (as noted by Berkeley professor Philip Stark).
+And spreadsheets impair reproducibility because they conflate input, output, code and presentation—as noted by Berkeley professor Philip Stark.<sup>3</sup>
 This situation calls for adopting a scientific software stack for programmatic analysis and visualization.
 Our favorite environment to accomplish this is Scientific Python.
 
 Genuine reproducible research is not only privately reproducible, but publicly so.
 That's why all our subsequent reproducibility commitments deal with open access to data, code and publications.
+The American Physical Society issued a policy statement under the Ethics and Values category, titled ["What is Science?"](https://www.aps.org/policy/statements/99_6.cfm) (1999). 
+It reads:
+_"The success and credibility of science are anchored in the willingness of scientists to […] Expose their ideas and results to independent testing and replication by others. This requires the open exchange of data, procedures and materials."_
+In computational research, many 
+
+
 
 ### Definitions
 
@@ -67,4 +73,8 @@ That's why all our subsequent reproducibility commitments deal with open access 
 
 ## References
 
-<sup>1</sup> LeVeque, Randall J. (2012), "Issues in Reproducibility," talk given at the ICERM Workshop on Reproducibility in Computational and Experimental Mathematics, Brown University [slides PDF](https://icerm.brown.edu/materials/Slides/tw-12-5/Issues_in_Reproducibility_]_Randy_LeVeque,_University_of_Washington.pdf)
+<sup>1</sup> LeVeque, Randall J. (2012), "Issues in Reproducibility," talk given at the ICERM Workshop on Reproducibility in Computational and Experimental Mathematics, Brown University; [slides PDF](https://icerm.brown.edu/materials/Slides/tw-12-5/Issues_in_Reproducibility_]_Randy_LeVeque,_University_of_Washington.pdf).
+
+<sup>2</sup> Claerbout, Jon; cited in Fomel, S. and Claerbout, J.F. (2009), Guest Editors' Introduction: Reproducible Research, _Computing in Science and Engineering_, Vol. 11(1):5–7, [doi:10.1109/MCSE.2009.14](http://dx.doi.org/10.1109/MCSE.2009.14)
+
+<sup>3</sup> Stark, Philip B. (2016), "A noob's guide to reproducibility and open science," talk given at the Nuclear Engineering/BIDS/BITSS joint seminar, UC Berkeley, 25 January 2016; [slides HTML](http://www.stat.berkeley.edu/~stark/Seminars/reproNE16.htm#1) and [talk video](https://youtu.be/xE2p9j0ntJA).
