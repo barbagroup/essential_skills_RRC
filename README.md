@@ -44,7 +44,7 @@ It consists of a commitment to:
 
 With this workshop, we propel the first commitment beyond our research group: 
 we take responsibility for not only teaching our group members, but broadly disseminating the know-how to our community. 
-The second commitment helps for what University of Washington professor Randall LeVeque called _"private reproducibility"_: 
+The second commitment helps for what University of Washington professor Randall LeVeque<sup>1</sup> called _"private reproducibility"_: 
 we can rebuild our own past research results from the precise version of the code that was used to create them.
 Private reproducibility also demands fully automating the analysis and visualization of data.
 Stanford professor Jon Claerbout said:
@@ -67,4 +67,4 @@ That's why all our subsequent reproducibility commitments deal with open access 
 
 ## References
 
-LeVeque, Randall J. (2012), "Issues in Reproducibility," talk given at the ICERM Workshop on Reproducibility in Computational and Experimental Mathematics, Brown University [slides PDF](https://icerm.brown.edu/materials/Slides/tw-12-5/Issues_in_Reproducibility_]_Randy_LeVeque,_University_of_Washington.pdf)
+<sup>1</sup> LeVeque, Randall J. (2012), "Issues in Reproducibility," talk given at the ICERM Workshop on Reproducibility in Computational and Experimental Mathematics, Brown University [slides PDF](https://icerm.brown.edu/materials/Slides/tw-12-5/Issues_in_Reproducibility_]_Randy_LeVeque,_University_of_Washington.pdf)
