@@ -61,7 +61,15 @@ That's why all our subsequent reproducibility commitments deal with open access 
 The American Physical Society issued a policy statement under the Ethics and Values category, titled ["What is Science?"](https://www.aps.org/policy/statements/99_6.cfm) (1999). 
 It reads:
 _"The success and credibility of science are anchored in the willingness of scientists to […] Expose their ideas and results to independent testing and replication by others. This requires the open exchange of data, procedures and materials."_
-In computational research, many 
+In computational research, we and many others maintain that this tenet calls for open-source software, and open data.
+
+### Open-source software and open data
+
+The Yale Law School Roundtable on Data and Code Sharing<sup>4</sup> (November 2009) made an unambiguous statement urging for more transparency in computational sciences. 
+Their recommendations include: assigning a unique identifier to every version of the data and code, describing within each publication the computing environment used, using open licenses and non-proprietary formats, and publishing under open-access conditions (or posting pre-prints).
+
+Subscribing to the recommendations of the Yale roundtable means we need to learn about software licensing and data management.
+This workshop will present and discuss the essential material and tools that open scientists need command of.
 
 
 
@@ -78,3 +86,5 @@ In computational research, many
 <sup>2</sup> Claerbout, Jon; cited in Fomel, S. and Claerbout, J.F. (2009), Guest Editors' Introduction: Reproducible Research, _Computing in Science and Engineering_, Vol. 11(1):5–7, [doi:10.1109/MCSE.2009.14](http://dx.doi.org/10.1109/MCSE.2009.14)
 
 <sup>3</sup> Stark, Philip B. (2016), "A noob's guide to reproducibility and open science," talk given at the Nuclear Engineering/BIDS/BITSS joint seminar, UC Berkeley, 25 January 2016; [slides HTML](http://www.stat.berkeley.edu/~stark/Seminars/reproNE16.htm#1) and [talk video](https://youtu.be/xE2p9j0ntJA).
+
+<sup>4</sup> CiSE Reproducible Research By the Yale Law School Roundtable on Data and Code Sharing, _Computing in Science and Engineering_, Vol. 12(5): 8–13 (Sept.-Oct. 2010), [doi:10.1109/mcse.2010.113](http://dx.doi.org/10.1109/mcse.2010.113)
