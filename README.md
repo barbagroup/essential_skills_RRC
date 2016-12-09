@@ -1,4 +1,4 @@
-# Foundations in Scientific Computing
+# Essential skills for reproducible research computing
 
 **A five-day, intensive, hands-on workshop on the foundational skills that everyone using computers in the pursuit of scientific research should have.**
 
