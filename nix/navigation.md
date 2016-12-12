@@ -101,7 +101,7 @@ Mandatory arguments to long options are mandatory for short options too.
                                use of --sort=none (-U) disables grouping
   -G, --no-group             in a long listing, don't print group names
   -h, --human-readable       with -l and/or -s, print human readable sizes
-                               (e.g., 1K 234M 2G)
+     recommonmark                          (e.g., 1K 234M 2G)
       --si                   likewise, but use powers of 1000 not 1024
   -H, --dereference-command-line
                              follow symbolic links listed on the command line
@@ -341,7 +341,7 @@ If you don't pass a target to `cd` it will always take you back to your home
 directory by default. This is a nice option if you're looking around in a very
 deep directory tree.
 
-# Absolute vs. relative paths
+## Absolute vs. relative paths
 
 All of the navigation so far has been _relative_. We are in the home directory,
 we want to go to `Desktop` and so we type `cd Desktop`. This wouldn't work if we
@@ -376,7 +376,7 @@ $ pwd
 /home/gil/Desktop
 ```
 
-# Tab completion
+## Tab completion
 
 Before we go any further, let's take a look at one of the most useful features
 of the *nix command line: tab completion
