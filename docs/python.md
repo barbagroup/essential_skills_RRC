@@ -1,18 +1,23 @@
 # Python (IPython)
 
-Python is a dynamic and high-level language that is easy to learn and it is fun to use. 
+Python is a dynamic and high-level language that is easy to learn and fun to use. 
 
-The classical Hello World program is as simple as:
+The classic Hello World program is as simple as:
 
 `print("Hello World!!")`
 
-Python itself is an **interpreter**, it translates Python *source code* into instructions that the computer can understand. It's a dynamic language (duck typing), i.e you don't need a type to invoke an existing method on an object. 
+Python itself is an **interpreter**, it translates Python *source code* into
+instructions that the computer can understand. It's a dynamic language (duck
+typing), i.e you don't need a type to invoke an existing method on an object.
 
-*"If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck."*
+*"If it looks like a duck, swims like a duck, and quacks like a duck, then it
+probably is a duck."*
 
-If you come from  different languages you probably code by doing scripts, with python we can do the same but we have other tools that allows as to work interactively. 
+If you come from different languages you probably code by doing scripts, with
+Python we can do the same but we have other tools that allows us to work
+interactively.
 
-Let's work with one of these tools (Ipython).
+Let's work with one of these tools (IPython).
 
 Type in a terminal :
 
@@ -67,9 +72,9 @@ In [9]: print(z)
 (3+1j)
 ```
 
-Regular arithmetic symbols are preserved except for the "power".
+Regular arithmetic symbols are preserved except for the "power" operator.
 
-For example power to 2 would be:
+For example, raising `x` to the power of 2 would be:
 
 `x**2`
 
@@ -147,7 +152,7 @@ Out[27]: 'dlrow olleh'
 
 ```
 
-Strings has different methods that we can applied to them, for example:
+Strings have different methods that we can apply to them, for example:
 
 Make all uppercase:
 
@@ -155,7 +160,7 @@ Make all uppercase:
 In [28]: my_string.upper()
 Out[28]: 'HELLO WORLD'
 ```
-Find where a character is or start:
+Find where a character is or starts:
 
 ```
 In [29]: my_string.find('hello')
@@ -165,7 +170,8 @@ In [30]: my_string.find('l')
 Out[30]: 2
 ```
 
-If you want to know all what you can do to a certain object, there is a magic command that will give you that information:
+If you want to know all of the available methods for a certain object, there is
+a simple command that will give you that information:
 
 `dir(my_string)`
 
@@ -173,13 +179,15 @@ If you want to know all what you can do to a certain object, there is a magic co
 
 ### Special variables
 
-Python has a special type of variables that are built into the language: namely `True`, `False`, `None` and `NotImplemented`. 
+Python has special variables that are built into the language: namely `True`,
+`False`, `None` and `NotImplemented`.
 
 **Boolean variables**
 
 `True` and `False`.
 
-In general, if the value is zero or empty, the it's converted to `False`. Otherwise, it'll be converted to `True`. 
+In general, if the value is zero or empty, then it's converted to `False`.
+Otherwise, it'll be converted to `True`.
 
 
 ```
@@ -193,9 +201,9 @@ Out[32]: True
 It also applies to logic statements, for example:
 
 ```
-In [33]: x=3
-In [34]: y=5
-In [35]: z=x>y
+In [33]: x = 3
+In [34]: y = 5
+In [35]: z = x > y
 
 In [36]: z
 Out[36]: False
@@ -207,23 +215,31 @@ Out[37]: bool
 
 **None is not Zero**
 
-It is used to indicate that no value was given or behaviour was defined. This is different than zero, an empty string, or some other nil value.
+It is used to indicate that no value was given or that the behavior was
+undefined. This is different than zero, an empty string, or some other nil
+value.
 
 
 **NotImplemented is not None**
 
-`NotImplemented` is used to indicate that a behavior is not defined or that the action we are trying to execute is impossible. For example, `NotImplemented` is used under the covers when you try to divide a string by a float. We will end up with a `TypeError`. (Try it on the shell)
+`NotImplemented` is used to indicate that a behavior is not defined or that the
+action we are trying to execute is impossible. For example, `NotImplemented` is
+used under the covers when you try to divide a string by a float. We will end up
+with a `TypeError`. (Try it on the shell)
 
 
 *Important notes*:
 
-* Variables names can be upper or lower letters, and we can put digits (0-9) and underscores. However, they can not start with a digit.
+* Variables names can be upper- or lower-case letters, and we can put digits
+  (0-9) and underscores. However, they can not start with a digit.
 
-* There are reserved words you can't use and you can find them in this [link](https://docs.python.org/2.5/ref/keywords.html).
+* There are reserved words you can't use and you can find them in
+  this [link](https://docs.python.org/3/reference/lexical_analysis.html#keywords)
 
 * Variables are mutable.
 
-* Standard data types: Numerical, String, **List**, Tuple, Dictionaries. (list are the default in python)
+* Standard data types: Numerical, String, **List**, Tuple, Dictionaries. (list
+  are the default in Python)
 
 * Numerical types: `int`, `long` (long integers), `float` and `complex`.
 
@@ -234,28 +250,31 @@ It is used to indicate that no value was given or behaviour was defined. This is
 
 Lists, dictionaries and tuples are kinds of *Collections*
 
-- A *collection* allows us to put many values in a a single "variable". 
-- They are convenient because we can carry all many values around in one convenient package.
+- A *collection* allows us to put many values in a single "variable".
+- They are convenient because we can carry many values around in one
+  convenient package.
 - Simple variables are not collections.
 
 ### Lists
 
-* The beginning and end of a list is denoted by square brackets `[]` and it's elements separated by commas. 
+* The beginning and end of a list is denoted by square brackets `[]` and its
+  elements are separated by commas.
 * A list element can be any Python object, even another list.
-* List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called replace for strings but it creates a copy)
+* List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called
+  replace for strings but it creates a copy)
 
 ```
 In [38]: my_list = [2, 50, 4, 61]
-In [39]: print (my_list)
+In [39]: print(my_list)
 [2, 50, 4, 61]
 
 In [40]: my_list[1] = 1
 
-In [41]: print (my_list)
+In [41]: print(my_list)
 [2, 1, 4, 61]                 #Now we have a 1 instead of a 50 in the second place.
 ```
 
-* `len()` function fives as the number of elements of the list.
+* `len()` function gives us the number of elements in the list.
 
 * We can *concatenate* lists by using the operator `+`: 
 
@@ -271,7 +290,8 @@ In [45]: print(conc)
 
 ```
 
-* There are different methods to apply to a list (check them by typing `dir(lst1)`), an example is `append()`.
+* There are different methods to apply to a list (check them by typing
+  `dir(lst1)`), an example is `append()`.
 
 ```
 In [46]: lst1.append(4)
@@ -289,7 +309,8 @@ In [50]: lst1.append([6, 7, 8])
 In [51]: lst1
 Out[51]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
 ```
-* Similar to strings we can access elements of a list by doing `list[i]` and also we can do slices.
+* Similar to strings we can access elements of a list by doing `list[i]` and
+  also we can do slices.
 
 ```
 In [52]: lst1[-1]
@@ -302,7 +323,7 @@ Out[53]: ['five', [6, 7, 8]]
 * We can check if something is or not in a list.
 
 ```
-In [54]: my_numbers = [3,17,27,19]
+In [54]: my_numbers = [3, 17, 27, 19]
 
 In [55]: 17 in my_numbers
 Out[55]: True
@@ -315,9 +336,9 @@ Out[57]: True
 ```
 Note: This operators does NOT modify the list.
 
-* A **list** is an ordered sequence. We can change the order by sorting a list. 
+* A **list** is an ordered sequence. We can change the order by sorting the list. 
 ```
-In [58]: names = ['Naty','Gil','Lorena','Chris']
+In [58]: names = ['Naty', 'Gil', 'Lorena', 'Chris']
 
 In [59]: names.sort()
 
@@ -343,7 +364,7 @@ In [65]: stuff = line.split()
 In [66]: print(stuff)
 ['A', 'lot', 'of', 'space']
 ```
-If we specify the delimiter (it can be a space `' '`, a `;`, a `:`, what ever you want).
+If we specify the delimiter (it can be a space `' '`, a `;`, a `:`, whatever you want).
 ```
 In [67]: line = 'A lot of       space'
 
@@ -376,7 +397,8 @@ In [74]: print(thing)
 
 * List: a linear collection of values that stay in order.
 * Dictionary: A "bag" of values, each with it's own label (key).
-* Dictionaries don't maintain order, we index the the things we put in the dictionary with a "look up" tag. For example:
+* Dictionaries don't maintain order, we index the the things we put in the
+  dictionary with a "look up" tag. For example:
 
 ```
 In [75]: bag = {}
@@ -400,7 +422,8 @@ In [82]: print(bag)
 
 ```
 
-* We can use the operators `in` and `not in` to check if a key is or not in a dictionary.
+* We can use the operators `in` and `not in` to check if a key is or not in a
+  dictionary.
 
 ```
 In [83]: 'book' in bag
@@ -424,7 +447,9 @@ dict_keys(['Maria', 'Lucas', 'John'])
 In [88]: print(ages.values())
 dict_values([28, 23, 30])
 ```
-*Note*: If we din't change the dictionary in between these operations, the keys and values correspond each other in order.
+
+*Note*: If we don't change the dictionary in between these operations, the keys
+and values are displayed in order.
 
 * We can get a list with pairs (key, value) by doing:
 ```
@@ -432,14 +457,22 @@ In [89]: print(ages.items())
 dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
 ```
 
-* Dictionaries are good for counting how often do we "see" something. 
+* Dictionaries are good for counting how often we "see" something. 
 
-There are other tow types of data structures tuples and sets, you can read about them in the python [documentation](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences). 
+There are another two built in data structures: tuples and sets. You can read
+about them in the
+Python
+[documentation](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences).
 
 *A quick insight into them:*
 
-* **Tuples** are like lists but they are IMMUTABLE, what saves time in accessing memory. (Syntax `(element1, element2, ...)`)
-* **Sets** are collections that have no order, no duplicate elements and their elements are [hashable](https://docs.python.org/3/glossary.html#term-hashable) what saves time in accessing memory. We can do operation like union, intersection, difference, and symmetric difference. (Syntax `{element1, element2, ...}` and an empty set is created by doing `set()`)
+* **Tuples** are like lists but they are IMMUTABLE, which saves time in
+  accessing memory. (Syntax `(element1, element2, ...)`)
+* **Sets** are collections that have no order, no duplicate elements and their
+  elements are [hashable](https://docs.python.org/3/glossary.html#term-hashable)
+  which saves time when accessing memory. We can do operations like union,
+  intersection, difference, and symmetric difference. (Syntax `{element1,
+  element2, ...}` and an empty set is created by doing `set()`)
 
 
 ** Example: look for an element in a list and in a set (%timeit)**
@@ -496,12 +529,12 @@ a is bigger than b
 In [100]: x = float(input('Insert your number: '))
 Insert your number: 711457
 
-In [101]: if x%17 == 0:
-     ...:     print('Your number is multiple of 17.')
+In [101]: if x % 17 == 0:
+     ...:     print('Your number is a multiple of 17.')
      ...: else :
-     ...:     print('Your number is not multiple of 17.')
+     ...:     print('Your number is not a multiple of 17.')
 
-Your number is not multiple of 17.
+Your number is not a multiple of 17.
 ```
 
 **If-elif-else** statement:
@@ -525,7 +558,8 @@ a is smaller than b.
 
 ### Loops
 
-Loops are useful for executing the same block multiple times. In python we have multiple looping formats: `while` loops, `for` loops, and comprehensions.
+Loops are useful for executing the same block multiple times. In Python we have
+multiple looping formats: `while` loops, `for` loops, and comprehensions.
 
 **While loops**
 
@@ -545,10 +579,10 @@ You have 2 seconds
 You have 1 seconds
 Boom!!!
 ```
-*Note:* You have to be careful in not generating an infinite loop. 
+*Note:* You have to be careful to not generate an infinite loop. 
 
 **For loops**
-It is usually more useful to iterate over a certain group of things or "iterable".
+It is usually more useful to iterate over a certain group of things or an "iterable".
 
 ```
 In [107]: for i in range(5,0,-1):
@@ -582,7 +616,7 @@ The 2 letter is a
 The 3 letter is t
 The 4 letter is y
 ```
-We can do loops in dictionaries too:
+We can loop over dictionaries too:
 
 ```
 In [112]: d = {"name":"Lionel", "last_name": "Messi", "birthday": [6, 24, 1987]}
@@ -604,7 +638,11 @@ last_name Messi
 
 **Comprehensions**
 
-`for` and `while` loops are really useful but they take at least "two lines", and if you need to save the result in of each loop iteration in a list, set, etc. This take at leas "three lines". Thankfully, Python is so great that in some cases we can reduce these cases to just ONE line! Let's see this with an example:
+`for` and `while` loops are really useful but they take at least "two lines",
+and if you need to save the result of each loop in the iteration in a list, set,
+etc. This takes at least "three lines". Thankfully, Python is so great that in
+some cases we can reduce these cases to just ONE line! Let's see this with an
+example:
 
 *Normal loop:*
 
@@ -650,19 +688,24 @@ Out[125]: [3, 57, 33, 9]
 
 ## IPython Magics
 
-Sometimes when we are working on IPython we would like to select certain lines and save them into a python script. In IPython we can do that! 
+Sometimes when we are working on IPython we would like to select certain lines
+and save them into a Python script. We can do that!
 
-We can check the history of what we've done in the current session of IPython by doing:
+We can check the history of what we've done in the current session of IPython by
+typing:
 
 `%hist -n`
 
-If we want to select certain lines and put them into a script, the command `%edit` allow us to do this. Let's suppose we want the lines 1, 3 and from 5-10 the we should do:
+If we want to select certain lines and put them into a script, the command
+`%edit` allow us to do this. Let's suppose we want lines 1, 3 and from 5-10; 
+then we should do:
 
 `%edit 1 3 5-10`
 
 and this will open the default editor with the lines we want. 
 
-Once we have that script saved if we want to run it we can use the command `%run`: 
+Once we have that script saved if we want to run it we can use the command
+`%run`:
 
 `%run my_script.py`
 
@@ -670,8 +713,10 @@ Once we have that script saved if we want to run it we can use the command `%run
 
 **Slicing** 
 
-1- Write code using find() and string slicing to extract the number at the end of the line below. Convert the extracted value to
-a floating point number and print it out. (Content took from online course "Python Data Structures" by Dr. Charles Severance)
+1- Write code using `find()` and string slicing to extract the number at the end
+of the line below. Convert the extracted value to a floating point number and
+print it out. (Content taken from online course "Python Data Structures" by Dr.
+Charles Severance)
 
 ```
 text = "X-DSPAM-Confidence:    0.8475"
@@ -681,8 +726,10 @@ text = "X-DSPAM-Confidence:    0.8475"
 
 [solu](/solutions/python.slicing.soln.md)
 
-**Slicing and for loop**
-2- Write a code that grabs, from each word, all the letters except 'ball' at the end of each one. Save the output in a list and print it out. 
+**Slicing and for loop** 
+
+2- Write a code that grabs, from each word, all the letters except 'ball' at the
+end of each one. Save the output in a list and print it out.
 
 The original list is:
 
@@ -714,11 +761,14 @@ In [134]: print(random)
 
 **Dictionaries for counting**
 
-3- Write a code that counts the amount of each letter that we have in the phrase provided.
+3- Write a code that counts the frequency of each word that we have in the
+phrase provided.
 
-Tips: split the text and put the words in a list, use a dictionary to count the repetitions.
+Tips: split the text and put the words in a list, use a dictionary to count the
+repetitions.
 
-(The idea of the following two exercises was inspired in content from online course "Python Data Structures" by Dr. Charles Severance)
+(The idea of the following two exercises was inspired by content from the online
+course "Python Data Structures" by Dr. Charles Severance)
 
 
 ```
@@ -727,12 +777,16 @@ happy = "I felt happy because I saw the others were happy and because I knew I s
 
 Your output should look like:
 
+```
 {'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
+```
 
+Remember that dictionaries don't preserve order, therefore the items in your
+output might be in a different order. However, you can still check if your
+output is equal to the one we provide by doing a logical comparison using the
+`==` operation, which should return `True` if you get it right.
 
-Remember that dictionaries don't preserve order, therefore the items in your output might be in a different order. However, you can still check if your output is equal to the one we provide by doing a logical comparison using the `==` operation, which should return `True` if you get it right.
-
-**Optional**: Rewrite the exercise 3 using the method `get()`. 
+**Optional**: Rewrite exercise 3 using the method `get()`. 
 
 *Solution*
 
@@ -772,9 +826,3 @@ In [144]: print(counts)
 {'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
 
 ```
-
-
-
-
-
-

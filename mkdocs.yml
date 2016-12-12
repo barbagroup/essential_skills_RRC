@@ -1,7 +1,6 @@
-site_name: Foundations in Scientific Computing
+site_name: Essential skills for reproducible research computing
 pages:
     - Home: index.md
-    - Schedule: tentative_schedule.md
     - UNIX Command Line:
         - Navigation: nix/navigation.md
         - File Creation and Editing: nix/file_handling.md
@@ -11,5 +10,3 @@ pages:
         - Uber exercise: nix/uber.md
     - (I)Python: 
         - Python: python.md
-        - Solution 1: solutions/python.slicing.soln.md
-    - git: git.md
