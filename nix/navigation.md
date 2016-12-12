@@ -341,6 +341,41 @@ If you don't pass a target to `cd` it will always take you back to your home
 directory by default. This is a nice option if you're looking around in a very
 deep directory tree.
 
+# Absolute vs. relative paths
+
+All of the navigation so far has been _relative_. We are in the home directory,
+we want to go to `Desktop` and so we type `cd Desktop`. This wouldn't work if we
+were in a different directory.
+
+One option when you need to jump around is to use _absolute_ paths, like this:
+
+```bash
+$ cd /home/gil/Desktop
+```
+```bash
+$ pwd
+```
+```bash
+/home/gil/Desktop
+```
+
+The benefit of an absolute path is that it will work no matter where you start
+from, which can be helpful if you are deep in a directory tree.
+
+One useful shortcut when typing out absolute paths is the `~`. The `~` is a
+shortcut for your home directory, so you don't need to explicitly write out
+`/home/<username>/` all the time.
+
+```bash
+$ cd ~/Desktop
+```
+```bash
+$ pwd
+```
+```bash
+/home/gil/Desktop
+```
+
 # Tab completion
 
 Before we go any further, let's take a look at one of the most useful features
