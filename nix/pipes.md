@@ -87,10 +87,6 @@ ls -F | wc -l
 
 Any output can be piped to (nearly) any other program. 
 
-### Quick exercise:
-
-Why does `cat filelist | wc -l` return `8` while `ls -F | wc -l` return `9`?
-
 ## `grep`
 
 `grep` is your best friend, you just don't know it yet. `grep` does stand for
