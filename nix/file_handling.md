@@ -63,6 +63,9 @@ an "empty" file, you can use `touch`. Try it!
 $ touch newfile
 ```
 ```console
+$ ls -F
+```
+```console
 Desktop/    Downloads/  Pictures/  TODO        Videos/
 Documents/  Music/      Public/    Templates/  newfile
 ```
