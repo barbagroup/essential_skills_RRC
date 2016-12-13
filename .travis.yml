@@ -7,9 +7,12 @@ python: '3.5'
 env:
   global:
     - secure: "jO4Jlj8QvHSacNl/85WL66RAj7n/WVp6xnCS3omdEIjfogZPgXZ5m/NZ9WHaMuQtT1HtsDxOoJr0JwMkyCn+milIbyTr5oZ7ke9L5GwpNA1uVGAY4hgCeupbzmnFeqihiLpT2WeZvrUXD3R4/W4p46XtjZG9WzanXEH8hISUfAZJR7y/l8ICslZF1/OUhlmrNiP2YQSk9IzvWusqwIbXrzj0zIiNybOr/TW8qHr5rx6GJTk8827YacklGiDUg56/S/0GOPlM5vgAyOyEFWWlzS6YifMZ9fpLIxLDrVZNhHxM98MmRRYEF09giUagPax5mx2eOQNfdBw6gIzCdL/B1oLOb+B5aOPBlimKOjx9CNb+xTPtYBD8h3845lNXOr46FhisS0nLW1Jcz+kdh6HrZuOTcOC4z21ijTrEbt/HS9YLyspxw7nUK+ZXR/c1HgWX6iWRA44NOT876nnrPB7qbYAQDYyIwUbtLCz5r1eMJCSUd1LANOOsFTfiQgfJsvdGODmrRcVwHeS8L8B6EgC/Yr0/2zOIL3qpLdoQ+MeduIbJSVinapJ7FJPxJc3+xiBCfpw1xW4slzoKYkT23BIJD2FsFxpO4eSs5GQwbgl4MXxaFbLViDDH77/aClyz/7kox4LzEbcwhhmvmFlKKMkgQoSXCEcBfwR/RUOr3UW4JM0="
-before install:
+
+before_install:
   - pip install doctr
+
 install:
+  - pip install doctr
   - pip install mkdocs python-markdown-math
 
 script:
