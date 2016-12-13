@@ -10,3 +10,5 @@ pages:
         - Uber exercise: nix/uber.md
     - (I)Python: 
         - Python: python.md
+    - git:
+        - git: git/git.md
