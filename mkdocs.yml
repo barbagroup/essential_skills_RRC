@@ -1,0 +1,6 @@
+site_name: Essential skills for reproducible research computing
+pages:
+    - Home: index.md
+    - IPython: python.md
+    - Numba: numba.md
+
