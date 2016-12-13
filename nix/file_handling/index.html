@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>File Creation and Editing - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "File Creation and Editing";
+    var mkdocs_page_input_path = "nix/file_handling.md";
+    var mkdocs_page_url = "/nix/file_handling/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">File Creation and Editing</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#creating-editing-removing-files">Creating, editing, removing files</a></li>
+                
+                    <li><a class="toctree-l4" href="#use-a-text-editor">Use a text editor</a></li>
+                
+                    <li><a class="toctree-l4" href="#create-an-empty-file">Create an empty file</a></li>
+                
+                    <li><a class="toctree-l4" href="#create-a-directory">Create a directory</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-a-file">Remove a file</a></li>
+                
+                    <li><a class="toctree-l4" href="#remove-a-directory">Remove a directory</a></li>
+                
+                    <li><a class="toctree-l4" href="#moverename-a-file">Move/Rename a file</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../redirection/">Redirection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../pipes/">Piping</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../man_and_less/">man and less</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../uber/">Uber exercise</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/">Python</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>UNIX Command Line &raquo;</li>
+        
+      
+    
+    <li>File Creation and Editing</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="creating-editing-removing-files">Creating, editing, removing files</h1>
+<h2 id="use-a-text-editor">Use a text editor</h2>
+<p>There are a <em>lot</em> of different text editors and a <em>lot</em> of strong
+feelings about which of them is the best.</p>
+<p>You can use any editor you like, but you <em>must</em> know how to use at least one
+terminal-friendly editor. In this workshop we are going to use <code>nano</code>. It's
+simple and easy to use.</p>
+<p>Make sure you're in your home directory (use <code>cd</code> and <code>pwd</code> to confirm) then type</p>
+<pre><code class="console">$ nano
+</code></pre>
+
+<p>This is a no-frills editor. Type something! How about a TODO list?</p>
+<pre><code class="console">TODO
+* [x] Learn how to navigate using the terminal
+* [ ] Learn how to create files
+* [ ] Learn about pipes and redirects
+</code></pre>
+
+<p>At the bottom you'll notice a bunch of different options but we are concerned
+with only two of them: <code>Write Out</code> (save) and <code>Exit</code>.</p>
+<p>The caret (<code>^</code>) means the Control key. To save the TODO list, hit <code>Ctrl+o</code>, type
+in a name (how about "TODO") and then hit <code>Enter</code>. <code>nano</code> will report that it
+wrote some number of lines.</p>
+<p>Now exit <code>nano</code> by typing <code>Ctrl+x</code>.</p>
+<p>Use <code>ls</code> to see what happened:</p>
+<pre><code class="console">$ ls -F
+</code></pre>
+
+<pre><code class="console">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  TODO  Templates/  Videos/
+</code></pre>
+
+<p>There's the TODO list! If you want to edit the todo list, you can open it up in
+<code>nano</code> (you can use tab completion for the filename, too!)</p>
+<pre><code class="console">$ nano TODO
+</code></pre>
+
+<p>Check off the second item on the todo list and then save and exit <code>nano</code>. Notice
+that when you hit <code>Ctrl+o</code> to save an existing file, <code>nano</code> will automatically
+fill in the name of the existing file. If you wanted to "Save As...", you can
+simply change the name in the <code>Write Out</code> bar.</p>
+<h2 id="create-an-empty-file">Create an empty file</h2>
+<p>There are a few ways to create files on the command line. If you want to create
+an "empty" file, you can use <code>touch</code>. Try it!</p>
+<pre><code class="console">$ touch newfile
+</code></pre>
+
+<pre><code class="console">$ ls -F
+</code></pre>
+
+<pre><code class="console">Desktop/    Downloads/  Pictures/  TODO        Videos/
+Documents/  Music/      Public/    Templates/  newfile
+</code></pre>
+
+<p>You can open <code>newfile</code> in <code>nano</code> to confirm that it's empty. Then just exit out
+using <code>Ctrl+x</code> since there's nothing to save!</p>
+<h2 id="create-a-directory">Create a directory</h2>
+<p>To create a new directory, use the <code>mkdir</code> command. We can create a <code>Research/</code>
+folder in the home directory.</p>
+<pre><code class="console">$ mkdir Research
+</code></pre>
+
+<pre><code class="console">$ ls -F
+</code></pre>
+
+<pre><code class="console">Desktop/    Downloads/  Pictures/  Research/  Templates/  newfile
+Documents/  Music/      Public/    TODO       Videos/
+</code></pre>
+
+<h2 id="remove-a-file">Remove a file</h2>
+<p>We don't need that empty file sitting around, we can remove it. To remove a
+file, use the <code>rm</code> command:</p>
+<pre><code class="console">$ rm newfile
+</code></pre>
+
+<p>Did anything happen?</p>
+<pre><code class="console">$ ls -F
+</code></pre>
+
+<pre><code class="console">Desktop/    Downloads/  Pictures/  Research/  Templates/
+Documents/  Music/      Public/    TODO       Videos/
+</code></pre>
+
+<p>Yes, <code>newfile</code> is gone. And this is something to be aware of: there is no
+"Recycle Bin". There is no "Undo". That file is gone.</p>
+<h2 id="remove-a-directory">Remove a directory</h2>
+<p>Let's try to remove the <code>Research</code> directory we created earlier.</p>
+<pre><code class="console">$ rm Research
+</code></pre>
+
+<pre><code class="console">rm: cannot remove 'Research': Is a directory
+</code></pre>
+
+<p><code>rm</code> only works with files by default. If you want to remove the directory you
+need to use the <code>-r</code> flag to specify a <em>recursive</em> removal.</p>
+<p><strong>This will delete the directory and ALL of its contents. BE CAREFUL WHEN USING
+THIS</strong></p>
+<pre><code class="console">$ rm -r Research
+</code></pre>
+
+<pre><code class="console">$ ls -F
+</code></pre>
+
+<pre><code class="console">Desktop/    Downloads/  Pictures/  TODO        Videos/
+Documents/  Music/      Public/    Templates/
+</code></pre>
+
+<h2 id="moverename-a-file">Move/Rename a file</h2>
+<p>We know how to create and delete files and folders now. What about renaming a
+file?</p>
+<p>To rename a file, we use the <code>mv</code> command, which is short for "move". This may
+seem a little bit odd at first, but renaming a file is the same as moving it to
+a different location.</p>
+<p>To start, let's make the file <code>TODO</code> lowercase. The syntax is <code>mv &lt;old location&gt;
+&lt;new location&gt;</code></p>
+<pre><code class="console">$ mv TODO todo
+</code></pre>
+
+<pre><code class="console">$ ls -F
+</code></pre>
+
+<pre><code class="console">Desktop/    Downloads/  Pictures/  Templates/  todo
+Documents/  Music/      Public/    Videos/
+</code></pre>
+
+<p>We <em>moved</em> the file <code>TODO</code> from <code>/home/&lt;user&gt;/TODO</code> to a new location, called
+<code>/home/&lt;user&gt;/todo</code>. Since the directory doesn't change, the result is a
+<em>renamed</em> file. </p>
+<p>We can also move the <code>todo</code> list to a different folder:</p>
+<pre><code class="console">$ mv todo Desktop/
+</code></pre>
+
+<pre><code class="console">$ ls -F
+</code></pre>
+
+<pre><code class="console">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
+</code></pre>
+
+<p>We specified <code>Desktop/</code> as the <code>&lt;new location&gt;</code> in the <code>mv</code> command. Since
+<code>Desktop/</code> is a folder, <code>todo</code> will move inside that folder. </p>
+<pre><code class="console">$ ls -F Desktop/
+</code></pre>
+
+<pre><code class="console">todo workshop_data.zip
+</code></pre>
+
+<p><strong>Note:</strong> As we see, if <code>&lt;new location&gt;</code> is a folder, then the file is moved
+inside the folder. However, if <code>&lt;new location&gt;</code> is an existing <em>file</em>, then that
+file will be overwritten.</p>
+<h3 id="todo-exercises">TODO exercises</h3>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../redirection/" class="btn btn-neutral float-right" title="Redirection">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../navigation/" class="btn btn-neutral" title="Navigation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../navigation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../redirection/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

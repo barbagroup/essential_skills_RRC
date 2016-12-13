@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Navigation - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Navigation";
+    var mkdocs_page_input_path = "nix/navigation.md";
+    var mkdocs_page_url = "/nix/navigation/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Navigation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#navigating-the-command-line">Navigating the Command Line</a></li>
+                
+                    <li><a class="toctree-l4" href="#whoami">whoami</a></li>
+                
+                    <li><a class="toctree-l4" href="#pwd">pwd</a></li>
+                
+                    <li><a class="toctree-l4" href="#ls">ls</a></li>
+                
+                    <li><a class="toctree-l4" href="#cd">cd</a></li>
+                
+                    <li><a class="toctree-l4" href="#absolute-vs-relative-paths">Absolute vs. relative paths</a></li>
+                
+                    <li><a class="toctree-l4" href="#tab-completion">Tab completion</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../file_handling/">File Creation and Editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../redirection/">Redirection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../pipes/">Piping</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../man_and_less/">man and less</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../uber/">Uber exercise</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/">Python</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>UNIX Command Line &raquo;</li>
+        
+      
+    
+    <li>Navigation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="navigating-the-command-line">Navigating the Command Line</h1>
+<p>Welcome!</p>
+<p>The command line can be a little intimidating at first, but it is a powerful and
+efficient way of interacting with your computer. It's also the lingua franca
+when dealing with computing clusters and remote machines.</p>
+<h2 id="whoami"><code>whoami</code></h2>
+<p>Before we do anything else, let's figure out who we are. We can ask on the
+command line:</p>
+<pre><code class="bash">$ whoami
+</code></pre>
+
+<pre><code class="bash">gil
+</code></pre>
+
+<p>That's my username!</p>
+<h2 id="pwd"><code>pwd</code></h2>
+<p>Now that we know who we are, time to figure out <em>where</em> we are.  To do that, we ask the terminal to <code>print working directory</code> or <code>pwd</code></p>
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home/gil/
+</code></pre>
+
+<p>We're in the "home directory" for our user. To understand the "home directory",
+let's take a brief moment to look at how the file system is organized.</p>
+<p><strong>Inverted tree diagram a la software carpentry</strong></p>
+<h2 id="ls"><code>ls</code></h2>
+<p>Let's look around</p>
+<pre><code class="bash">$ ls
+</code></pre>
+
+<pre><code class="bash">Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+</code></pre>
+
+<p>I think those are folders?  How can we tell? Use the <code>-F</code> flag</p>
+<pre><code class="bash">$ ls -F
+</code></pre>
+
+<pre><code class="bash">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
+</code></pre>
+
+<p>They all have a trailing slash, so they're all folders.
+What other options does <code>ls</code> have?</p>
+<pre><code class="bash">$ ls --help
+</code></pre>
+
+<pre><code class="bash">Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+      --block-size=SIZE      scale sizes by SIZE before printing them; e.g.,
+                               '--block-size=M' prints sizes in units of
+                               1,048,576 bytes; see SIZE format below
+  -B, --ignore-backups       do not list implied entries ending with ~
+  -c                         with -lt: sort by, and show, ctime (time of last
+                               modification of file status information);
+                               with -l: show ctime and sort by name;
+                               otherwise: sort by ctime, newest first
+  -C                         list entries by columns
+      --color[=WHEN]         colorize the output; WHEN can be 'always' (default
+                               if omitted), 'auto', or 'never'; more info below
+  -d, --directory            list directories themselves, not their contents
+  -D, --dired                generate output designed for Emacs' dired mode
+  -f                         do not sort, enable -aU, disable -ls --color
+  -F, --classify             append indicator (one of */=&gt;@|) to entries
+      --file-type            likewise, except do not append '*'
+      --format=WORD          across -x, commas -m, horizontal -x, long -l,
+                               single-column -1, verbose -l, vertical -C
+      --full-time            like -l --time-style=full-iso
+  -g                         like -l, but do not list owner
+      --group-directories-first
+                             group directories before files;
+                               can be augmented with a --sort option, but any
+                               use of --sort=none (-U) disables grouping
+  -G, --no-group             in a long listing, don't print group names
+  -h, --human-readable       with -l and/or -s, print human readable sizes
+     recommonmark                          (e.g., 1K 234M 2G)
+      --si                   likewise, but use powers of 1000 not 1024
+  -H, --dereference-command-line
+                             follow symbolic links listed on the command line
+      --dereference-command-line-symlink-to-dir
+                             follow each command line symbolic link
+                               that points to a directory
+      --hide=PATTERN         do not list implied entries matching shell PATTERN
+                               (overridden by -a or -A)
+      --indicator-style=WORD  append indicator with style WORD to entry names:
+                               none (default), slash (-p),
+                               file-type (--file-type), classify (-F)
+  -i, --inode                print the index number of each file
+  -I, --ignore=PATTERN       do not list implied entries matching shell PATTERN
+  -k, --kibibytes            default to 1024-byte blocks for disk usage
+  -l                         use a long listing format
+  -L, --dereference          when showing file information for a symbolic
+                               link, show information for the file the link
+                               references rather than for the link itself
+  -m                         fill width with a comma separated list of entries
+  -n, --numeric-uid-gid      like -l, but list numeric user and group IDs
+  -N, --literal              print raw entry names (don't treat e.g. control
+                               characters specially)
+  -o                         like -l, but do not list group information
+  -p, --indicator-style=slash
+                             append / indicator to directories
+  -q, --hide-control-chars   print ? instead of nongraphic characters
+      --show-control-chars   show nongraphic characters as-is (the default,
+                               unless program is 'ls' and output is a terminal)
+  -Q, --quote-name           enclose entry names in double quotes
+      --quoting-style=WORD   use quoting style WORD for entry names:
+                               literal, locale, shell, shell-always,
+                               shell-escape, shell-escape-always, c, escape
+  -r, --reverse              reverse order while sorting
+  -R, --recursive            list subdirectories recursively
+  -s, --size                 print the allocated size of each file, in blocks
+  -S                         sort by file size, largest first
+      --sort=WORD            sort by WORD instead of name: none (-U), size (-S),
+                               time (-t), version (-v), extension (-X)
+      --time=WORD            with -l, show time as WORD instead of default
+                               modification time: atime or access or use (-u);
+                               ctime or status (-c); also use specified time
+                               as sort key if --sort=time (newest first)
+      --time-style=STYLE     with -l, show times using style STYLE:
+                               full-iso, long-iso, iso, locale, or +FORMAT;
+                               FORMAT is interpreted like in 'date'; if FORMAT
+                               is FORMAT1&lt;newline&gt;FORMAT2, then FORMAT1 applies
+                               to non-recent files and FORMAT2 to recent files;
+                               if STYLE is prefixed with 'posix-', STYLE
+                               takes effect only outside the POSIX locale
+  -t                         sort by modification time, newest first
+  -T, --tabsize=COLS         assume tab stops at each COLS instead of 8
+  -u                         with -lt: sort by, and show, access time;
+                               with -l: show access time and sort by name;
+                               otherwise: sort by access time, newest first
+  -U                         do not sort; list entries in directory order
+  -v                         natural sort of (version) numbers within text
+  -w, --width=COLS           set output width to COLS.  0 means no limit
+  -x                         list entries by lines instead of by columns
+  -X                         sort alphabetically by entry extension
+  -Z, --context              print any security context of each file
+  -1                         list one file per line.  Avoid '\n' with -q or -b
+      --help     display this help and exit
+      --version  output version information and exit
+
+The SIZE argument is an integer and optional unit (example: 10K is 10*1024).
+Units are K,M,G,T,P,E,Z,Y (powers of 1024) or KB,MB,... (powers of 1000).
+
+Using color to distinguish file types is disabled both by default and
+with --color=never.  With --color=auto, ls emits color codes only when
+standard output is connected to a terminal.  The LS_COLORS environment
+variable can change the settings.  Use the dircolors command to set it.
+
+Exit status:
+ 0  if OK,
+ 1  if minor problems (e.g., cannot access subdirectory),
+ 2  if serious trouble (e.g., cannot access command-line argument).
+
+GNU coreutils online help: &lt;http://www.gnu.org/software/coreutils/&gt;
+Full documentation at: &lt;http://www.gnu.org/software/coreutils/ls&gt;
+or available locally via: info '(coreutils) ls invocation'
+</code></pre>
+
+<p>Oh...  lots... but we aren't going to worry about that.</p>
+<p>For now, let's look inside the <code>Desktop/</code> folder where we downloaded that zip
+file at the beginning of the workshop.</p>
+<p>If we want to use <code>ls</code> on a different folder than the <em>current</em> folder, just
+pass the name of the folder you want to look in:</p>
+<pre><code class="bash">$ ls -F Desktop/
+</code></pre>
+
+<pre><code class="bash">workshop_data.zip
+</code></pre>
+
+<p>There it is!</p>
+<h2 id="cd"><code>cd</code></h2>
+<p>Ok, we know where the zip file is, time to <em>change directory</em> to the folder <code>Desktop/</code>.  To do this, we use the <code>cd</code> command:</p>
+<pre><code class="bash">$ cd Desktop
+</code></pre>
+
+<p>Now let's check in with <code>pwd</code> again:</p>
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home/gil/Desktop
+</code></pre>
+
+<p>Ok! Cool! We moved! Now if we run <code>ls</code> we should see the zip file in here.</p>
+<pre><code class="bash">$ ls -F
+</code></pre>
+
+<pre><code class="bash">workshop_data.zip
+</code></pre>
+
+<p>And there it is! Ok. We'll come back here in a second, but first let's explore a
+little more. Let's go back to the "home directory".</p>
+<p>How do we do that...?</p>
+<p>The home directory has the same name as our username. Let's try that!</p>
+<pre><code class="bash">$ cd gil
+</code></pre>
+
+<pre><code class="bash">cd: no such file or directory: gil
+</code></pre>
+
+<p>That doesn't work. We're at the end of a branch of the tree that makes up the
+filesystem. There has to be a way to go back -- what are we missing?</p>
+<p>Let's use <code>ls</code> again, but this time add in the <code>-a</code> flag for "show all"</p>
+<pre><code class="bash">$ ls -a
+</code></pre>
+
+<pre><code class="bash">.  ..  workshop_data.zip
+</code></pre>
+
+<p>AHA! There are two more entries that we didn't see before: <code>.</code> and <code>..</code>
+What are those? Learn by doing, I say:</p>
+<pre><code class="bash">$ cd .
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home/gil/Desktop
+</code></pre>
+
+<p>We're in the same spot. The <code>.</code> directory is a special directory in every folder
+on the filesystem and it points to the current working directory.</p>
+<pre><code class="bash">$ cd ..
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home/gil/
+</code></pre>
+
+<p>We made it back <em>home</em>! The <code>..</code> directory is another special directory, but this one always points to the <em>parent</em> of the current directory.</p>
+<p>Let's try moving up a few more times!</p>
+<pre><code class="bash">$ cd ..
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home
+</code></pre>
+
+<pre><code class="bash">$ cd ..
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/
+</code></pre>
+
+<pre><code class="bash">$ cd ..
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/
+</code></pre>
+
+<p>We can't go back any further because we are at the <em>root</em> of the file <em>tree</em>.</p>
+<p>Now that we've had a look around, time to go back to the home directory.
+Let's use a little shortcut:</p>
+<pre><code class="bash">$ cd
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home/gil/
+</code></pre>
+
+<p>If you don't pass a target to <code>cd</code> it will always take you back to your home
+directory by default. This is a nice option if you're looking around in a very
+deep directory tree.</p>
+<h2 id="absolute-vs-relative-paths">Absolute vs. relative paths</h2>
+<p>All of the navigation so far has been <em>relative</em>. We are in the home directory,
+we want to go to <code>Desktop</code> and so we type <code>cd Desktop</code>. This wouldn't work if we
+were in a different directory.</p>
+<p>One option when you need to jump around is to use <em>absolute</em> paths, like this:</p>
+<pre><code class="bash">$ cd /home/gil/Desktop
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home/gil/Desktop
+</code></pre>
+
+<p>The benefit of an absolute path is that it will work no matter where you start
+from, which can be helpful if you are deep in a directory tree.</p>
+<p>One useful shortcut when typing out absolute paths is the <code>~</code>. The <code>~</code> is a
+shortcut for your home directory, so you don't need to explicitly write out
+<code>/home/&lt;username&gt;/</code> all the time.</p>
+<pre><code class="bash">$ cd ~/Desktop
+</code></pre>
+
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<pre><code class="bash">/home/gil/Desktop
+</code></pre>
+
+<h2 id="tab-completion">Tab completion</h2>
+<p>Before we go any further, let's take a look at one of the most useful features
+of the *nix command line: tab completion</p>
+<p>Return to the home directory if you aren't there already.</p>
+<pre><code class="bash">$ cd
+</code></pre>
+
+<p>Type</p>
+<pre><code class="bash">$ cd T
+</code></pre>
+
+<p>then hit the TAB key. Pretty cool, huh?</p>
+<p>Whenever you hit the TAB key, the shell will try to complete the remainder of
+the line for you! It can't read minds, though. Since <code>Templates</code> is the only
+directory beginning with <code>T</code>, the shell knew what to do. Let's try a different
+example.</p>
+<p>Type</p>
+<pre><code class="bash">$ cd Do
+</code></pre>
+
+<p>then hit the TAB key.</p>
+<p>Nothing. But hit it again</p>
+<pre><code class="bash">Documents/  Downloads/
+</code></pre>
+
+<p>There are two possible answers based on a prefix <code>Do</code>. In this case, tab
+completion will only complete up to the common prefix, which is just <code>Do</code>. It
+needs a little more information to finish the completion. Try adding a <code>c</code> and
+hitting TAB again.</p>
+<pre><code class="bash">$ cd Doc
+</code></pre>
+
+<pre><code class="bash">$ cd Documents/
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../file_handling/" class="btn btn-neutral float-right" title="File Creation and Editing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../file_handling/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

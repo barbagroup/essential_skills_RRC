@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Piping - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Piping";
+    var mkdocs_page_input_path = "nix/pipes.md";
+    var mkdocs_page_url = "/nix/pipes/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../navigation/">Navigation</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../file_handling/">File Creation and Editing</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../redirection/">Redirection</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Piping</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#pipes-and-intro-to-unix-utilities">Pipes and intro to unix utilities</a></li>
+                
+                    <li><a class="toctree-l4" href="#cat">cat</a></li>
+                
+                    <li><a class="toctree-l4" href="#time-to-pipe">Time to pipe!</a></li>
+                
+                    <li><a class="toctree-l4" href="#skip-filelist">Skip filelist</a></li>
+                
+                    <li><a class="toctree-l4" href="#grep">grep</a></li>
+                
+                    <li><a class="toctree-l4" href="#sort">sort</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../man_and_less/">man and less</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../uber/">Uber exercise</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/">Python</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>UNIX Command Line &raquo;</li>
+        
+      
+    
+    <li>Piping</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="pipes-and-intro-to-unix-utilities">Pipes and intro to unix utilities</h1>
+<p>We just learned about redirecting output to files using the <code>&gt;</code> operator. In
+addition to redirecting a data stream to a file, we can also <em>intercept</em> that
+stream of information and perform another operation on it. </p>
+<p>To do this we use the <code>|</code> operator which we call a pipe. </p>
+<p>Pipes allow a user to string together a series of commands, a "command
+pipeline", and there are many useful utilites that are commonly installed on
+UNIX systems. </p>
+<p>The use of these many small programs is only clear when we use it in concert
+with pipes, so we're going to learn about them at the same time.</p>
+<h2 id="cat"><code>cat</code></h2>
+<p>In the redirection exercise we wrote the contents of the command <code>ls -F</code> into a
+file called <code>filelist</code>. When we checked to see if it worked, we opened the file
+up in <code>nano</code>. That didn't take very long, but it can be a pain if you need to
+look through the contents of a number of files.</p>
+<p>Now, we didn't need to <em>edit</em> <code>filelist</code>, right? We just wanted to look at it. 
+This is the perfect job for <code>cat</code>!</p>
+<p><code>cat</code> dumps the contents of a file into <code>stdout</code> (by default). </p>
+<p>Try it out on <code>filelist</code> to see what happens.</p>
+<pre><code class="bash">$ cat filelist
+</code></pre>
+
+<pre><code class="bash">Desktop/
+Documents/
+Downloads/
+Music/
+Pictures/
+Public/
+Templates/
+Videos/
+</code></pre>
+
+<h2 id="time-to-pipe">Time to pipe!</h2>
+<p>Remember <code>wc -l</code>? We used it to count the lines in <code>filelist</code>. We did:</p>
+<pre><code class="bash">$ wc -l filelist
+</code></pre>
+
+<pre><code class="bash">8 filelist
+</code></pre>
+
+<p>But instead of doing it this way, we can also <strong>pipe</strong> the <em>contents</em> of
+<code>filelist</code> to <code>wc</code>.</p>
+<p>Try it out!</p>
+<pre><code class="bash">$ cat filelist | wc -l
+</code></pre>
+
+<pre><code class="bash">8
+</code></pre>
+
+<p>What just happened? </p>
+<p>We used <code>cat</code> to dump the contents of <code>filelist</code> to the screen (<code>stdout</code>). But
+then, instead of printing the contents, we intercepted them with the pipe and
+instead fed them into <code>wc</code>. </p>
+<h2 id="skip-filelist">Skip <code>filelist</code></h2>
+<p>We used <code>&gt;</code> to redirect the contents of <code>ls -F</code>, then used <code>cat</code> to dump the
+contents of <code>filelist</code> and then piped those contents to <code>wc</code>. Are all of these
+steps necessary?</p>
+<p>No! How about: </p>
+<pre><code class="bash">ls -F | wc -l
+</code></pre>
+
+<pre><code class="bash">9
+</code></pre>
+
+<p>Any output can be piped to (nearly) any other program. </p>
+<h2 id="grep"><code>grep</code></h2>
+<p><code>grep</code> is your best friend, you just don't know it yet. <code>grep</code> does stand for
+something, but it's long and confusing, so just accept that <code>grep</code> is <code>grep</code>. </p>
+<p><code>grep</code> searches through text files and streams for matches. It is one of the
+most powerful tools in the UNIX toolbox. It's also <em>42 years old</em>. And we still
+use it. It's that good.</p>
+<p>Try it out by piping the contents of <code>ls -F</code> and <code>grep</code>ping for "Do"</p>
+<pre><code class="bash">$ ls -F | grep Do
+</code></pre>
+
+<pre><code class="bash">Documents/
+Downloads/
+</code></pre>
+
+<h3 id="exercise">Exercise</h3>
+<p>There are obviously two files/folders that contain <code>Do</code> that <code>grep</code> has matched.
+But what if there were hundreds? How can we count the number of results from a
+<code>grep</code>? </p>
+<p>Use <code>ls</code>, <code>grep</code> and any tools we've already learned about to get the command
+line to spit out the number of files/folders that contain <code>Do</code> in their title.</p>
+<h2 id="sort"><code>sort</code></h2>
+<pre><code class="bash">wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
+</code></pre>
+
+<p>Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
+take a look at what the file contains:</p>
+<pre><code class="bash">$ cat copa_america_goals 
+</code></pre>
+
+<pre><code class="bash">1 Miku
+1 Neymar
+1 Robinho
+3 Sergio Aguero
+2 Charles Aranguiz
+3 Lucas Barrios
+1 Edgar Benitez
+2 Miller Bolanos
+1 Andrew Carrillo
+1 Douglas Costa
+1 Christian Cueva
+2 Angel Di Maria
+1 Roberto Firmino
+1 Jose Gimenez
+1 Derlis Gonzalez
+4 Paolo Guerrero
+1 Nelson Haedo Valdez
+2 Gonzalo Higuain
+1 Mauricio Isla
+2 Raul Jimenez
+2 Marcelo Martins Moreno
+1 Gary Medel
+1 Lionel Messi
+1 Jeison Murillo
+1 Javier pastore
+1 Claudio Pizarro
+1 Ronald Raldes
+1 Cristian Rodriguez
+1 Marcos Rojo
+1 Salomon Rondon
+1 Alexis Sanchez
+1 Thiago Silva
+1 Martis Smedberg-Dalence
+2 Enner Valencia
+4 Eduardo Vargas
+3 Arturo Vidal
+2 Matias Vuoso
+</code></pre>
+
+<p>The first column is goals, then first names, then last names. And of course,
+some players only have one name. How many players scored 4 goals? We can <code>grep</code>
+for that, which will definitely work, but we can also sort the list easily using
+the <code>sort</code> command.  Try it out!</p>
+<pre><code class="bash">$ cat copa_america_goals | sort
+</code></pre>
+
+<pre><code class="bash">1 Alexis Sanchez
+1 Andrew Carrillo
+1 Christian Cueva
+1 Claudio Pizarro
+1 Cristian Rodriguez
+1 Derlis Gonzalez
+1 Douglas Costa
+1 Edgar Benitez
+1 Gary Medel
+1 Javier pastore
+1 Jeison Murillo
+1 Jose Gimenez
+1 Lionel Messi
+1 Marcos Rojo
+1 Martis Smedberg-Dalence
+1 Mauricio Isla
+1 Miku
+1 Nelson Haedo Valdez
+1 Neymar
+1 Roberto Firmino
+1 Robinho
+1 Ronald Raldes
+1 Salomon Rondon
+1 Thiago Silva
+2 Angel Di Maria
+2 Charles Aranguiz
+2 Enner Valencia
+2 Gonzalo Higuain
+2 Marcelo Martins Moreno
+2 Matias Vuoso
+2 Miller Bolanos
+2 Raul Jimenez
+3 Arturo Vidal
+3 Lucas Barrios
+3 Sergio Aguero
+4 Eduardo Vargas
+4 Paolo Guerrero
+</code></pre>
+
+<p>And we see that at the bottom of the sorted list there are two players who
+scored 4 goals in the Copa. </p>
+<p>Now, sorting goal scorers by last name seems a little strange if we care about
+the number of goals scored. Let's save the list of goals but sort it by the
+number of goals. How should we do that?</p>
+<pre><code class="bash">$ cat copa_america_goals | sort &gt; copa_goals_sorted
+</code></pre>
+
+<p>And remember, there's no output to the screen (<code>stdout</code>) because we <em>redirected</em>
+it to a new file. We can <code>cat</code> the new file to make sure it worked as we expect.</p>
+<pre><code class="bash">$ cat copa_goals_sorted 
+</code></pre>
+
+<pre><code class="bash">1 Alexis Sanchez
+1 Andrew Carrillo
+1 Christian Cueva
+1 Claudio Pizarro
+1 Cristian Rodriguez
+1 Derlis Gonzalez
+1 Douglas Costa
+1 Edgar Benitez
+1 Gary Medel
+1 Javier pastore
+1 Jeison Murillo
+1 Jose Gimenez
+1 Lionel Messi
+1 Marcos Rojo
+1 Martis Smedberg-Dalence
+1 Mauricio Isla
+1 Miku
+1 Nelson Haedo Valdez
+1 Neymar
+1 Roberto Firmino
+1 Robinho
+1 Ronald Raldes
+1 Salomon Rondon
+1 Thiago Silva
+2 Angel Di Maria
+2 Charles Aranguiz
+2 Enner Valencia
+2 Gonzalo Higuain
+2 Marcelo Martins Moreno
+2 Matias Vuoso
+2 Miller Bolanos
+2 Raul Jimenez
+3 Arturo Vidal
+3 Lucas Barrios
+3 Sergio Aguero
+4 Eduardo Vargas
+4 Paolo Guerrero
+</code></pre>
+
+<pre><code class="bash">$ cat copa_goals_sorted | grep Alexis
+</code></pre>
+
+<pre><code class="bash">1 Alexis Sanchez
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../man_and_less/" class="btn btn-neutral float-right" title="man and less">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../redirection/" class="btn btn-neutral" title="Redirection"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../redirection/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../man_and_less/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>
