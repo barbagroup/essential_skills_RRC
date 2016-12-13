@@ -116,8 +116,9 @@ Use `ls`, `grep` and any tools we've already learned about to get the command
 line to spit out the number of files/folders that contain `Do` in their title.
 
 ## `sort`
-
-#TODO: get the copa america goals list using wget
+```bash
+wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
+```
 
 Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
 take a look at what the file contains:
