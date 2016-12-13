@@ -17,9 +17,10 @@ for nb in notebooks:
 notebooks = g`numba/*_execute.ipynb`
 for i, nb in enumerate(notebooks):
     jupyter nbconvert --to markdown @(nb)
-    sed -i 's/\.\figures/\.\./figures/g' *.md
+    sed -i 's/\.\/figures/\.\.\/figures/g' *.md
     mv @(nb.rstrip('.ipynb')+'.md') @('../docs/numba/{}.md'.format(i+1))
 
 /usr/bin/rm numba/*_execute.ipynb
+/usr/bin/rm -r ../docs/numba/*_execute_files
 
 mv numba/*_execute_files ../docs/numba/
