@@ -24,3 +24,5 @@ extra_javascript:
 markdown_extensions:
     - mdx_math
 theme: readthedocs
+docs_dir: docs
+site_sir: _site
