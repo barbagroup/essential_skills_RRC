@@ -1,6 +1,12 @@
 site_name: Essential skills for reproducible research computing
 pages:
     - Home: index.md
-    - IPython: python.md
-    - Numba: numba.md
-
+    - UNIX Command Line:
+        - Navigation: nix/navigation.md
+        - File Creation and Editing: nix/file_handling.md
+        - Redirection: nix/redirection.md
+        - Piping: nix/pipes.md
+        - man and less: nix/man_and_less.md
+        - Uber exercise: nix/uber.md
+    - (I)Python: 
+        - Python: python.md
