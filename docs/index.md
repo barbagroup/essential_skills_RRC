@@ -1,1 +1,1 @@
-# Essential skills for reproducible research computing
+../README.md

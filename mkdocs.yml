@@ -12,3 +12,19 @@ pages:
         - Python: python.md
     - git:
         - git: git/git.md
+    - Numba:
+        - Profiling: numba/1.md
+        - Intro to JIT: numba/2.md
+        - Numba Internals: numba/3.md
+        - CFD Intro: numba/4.md
+        - Cavity Flow: numba/5.md
+        - vectorize: numba/6.md
+
+extra_javascript: 
+    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+theme: readthedocs
+docs_dir: docs
+site_dir: _site
