@@ -562,24 +562,3 @@ nothing to commit, working tree clean
 ```
 
 And we're back to the future!
-
-### Collaborating
-
-`clone`, `push`, `pull`, `remote` (note `fetch` and `merge` but do not dwell)
-
-## GitHub add collaborator
-
-Students pair up, push to same repo. Try force a conflict (and also a rejected
-push)
-
-## Branching and Pull Requests
-
-This might be presented as a demonstration with a followup assignment.
-
-## Advanced `git` features demo
-
-`bisect` for finding bugs
-(ideally an automatic bisect for demo purposes)
-
-Portions of this lesson were adapted from [Software Carpentry](http://swcarpentry.github.io )
-Copyright © Software Carpentry under [CC-BY](https://creativecommons.org/licenses/by/4.0/ )
