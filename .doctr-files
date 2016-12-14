@@ -5,6 +5,9 @@
 ./fonts/fontawesome-webfont.svg
 ./fonts/fontawesome-webfont.ttf
 ./fonts/fontawesome-webfont.woff
+./git/git/index.html
+./git/phdcomics.1531.png
+./git/word_count.py
 ./img/favicon.ico
 ./index.html
 ./js/highlight.pack.js
