@@ -72,6 +72,16 @@
     
         
     <url>
+     <loc>/jupyter/1/</loc>
+     <lastmod>2016-12-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/numba/1/</loc>
      <lastmod>2016-12-15</lastmod>
      <changefreq>daily</changefreq>
