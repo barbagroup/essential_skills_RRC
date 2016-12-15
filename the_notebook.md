@@ -106,8 +106,8 @@ Once you close your notebook, you will see in the main Jupyter page that your
 notebook file has a green book symbol. You should click in the box at the left 
 of that symbol, and then click where it says `shutdown`. Finally, go to the
 terminal that we use at the beginning to open the jupyter notebook and type
-`[Ctrl] + [c]`.
- 
+`[Ctrl] + [c]` and you are all done!
+
 
 
 
