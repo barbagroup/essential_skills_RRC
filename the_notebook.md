@@ -72,7 +72,7 @@ bar or by doing  `[Ctrl] + [s]`. This will save in the directory you are located
 a `.ipynb` file with the name that you pick for your file. 
 
 
-## The two different modes: Edit mode and Command mode
+## The two different modes: Edit mode and Command mode [1]
 
 **Edit mode:**
 
@@ -108,6 +108,10 @@ of that symbol, and then click where it says `shutdown`. Finally, go to the
 terminal that we use at the beginning to open the jupyter notebook and type
 `[Ctrl] + [c]` and you are all done!
 
+
+## References:
+
+[1] [Notebook Basics: Modal Editor](http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html)
 
 
 
