@@ -67,6 +67,7 @@ Cool! ah?
 
 * First lets pick a name for our notebook. Click where it says Untitled (right 
 next to the Jupyter logo) and pick the name that you want. 
+
 * You save your changes by either clicking in the floppy disk symbol in the tool
 bar or by doing  `[Ctrl] + [s]`. This will save in the directory you are located,
 a `.ipynb` file with the name that you pick for your file. 
