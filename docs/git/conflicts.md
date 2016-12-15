@@ -1,17 +1,46 @@
 # Conflicts
 
-## 
-```diff
-$ git add word_count.py
+The last section went over one scenario where two different changesets are
+brought together. `git` used the 'recursive' strategy to smash the changes
+together and we got something called a 'merge commit' (again, more on this
+later).
+
+`git` was able to merge the two histories together because they were mostly
+independent. One change was to the script `word_count.py`, the other was
+creating a file called `README.md`. Not much overlap there. What about if there
+are changes made to the same file in two places?
+
+Time to find out!
+
+
+## Edit on GitHub
+
+Edit the file `word_count.py` using GitHub's online editor and change the first line of the script to read: 
+
+```python
+happy = input("Enter a statement to check word frequency: ")
 ```
-```diff
-$  git commit -v
-[master ad6cb94] change wording in initial prompt
- 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Commit your changes on GitHub. 
+
+## Edit locally
+
+Using `nano`, edit `word_count.py` and change the first line of the script to read:
+
+```python
+happy = input("Enter a phrase to word count:")
 ```
+
+Commit your changes to this file locally. 
+
+
+We now have changes made to the same file in two different places. What happens
+if we `push`?
 
 ```diff
 $ git push
+```
+```diff
 To github.com:gforsyth/wordcount.git
  ! [rejected]        master -> master (fetch first)
 error: failed to push some refs to 'git@github.com:gforsyth/wordcount.git'
@@ -22,8 +51,14 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details
 ```
 
+The same thing as before -- if there are changes on a remote you have to `pull`
+them in before you can `push`.
+
+
 ```diff
 $ git pull
+```
+```diff
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
@@ -35,8 +70,20 @@ CONFLICT (content): Merge conflict in word_count.py
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
+Ahh, that's different... 
+
+`git` is very clever, but if you make changes to the same line in two different
+places, how can `git` know which change should take precedence? In this case, it
+needs human input to decide how to proceed.
+
+We're in uncharted waters, what should we do? 
+
+When in doubt, `git status`.
+
 ```diff
 $ git status
+```
+```diff
 On branch master
 Your branch and 'origin/master' have diverged,
 and have 1 and 1 different commits each, respectively.
@@ -52,8 +99,21 @@ Unmerged paths:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
+
+`status` tells us that the two repositories have diverged. And we have to fix
+the conflicts and then run `git commit`.
+
+How do we know what the conflicts are?
+
+## Resolving conflicts
+
+`git status` told us that the file `word_count.py` is the trouble maker. Let's
+look at it.
+
 ```diff
 $ cat word_count.py 
+```
+```bash
 <<<<<<< HEAD
 happy = input("Enter a phrase to word count: ")
 =======
@@ -70,6 +130,20 @@ print("The word frequency of your statement is: ")
 print(counts)
 ```
 
+Because `git` didn't know how to fix the conflict, it has highlighted the
+problem area for us by surrounding it with chevrons. 
+
+The two versions of the same line are separated by the `=`s
+
+There are also labels telling us where each version is from: `HEAD` refers to
+the local repository, the commit hash is the commit we made on GitHub.
+
+To resolve the conflict, open the file in `nano` and edit it to combine the two
+versions of the `input` statement in whatever way you think is best. Make sure
+to remove all of the chevrons and the equal signs when you are done.
+
+We ended up with this:
+
 ```diff
 $ cat word_count.py 
 happy = input("Enter a phrase to check word frequency: ")
@@ -84,8 +158,13 @@ print("The word frequency of your statement is: ")
 print(counts)
 ```
 
+Now that we have manually resolved the conflict, what do we do? 
+`git status` told us, let's check again:
+
 ```diff
 $ git status
+```
+```diff
 On branch master
 Your branch and 'origin/master' have diverged,
 and have 1 and 1 different commits each, respectively.
@@ -101,28 +180,18 @@ Unmerged paths:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-```
-gil@theo ~/wordcount master 🐚  git add word_count.py
-```
-```
-gil@theo ~/wordcount master 🐚  git status
-On branch master
-Your branch and 'origin/master' have diverged,
-and have 1 and 1 different commits each, respectively.
-  (use "git pull" to merge the remote branch into yours)
-All conflicts fixed but you are still merging.
-  (use "git commit" to conclude merge)
 
-Changes to be committed:
+Right, we need to stage the changes me made. 
 
-	modified:   word_count.py
+```diff
+$ git add word_count.py
 ```
 
-```
-gil@theo ~/wordcount master 🐚  git commit
-```
+And now it's time to `commit`!
 
-
+```diff
+$ git commit
+```
 ```diff
 Merge branch 'master' of github.com:gforsyth/wordcount
 
@@ -149,12 +218,22 @@ Merge branch 'master' of github.com:gforsyth/wordcount
 #
 ```
 
+That's different. When you `git commit` after resolving a conflict, `git` will
+autofill a message for you. You are welcome to use the automatic message, or
+replace it with something else, it's up to you.
+
+Save and quit and we should see the following:
+
 ```diff
 [master d31e6b9] Merge branch 'master' of github.com:gforsyth/wordcount
 ```
 
+We have resolved the conflict! That wasn't so bad, was it? Now that we fixed the conflict, we just have to push it back up to GitHub.
+
 ```diff
 $ git push
+```
+```diff
 Counting objects: 6, done.
 Delta compression using up to 12 threads.
 Compressing objects: 100% (4/4), done.
