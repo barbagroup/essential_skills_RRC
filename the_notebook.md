@@ -26,7 +26,7 @@ your default browser will open with the jupyter app. It should look like this:
 To start a new notebook click on the top right where it says **New** and click 
 in `Python 3`, a new tab will appear in your browser and you will see:
 
-<center>![jupyter_new](resources/new_notebook.png)<center>
+<center>![jupyter_new](resources/new_notebook3.png)<center>
 
 The notebook opens by default with a with a single empty code cell. Try to write
 some Python there and execute the cell  by doing `[shift] + [enter]`.
@@ -72,6 +72,34 @@ bar or by doing  `[Ctrl] + [s]`. This will save in the directory you are located
 a `.ipynb` file with the name that you pick for your file. 
 
 
+## The two different modes: Edit mode and Command mode
+
+**Edit mode:**
+
+* We know we are in this mode when we see a green cell boarder and a prompt 
+showing in the editor area.
+
+* We enter in **edit mode** by pressing `Enter` or clicking on the cell.
+
+* When we are in edit mode, we can type into the cell, like a normal text editor.
+
+
+**Command mode:**
+
+* We know we are in this mode when we see a grey cell boarder with a left blue
+margin.
+
+* We enter in **command mode** by pressing `Esc` or clicking outside the cell's
+area.
+
+* In **command mode** the keyboard is mapped to certain that allows
+you to do certain actions easily.
+
+
+You can find a list of [shortcuts](https://www.cheatography.com/weidadeyue/cheat-sheets/jupyter-notebook/)
+in the two different modes, check them out and have fun!
+
+
 ## How we shut down the Kernel?
 
 Once you close your notebook, you will see in the main Jupyter page that your 
@@ -80,7 +108,6 @@ of that symbol, and then click where it says `shutdown`. Finally, go to the
 terminal that we use at the beginning to open the jupyter notebook and type
 `[Ctrl] + [c]`.
  
-
 
 
 
