@@ -12,6 +12,10 @@ pages:
         - Python: python.md
     - git:
         - git: git/git.md
+        - GitHub:
+            - push and pull: git/github1.md
+            - merging: git/merge.md
+            - conflicts: git/conflicts.md
     - Numba:
         - Profiling: numba/1.md
         - Intro to JIT: numba/2.md
