@@ -26,7 +26,7 @@ your default browser will open with the jupyter app. It should look like this:
 To start a new notebook click on the top right where it says **New** and click 
 in `Python 3`, a new tab will appear in your browser and you will see:
 
-<center>![jupyter_new](resources/new_notebook3.png)<center>
+<center>![jupyter_new](resources/new_notebook.png)<center>
 
 The notebook opens by default with a with a single empty code cell. Try to write
 some Python there and execute the cell  by doing `[shift] + [enter]`.
