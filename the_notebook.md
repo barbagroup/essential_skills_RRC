@@ -22,3 +22,58 @@ All set? Let's open a terminal and type `jupyter notebook` hit enter and tadah!!
 your default browser will open with the jupyter app. It should look like this:
 
 <center>![jupyter_main](resources/jupyter-main.png)<center>
+
+To start a new notebook click on the top right where it says **New** and click 
+in `Python 3`, a new tab will appear in your browser and you will see:
+
+<center>![jupyter_new](resources/new_notebook.png)<center>
+
+The notebook opens by default with a with a single empty code cell. Try to write
+some Python there and execute the cell  by doing `[shift] + [enter]`.
+
+For example:
+
+* `2 * 12` 
+
+* `print('Hello world')`
+
+* `x = 5` #(notice there will be no output)
+
+* `print(x * 'Hi there')`
+
+## What if we want to add a new cell? 
+
+To add a new cell (by default will be a code cell) press the **`+`** that is in
+tool bar. 
+
+## What if I want that cell to be a markdown cell? 
+
+In the tool bar you can see a display bar that says **Code**, display that and 
+pick **Markdown**. Now you can write some text using the markdown syntax and you
+can write some equations using the [LaTeX](https://en.wikipedia.org/wiki/LaTeX).
+
+For example, type in a markdown cell:
+
+`$\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x)$`
+
+or 
+
+`${\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+
+\left (\cos({x}^{2})\right )^{2}}}$`
+
+Cool! ah? 
+
+## How we save our work? 
+
+* First lets pick a name for our notebook. Click where it says Untitled (right 
+next to the Jupyter logo) and pick the name that you want. 
+* You save your changes by either clicking in the floppy disk symbol in the tool
+bar or by doing  `[Ctrl] + [s]`. This will save in the directory you are located,
+a `.ipynb` file with the name that you pick for your file. 
+
+ 
+
+
+
+
+
