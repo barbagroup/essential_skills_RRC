@@ -16,4 +16,9 @@ to HTML. It is easy to learn, check out the syntax in the "Daring Fireball"
 If you follow the installation steps for this workshop listed in the [required
 software](https://github.com/barbagroup/essential_skills_RRC/blob/master/software_requirements.md)
 markdown, you should have jupyter installed. If not, go to the link and follow
- the installation requirements.
+the installation requirements.
+
+All set? Let's open a terminal and type `jupyter notebook` hit enter and tadah!!
+your default browser will open with the jupyter app. It should look like this:
+
+<center>![jupyter_main](resources/jupyter-main.png)<center>
