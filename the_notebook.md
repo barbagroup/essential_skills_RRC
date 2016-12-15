@@ -71,6 +71,14 @@ next to the Jupyter logo) and pick the name that you want.
 bar or by doing  `[Ctrl] + [s]`. This will save in the directory you are located,
 a `.ipynb` file with the name that you pick for your file. 
 
+
+## How we shut down the Kernel?
+
+Once you close your notebook, you will see in the main Jupyter page that your 
+notebook file has a green book symbol. You should click in the box at the left 
+of that symbol, and then click where it says `shutdown`. Finally, go to the
+terminal that we use at the beginning to open the jupyter notebook and type
+`[Ctrl] + [c]`.
  
 
 
