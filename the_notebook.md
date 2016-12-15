@@ -46,7 +46,7 @@ For example:
 To add a new cell (by default will be a code cell) press the **`+`** that is in
 tool bar. 
 
-## What if I want that cell to be a markdown cell? 
+## What if we want that cell to be a markdown cell? 
 
 In the tool bar you can see a display bar that says **Code**, display that and 
 pick **Markdown**. Now you can write some text using the markdown syntax and you
