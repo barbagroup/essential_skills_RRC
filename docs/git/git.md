@@ -1,12 +1,10 @@
-# Intro to `git` and GitHub
+# Intro to `git`
 
 ## Why version control?
 
 ![](./phdcomics.1531.png)
 
 ## Initial configuration
-
-`git config` to set editor, colors, email, name, etc... (use `nano`)
 
 ### User settings
 
