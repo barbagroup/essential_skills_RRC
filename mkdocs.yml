@@ -16,6 +16,8 @@ pages:
             - push and pull: git/github1.md
             - merging: git/merge.md
             - conflicts: git/conflicts.md
+    - Jupyter:
+        - The Python Scientific Stack: jupyter/1.md
     - Numba:
         - Profiling: numba/1.md
         - Intro to JIT: numba/2.md
@@ -32,3 +34,4 @@ markdown_extensions:
 theme: readthedocs
 docs_dir: docs
 site_dir: _site
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.
