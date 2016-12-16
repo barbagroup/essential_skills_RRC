@@ -74,7 +74,7 @@ target/
 .ipynb_checkpoints
 
 # Data file
-.csv
+*.csv
 # pyenv
 .python-version
 
