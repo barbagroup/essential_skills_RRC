@@ -73,6 +73,8 @@ target/
 # IPython Notebook
 .ipynb_checkpoints
 
+# Data file
+.csv
 # pyenv
 .python-version
 
