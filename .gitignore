@@ -75,6 +75,7 @@ target/
 
 # Data file
 *.csv
+
 # pyenv
 .python-version
 
