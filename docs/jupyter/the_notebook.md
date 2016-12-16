@@ -22,14 +22,18 @@ installation requirements.
 All set? Let's open a terminal and type `jupyter notebook` hit enter and tadah!!
 Your default browser will open with the jupyter app. It should look like this:
 
-<center>![jupyter_main](resources/jupyter-main.png)<center>
+![jupyter_main](./resources/jupyter-main.png)
 
 To start a new notebook click on the top right where it says **New** and click 
-on `Python 3`, a new tab will appear in your browser and you will see:
+on `Python 3`. 
 
-<center>![jupyter_new](resources/new_notebook.png)<center>
+![](./resources/new_notebook.png)
 
-The notebook opens by default with a with a single empty code cell. Try to write
+A new tab will appear in your browser and you will see:
+
+![jupyter_new](resources/new_notebook.png)
+
+The notebook opens by default with a single empty code cell. Try to write
 some Python there and execute the cell by doing `[shift] + [enter]`.
 
 For example:
