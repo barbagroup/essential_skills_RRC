@@ -15,6 +15,10 @@
 ./js/modernizr-2.8.3.min.js
 ./js/theme.js
 ./jupyter/1/index.html
+./jupyter/resources/create_notebook.png
+./jupyter/resources/jupyter-main.png
+./jupyter/resources/new_notebook.png
+./jupyter/the_notebook/index.html
 ./jupyter/the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_104_0.png
 ./jupyter/the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_32_1.png
 ./jupyter/the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_34_0.png

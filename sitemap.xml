@@ -72,6 +72,12 @@
     
         
     <url>
+     <loc>/jupyter/the_notebook/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/jupyter/1/</loc>
      <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
