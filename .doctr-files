@@ -5,7 +5,6 @@
 ./fonts/fontawesome-webfont.svg
 ./fonts/fontawesome-webfont.ttf
 ./fonts/fontawesome-webfont.woff
-./git/conflicts/index.html
 ./git/gh_images/add_readme.png
 ./git/gh_images/create_repo.gif
 ./git/gh_images/create_repo.png
@@ -16,9 +15,6 @@
 ./git/gh_images/gh_readme_commit.png
 ./git/gh_images/readme_added.png
 ./git/gh_images/setup_help.png
-./git/git/index.html
-./git/github1/index.html
-./git/merge/index.html
 ./git/phdcomics.1531.png
 ./git/word_count.py
 ./img/favicon.ico
@@ -27,11 +23,9 @@
 ./js/jquery-2.1.1.min.js
 ./js/modernizr-2.8.3.min.js
 ./js/theme.js
-./jupyter/1/index.html
 ./jupyter/resources/create_notebook.png
 ./jupyter/resources/jupyter-main.png
 ./jupyter/resources/new_notebook.png
-./jupyter/the_notebook/index.html
 ./jupyter/the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_104_0.png
 ./jupyter/the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_32_1.png
 ./jupyter/the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_34_0.png
@@ -52,7 +46,6 @@
 ./mkdocs/js/search-results-template.mustache
 ./mkdocs/js/search.js
 ./mkdocs/js/text.js
-./mkdocs/search_index.json
 ./nix/file_handling/index.html
 ./nix/man_and_less/index.html
 ./nix/navigation/index.html
@@ -61,15 +54,8 @@
 ./nix/uber/index.html
 ./numba/04.1.Cavity_Flow_execute_files/04.1.Cavity_Flow_execute_18_0.png
 ./numba/04.1.Cavity_Flow_execute_files/04.1.Cavity_Flow_execute_35_0.png
-./numba/1/index.html
-./numba/2/index.html
-./numba/3/index.html
-./numba/4/index.html
-./numba/5/index.html
-./numba/6/index.html
 ./numba/figures/2dgrid.svg
 ./numba/figures/drivencavity.svg
 ./numba/figures/ppe.highlight.svg
-./python/index.html
 ./search.html
 ./sitemap.xml
