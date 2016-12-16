@@ -408,6 +408,9 @@ on the first line and then save and quit.</p>
 
 <p>Great! We have created a snapshot of our file in the repo history. Now, even if
 we make changes, we'll be able to roll them back if we don't like them.</p>
+<p>You might be wondering what is a "good commit" message. We encourage you to go
+to this <a href="http://chris.beams.io/posts/git-commit/">link</a> and read about why good
+commit messages matter and how to write them. </p>
 <p>Did we miss anything? Check <code>git status</code> to find out the state of the repository
 now.</p>
 <pre><code class="bash">$ git status 
@@ -421,7 +424,9 @@ now.</p>
 <pre><code class="bash">$ python word_count.py 
 </code></pre>
 
-<pre><code class="bash">{'not': 1, 'but': 1, 'because': 2, 'the': 1, 'was': 1, 'others': 1, 'happy': 4, 'I': 5, 'really': 1, 'knew': 1, 'feel': 1, 'and': 1, 'felt': 1, 'should': 1, 'saw': 1, 'were': 1}
+<pre><code class="bash">{'not': 1, 'but': 1, 'because': 2, 'the': 1, 'was': 1, 'others': 1, 'happy': 4, 
+'I': 5, 'really': 1, 'knew': 1, 'feel': 1, 'and': 1, 'felt': 1, 'should': 1, 
+'saw': 1, 'were': 1}
 </code></pre>
 
 <p>Ok. This would be more useful if the user could decide what to input, don't you
@@ -435,7 +440,8 @@ sentence.</p>
 I can't quite tell if this is working.  Is it working?
 </code></pre>
 
-<pre><code class="bash">{'tell': 1, 'is': 1, 'working.': 1, 'if': 1, 'working?': 1, &quot;can't&quot;: 1, 'quite': 1, 'Is': 1, 'it': 1, 'I': 1, 'this': 1}
+<pre><code class="bash">{'tell': 1, 'is': 1, 'working.': 1, 'if': 1, 'working?': 1, &quot;can't&quot;: 1,
+ 'quite': 1, 'Is': 1, 'it': 1, 'I': 1, 'this': 1}
 </code></pre>
 
 <p>It is working! Time to check in with <code>git</code>.</p>
