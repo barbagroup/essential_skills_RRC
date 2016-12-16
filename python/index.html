@@ -966,41 +966,8 @@ output might be in a different order. However, you can still check if your
 output is equal to the one we provide by doing a logical comparison using the
 <code>==</code> operation, which should return <code>True</code> if you get it right.</p>
 <p><strong>Optional</strong>: Rewrite exercise 3 using the method <code>get()</code>. </p>
-<p><em>Solution</em></p>
-<pre><code>In [135]: happy = &quot;I felt happy because I saw the others were happy and because I knew I should feel happy
-    ...:  but I was not really happy&quot;
-
-In [136]: words = happy.split()
-
-In [137]: counts = {}
-
-In [138]: for word in words:
-     ...:     if word not in counts:
-     ...:         counts[word] = 1
-     ...:     else:
-     ...:         counts[word] += 1
-     ...: 
-
-In [139]: print(counts)
-{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
-
-</code></pre>
-
-<p><em>Solution using <code>get()</code></em></p>
-<pre><code>In [140]: happy = &quot;I felt happy because I saw the others were happy and because I knew I should feel happy
-    ...:  but I was not really happy&quot;
-
-In [141]: words = happy.split()
-
-In [142]: counts = {}
-In [143]: for word in words:
-     ...:     counts[word] = counts.get(word, 0) +1 
-     ...:
-
-In [144]: print(counts)
-{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
-
-</code></pre>
+<p><em>Solutions</em></p>
+<p><a href="/solutions/python.dict.count.soln.md">solu</a></p>
               
             </div>
           </div>
