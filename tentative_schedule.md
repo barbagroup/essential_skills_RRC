@@ -1,9 +1,9 @@
-|              | Mon            | Tue              | Wed                    | Thurs | Fri     |
-|--------------|----------------|------------------|------------------------|-------|---------|
-| AM (10 - 12) | Bash           | git              | Jupyter                |       |         |
-| PM (1 - 3)   | Bash / IPython | GitHub Workflow  | Numpy Matplotlib etc.  |       |         |
-| PM (3 - 5)   | IPython        | Software License | Testing / Code Hygiene |       | Also... |
-|              |                |                  |                        |       |         |
+|              | Mon            | Tue                 | Wed                    | Thurs | Fri     |
+|--------------|----------------|-------------------- |------------------------|-------|---------|
+| AM  | UNIX Command Line          | git                 | Jupyter                | Laplace Equation: Hands-on      | Numba: High Performance Python   |
+| PM    | UNIX cont'd / IPython | GitHub Workflow \#1 | Python Scientific Stack| Intro Testing / setting up projects | xonsh |
+| PM    | IPython        | Open Licensing      | Reproducibility Talk   | GitHub Workflow \#2      |         |
+|              |                |                     |                        |                                 |         |
 
 # Topics
 ## Linux command line
@@ -12,6 +12,11 @@
   keystrokes. Combine existing programs in new ways and automate repetitive
   tasks to avoid typing the same things over and over again. Use of the shell is
   fundamental to reproducibility in scientific computing.
+  - Navigation
+  - File Handling
+  - Redirection
+  - Piping
+  - `cat`, `head`, `tail`, `sort`, `wc`, `grep`, `less`
 
 ## The Python Scientific Stack
 

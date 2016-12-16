@@ -1,0 +1,33 @@
+site_name: Essential skills for reproducible research computing
+pages:
+    - Home: index.md
+    - UNIX Command Line:
+        - Navigation: nix/navigation.md
+        - File Creation and Editing: nix/file_handling.md
+        - Redirection: nix/redirection.md
+        - Piping: nix/pipes.md
+        - man and less: nix/man_and_less.md
+        - Uber exercise: nix/uber.md
+    - (I)Python: 
+        - Python: python.md
+    - git:
+        - git: git/git.md
+    - Jupyter:
+        - The Python Scientific Stack: jupyter/1.md
+    - Numba:
+        - Profiling: numba/1.md
+        - Intro to JIT: numba/2.md
+        - Numba Internals: numba/3.md
+        - CFD Intro: numba/4.md
+        - Cavity Flow: numba/5.md
+        - vectorize: numba/6.md
+
+extra_javascript: 
+    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+theme: readthedocs
+docs_dir: docs
+site_dir: _site
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.
