@@ -212,7 +212,9 @@ $ python word_count.py
 ```
 
 ```bash
-{'not': 1, 'but': 1, 'because': 2, 'the': 1, 'was': 1, 'others': 1, 'happy': 4, 'I': 5, 'really': 1, 'knew': 1, 'feel': 1, 'and': 1, 'felt': 1, 'should': 1, 'saw': 1, 'were': 1}
+{'not': 1, 'but': 1, 'because': 2, 'the': 1, 'was': 1, 'others': 1, 'happy': 4, 
+'I': 5, 'really': 1, 'knew': 1, 'feel': 1, 'and': 1, 'felt': 1, 'should': 1, 
+'saw': 1, 'were': 1}
 ```
 
 Ok. This would be more useful if the user could decide what to input, don't you
@@ -230,7 +232,8 @@ $ python word_count.py
 I can't quite tell if this is working.  Is it working?
 ```
 ```bash
-{'tell': 1, 'is': 1, 'working.': 1, 'if': 1, 'working?': 1, "can't": 1, 'quite': 1, 'Is': 1, 'it': 1, 'I': 1, 'this': 1}
+{'tell': 1, 'is': 1, 'working.': 1, 'if': 1, 'working?': 1, "can't": 1,
+ 'quite': 1, 'Is': 1, 'it': 1, 'I': 1, 'this': 1}
 ```
 
 It is working! Time to check in with `git`.
