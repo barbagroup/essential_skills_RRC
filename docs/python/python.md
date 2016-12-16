@@ -722,9 +722,7 @@ Charles Severance)
 text = "X-DSPAM-Confidence:    0.8475"
 ```
 
-*Solution:*
-
-[solu](/solutions/python.slicing.soln.md)
+[*Solution*](./solutions/python.slicing.soln.md)
 
 **Slicing and for loop** 
 
@@ -743,21 +741,7 @@ And your output should look like:
 ['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
 ```
 
-*Solution*:
-```
-In [131]: sports = ['Football', 'Volleyball', 'Basketball', 'Baseball', 'Handball', 'Softball']
-
-In [132]: random = []
-
-In [133]: for sport in sports:
-     ...:     word = sport[:-4]
-     ...:     random.append(word)
-     ...:
-
-In [134]: print(random)
-['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
-
-```
+[*Solution*](./solutions/python.ball.soln.md)
 
 **Dictionaries for counting**
 
@@ -788,7 +772,5 @@ output is equal to the one we provide by doing a logical comparison using the
 
 **Optional**: Rewrite exercise 3 using the method `get()`. 
 
-*Solutions*
-
-[solu](/solutions/python.dict.count.soln.md)
+[*Solutions*](./solutions/python.dict.count.soln.md)
 
