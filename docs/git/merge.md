@@ -28,7 +28,8 @@ you can just click "Commit"
 
 ![](./gh_images/readme_added.png)
 
-You should see something like the above, where the GitHub copy of the repo now has two files: `word_count.py` and `README.md`
+You should see something like the above, where the GitHub copy of the repo now 
+has two files: `word_count.py` and `README.md`
 
 ## Make a change to the local repo
 
@@ -128,7 +129,8 @@ back to that a little bit later, but the quick explanation is that it's a commit
 that helps join the _slightly_ divergent histories of the GitHub repo and the
 local repo. 
 
-One last thing before we move on, now that we have `pull`ed and `merge`d these changes, we should `push` those changes back up to GitHub. 
+One last thing before we move on, now that we have `pull`ed and `merge`d these 
+changes, we should `push` those changes back up to GitHub. 
 
 `push` often!
 
