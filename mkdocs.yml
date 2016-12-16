@@ -12,6 +12,10 @@ pages:
         - Python: python.md
     - git:
         - git: git/git.md
+        - GitHub:
+            - push and pull: git/github1.md
+            - merging: git/merge.md
+            - conflicts: git/conflicts.md
     - Jupyter:
         - Navigating the notebook: jupyter/the_notebook.md
         - The Python Scientific Stack: jupyter/1.md
