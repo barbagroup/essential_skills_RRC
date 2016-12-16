@@ -15,7 +15,8 @@ Time to find out!
 
 ## Edit on GitHub
 
-Edit the file `word_count.py` using GitHub's online editor and change the first line of the script to read: 
+Edit the file `word_count.py` using GitHub's online editor and change the first 
+line of the script to read: 
 
 ```python
 happy = input("Enter a statement to check word frequency: ")
@@ -228,7 +229,8 @@ Save and quit and we should see the following:
 [master d31e6b9] Merge branch 'master' of github.com:gforsyth/wordcount
 ```
 
-We have resolved the conflict! That wasn't so bad, was it? Now that we fixed the conflict, we just have to push it back up to GitHub.
+We have resolved the conflict! That wasn't so bad, was it? Now that we fixed the
+conflict, we just have to push it back up to GitHub.
 
 ```diff
 $ git push
