@@ -13,6 +13,7 @@ pages:
     - git:
         - git: git/git.md
     - Jupyter:
+        - Navigating the notebook: jupyter/the_notebook.md
         - The Python Scientific Stack: jupyter/1.md
     - Numba:
         - Profiling: numba/1.md
