@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Python - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python";
+    var mkdocs_page_input_path = "python/python.md";
+    var mkdocs_page_url = "/python/python/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Python</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#python-ipython">Python (IPython)</a></li>
+                
+                    <li><a class="toctree-l4" href="#python-is-awesome">Python is awesome!</a></li>
+                
+                    <li><a class="toctree-l4" href="#variable-assignment-types-and-duck-typing">Variable assignment, types and  duck typing</a></li>
+                
+                    <li><a class="toctree-l4" href="#data-structures">Data structures</a></li>
+                
+                    <li><a class="toctree-l4" href="#control-flow">Control Flow</a></li>
+                
+                    <li><a class="toctree-l4" href="#ipython-magics">IPython Magics</a></li>
+                
+                    <li><a class="toctree-l4" href="#exercises">Exercises</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/conflicts/">conflicts</a>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/the_notebook/">Navigating the notebook</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/1/">The Python Scientific Stack</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>(I)Python &raquo;</li>
+        
+      
+    
+    <li>Python</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="python-ipython">Python (IPython)</h1>
+<p>Python is a dynamic and high-level language that is easy to learn and fun to use. </p>
+<p>The classic Hello World program is as simple as:</p>
+<p><code>print("Hello World!!")</code></p>
+<p>Python itself is an <strong>interpreter</strong>, it translates Python <em>source code</em> into
+instructions that the computer can understand. It's a dynamic language (duck
+typing), i.e you don't need a type to invoke an existing method on an object.</p>
+<p><em>"If it looks like a duck, swims like a duck, and quacks like a duck, then it
+probably is a duck."</em></p>
+<p>If you come from different languages you probably code by doing scripts, with
+Python we can do the same but we have other tools that allows us to work
+interactively.</p>
+<p>Let's work with one of these tools (IPython).</p>
+<p>Type in a terminal :</p>
+<p><code>ipython</code></p>
+<h2 id="python-is-awesome">Python is awesome!</h2>
+<pre><code>import this 
+import antigravity
+</code></pre>
+
+<h2 id="variable-assignment-types-and-duck-typing">Variable assignment, types and  duck typing</h2>
+<p>In Python is perfectly legal to do:</p>
+<pre><code>In [1]: x = 3
+</code></pre>
+
+<p>Try:</p>
+<pre><code>In [2]: x
+Out[2]: 3
+</code></pre>
+
+<pre><code>In [3]: print(x)
+3
+</code></pre>
+
+<pre><code>In [4]: type(x)
+Out[4]: int
+</code></pre>
+
+<pre><code>In [5]: float(x)
+Out[5]: 3.0
+</code></pre>
+
+<pre><code>In [6]: complex(x)
+Out[6]: (3+0j)
+</code></pre>
+
+<pre><code>In [7]: z = complex(x)
+In [8]: z = z + 1j
+In [9]: print(z)
+(3+1j)
+</code></pre>
+
+<p>Regular arithmetic symbols are preserved except for the "power" operator.</p>
+<p>For example, raising <code>x</code> to the power of 2 would be:</p>
+<p><code>x**2</code></p>
+<h3 id="what-about-strings">What about strings?</h3>
+<pre><code>In [9]: y = &quot;hello&quot;
+
+In [10]: y
+Out[10]: 'hello'
+
+In [11]: print(y)
+hello
+
+In [12]: type(y)
+Out[12]: str
+
+In [13]: s = &quot;world&quot;
+</code></pre>
+
+<p>What if we try to "sum" strings? </p>
+<pre><code>In [14]: my_string = y+s
+
+In [15]: print(my_string)
+helloworld
+</code></pre>
+
+<p>Let's add a space in between:</p>
+<pre><code>In [16]: my_string = y +' '+ s
+
+In [17]: print(my_string)
+hello world
+</code></pre>
+
+<p>We can access the different elements of a string and slices of it, for example:</p>
+<pre><code>In [18]: my_string[0]
+Out[18]: 'h'
+
+In [19]: my_string[8]
+Out[19]: 'r'
+
+In [20]: my_string[-1]
+Out[20]: 'd'
+
+In [21]: my_string[2:5]
+Out[21]: 'llo'
+
+In [22]: my_string[2:]
+Out[22]: 'llo world'
+
+In [23]: my_string[1:-1]
+Out[23]: 'ello worl'
+</code></pre>
+
+<p><strong> Note that the start index is inclusive and the end one is exclusive!!</strong></p>
+<p>Slices also allow us to pick specific elements from specific slices, for example:</p>
+<pre><code>In [24]: my_string[::2]
+Out[24]: 'hlowrd'
+
+In [25]: my_string[1:-1:2]
+Out[25]: 'el ol'
+
+In [26]: my_string[2::3]
+Out[26]: 'l r'
+
+In [27]: my_string[::-1]
+Out[27]: 'dlrow olleh'
+
+</code></pre>
+
+<p>Strings have different methods that we can apply to them, for example:</p>
+<p>Make all uppercase:</p>
+<pre><code>In [28]: my_string.upper()
+Out[28]: 'HELLO WORLD'
+</code></pre>
+
+<p>Find where a character is or starts:</p>
+<pre><code>In [29]: my_string.find('hello')
+Out[29]: 0
+
+In [30]: my_string.find('l')
+Out[30]: 2
+</code></pre>
+
+<p>If you want to know all of the available methods for a certain object, there is
+a simple command that will give you that information:</p>
+<p><code>dir(my_string)</code></p>
+<h3 id="special-variables">Special variables</h3>
+<p>Python has special variables that are built into the language: namely <code>True</code>,
+<code>False</code>, <code>None</code> and <code>NotImplemented</code>.</p>
+<p><strong>Boolean variables</strong></p>
+<p><code>True</code> and <code>False</code>.</p>
+<p>In general, if the value is zero or empty, then it's converted to <code>False</code>.
+Otherwise, it'll be converted to <code>True</code>.</p>
+<pre><code>In [31]: bool(0)
+Out[31]: False
+
+In [32]: bool(&quot;Do we need oxygen?&quot;)
+Out[32]: True
+</code></pre>
+
+<p>It also applies to logic statements, for example:</p>
+<pre><code>In [33]: x = 3
+In [34]: y = 5
+In [35]: z = x &gt; y
+
+In [36]: z
+Out[36]: False
+
+In [37]: type(z)
+Out[37]: bool
+
+</code></pre>
+
+<p><strong>None is not Zero</strong></p>
+<p>It is used to indicate that no value was given or that the behavior was
+undefined. This is different than zero, an empty string, or some other nil
+value.</p>
+<p><strong>NotImplemented is not None</strong></p>
+<p><code>NotImplemented</code> is used to indicate that a behavior is not defined or that the
+action we are trying to execute is impossible. For example, <code>NotImplemented</code> is
+used under the covers when you try to divide a string by a float. We will end up
+with a <code>TypeError</code>. (Try it on the shell)</p>
+<p><em>Important notes</em>:</p>
+<ul>
+<li>
+<p>Variables names can be upper- or lower-case letters, and we can put digits
+  (0-9) and underscores. However, they can not start with a digit.</p>
+</li>
+<li>
+<p>There are reserved words you can't use and you can find them in
+  this <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">link</a></p>
+</li>
+<li>
+<p>Variables are mutable.</p>
+</li>
+<li>
+<p>Standard data types: Numerical, String, <strong>List</strong>, Tuple, Dictionaries. (list
+  are the default in Python)</p>
+</li>
+<li>
+<p>Numerical types: <code>int</code>, <code>long</code> (long integers), <code>float</code> and <code>complex</code>.</p>
+</li>
+</ul>
+<h2 id="data-structures">Data structures</h2>
+<p>Lists, dictionaries and tuples are kinds of <em>Collections</em></p>
+<ul>
+<li>A <em>collection</em> allows us to put many values in a single "variable".</li>
+<li>They are convenient because we can carry many values around in one
+  convenient package.</li>
+<li>Simple variables are not collections.</li>
+</ul>
+<h3 id="lists">Lists</h3>
+<ul>
+<li>The beginning and end of a list is denoted by square brackets <code>[]</code> and its
+  elements are separated by commas.</li>
+<li>A list element can be any Python object, even another list.</li>
+<li>List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called
+  replace for strings but it creates a copy)</li>
+</ul>
+<pre><code>In [38]: my_list = [2, 50, 4, 61]
+In [39]: print(my_list)
+[2, 50, 4, 61]
+
+In [40]: my_list[1] = 1
+
+In [41]: print(my_list)
+[2, 1, 4, 61]                 #Now we have a 1 instead of a 50 in the second place.
+</code></pre>
+
+<ul>
+<li>
+<p><code>len()</code> function gives us the number of elements in the list.</p>
+</li>
+<li>
+<p>We can <em>concatenate</em> lists by using the operator <code>+</code>: </p>
+</li>
+</ul>
+<pre><code>In [42]: lst1 = [0,1,2,3]
+
+In [43]: lst2 = ['a','b','c']
+
+In [44]: conc = lst1 + lst2
+
+In [45]: print(conc)
+[0, 1, 2, 3, 'a', 'b', 'c']
+
+</code></pre>
+
+<ul>
+<li>There are different methods to apply to a list (check them by typing
+  <code>dir(lst1)</code>), an example is <code>append()</code>.</li>
+</ul>
+<pre><code>In [46]: lst1.append(4)
+
+In [47]: print(lst1)
+[0, 1, 2, 3, 4]
+
+In [48]: lst1.append('five')
+
+In [49]: lst1
+Out[49]: [0, 1, 2, 3, 4, 'five']
+
+In [50]: lst1.append([6, 7, 8])
+
+In [51]: lst1
+Out[51]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
+</code></pre>
+
+<ul>
+<li>Similar to strings we can access elements of a list by doing <code>list[i]</code> and
+  also we can do slices.</li>
+</ul>
+<pre><code>In [52]: lst1[-1]
+Out[52]: [6, 7, 8]
+
+In [53]: lst1[5:]
+Out[53]: ['five', [6, 7, 8]]
+</code></pre>
+
+<ul>
+<li>We can check if something is or not in a list.</li>
+</ul>
+<pre><code>In [54]: my_numbers = [3, 17, 27, 19]
+
+In [55]: 17 in my_numbers
+Out[55]: True
+
+In [56]: 2 in my_numbers
+Out[56]: False
+
+In [57]: 13 not in my_numbers
+Out[57]: True
+</code></pre>
+
+<p>Note: This operators does NOT modify the list.</p>
+<ul>
+<li>A <strong>list</strong> is an ordered sequence. We can change the order by sorting the list. </li>
+</ul>
+<pre><code>In [58]: names = ['Naty', 'Gil', 'Lorena', 'Chris']
+
+In [59]: names.sort()
+
+In [60]: print(names)
+['Chris', 'Gil', 'Lorena', 'Naty']
+</code></pre>
+
+<ul>
+<li><strong>Strings</strong> and <strong>lists</strong>. The <code>split()</code> function.</li>
+</ul>
+<pre><code>In [61]: string = 'Just three words'
+
+In [62]: str_list = string.split()
+
+In [63]: print(str_list)
+['Just', 'three', 'words']
+</code></pre>
+
+<p>Python takes care of long spaces, for example:</p>
+<pre><code>In [64]: line = 'A lot of       space'
+
+In [65]: stuff = line.split()
+
+In [66]: print(stuff)
+['A', 'lot', 'of', 'space']
+</code></pre>
+
+<p>If we specify the delimiter (it can be a space <code>' '</code>, a <code>;</code>, a <code>:</code>, whatever you want).</p>
+<pre><code>In [67]: line = 'A lot of       space'
+
+In [68]: stuff = line.split(' ')
+
+In [69]: print(stuff)
+['A', 'lot', 'of', '', '', '', '', '', '', 'space']
+</code></pre>
+
+<p><code>;</code> and many other characters are not delimiters by default:</p>
+<pre><code>In [70]: s = 'a;b;c'
+
+In [71]: thing  = s.split()
+
+In [72]: print(thing)
+a;b;c
+
+In [73]: thing = s.split(';')
+
+In [74]: print(thing)
+['a', 'b', 'c']
+</code></pre>
+
+<h3 id="dictionaries">Dictionaries</h3>
+<ul>
+<li>Dictionaries are also a type of collections and they are MUTABLE too. </li>
+</ul>
+<p><strong>Difference between lists and dictionaries:</strong></p>
+<ul>
+<li>List: a linear collection of values that stay in order.</li>
+<li>Dictionary: A "bag" of values, each with it's own label (key).</li>
+<li>Dictionaries don't maintain order, we index the the things we put in the
+  dictionary with a "look up" tag. For example:</li>
+</ul>
+<pre><code>In [75]: bag = {}
+
+In [76]: bag['money'] = 12
+
+In [77]: bag['candy'] = 5 
+
+In [78]: bag['tissues'] = 7 
+
+In [79]: print(bag)
+{'tissues': 7, 'money': 12, 'candy': 5}
+
+In [80]: print(bag['money'])
+12
+
+In [81]: bag['money'] += 2
+
+In [82]: print(bag)
+{'tissues': 7, 'money': 14, 'candy': 5}
+
+</code></pre>
+
+<ul>
+<li>We can use the operators <code>in</code> and <code>not in</code> to check if a key is or not in a
+  dictionary.</li>
+</ul>
+<pre><code>In [83]: 'book' in bag
+Out[83]: False
+
+In [84]: 'candy' in bag
+Out[84]: True
+
+In [85]: 'cigarette' not in bag
+Out[85]: True
+</code></pre>
+
+<ul>
+<li>Retrieving keys and values.</li>
+</ul>
+<pre><code>In [86]: ages = {'John': 30, 'Maria': 28, 'Lucas': 23}
+
+In [87]: print(ages.keys())
+dict_keys(['Maria', 'Lucas', 'John'])
+
+In [88]: print(ages.values())
+dict_values([28, 23, 30])
+</code></pre>
+
+<p><em>Note</em>: If we don't change the dictionary in between these operations, the keys
+and values are displayed in order.</p>
+<ul>
+<li>We can get a list with pairs (key, value) by doing:</li>
+</ul>
+<pre><code>In [89]: print(ages.items())
+dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
+</code></pre>
+
+<ul>
+<li>Dictionaries are good for counting how often we "see" something. </li>
+</ul>
+<p>There are another two built in data structures: tuples and sets. You can read
+about them in the
+Python
+<a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">documentation</a>.</p>
+<p><em>A quick insight into them:</em></p>
+<ul>
+<li><strong>Tuples</strong> are like lists but they are IMMUTABLE, which saves time in
+  accessing memory. (Syntax <code>(element1, element2, ...)</code>)</li>
+<li><strong>Sets</strong> are collections that have no order, no duplicate elements and their
+  elements are <a href="https://docs.python.org/3/glossary.html#term-hashable">hashable</a>
+  which saves time when accessing memory. We can do operations like union,
+  intersection, difference, and symmetric difference. (Syntax <code>{element1,
+  element2, ...}</code> and an empty set is created by doing <code>set()</code>)</li>
+</ul>
+<p><strong> Example: look for an element in a list and in a set (%timeit)</strong></p>
+<pre><code>In [90]: rg = range(50000)
+
+In [91]: lst = list(rg)
+
+In [92]: %time (40035 in lst)
+CPU times: user 4 ms, sys: 0 ns, total: 4 ms
+Wall time: 1.91 ms
+Out[92]: True
+
+In [93]: st = set(rg)
+
+In [94]: %time (40035 in st)
+CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 14.3 µs
+Out[94]: True
+
+In [95]: %time (51000 in lst)
+CPU times: user 4 ms, sys: 0 ns, total: 4 ms
+Wall time: 2.36 ms
+Out[95]: False
+
+In [96]: %time (51000 in st)
+CPU times: user 0 ns, sys: 0 ns, total: 0 ns
+Wall time: 12.9 µs
+Out[96]: False
+</code></pre>
+
+<h2 id="control-flow">Control Flow</h2>
+<h3 id="conditionals">Conditionals</h3>
+<p>The syntax is "If <code>x</code> true, then do something; otherwise, do something else."</p>
+<p><strong>If</strong> statement on its own:</p>
+<pre><code>In [97]: a = 8
+
+In [98]: b = 3 
+
+In [99]: if a &gt; b :
+    ...:     print('a is bigger than b')
+    ...:
+a is bigger than b
+</code></pre>
+
+<p><strong>If-else</strong> statement: </p>
+<pre><code>In [100]: x = float(input('Insert your number: '))
+Insert your number: 711457
+
+In [101]: if x % 17 == 0:
+     ...:     print('Your number is a multiple of 17.')
+     ...: else :
+     ...:     print('Your number is not a multiple of 17.')
+
+Your number is not a multiple of 17.
+</code></pre>
+
+<p><strong>If-elif-else</strong> statement:</p>
+<pre><code>In [102]: a = 3
+
+In [103]: b = 5
+
+In [104]: if a &gt; b:
+     ...:     print('a is bigger than b.')
+     ...: elif a &lt; b:
+     ...:     print('a is smaller than b.')
+     ...: else:
+     ...:     print('a is equal to b.')
+     ...:
+a is smaller than b.
+</code></pre>
+
+<p><em>Note:</em> We can have as many <code>elif</code> as we want.</p>
+<h3 id="loops">Loops</h3>
+<p>Loops are useful for executing the same block multiple times. In Python we have
+multiple looping formats: <code>while</code> loops, <code>for</code> loops, and comprehensions.</p>
+<p><strong>While loops</strong></p>
+<p>They are related to an <code>if</code> statement, they will compute <strong>while</strong> a condition is true.</p>
+<pre><code>In [105]: sec = 5
+In [106]: while 0 &lt; sec :
+     ...:     print('You have {} seconds'.format(sec))
+     ...:     sec -= 1
+     ...: print('Boom!!!')
+    ...:
+You have 5 seconds
+You have 4 seconds
+You have 3 seconds
+You have 2 seconds
+You have 1 seconds
+Boom!!!
+</code></pre>
+
+<p><em>Note:</em> You have to be careful to not generate an infinite loop. </p>
+<p><strong>For loops</strong>
+It is usually more useful to iterate over a certain group of things or an "iterable".</p>
+<pre><code>In [107]: for i in range(5,0,-1):
+    ...:     print('You have {} seconds'.format(i))
+    ...: print('Boom!!!')
+    ...: 
+You have 5 seconds
+You have 4 seconds
+You have 3 seconds
+You have 2 seconds
+You have 1 seconds
+Boom!!!
+</code></pre>
+
+<p>Another example:</p>
+<pre><code>In [108]: name = input('Insert your name: ')
+Insert your name: Naty
+
+In [109]: name
+Out[109]: 'Naty'
+
+In [110]: count = 1
+
+In [111]: for letter in name:
+    ...:     print('The {} letter is {}'.format(count,letter))
+    ...:     count +=1
+    ...:
+The 1 letter is N
+The 2 letter is a
+The 3 letter is t
+The 4 letter is y
+</code></pre>
+
+<p>We can loop over dictionaries too:</p>
+<pre><code>In [112]: d = {&quot;name&quot;:&quot;Lionel&quot;, &quot;last_name&quot;: &quot;Messi&quot;, &quot;birthday&quot;: [6, 24, 1987]}
+
+In [113]: for item in d.items():
+     ...:     print(item)
+     ...:
+('birthday', [6, 24, 1987])
+('name', 'Lionel')
+('last_name', 'Messi')
+
+In [114]: for key, value in d.items():
+     ...:     print(key, value)
+     ...:
+birthday [6, 24, 1987]
+name Lionel
+last_name Messi
+</code></pre>
+
+<p><strong>Comprehensions</strong></p>
+<p><code>for</code> and <code>while</code> loops are really useful but they take at least "two lines",
+and if you need to save the result of each loop in the iteration in a list, set,
+etc. This takes at least "three lines". Thankfully, Python is so great that in
+some cases we can reduce these cases to just ONE line! Let's see this with an
+example:</p>
+<p><em>Normal loop:</em></p>
+<pre><code>In [114]: fruits = ['apple', 'orange', 'grape', 'banana', 'pineapple', 'strawberry', 'watermelon']
+
+In [115]: upper_fruits = []
+
+In [116]: for fruit in fruits:
+    ...:     upper_fruits.append(fruit.upper())
+
+In [117]: upper_fruits
+Out[117]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WATERMELON']
+</code></pre>
+
+<p><em>Pythonic way:</em></p>
+<pre><code>In [118]: upper_pythonic = [fruit.upper() for fruit in fruits]
+
+In [119]: upper_pythonic
+Out[119]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WATERMELON']
+</code></pre>
+
+<p>We can add a filter, for example:</p>
+<pre><code>In [120]: entries = [2, 11, 49, 3, 57, 33, 9]
+
+In [121]: entries
+Out[121]: [2, 11, 49, 3, 57, 33, 9]
+
+In [122]: some = [x**2 for x in entries if x%3==0]
+
+In [123]: some
+Out[123]: [9, 3249, 1089, 81]
+
+In [124]: orig = [int(x**(1/2)) for x in some]
+
+In [125]: orig
+Out[125]: [3, 57, 33, 9]
+</code></pre>
+
+<h2 id="ipython-magics">IPython Magics</h2>
+<p>Sometimes when we are working on IPython we would like to select certain lines
+and save them into a Python script. We can do that!</p>
+<p>We can check the history of what we've done in the current session of IPython by
+typing:</p>
+<p><code>%hist -n</code></p>
+<p>If we want to select certain lines and put them into a script, the command
+<code>%edit</code> allow us to do this. Let's suppose we want lines 1, 3 and from 5-10; 
+then we should do:</p>
+<p><code>%edit 1 3 5-10</code></p>
+<p>and this will open the default editor with the lines we want. </p>
+<p>Once we have that script saved if we want to run it we can use the command
+<code>%run</code>:</p>
+<p><code>%run my_script.py</code></p>
+<h2 id="exercises">Exercises</h2>
+<p><strong>Slicing</strong> </p>
+<p>1- Write code using <code>find()</code> and string slicing to extract the number at the end
+of the line below. Convert the extracted value to a floating point number and
+print it out. (Content taken from online course "Python Data Structures" by Dr.
+Charles Severance)</p>
+<pre><code>text = &quot;X-DSPAM-Confidence:    0.8475&quot;
+</code></pre>
+
+<p><a href="../solutions/python.slicing.soln/"><em>Solution</em></a></p>
+<p><strong>Slicing and for loop</strong> </p>
+<p>2- Write a code that grabs, from each word, all the letters except 'ball' at the
+end of each one. Save the output in a list and print it out.</p>
+<p>The original list is:</p>
+<pre><code>sports = ['Football', 'Volleyball', 'Basketball', 'Baseball', 'Handball', 'Softball']
+</code></pre>
+
+<p>And your output should look like:</p>
+<pre><code>['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
+</code></pre>
+
+<p><a href="../solutions/python.ball.soln/"><em>Solution</em></a></p>
+<p><strong>Dictionaries for counting</strong></p>
+<p>3- Write a code that counts the frequency of each word that we have in the
+phrase provided.</p>
+<p>Tips: split the text and put the words in a list, use a dictionary to count the
+repetitions.</p>
+<p>(The idea of the following two exercises was inspired by content from the online
+course "Python Data Structures" by Dr. Charles Severance)</p>
+<pre><code>happy = &quot;I felt happy because I saw the others were happy and because I knew I should feel happy but I was not really happy&quot;
+</code></pre>
+
+<p>Your output should look like:</p>
+<pre><code>{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
+</code></pre>
+
+<p>Remember that dictionaries don't preserve order, therefore the items in your
+output might be in a different order. However, you can still check if your
+output is equal to the one we provide by doing a logical comparison using the
+<code>==</code> operation, which should return <code>True</code> if you get it right.</p>
+<p><strong>Optional</strong>: Rewrite exercise 3 using the method <code>get()</code>. </p>
+<p><a href="../solutions/python.dict.count.soln/"><em>Solutions</em></a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../solutions/python.slicing.soln/" class="btn btn-neutral float-right" title="_slicing_solution">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../nix/uber/" class="btn btn-neutral" title="Uber exercise"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../nix/uber/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../solutions/python.slicing.soln/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

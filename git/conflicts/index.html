@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>conflicts - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "conflicts";
+    var mkdocs_page_input_path = "git/conflicts.md";
+    var mkdocs_page_url = "/git/conflicts/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/python/">Python</a>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">conflicts</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#conflicts">Conflicts</a></li>
+                
+                    <li><a class="toctree-l4" href="#edit-on-github">Edit on GitHub</a></li>
+                
+                    <li><a class="toctree-l4" href="#edit-locally">Edit locally</a></li>
+                
+                    <li><a class="toctree-l4" href="#resolving-conflicts">Resolving conflicts</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/the_notebook/">Navigating the notebook</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/1/">The Python Scientific Stack</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>git &raquo;</li>
+        
+      
+        
+          <li>GitHub &raquo;</li>
+        
+      
+    
+    <li>conflicts</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="conflicts">Conflicts</h1>
+<p>The last section went over one scenario where two different changesets are
+brought together. <code>git</code> used the 'recursive' strategy to smash the changes
+together and we got something called a 'merge commit' (again, more on this
+later).</p>
+<p><code>git</code> was able to merge the two histories together because they were mostly
+independent. One change was to the script <code>word_count.py</code>, the other was
+creating a file called <code>README.md</code>. Not much overlap there. What about if there
+are changes made to the same file in two places?</p>
+<p>Time to find out!</p>
+<h2 id="edit-on-github">Edit on GitHub</h2>
+<p>Edit the file <code>word_count.py</code> using GitHub's online editor and change the first 
+line of the script to read: </p>
+<pre><code class="python">happy = input(&quot;Enter a statement to check word frequency: &quot;)
+</code></pre>
+
+<p>Commit your changes on GitHub. </p>
+<h2 id="edit-locally">Edit locally</h2>
+<p>Using <code>nano</code>, edit <code>word_count.py</code> and change the first line of the script to read:</p>
+<pre><code class="python">happy = input(&quot;Enter a phrase to word count:&quot;)
+</code></pre>
+
+<p>Commit your changes to this file locally. </p>
+<p>We now have changes made to the same file in two different places. What happens
+if we <code>push</code>?</p>
+<pre><code class="diff">$ git push
+</code></pre>
+
+<pre><code class="diff">To github.com:gforsyth/wordcount.git
+ ! [rejected]        master -&gt; master (fetch first)
+error: failed to push some refs to 'git@github.com:gforsyth/wordcount.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details
+</code></pre>
+
+<p>The same thing as before -- if there are changes on a remote you have to <code>pull</code>
+them in before you can <code>push</code>.</p>
+<pre><code class="diff">$ git pull
+</code></pre>
+
+<pre><code class="diff">remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:gforsyth/wordcount
+   2f53c34..a717ad5  master     -&gt; origin/master
+Auto-merging word_count.py
+CONFLICT (content): Merge conflict in word_count.py
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+
+<p>Ahh, that's different... </p>
+<p><code>git</code> is very clever, but if you make changes to the same line in two different
+places, how can <code>git</code> know which change should take precedence? In this case, it
+needs human input to decide how to proceed.</p>
+<p>We're in uncharted waters, what should we do? </p>
+<p>When in doubt, <code>git status</code>.</p>
+<pre><code class="diff">$ git status
+</code></pre>
+
+<pre><code class="diff">On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &quot;git pull&quot; to merge the remote branch into yours)
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+    both modified:   word_count.py
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+
+<p><code>status</code> tells us that the two repositories have diverged. And we have to fix
+the conflicts and then run <code>git commit</code>.</p>
+<p>How do we know what the conflicts are?</p>
+<h2 id="resolving-conflicts">Resolving conflicts</h2>
+<p><code>git status</code> told us that the file <code>word_count.py</code> is the trouble maker. Let's
+look at it.</p>
+<pre><code class="diff">$ cat word_count.py 
+</code></pre>
+
+<pre><code class="bash">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+happy = input(&quot;Enter a phrase to word count: &quot;)
+=======
+happy = input(&quot;Enter a statement to check word frequency: &quot;)
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; a717ad59e716184700199769a1f17b2f92874167
+
+words = happy.split()
+
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+
+print(&quot;The word frequency of your statement is: &quot;)
+print(counts)
+</code></pre>
+
+<p>Because <code>git</code> didn't know how to fix the conflict, it has highlighted the
+problem area for us by surrounding it with chevrons. </p>
+<p>The two versions of the same line are separated by the <code>=</code>s</p>
+<p>There are also labels telling us where each version is from: <code>HEAD</code> refers to
+the local repository, the commit hash is the commit we made on GitHub.</p>
+<p>To resolve the conflict, open the file in <code>nano</code> and edit it to combine the two
+versions of the <code>input</code> statement in whatever way you think is best. Make sure
+to remove all of the chevrons and the equal signs when you are done.</p>
+<p>We ended up with this:</p>
+<pre><code class="diff">$ cat word_count.py 
+happy = input(&quot;Enter a phrase to check word frequency: &quot;)
+
+words = happy.split()
+
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+
+print(&quot;The word frequency of your statement is: &quot;)
+print(counts)
+</code></pre>
+
+<p>Now that we have manually resolved the conflict, what do we do? 
+<code>git status</code> told us, let's check again:</p>
+<pre><code class="diff">$ git status
+</code></pre>
+
+<pre><code class="diff">On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use &quot;git pull&quot; to merge the remote branch into yours)
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+    both modified:   word_count.py
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+
+<p>Right, we need to stage the changes me made. </p>
+<pre><code class="diff">$ git add word_count.py
+</code></pre>
+
+<p>And now it's time to <code>commit</code>!</p>
+<pre><code class="diff">$ git commit
+</code></pre>
+
+<pre><code class="diff">Merge branch 'master' of github.com:gforsyth/wordcount
+
+# Conflicts:
+#   word_count.py
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#   .git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 1 different commits each, respectively.
+#   (use &quot;git pull&quot; to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#   modified:   word_count.py
+#
+</code></pre>
+
+<p>That's different. When you <code>git commit</code> after resolving a conflict, <code>git</code> will
+autofill a message for you. You are welcome to use the automatic message, or
+replace it with something else, it's up to you.</p>
+<p>Save and quit and we should see the following:</p>
+<pre><code class="diff">[master d31e6b9] Merge branch 'master' of github.com:gforsyth/wordcount
+</code></pre>
+
+<p>We have resolved the conflict! That wasn't so bad, was it? Now that we fixed the
+conflict, we just have to push it back up to GitHub.</p>
+<pre><code class="diff">$ git push
+</code></pre>
+
+<pre><code class="diff">Counting objects: 6, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 608 bytes | 0 bytes/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:gforsyth/wordcount.git
+   a717ad5..d31e6b9  master -&gt; master
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../jupyter/the_notebook/" class="btn btn-neutral float-right" title="Navigating the notebook">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../merge/" class="btn btn-neutral" title="merging"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../merge/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../jupyter/the_notebook/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>The Python Scientific Stack - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "The Python Scientific Stack";
+    var mkdocs_page_input_path = "jupyter/1.md";
+    var mkdocs_page_url = "/jupyter/1/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/python/">Python</a>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/conflicts/">conflicts</a>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../the_notebook/">Navigating the notebook</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">The Python Scientific Stack</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#jupyter-notebooks">Jupyter Notebooks</a></li>
+                
+                    <li><a class="toctree-l4" href="#intro-to-the-python-scientific-stack">Intro to the python scientific stack</a></li>
+                
+                    <li><a class="toctree-l4" href="#context-earth-temperature-over-time">Context — Earth temperature over time</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-1-read-a-data-file">Step 1: Read a data file.</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-2-plot-the-data">Step 2: Plot the data.</a></li>
+                
+                    <li><a class="toctree-l4" href="#step-3-smooth-the-data-and-do-regression">Step 3: Smooth the data and do regression</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Jupyter &raquo;</li>
+        
+      
+    
+    <li>The Python Scientific Stack</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Content under Creative Commons Attribution license CC-BY 4.0, code under MIT license © 2016 L.A. Barba, N.C. Clementi, G.F. Forsyth.  Based on <a href="https://github.com/barbagroup/JITcode-MechE">JITcode-MechE</a>, also under CC-BY and MIT licenses, 2014.</p>
+<h1 id="jupyter-notebooks">Jupyter Notebooks</h1>
+<h2 id="intro-to-the-python-scientific-stack">Intro to the python scientific stack</h2>
+<p>Welcome to the Jupyter notebook, a place where you can combine markdown text, LaTeX equations, code and results in a single document. </p>
+<p>In this notebook we will introduce useful python libraries that are important if you want to do scientific computing. We will learn:</p>
+<ul>
+<li>
+<p>How to import data, manipulate arrays and do operations with them using <a href="http://www.numpy.org/">Numpy</a>.</p>
+</li>
+<li>
+<p>How to do some stats and data fitting using <strong>Numpy</strong> and <strong>Scipy</strong>.</p>
+</li>
+<li>
+<p>How to do nice plots using <a href="http://matplotlib.org/">matplotlib</a>.</p>
+</li>
+</ul>
+<h2 id="context-earth-temperature-over-time">Context — Earth temperature over time</h2>
+<p>Is global temperature rising? How much? This is a question of burning importance in today's world!</p>
+<p>Data about global temperatures are available from several sources: NASA, the National Climatic Data Center (NCDC) and the University of East Anglia in the UK. Check out the <a href="https://www2.ucar.edu/climate/faq/how-much-has-global-temperature-risen-last-100-years">University Corporation for Atmospheric Research</a> (UCAR) for an in-depth discussion.</p>
+<p>The <a href="http://svs.gsfc.nasa.gov/goto?3901">NASA Goddard Space Flight Center</a> is one of our sources of global climate data. They produced this video showing a color map of the changing global surface <strong>temperature anomalies</strong> from 1880 to 2011.</p>
+<p>The term <a href="https://www.ncdc.noaa.gov/monitoring-references/faq/anomalies.php">global temperature anomaly</a> means the difference in temperature with respect to a reference value or a long-term average. It is a very useful way of looking at the problem and in many ways better than absolute temperature. For example, a winter month may be colder than average in Washington DC, and also in Miami, but the absolute temperatures will be different in both places.</p>
+<pre><code class="python">from IPython.display import YouTubeVideo
+YouTubeVideo('lyb4gau3LyI')
+</code></pre>
+
+<pre><code>    &lt;iframe
+        width="400"
+        height="300"
+        src="https://www.youtube.com/embed/lyb4gau3LyI"
+        frameborder="0"
+        allowfullscreen
+    &gt;&lt;/iframe&gt;
+</code></pre>
+<p>How would we go about understanding the <em>trends</em> from the data on global temperature?</p>
+<p>The first step in analyzing unknown data is to generate some simple plots using <strong>matplotlib</strong>. We are going to look at the temperature-anomaly history, contained in a file, and make our first plot to explore this data. </p>
+<p>We are going to smooth the data and then we'll fit a line to it to find a trend, plotting along the way to see how it all looks.</p>
+<p>Let's get started!</p>
+<h2 id="step-1-read-a-data-file">Step 1: Read a data file.</h2>
+<p>We took the data from the <a href="https://www.ncdc.noaa.gov/cag/">NOAA</a> (National Oceanic and Atmospheric Administration) webpage. Feel free to play around with the webpage and analyze data on your own, but for now, let's make sure we're working with the same dataset.</p>
+<p>First we will download the data from the web by using some Python magic and invoke the command <code>wget</code>.  We will save the file in the folder <code>resources</code> under the name:</p>
+<p><code>land_global_temperature_anomaly-1880-2015.csv</code></p>
+<p>This file contains the year and month on the first column and 12 monthly averages of land temperature anomaly listed sequentially on the second column, from 1880 to 2015. We will read the file, then make an initial plot to see what it looks like.</p>
+<p>In the NOAA web page you can select the data that you want to download as  a <code>csv</code> file and this will automatically open another tab with the data. We want to get that data so we will use <code>wget</code> but instead from a terminal we will invoke it from the notebook, yes! from the notebook.</p>
+<p>To run shell commands in the notebook we just need to use an exclamation mark <code>!</code> before the command:</p>
+<pre><code class="python">!wget -O resources/land_global_temperature_anomaly-1880-2015.csv  https://www.ncdc.noaa.gov/cag/time-series/global/globe/land/all/1/1880-2015.csv 
+</code></pre>
+
+<pre><code>--2016-12-15 15:51:35--  https://www.ncdc.noaa.gov/cag/time-series/global/globe/land/all/1/1880-2015.csv
+Resolving www.ncdc.noaa.gov (www.ncdc.noaa.gov)... 205.167.25.171, 205.167.25.172
+Connecting to www.ncdc.noaa.gov (www.ncdc.noaa.gov)|205.167.25.171|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: ‘resources/land_global_temperature_anomaly-1880-2015.csv’
+
+resources/land_glob     [ &lt;=&gt;                ]  23.24K  --.-KB/s    in 0.01s
+
+2016-12-15 15:51:36 (1.72 MB/s) - ‘resources/land_global_temperature_anomaly-1880-2015.csv’ saved [23799]
+</code></pre>
+<p>We got the data! Now we need to load it so we can work with it. The first thing to do is to load our favorite library: the <strong>NumPy</strong> library for array operations.</p>
+<pre><code class="python">import numpy
+</code></pre>
+
+<p>Pretty easy, right? Now to load the file, we use a function from the NumPy library called <code>loadtxt()</code>. To tell Python where to look for this function, we precede the function name with the library name, and use a dot between the two names. You can read the documentation in this <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">link</a>.</p>
+<p><code>loadtxt</code> expects every row in the same format, so we need to check that that's true of this data file. 
+We could open it in Python, but we've already learned a useful command for peeking into files, right? 
+Let's use <code>head</code> to show the first ten lines of the <code>csv</code> file, again using a <code>!</code> to denote a shell command.</p>
+<pre><code class="python">!head resources/land_global_temperature_anomaly-1880-2015.csv
+</code></pre>
+
+<pre><code>Global Land Temperature Anomalies
+Units: Degrees Celsius
+Base Period: 1901-2000
+Year,Value
+188001,-0.1720
+188002,-0.5765
+188003,-0.7504
+188004,-0.3306
+188005,-0.2171
+188006,-0.3052
+</code></pre>
+<p>We see that the first 4 lines of the file are metadata but those will mess up <code>loadtxt</code>. 
+To fix this, we will pass an argument to <code>loadtxt</code> to tell it to skip the first 4 rows.</p>
+<pre><code class="python">numpy.loadtxt(fname='resources/land_global_temperature_anomaly-1880-2015.csv',
+              delimiter=',', skiprows=4)
+</code></pre>
+
+<pre><code>array([[  1.88001000e+05,  -1.72000000e-01],
+       [  1.88002000e+05,  -5.76500000e-01],
+       [  1.88003000e+05,  -7.50400000e-01],
+       ..., 
+       [  2.01510000e+05,   1.34570000e+00],
+       [  2.01511000e+05,   1.29680000e+00],
+       [  2.01512000e+05,   1.87450000e+00]])
+</code></pre>
+<p>We called the function with three parameters: the file name and path, the delimiter that separates each value on a line (a comma in this case), and <code>skiprows=4</code> which tells Numpy to omit the first 4 rows. 
+Note that the first two parameters are strings (made up of characters) and we put them in quotes.</p>
+<p>As the output of the function, we get an array. Because it's rather big, Python shows only a few rows and columns of the array. </p>
+<p>So far, so good. Now, what if we want to manipulate this data? Or plot it? We need to refer to it with a name. We've only just read the file, but we did not assign the array any name! Let's try again.</p>
+<pre><code class="python">T_land = numpy.loadtxt(fname='resources/land_global_temperature_anomaly-1880-2015.csv', 
+                       delimiter=',', skiprows=4)
+</code></pre>
+
+<p>That's interesting. Now, we don't see any output from the function call. Why? It's simply that the output was stored into the variable <code>T_land</code>, so to see it, we can do:</p>
+<pre><code class="python">print(T_land)
+</code></pre>
+
+<pre><code>[[  1.88001000e+05  -1.72000000e-01]
+ [  1.88002000e+05  -5.76500000e-01]
+ [  1.88003000e+05  -7.50400000e-01]
+ ..., 
+ [  2.01510000e+05   1.34570000e+00]
+ [  2.01511000e+05   1.29680000e+00]
+ [  2.01512000e+05   1.87450000e+00]]
+</code></pre>
+<p>Ah, there it is! Let's find out how big the array is. For that, we use a cool NumPy function called <code>shape()</code>:</p>
+<pre><code class="python">numpy.shape(T_land)
+</code></pre>
+
+<pre><code>(1632, 2)
+</code></pre>
+<p>Again, we've told Python where to find the function <code>shape()</code> by attaching it to the library name with a dot. However, NumPy arrays also happen to have a property shape that will return the same value, so we can get the same result another way:</p>
+<pre><code class="python">T_land.shape
+</code></pre>
+
+<pre><code>(1632, 2)
+</code></pre>
+<p>It's just shorter. The array <code>T_shape</code> holding our temperature-anomaly data has two columns and 1632 rows. Since we said we had monthly data, how many years is that?</p>
+<pre><code class="python">1632/12
+</code></pre>
+
+<pre><code>136.0
+</code></pre>
+<p>That's right: from 1880 through 2015.</p>
+<h2 id="step-2-plot-the-data">Step 2: Plot the data.</h2>
+<p>We will display the data in two ways: as a time series of the monthly temperature anomalies versus time, and as a histogram. To be fancy, we'll put both plots in one figure.</p>
+<p>Let's first load our plotting library, called <code>matplotlib</code>. To get the plots inside the notebook (rather than as popups), we use a special "magic" command, <code>%matplotlib inline</code>:</p>
+<pre><code class="python">from matplotlib import pyplot
+%matplotlib inline
+</code></pre>
+
+<p>What's this <code>from</code> business about?  <code>matplotlib</code> is a pretty big (and awesome!) library.  All that we need is a subset of the library for creating 2D plots, so we ask for the <code>pyplot</code> module of the <code>matplotlib</code> library.  </p>
+<p>Plotting the time series of temperature is as easy as calling the function <a href="http://matplotlib.org/1.5.1/api/pyplot_api.html#matplotlib.pyplot.plot"><code>plot()</code></a> from the module <code>pyplot</code>.  </p>
+<p>But remember the shape of <code>T_land</code>? It has two columns and the temperature-anomaly values are in the second column. We extract the values of the second column by specifying 1 as the second index (the first column has index 0) and using the colon notation <code>:</code> to mean <em>all rows</em>. Check it out: </p>
+<pre><code class="python">pyplot.plot(T_land[:,1])
+</code></pre>
+
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x7f312f6de978&gt;]
+</code></pre>
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_32_1.png" /></p>
+<p>You can add a semicolon at the end of the plotting command to avoid that stuff that appeared on top of the figure, that <code>Out[x]: [&lt; ...&gt;]</code> ugliness. Try it.</p>
+<p><em>Do you see a trend in the data?</em></p>
+<p>The plot above is certainly useful, but wouldn't it be nicer if we could look at the data relative to the year, instead of the location of the data in the array?</p>
+<p>The plot function can take another input; let's get the year displayed as well.</p>
+<pre><code class="python">pyplot.plot(T_land[:,0],T_land[:,1]);
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_34_0.png" /></p>
+<p>What happened? It does not look like the previous plot. 
+It looks a little sparse. 
+Do you know why? 
+Notice that in the <code>csv</code> file the column for the years are integers, and even though we understand what they mean, is that what we want to plot? 
+Let's take a closer look by just plotting the first two years. </p>
+<pre><code class="python">pyplot.plot(T_land[0:25,0],T_land[0:25,1]);
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_36_0.png" /></p>
+<p>Do you notice what is going on? We are not using the right scale to plot our dates. However, <strong>Python</strong> is really cool and we can solve this in a nice and neat way. We will use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.arange.html"><code>numpy.arange()</code></a> and specify a data type for dates that you can explore in depth in this <a href="https://docs.scipy.org/doc/numpy/reference/arrays.datetime.html">link</a>. </p>
+<pre><code class="python">date = numpy.arange('1880', '2016', dtype=('datetime64[M]'))
+</code></pre>
+
+<p>We passed to <code>numpy.arange()</code> three arguments, the beginning and the end of the array, and  <code>dtype=datetime64[M]</code> that indicates that we want to show every month in the range determined by the beginning and end of the array. Let's print some of the elements of the array <code>date</code>: </p>
+<pre><code class="python">print(date[0:15])
+</code></pre>
+
+<pre><code>['1880-01' '1880-02' '1880-03' '1880-04' '1880-05' '1880-06' '1880-07'
+ '1880-08' '1880-09' '1880-10' '1880-11' '1880-12' '1881-01' '1881-02'
+ '1881-03']
+</code></pre>
+<p>We create this array but we can not use it directly to plot, we need a dummy array the same length as our data array. Then we will use the <code>date</code> array to plot the ticks on the <code>x-axis</code>.</p>
+<pre><code class="python">len(T_land)
+</code></pre>
+
+<pre><code>1632
+</code></pre>
+<p>The <code>dummy</code> array should contain 1632 equally space elements but it doesn't matter when it starts and when it finishes.
+Why? Because we aren't going to use that for display!
+For simplity we will start at 1 and finish at 1632. 
+We will use <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html"><code>numpy.linspace()</code></a> to create our array. The first argument indicates the start of the array, the second the end, and the third one indicates the number of elements we want our array to have.</p>
+<pre><code class="python">dummy = numpy.linspace(1, 1632, 1632)
+</code></pre>
+
+<p>We will use this array and the <code>date</code> array to make the plot again but now in the <code>x-axis</code> we will plot the <code>date</code>. Because plotting all the months will end up being non-readable, we will use <strong>slices</strong> to plot the <code>x-ticks</code> every ten years (120 months).    </p>
+<pre><code class="python">pyplot.xticks(dummy[::12*10], date[::12*10] , rotation=75)
+pyplot.plot(dummy,T_land[:,1]);
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_46_0.png" /></p>
+<p>Now we have a better plot but if I give you this plot without any information you would not be able to figure out what kind of data it is! We need labels on the axis, a title and why not a better color, font and size of the ticks. 
+<strong>Publication quality</strong> plots should always be your standard for plotting. 
+How you present your data will allow others (and probably you in the future) to better understand your work. </p>
+<p>Let's make the font of a specific size and type. 
+We don't want to write this out every time we create a plot. 
+Instead, the next few lines of code will apply for all the plots we create from now on.</p>
+<pre><code class="python">from matplotlib import rcParams
+rcParams['font.family'] = 'serif'
+rcParams['font.size'] = 16
+</code></pre>
+
+<p>We are going to plot the same plot as before but now we will add a few things to make it prettier and <strong>publication quality</strong>.</p>
+<pre><code class="python">pyplot.figure(figsize=(10,5))
+pyplot.xticks(dummy[::12*10], date[::12*10] , rotation=75)
+pyplot.plot(dummy,T_land[:,1], color='#2929a3', ls='-', lw=1)
+pyplot.title('Land global temperature anomalies. \n')
+pyplot.xlabel('Year-Month')
+pyplot.ylabel('Land temperature anomaly [°C]')
+pyplot.grid();
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_51_0.png" /></p>
+<p>Better ah? Feel free to play around with the parameters and see how it changes. </p>
+<p><em>Do you see a trend in the data?</em></p>
+<p>The temperature anomaly certainly seems to show an increasing trend. But we're not going to stop there, of course. It's not that easy to convince people that the planet is warming, as you know.</p>
+<p>Plotting a histogram is as easy as calling the function <code>hist()</code>. Why should it be any harder?</p>
+<pre><code class="python">pyplot.figure(figsize=(10,5))
+pyplot.hist(T_land[:,1])
+pyplot.xlabel('Land temperature anomaly [°C]')
+pyplot.ylabel('Frequency');
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_54_0.png" /></p>
+<p>You can control several parameters of the <a href="http://matplotlib.org/1.3.1/api/pyplot_api.html?highlight=hist#matplotlib.pyplot.hist"><code>hist()</code></a> plot. Learn more by reading the manual page (yes, you have to read the manual sometimes!). The first option is the number of bins—the default is 10—but you can also change the appearance (color, transparency). Try some things out.</p>
+<pre><code class="python">pyplot.figure(figsize=(10,5))
+pyplot.hist(T_land[:,1], 25, normed=True, color='g', alpha=0.5)
+pyplot.xlabel('Land temperature anomaly [°C]')
+pyplot.ylabel('Normalized frequency');
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_56_0.png" /></p>
+<p>What does this plot tell you about the data? It's more interesting than just an increasing trend, that's for sure. You might want to look at more statistics now: mean, median, standard deviation ... NumPy makes that easy for you:</p>
+<pre><code class="python">mean_T = numpy.mean(T_land[:,1])
+median_T = numpy.median(T_land[:,1])
+
+print('The mean value is {:.5} and the median {:.5}'.format(mean_T,
+                                                            median_T))
+</code></pre>
+
+<pre><code>The mean value is 0.04238 and the median -0.02915
+</code></pre>
+<pre><code class="python">variance_T = numpy.var(T_land[:,1])
+sigma_T = numpy.sqrt(variance_T)
+print('The variance is {:.5} and the standard deviation {:.5}'.format(variance_T,
+                                                                      sigma_T))
+</code></pre>
+
+<pre><code>The variance is 0.28669 and the standard deviation 0.53544
+</code></pre>
+<p>With these data, we can plot the probability density function (pdf) that correspond to this data, compare with the histogram and see how far from a normal distribution we are.</p>
+<p>In order to do that, we need to import the module <a href="https://docs.scipy.org/doc/scipy/reference/stats.html"><code>stats</code></a> from <strong>SciPy</strong>, another great python library that contains tools for scientific computing. </p>
+<pre><code class="python">from scipy import stats
+</code></pre>
+
+<pre><code class="python">bins = numpy.linspace(min(T_land[:,1]), max(T_land[:,1]), 40)
+
+pyplot.figure(figsize=(10,5))
+pyplot.hist(T_land[:,1], bins, normed=True, facecolor='g', alpha=0.5)
+pyplot.plot(bins, stats.norm.pdf(bins, mean_T, sigma_T),
+            color='#ff5733', ls='-', lw=2.5)
+pyplot.xlim(min(T_land[:,1]), max(T_land[:,1]))
+pyplot.xlabel('Land temperature anomaly [°C]')
+pyplot.ylabel('Normalized frequency')
+pyplot.grid();
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_62_0.png" /></p>
+<p>This is fun. Finally, we'll put both plots on the same figure using the <a href="http://matplotlib.org/api/pyplot_api.html?highlight=subplot#matplotlib.pyplot.subplot"><code>subplot()</code></a> function, which creates a grid of plots. The argument tells this function how many rows and columns of sub-plots we want, and where in the grid each plot will go.</p>
+<pre><code class="python">pyplot.figure(figsize=(12,4))  
+
+pyplot.subplot(121)   # creates a grid of 1 row, 2 columns and 
+                      # selects the first plot
+
+pyplot.xticks(dummy[::12*10], date[::12*10] , rotation=75)   
+pyplot.plot(dummy,T_land[:,1], color='#2929a3', ls='-', lw=1) 
+pyplot.xlabel('Year-Month')
+pyplot.ylabel('Land temperature anomaly [°C]')
+pyplot.grid()
+
+pyplot.subplot(122)            # prepares for the second plot
+
+bins = numpy.linspace(min(T_land[:,1]), max(T_land[:,1]), 40)
+pyplot.hist(T_land[:,1], bins, normed=True, color='#2929a3',
+            alpha=0.4, histtype= 'stepfilled')
+pyplot.plot(bins, stats.norm.pdf(bins, mean_T, sigma_T),
+            color='#ff5733', ls='-', lw=2.5)
+pyplot.xlim(min(T_land[:,1]), max(T_land[:,1]))
+pyplot.xlabel('Land temperature anomaly [°C]')
+pyplot.ylabel('Normalized frequency')
+pyplot.grid();
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_64_0.png" /></p>
+<p>Did you notice that the histogram looks a little different? You can tweak the type of histogram you want to plot by passing the <code>histtype</code> argument to the <code>hist()</code> function. Curious about what other options do you have? Go back to the <a href="http://matplotlib.org/1.3.1/api/pyplot_api.html?highlight=hist#matplotlib.pyplot.hist">documentation</a> and read about the other options that you have. </p>
+<h2 id="step-3-smooth-the-data-and-do-regression">Step 3: Smooth the data and do regression</h2>
+<p>You see a lot of fluctuations on the time series, so you might be asking yourself "How can I smooth it out?" No? Let's do it anyway.</p>
+<p>One possible approach to smooth the data (there are others) is using a <em>moving average</em>, also known as a sliding-window average. This is defined as:</p>
+<p>
+<script type="math/tex; mode=display">\hat{x}_{i,n} = \frac{1}{n} \sum_{j=1}^{n} x_{i-j}</script>
+</p>
+<p>The only parameter to the moving average is the value $n$. As you can see, the moving average smooths the set of data points by creating a new data set consisting of local averages (of the $n$ previous data points) at each point in the new set.</p>
+<p>A moving average is technically a <em>convolution</em>, and luckily NumPy has a built-in function for that, <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.convolve.html"><code>convolve()</code></a>.</p>
+<p>We need to pick <code>N</code> and create the "window" we want to use to smooth the data. but we might want to change <code>N</code> and try different values, so what if we create a simple function so then you can call this function with different parameters and see how the smoothed data varies. </p>
+<pre><code class="python">def smooth_data(N, data):
+    &quot;&quot;&quot;
+    Returns smoothed data using a sliding_moving avarage.
+
+    Arguments:
+    ----------
+    N (int)       : amount of data values we want to average.
+    data (array)  : array of data we want to smooth.
+
+
+    Returns:
+    --------
+    smooth (array): array with smoothed data.
+    &quot;&quot;&quot;
+
+    window = numpy.ones(N)/N
+    smooth = numpy.convolve(data, window, 'same')
+
+    return smooth
+</code></pre>
+
+<p>Did you notice the function <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ones.html"><code>ones()</code></a>? It creates an array filled with ... you guessed it: ones!</p>
+<p>Ok! We <strong>define</strong> our function and now we want to call the it with the parameters we want. But before calling the function you might be wondering what is the text that is between triple quotes?  That is a <em>docstring</em> and they explain what the function does. It's a good practice to always write the corresponding docstring, your future "you" and colleagues will thank you. </p>
+<p>Now we can read the docstring and see what our function does.  But let's suppose you are working on a big project and you see a function and you want to know what a function does; you can use the question mark <code>?</code> and you'll have this information. Let's try it:</p>
+<pre><code class="python">?smooth_data
+</code></pre>
+
+<p>Cool uh? Let's use this information and call our function with the land temperature data and $N=12$, we want each point of the smoothed data to be an average of 12 months. </p>
+<p>We also want the return data to be saved in a variable that we can use to plot afterwards, then:</p>
+<pre><code class="python">smooth = smooth_data(12, T_land[:,1])
+</code></pre>
+
+<pre><code class="python">pyplot.figure(figsize=(10, 5))
+pyplot.xticks(dummy[::12*10], date[::12*10] , rotation=75)   
+pyplot.plot(dummy, smooth, color='r', ls='-', lw=2)
+
+pyplot.xlabel('Year-Month')
+pyplot.ylabel('Land temperature anomaly [°C]')
+pyplot.grid(); 
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_75_0.png" /></p>
+<p>Looking at the plot, we can still see a trend, but the range of values is smaller. Let's plot the original time series together with the smoothed version:</p>
+<pre><code class="python">pyplot.figure(figsize=(10, 5))
+pyplot.xticks(dummy[::12*10], date[::12*10] , rotation=75)   
+pyplot.plot(dummy, T_land[:,1], color='#2929a3', ls='-', lw=1, alpha=0.5) 
+pyplot.plot(dummy, smooth, color='r', ls='-', lw=2)
+
+pyplot.xlabel('Year-Month')
+pyplot.ylabel('Land temperature anomaly [°C]')
+pyplot.grid(); 
+
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_77_0.png" /></p>
+<p>That is interesting! The smoothed data follows the trend nicely but has much less noise. Well, that is what filtering data is all about. </p>
+<p>Let's now fit a straight line through the temperature-anomaly data, to see the trends. We need to perform a least-squares linear regression to find the slope and intercept of a line </p>
+<p>
+<script type="math/tex; mode=display">y = mx+b</script>
+</p>
+<p>that fits our data. Thankfully, Python and NumPy are here to help with the <a href="https://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.polyfit.html"><code>polyfit()</code></a> function and the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html"><code>poly1d()</code></a> class. The <code>polyfit()</code> function takes three arguments: the two array variables $x$ and $y$, and the order of the polynomial for the fit (in this case, 1 for linear regression). The <code>poly1d()</code> class takes an array with the polynomial's coefficient in decreasing power and it gives us back the polynomial itself ready to be used as a function. </p>
+<p>To fit our data we will keep using our <code>dummy</code> variable in the abscissa axis. However, if we want to use our linear regression to have an estimate of the temperature anomaly value in a certain year, we need to know which index in the array is the one that correspond to the date we want to give as input. Once we know that index we can evaluate our <code>dummy</code> variable in that index and pass that value to the <em>fitting-function</em>. </p>
+<p>We call <code>polyfit()</code> with our data and we save the coefficients of our linear polynomial into the <code>tuple</code> $(m, b)$. Then, we feed <code>poly1d()</code> with $(m, b)$ to get our linear regression as a function.   </p>
+<pre><code class="python">m, b = numpy.polyfit(dummy, T_land[:,1], 1)
+
+f_linear = numpy.poly1d((m, b)) 
+</code></pre>
+
+<pre><code class="python">print(f_linear)
+</code></pre>
+
+<pre><code>0.0008475 x - 0.6496
+</code></pre>
+<pre><code class="python">pyplot.figure(figsize=(10, 5))
+
+pyplot.xticks(dummy[::12*10], date[::12*10] , rotation=75)   
+pyplot.plot(dummy, T_land[:,1], color='#2929a3', ls='-', lw=1, alpha=0.5) 
+pyplot.plot(dummy, f_linear(dummy), 'k--', linewidth=2,
+            label='linear regression')
+pyplot.xlabel('Year-Month')
+pyplot.ylabel('Land temperature anomaly [°C]')
+pyplot.legend(loc='best', fontsize=15)
+pyplot.grid();
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_83_0.png" /></p>
+<p>If we want to know the value of the land temperature anomaly that our linear regression gives for a certain year we need to know the index in the array that corresponds to the date we want. 
+Let's create a function that does that for us, with the help of <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.where.html"><code>numpy.where()</code></a> this task should be easy.</p>
+<p>Our <code>date</code> array has a specific data type, and we need to take this into account when we use the <code>numpy.where()</code> function. Why don't we take a look at the array to refresh our minds.</p>
+<pre><code class="python">#Our date array
+date
+</code></pre>
+
+<pre><code>array(['1880-01', '1880-02', '1880-03', ..., '2015-10', '2015-11',
+       '2015-12'], dtype='datetime64[M]')
+</code></pre>
+<pre><code class="python">#A specific element of our array
+date[23]
+</code></pre>
+
+<pre><code>numpy.datetime64('1881-12')
+</code></pre>
+<p>With this information in mind we design our function <code>date_index()</code> that takes as inputs the array that contains the dates and the desired date, and it'll return the index on the date's array that correspond to the date we want.</p>
+<p><strong>What if we pass a date that is not in the array, or we pass it in the wrong format?</strong>
+To prevent this we use <a href="http://www.pythonforbeginners.com/error-handling/python-try-and-except"><code>try and except</code></a> to help us handle errors in an easy way. </p>
+<pre><code class="python">def date_index(dates_array, date_desired):
+    &quot;&quot;&quot;
+    Looks for the index of a specific date in the dates_array.
+
+    Arguments:
+    ----------
+    dates_array  : array,  contains the dates (dtype='datetime64[M]')
+    date_desired : str, in the format YYYY-MM we want to know their 
+                        index.
+
+    Returns:
+    --------
+    date_index   : array, index in the dates_array that correspond to the
+                   desired_date    
+    &quot;&quot;&quot;
+    try:    
+        date_index = numpy.where(dates_array==numpy.datetime64(date_desired))
+    except ValueError:
+        raise ValueError('Invalid date entered (bad format)')
+
+
+    if len(date_index[0]) &gt; 0:
+        return date_index[0][0]
+    else:
+        raise ValueError(&quot;Date not found in date range&quot;)
+
+</code></pre>
+
+<p>If we did things right, then '1880-01' should correspond to index 0, and '2015-12' to 1631.  </p>
+<pre><code class="python">idx_first = date_index(date, '1880-01')
+idx_last  = date_index(date, '2015-12')
+print('The index for 1880-01 is: {} and for 2015-12: {}'.format(idx_first,
+                                                                idx_last))
+</code></pre>
+
+<pre><code>The index for 1880-01 is: 0 and for 2015-12: 1631
+</code></pre>
+<p>If we force our function to fail, it should <code>raise</code> the errors we told it to raise. Let's try it!</p>
+<pre><code class="python"># Bad format date
+date_index(date, '1890-13')
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-39-74303b0d9f6e&gt; in date_index(dates_array, date_desired)
+     16     try:
+---&gt; 17         date_index = numpy.where(dates_array==numpy.datetime64(date_desired))
+     18     except ValueError:
+
+
+ValueError: Month out of range in datetime string "1890-13"
+
+
+During handling of the above exception, another exception occurred:
+
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-41-713570594e34&gt; in &lt;module&gt;()
+      1 # Bad format date
+----&gt; 2 date_index(date, '1890-13')
+
+
+&lt;ipython-input-39-74303b0d9f6e&gt; in date_index(dates_array, date_desired)
+     17         date_index = numpy.where(dates_array==numpy.datetime64(date_desired))
+     18     except ValueError:
+---&gt; 19         raise ValueError('Invalid date entered (bad format)')
+     20 
+     21
+
+
+ValueError: Invalid date entered (bad format)
+</code></pre>
+<pre><code class="python"># Date out of range
+date_index(date, '1879-01')
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-42-d4cc294cbd7c&gt; in &lt;module&gt;()
+      1 # Date out of range
+----&gt; 2 date_index(date, '1879-01')
+
+
+&lt;ipython-input-39-74303b0d9f6e&gt; in date_index(dates_array, date_desired)
+     23         return date_index[0][0]
+     24     else:
+---&gt; 25         raise ValueError("Date not found in date range")
+     26
+
+
+ValueError: Date not found in date range
+</code></pre>
+<p>Now we have the beginning and end indices, let's use them to see what our linear regression gives us when we evaluate  specific dates. For example:</p>
+<pre><code class="python">year_first = dummy[idx_first]
+year_last = dummy[idx_last]
+
+reg_first = f_linear(year_first)
+reg_last = f_linear(year_last)
+
+print('Temp anomaly estimation for 1880-01: {}'.format(reg_first))
+print('Temp anomaly estimation for 2015-12: {}'.format(reg_last))
+</code></pre>
+
+<pre><code>Temp anomaly estimation for 1880-01: -0.6487841104276981
+Temp anomaly estimation for 2015-12: 0.7335441594473067
+</code></pre>
+<p>Let's compare that to the actual dataset:</p>
+<pre><code class="python">print('Temp anomaly data for 1880-01: {}'.format(T_land[idx_first,1]))
+print('Temp anomaly data for 2015-12: {}'.format(T_land[idx_last,1]))
+</code></pre>
+
+<pre><code>Temp anomaly data for 1880-01: -0.172
+Temp anomaly data for 2015-12: 1.8745
+</code></pre>
+<p>It seems like a linear regression might not be the best way of modeling this data, but what if we try doing the regression in "chunks"? 
+If we take a look at the plot, we see that around the 1970's the slope starts to be more pronounced. 
+Maybe doing a linear regression in two different ranges is a good idea. 
+Writing a function to do this is a smart decision so we can reuse it in the future if we want to do more than two regressions.</p>
+<pre><code class="python">def regression_range(start_date, end_date, date_array, x, T):
+    &quot;&quot;&quot;
+    Perform a linear regression in the range of dates provided.
+
+    Arguments:
+    ----------
+    start_date: str 'YYYY-MM', starting date. 
+    end_date: str 'YYYY-MM', ending date.
+    date_array: array, it contains the dates in the format 'YYYY-MM'.
+    x: dummy array we need in order to plot to plot
+    T: temperature anomalies data array.
+
+    Returns:
+    --------
+    x_range: array, range of the x array used to perform the regression.
+    T_range: array, range of the T array used to perform the regression.
+    f_range: function, linear regression performed on the range provided.
+    &quot;&quot;&quot;
+
+    idx_start = date_index(date_array, start_date)
+    idx_end = date_index(date_array, end_date)
+
+    x_range = x[idx_start: idx_end+1]
+    T_range = T[idx_start: idx_end+1]
+
+    m, b = numpy.polyfit(x_range, T_range, 1)
+
+    f_range = numpy.poly1d((m,b)) 
+
+    return x_range, T_range, f_range
+
+</code></pre>
+
+<p>Now we call the function in two different ranges, one from <code>1880-01</code> to <code>1969-12</code> and the other from <code>1970-01</code> to <code>2015-12</code>:</p>
+<pre><code class="python"># First range 
+x1, T1, f1 = regression_range('1880-01', '1969-12', date,
+                              dummy, T_land[:,1])
+</code></pre>
+
+<pre><code class="python"># Second range
+x2, T2, f2 = regression_range('1970-01', '2015-12', date,
+                              dummy, T_land[:,1])
+</code></pre>
+
+<pre><code class="python">pyplot.figure(figsize=(10, 5))
+
+pyplot.xticks(dummy[::12*10], date[::12*10] , rotation=75)   
+pyplot.plot(dummy, T_land[:,1], color='#2929a3', ls='-', lw=1,
+            alpha=0.4, label = 'raw data')
+
+pyplot.plot(x1, f1(x1), 'g--', linewidth=2, label = 'reg 1880-1969')
+pyplot.plot(x2, f1(x2), 'r--', linewidth=2)
+pyplot.plot(x2, f2(x2), 'b--', linewidth=2, label = 'reg 1970-2015')
+pyplot.xlabel('Year-Month')
+pyplot.ylabel('Land temperature anomaly [°C]')
+pyplot.legend(loc='best', ncol=1, fontsize=15)
+pyplot.grid();
+</code></pre>
+
+<p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_104_0.png" /></p>
+<p>Let's pick a value in the middle of the array and examine the difference between the real data and the prediction made by the linear regression. </p>
+<pre><code class="python">mid_idx1 = date_index(date, '1925-05')
+mid_idx2 = date_index(date, '1990-05')
+print('The index for 1925-05 is: {} and for 1995-05: {}'.format(mid_idx1,
+                                                                mid_idx2))
+</code></pre>
+
+<pre><code>The index for 1925-05 is: 544 and for 1995-05: 1324
+</code></pre>
+<pre><code class="python">mid_year1 = dummy[mid_idx1]
+mid_year2 = dummy[mid_idx2]
+
+mid_reg1 = f1(mid_year1)
+mid_reg2 = f2(mid_year2)
+
+print('Temp anomaly estimation for 1925-05: {}'.format(mid_reg1))
+print('Temp anomaly estimation for 1990-05: {}'.format(mid_reg2))
+</code></pre>
+
+<pre><code>Temp anomaly estimation for 1925-05: -0.20404280836225513
+Temp anomaly estimation for 1990-05: 0.4571266424582525
+</code></pre>
+<pre><code class="python">print('Temp anomaly data for 1925-05: {}'.format(T_land[mid_idx1,1]))
+print('Temp anomaly data for 1990-05: {}'.format(T_land[mid_idx2,1]))
+</code></pre>
+
+<pre><code>Temp anomaly data for 1925-05: -0.2898
+Temp anomaly data for 1990-05: 0.5295
+</code></pre>
+<p>That's certainly better than before. Is it good, though? That's hard to know. 
+Later in the course, we'll take a more in-depth look at error analysis and try to answer that question in more detail.</p>
+<h3 id="dig-deeper">Dig Deeper:</h3>
+<ul>
+<li>
+<p>You can explore a different data set in the <a href="https://www.ncdc.noaa.gov/cag/">NOAA</a> webpage and do a similar analysis. </p>
+</li>
+<li>
+<p>A different way of doing linear regressions is by using <a href="https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.linregress.html"><code>scipy.stats.linregress</code></a>. Read the documentation and explore the differences with the <code>numpy.polyfit</code>. You can also study  which one is faster by using the magic <a href="https://ipython.org/ipython-doc/3/interactive/magics.html"><code>%timeit</code></a> .</p>
+</li>
+</ul>
+<pre><code class="python">#Ignore this cell, It simply loads a style for the notebook.
+
+from IPython.core.display import HTML
+def css_styling():
+    try:
+        styles = open(&quot;styles/custom.css&quot;, &quot;r&quot;).read()
+        return HTML(styles)
+    except:
+        pass
+css_styling()
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../numba/1/" class="btn btn-neutral float-right" title="Profiling">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../the_notebook/" class="btn btn-neutral" title="Navigating the notebook"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../the_notebook/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../numba/1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

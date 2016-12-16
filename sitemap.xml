@@ -52,7 +52,25 @@
     
         
     <url>
-     <loc>/python/</loc>
+     <loc>/python/python/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/python/solutions/python.slicing.soln/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/python/solutions/python.dict.count.soln/</loc>
+     <lastmod>2016-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/python/solutions/python.ball.soln/</loc>
      <lastmod>2016-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>merging - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "merging";
+    var mkdocs_page_input_path = "git/merge.md";
+    var mkdocs_page_url = "/git/merge/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/python/">Python</a>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">merging</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#merging">Merging</a></li>
+                
+                    <li><a class="toctree-l4" href="#add-a-readme-to-your-github-repo">Add a README to your GitHub repo</a></li>
+                
+                    <li><a class="toctree-l4" href="#make-a-change-to-the-local-repo">Make a change to the local repo</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../conflicts/">conflicts</a>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/the_notebook/">Navigating the notebook</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/1/">The Python Scientific Stack</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>git &raquo;</li>
+        
+      
+        
+          <li>GitHub &raquo;</li>
+        
+      
+    
+    <li>merging</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="merging">Merging</h1>
+<p>We can make a commit in the local repo and push it to GitHub. We can also make a
+commit on GitHub and pull it to the local repo. But what happens if we make a
+commit in both places?</p>
+<p>This happens all the time when multiple people are working on the same project.
+Let's investigate how <code>git</code> handles these situations.</p>
+<h2 id="add-a-readme-to-your-github-repo">Add a README to your GitHub repo</h2>
+<p>A README is a plain text file in the root of a repository that usually contains</p>
+<ul>
+<li>a brief description of a project</li>
+<li>installation instructions</li>
+<li>info on how to collaborate</li>
+</ul>
+<p>or whatever else you want. </p>
+<p>Open your GitHub copy of the <code>wordcount</code> repo and then click the "Add README"
+button</p>
+<p><img alt="" src="../gh_images/add_readme.png" /></p>
+<p>Don't worry about adding any additional text beyond what is automatically added
+for you. And the default GitHub commit message for this change is reasonable, so
+you can just click "Commit"</p>
+<p><img alt="" src="../gh_images/readme_added.png" /></p>
+<p>You should see something like the above, where the GitHub copy of the repo now 
+has two files: <code>word_count.py</code> and <code>README.md</code></p>
+<h2 id="make-a-change-to-the-local-repo">Make a change to the local repo</h2>
+<p><strong>Without</strong> performing a <code>git pull</code> now edit <code>word_count.py</code> locally to read:</p>
+<pre><code class="diff">happy = input(&quot;Enter a statement to word count: &quot;)
+
+words = happy.split()  # split user input on spaces
+
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+
+print(&quot;The word frequency of your statement is: &quot;)
+print(counts)
+</code></pre>
+
+<p>Stage and commit that change (remember the commands?). If we check the log in
+the local copy of the repo, we should have something like:</p>
+<pre><code class="diff">$ git log --oneline
+671907a add comment for future self
+de8fbc3 Add user-friendly print statement
+09633c8 add helper text to input function
+97fba8d allow user input of statement to word count
+47f748f Add initial version of word count script
+</code></pre>
+
+<p>But on GitHub, where we created the README file, the list of commits looks like</p>
+<p><img alt="" src="../gh_images/gh_readme_commit.png" /></p>
+<p>What can we do? </p>
+<p>Nothing to do but try something out. How about a <code>push</code>?</p>
+<pre><code class="diff"> git push
+To github.com:gforsyth/wordcount.git
+ ! [rejected]        master -&gt; master (fetch first)
+error: failed to push some refs to 'git@github.com:gforsyth/wordcount.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+
+<p>Ah, that didn't work. But the error message tells us what the problem is. There
+is work on the remote that we don't have locally (the README file). It wants us
+to integrate those changes into the local copy before we can push. Let's try
+that.</p>
+<pre><code class="diff">git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:gforsyth/wordcount
+   de8fbc3..3f62d8f  master     -&gt; origin/master
+Merge made by the 'recursive' strategy.
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+</code></pre>
+
+<p>That did something. <code>git</code> tells us that there was a "Merge made by the
+'recursive' strategy". And it says that it created a file. Let's check.</p>
+<pre><code class="bash">$ ls
+README.md  word_count.py
+</code></pre>
+
+<p>There's the <code>README</code>! Let's take a look at the <code>log</code>.</p>
+<pre><code class="diff">git log --oneline
+aa92e92 Merge branch 'master' of github.com:gforsyth/wordcount
+671907a add comment for future self
+3f62d8f Create README.md
+de8fbc3 Add user-friendly print statement
+09633c8 add helper text to input function
+97fba8d allow user input of statement to word count
+47f748f Add initial version of word count script
+</code></pre>
+
+<p>Interesting. There's a <code>Create README.md</code> commit that we made on GitHub. That
+one is further down in the list because it's older. Then there's the commit we
+made locally, <code>add comment for future self</code>.</p>
+<p>But what's that most recent commit? It's called a "Merge commit". We'll come
+back to that a little bit later, but the quick explanation is that it's a commit
+that helps join the <em>slightly</em> divergent histories of the GitHub repo and the
+local repo. </p>
+<p>One last thing before we move on, now that we have <code>pull</code>ed and <code>merge</code>d these 
+changes, we should <code>push</code> those changes back up to GitHub. </p>
+<p><code>push</code> often!</p>
+<p><img alt="" src="../gh_images/fire.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../conflicts/" class="btn btn-neutral float-right" title="conflicts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../github1/" class="btn btn-neutral" title="push and pull"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../github1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../conflicts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

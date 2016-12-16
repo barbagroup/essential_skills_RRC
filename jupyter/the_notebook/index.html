@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Navigating the notebook - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Navigating the notebook";
+    var mkdocs_page_input_path = "jupyter/the_notebook.md";
+    var mkdocs_page_url = "/jupyter/the_notebook/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/python/">Python</a>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/conflicts/">conflicts</a>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Navigating the notebook</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#the-notebook">The Notebook</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-do-we-start-the-jupyter-notebook-app">How do we start the Jupyter notebook app?</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-if-we-want-to-add-a-new-cell">What if we want to add a new cell?</a></li>
+                
+                    <li><a class="toctree-l4" href="#what-if-we-want-that-cell-to-be-a-markdown-cell">What if we want that cell to be a markdown cell?</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-do-we-save-our-work">How do we save our work?</a></li>
+                
+                    <li><a class="toctree-l4" href="#the-two-different-modes-edit-mode-and-command-mode-1">The two different modes: Edit mode and Command mode [1]</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-we-shut-down-the-kernel">How we shut down the Kernel?</a></li>
+                
+                    <li><a class="toctree-l4" href="#references">References:</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../1/">The Python Scientific Stack</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Jupyter &raquo;</li>
+        
+      
+    
+    <li>Navigating the notebook</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-notebook">The Notebook</h1>
+<p>The <em>notebook</em> is a document that allows as to combine text elements (headings,
+paragraphs, hyperlinks), equations (LaTeX), figures and interactive code. The
+notebook uses cells to divide text and code: text is formatted using markdown,
+and code is executed using the IPython kernel.</p>
+<p><a href="https://daringfireball.net/projects/markdown/">Markdown</a> is a simple way to
+format text; it has a plain text formatting syntax that can be converted easily
+to HTML. It is easy to learn, check out the syntax in the "Daring Fireball" 
+(by John Gruber) <a href="https://daringfireball.net/projects/markdown/syntax">webpage</a>.</p>
+<h2 id="how-do-we-start-the-jupyter-notebook-app">How do we start the Jupyter notebook app?</h2>
+<p>If you follow the installation steps for this workshop listed in
+the
+<a href="https://github.com/barbagroup/essential_skills_RRC/blob/master/software_requirements.md">required software</a> markdown,
+you should have jupyter installed. If not, go to the link and follow the
+installation requirements.</p>
+<p>All set? Let's open a terminal and type <code>jupyter notebook</code> hit enter and tadah!!
+Your default browser will open with the jupyter app. It should look like this:</p>
+<p><img alt="jupyter_main" src="../resources/jupyter-main.png" /></p>
+<p>To start a new notebook click on the top right where it says <strong>New</strong> and click 
+on <code>Python 3</code>. </p>
+<p><img alt="create_notebook" src="../resources/create_notebook.png" /></p>
+<p>A new tab will appear in your browser and you will see:</p>
+<p><img alt="jupyter_new" src="../resources/new_notebook.png" /></p>
+<p>The notebook opens by default with a single empty code cell. Try to write
+some Python there and execute the cell by doing <code>[shift] + [enter]</code>.</p>
+<p>For example:</p>
+<ul>
+<li>
+<p><code>2 * 12</code> </p>
+</li>
+<li>
+<p><code>print('Hello world')</code></p>
+</li>
+<li>
+<p><code>x = 5</code> # (notice there will be no output)</p>
+</li>
+<li>
+<p><code>print(x * 'Hi there')</code></p>
+</li>
+</ul>
+<h2 id="what-if-we-want-to-add-a-new-cell">What if we want to add a new cell?</h2>
+<p>To add a new cell (by default this will be a code cell) press the <strong><code>+</code></strong> button in
+tool bar. </p>
+<h2 id="what-if-we-want-that-cell-to-be-a-markdown-cell">What if we want that cell to be a markdown cell?</h2>
+<p>In the tool bar you can see a dropdown menu that says <strong>Code</strong>, click there and
+pick <strong>Markdown</strong>. Now you can write some text using the markdown syntax and you
+can write equations using <a href="https://www.mathjax.org/">mathjax</a>. (mathjax is a web
+display engine for mathematics that works in browsers. It supports most LaTeX
+syntax.)</p>
+<p>For example, type in a markdown cell:</p>
+<p><code>$\frac{d}{dx}\left( \int_{0}^{x} f(u)\,du\right)=f(x)$</code></p>
+<p>or </p>
+<p><code>${\frac {d}{dx}}\arctan(\sin({x}^{2}))=-2\,{\frac {\cos({x}^{2})x}{-2+
+\left (\cos({x}^{2})\right )^{2}}}$</code></p>
+<p>Cool! ah? </p>
+<h2 id="how-do-we-save-our-work">How do we save our work?</h2>
+<ul>
+<li>
+<p>First, lets pick a name for our notebook. Click where it says Untitled (right
+next to the Jupyter logo) and pick the name that you want.</p>
+</li>
+<li>
+<p>You save your changes by either clicking in the floppy disk symbol in the tool
+bar or by doing  <code>[Ctrl] + [s]</code>. This will save in the directory you are located,
+a <code>.ipynb</code> file with the name that you pick for your file. </p>
+</li>
+</ul>
+<h2 id="the-two-different-modes-edit-mode-and-command-mode-1">The two different modes: Edit mode and Command mode [1]</h2>
+<p><strong>Edit mode:</strong></p>
+<ul>
+<li>
+<p>We know we are in this mode when we see a green cell border and a prompt 
+showing in the editor area.</p>
+</li>
+<li>
+<p>We enter in <strong>edit mode</strong> by pressing <code>Enter</code> or clicking on the cell.</p>
+</li>
+<li>
+<p>When we are in edit mode, we can type into the cell, like a normal text editor.</p>
+</li>
+</ul>
+<p><strong>Command mode:</strong></p>
+<ul>
+<li>
+<p>We know we are in this mode when we see a grey cell border with a left blue
+margin.</p>
+</li>
+<li>
+<p>We enter in <strong>command mode</strong> by pressing <code>Esc</code> or clicking outside the cell's
+area.</p>
+</li>
+<li>
+<p>In <strong>command mode</strong> the certain keys are mapped to shortcuts that help with
+  common actions.</p>
+</li>
+</ul>
+<p>You can find a list of the shortcuts by selecting <code>Help-&gt;Keyboard Shortcuts</code>
+from the notebook menu bar. Check them out and have fun!</p>
+<h2 id="how-we-shut-down-the-kernel">How we shut down the Kernel?</h2>
+<p>Once you close your notebook, you will see in the main Jupyter page that your 
+notebook file has a green book symbol. You should click in the box at the left 
+of that symbol, and then click where it says <code>shutdown</code>. Finally, go to the
+terminal that we use at the beginning to open the jupyter notebook and type
+<code>[Ctrl] + [c]</code> and you are all done!</p>
+<h2 id="references">References:</h2>
+<p>[1] <a href="http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html">Notebook Basics: Modal Editor</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../1/" class="btn btn-neutral float-right" title="The Python Scientific Stack">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../git/conflicts/" class="btn btn-neutral" title="conflicts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../git/conflicts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>
