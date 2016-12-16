@@ -188,6 +188,10 @@ on the first line and then save and quit.
 Great! We have created a snapshot of our file in the repo history. Now, even if
 we make changes, we'll be able to roll them back if we don't like them.
 
+You might be wondering what is a "good commit" message. We encourage you to go
+to this [link](http://chris.beams.io/posts/git-commit/) and read about why good
+commit messages matter and how to write them. 
+
 Did we miss anything? Check `git status` to find out the state of the repository
 now.
 
