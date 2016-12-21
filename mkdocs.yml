@@ -22,6 +22,8 @@ pages:
     - Jupyter:
         - Navigating the notebook: jupyter/the_notebook.md
         - The Python Scientific Stack: jupyter/1.md
+    - Laplace:
+        - Elliptic PDEs: laplace/1.md
     - Numba:
         - Profiling: numba/1.md
         - Intro to JIT: numba/2.md
