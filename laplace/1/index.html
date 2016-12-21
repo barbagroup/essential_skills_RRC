@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Elliptic PDEs - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Elliptic PDEs";
+    var mkdocs_page_input_path = "laplace/1.md";
+    var mkdocs_page_url = "/laplace/1/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/python/">Python</a>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/conflicts/">conflicts</a>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/the_notebook/">Navigating the notebook</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/1/">The Python Scientific Stack</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Laplace</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Elliptic PDEs</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#content-under-creative-commons-attribution-license-cc-by-40-code-under-mit-license-2016-la-barba-nc-clementi-gf-forsyth-based-on-numerical-mooc-05-01-also-under-cc-by-and-mit-licenses-2015">Content under Creative Commons Attribution license CC-BY 4.0, code under MIT license © 2016 L.A. Barba, N.C. Clementi, G.F. Forsyth.  Based on numerical-mooc 05-01, also under CC-BY and MIT licenses, 2015.</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#relax-and-hold-steady">Relax and hold steady</a></li>
+                
+                    <li><a class="toctree-l4" href="#laplaces-equation">Laplace's equation</a></li>
+                
+                    <li><a class="toctree-l4" href="#convergence-analysis">Convergence analysis</a></li>
+                
+                    <li><a class="toctree-l4" href="#final-word">Final word</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Laplace &raquo;</li>
+        
+      
+    
+    <li>Elliptic PDEs</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h6 id="content-under-creative-commons-attribution-license-cc-by-40-code-under-mit-license-2016-la-barba-nc-clementi-gf-forsyth-based-on-numerical-mooc-05-01-also-under-cc-by-and-mit-licenses-2015">Content under Creative Commons Attribution license CC-BY 4.0, code under MIT license © 2016 L.A. Barba, N.C. Clementi, G.F. Forsyth.  Based on <a href="https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/05_relax/05_01_2D.Laplace.Equation.ipynb">numerical-mooc 05-01</a>, also under CC-BY and MIT licenses, 2015.</h6>
+<h1 id="relax-and-hold-steady">Relax and hold steady</h1>
+<p>Many problems in physics have no time dependence, yet are rich with physical meaning: the gravitational field produced by a massive object, the electrostatic potential of a charge distribution, the displacement of a stretched membrane and the steady flow of fluid through a porous medium ... all these can be modeled by <strong>Poisson's equation</strong>:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\nabla^2 u = f
+\end{equation}</script>
+</p>
+<p>where the unknown $u$ and the known $f$ are functions of space, in a domain $\Omega$. To find the solution, we require boundary conditions. These could be  Dirichlet boundary conditions, specifying the value of the solution on the boundary,</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+u = b_1 \text{ on } \partial\Omega,
+\end{equation}</script>
+</p>
+<p>or Neumann boundary conditions, specifying the normal derivative of the solution on the boundary,</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial u}{\partial n} = b_2 \text{ on } \partial\Omega.
+\end{equation}</script>
+</p>
+<p>A boundary-value problem consists of finding $u$, given the above information. Numerically, we can do this using <em>relaxation methods</em>, which start with an initial guess for $u$ and then iterate towards the solution. Let's find out how!</p>
+<h2 id="laplaces-equation">Laplace's equation</h2>
+<p>The particular case of $f=0$ (homogeneous case) results in Laplace's equation:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\nabla^2 u = 0
+\end{equation}</script>
+</p>
+<p>For example, the equation for steady, two-dimensional heat conduction is:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial ^2 T}{\partial x^2} + \frac{\partial ^2 T}{\partial y^2} = 0
+\end{equation}</script>
+</p>
+<p>where $T$ is a temperature that has reached steady state. The Laplace equation models the equilibrium state of a system under the supplied boundary conditions.</p>
+<p>The study of solutions to Laplace's equation is called <em>potential theory</em>, and the solutions themselves are often potential fields. Let's use $p$ from now on to represent our generic dependent variable, and write Laplace's equation again (in two dimensions):</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{\partial ^2 p}{\partial x^2} + \frac{\partial ^2 p}{\partial y^2} = 0
+\end{equation}</script>
+</p>
+<p>Like in the diffusion equation, we discretize the second-order derivatives with <em>central differences</em>. If you need to refresh your mind, check out this <a href="http://nbviewer.jupyter.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/02_spacetime/02_03_1DDiffusion.ipynb">lesson</a> and try to discretize the equation by yourself. On a two-dimensional Cartesian grid, it gives:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{p_{i+1, j}  - 2p_{i,j}  + p_{i-1,j} }{\Delta x^2} + \frac{p_{i,j+1}  - 2p_{i,j}  + p_{i, j-1} }{\Delta y^2} = 0
+\end{equation}</script>
+</p>
+<p>When $\Delta x = \Delta y$, we end up with the following equation:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+p_{i+1, j}   + p_{i-1,j} + p_{i,j+1}  + p_{i, j-1}- 4 p_{i,j} = 0
+\end{equation}</script>
+</p>
+<p>This tells us that the Laplacian differential operator at grid point $(i,j)$ can be evaluated discretely using the value of $p$ at that point (with a factor $-4$) and the four neighboring points to the left and right, above and below grid point $(i,j)$.</p>
+<p>The stencil of the discrete Laplacian operator is shown in Figure 1. It is typically called the <em>five-point stencil</em>, for obvious reasons.</p>
+<p><img src="../figures/laplace.svg"></p>
+<h4 id="figure-1-laplace-five-point-stencil">Figure 1: Laplace five-point stencil.</h4>
+<p>The discrete equation above is valid for every interior point in the domain. If we write the equations for <em>all</em> interior points, we have a linear system of algebraic equations. We <em>could</em> solve the linear system directly (e.g., with Gaussian elimination), but we can be more clever than that!</p>
+<p>Notice that the coefficient matrix of such a linear system has mostly zeroes. For a uniform spatial grid, the matrix is <em>block diagonal</em>: it has diagonal blocks that are tridiagonal with $-4$ on the main diagonal and $1$ on two off-center diagonals, and two more diagonals with $1$. All of the other elements are zero. Iterative methods are particularly suited for a system with this structure, and save us from storing all those zeroes.</p>
+<p>We will start with an initial guess for the solution, $p_{i,j}^{0}$, and use the discrete Laplacian to get an update, $p_{i,j}^{1}$, then continue on computing $p_{i,j}^{k}$ until we're happy.  Note that $k$ is <em>not</em> a time index here, but an index corresponding to the number of iterations we perform in the <em>relaxation scheme</em>.  </p>
+<p>At each iteration, we compute updated values $p_{i,j}^{k+1}$ in a (hopefully) clever way so that they converge to a set of values satisfying Laplace's equation. The system will reach equilibrium only as the number of iterations tends to $\infty$, but we can approximate the equilibrium state by iterating until the change between one iteration and the next is <em>very</em> small.  </p>
+<p>The most intuitive method of iterative solution is known as the <a href="https://en.wikipedia.org/wiki/Jacobi_method"><strong>Jacobi method</strong></a>, in which the values at the grid points are replaced by the corresponding weighted averages:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+p^{k+1}_{i,j} = \frac{1}{4} \left(p^{k}_{i,j-1} + p^k_{i,j+1} + p^{k}_{i-1,j} + p^k_{i+1,j} \right)
+\end{equation}</script>
+</p>
+<p>This method does indeed converge to the solution of Laplace's equation. Thank you Professor Jacobi!</p>
+<h5 id="challenge-task">Challenge task</h5>
+<p>Grab a piece of paper and write out the coefficient matrix for a discretization with 7 grid points in the $x$ direction (5 interior points) and 5 points in the $y$ direction (3 interior). The system should have 15 unknowns, and the coefficient matrix three diagonal blocks. Assume prescribed Dirichlet boundary conditions on all sides (not necessarily zero).</p>
+<h3 id="boundary-conditions-and-relaxation">Boundary conditions and relaxation</h3>
+<p>Suppose we want to model steady-state heat transfer on (say) a computer chip with one side insulated (zero Neumann BC), two sides held at a fixed temperature (Dirichlet condition) and one side touching a component that has a sinusoidal distribution of temperature.
+We would need to solve Laplace's equation with boundary conditions like</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+  \begin{gathered}
+p=0 \text{ at } x=0\\
+\frac{\partial p}{\partial x} = 0 \text{ at } x = L\\
+p = 0 \text{ at }y = 0 \\
+p = \sin \left(  \frac{\frac{3}{2}\pi x}{L} \right) \text{ at } y = H.
+  \end{gathered}
+\end{equation}</script>
+</p>
+<p>We'll take $L=1$ and $H=1$ for the sizes of the domain in the $x$ and $y$ directions.</p>
+<p>One of the defining features of elliptic PDEs is that they are "driven" by the boundary conditions.  In the iterative solution of Laplace's equation, boundary conditions are set and <strong>the solution relaxes</strong> from an initial guess to join the boundaries together smoothly, given those conditions.  Our initial guess will be $p=0$ everywhere. Now, let's relax!</p>
+<p>First, we import our usual smattering of libraries (plus a few new ones!)</p>
+<pre><code class="python">from matplotlib import pyplot
+import numpy
+%matplotlib inline
+from matplotlib import rcParams
+rcParams['font.family'] = 'serif'
+rcParams['font.size'] = 16
+</code></pre>
+
+<p>To visualize 2D data, we can use <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.imshow"><code>pyplot.imshow()</code></a>, but a 3D plot can sometimes show a more intuitive view the solution. Or it's just prettier!</p>
+<p>Be sure to enjoy the many examples of 3D plots in the <code>mplot3d</code> section of the <a href="http://matplotlib.org/gallery.html#mplot3d">Matplotlib Gallery</a>.  </p>
+<p>We'll import the <code>Axes3D</code> library from Matplotlib and also grab the <code>cm</code> package, which provides different colormaps for visualizing plots.  </p>
+<pre><code class="python">from mpl_toolkits.mplot3d import Axes3D
+from matplotlib import cm
+</code></pre>
+
+<p>Let's define a function for setting up our plotting environment, to avoid repeating this set-up over and over again. It will save us some typing.</p>
+<pre><code class="python">def plot_3D(x, y, p):
+    '''Creates 3D plot with appropriate limits and viewing angle
+
+    Parameters:
+    ----------
+    x: array of float
+        nodal coordinates in x
+    y: array of float
+        nodal coordinates in y
+    p: 2D array of float
+        calculated potential field
+
+    '''
+    fig = pyplot.figure(figsize=(11,7), dpi=100)
+    ax = fig.gca(projection='3d')
+    X,Y = numpy.meshgrid(x,y)
+    surf = ax.plot_surface(X,Y,p[:], rstride=1, cstride=1, cmap=cm.viridis,
+            linewidth=0, antialiased=False)
+
+    ax.set_xlim(0,1)
+    ax.set_ylim(0,1)
+    ax.set_xlabel('$x$')
+    ax.set_ylabel('$y$')
+    ax.set_zlabel('$z$')
+    ax.view_init(30,45)
+
+</code></pre>
+
+<h5 id="note">Note</h5>
+<p>This plotting function uses <em>Viridis</em>, a new (and <em>awesome</em>) colormap available in Matplotlib versions 1.5 and greater.  If you see an error when you try to plot using <tt>cm.viridis</tt>, just update Matplotlib using <tt>conda</tt> or <tt>pip</tt>.</p>
+<h3 id="analytical-solution">Analytical solution</h3>
+<p>The Laplace equation with the boundary conditions listed above has an analytical solution, given by</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+p(x,y) = \frac{\sinh \left( \frac{\frac{3}{2} \pi y}{L}\right)}{\sinh \left(  \frac{\frac{3}{2} \pi H}{L}\right)} \sin \left( \frac{\frac{3}{2} \pi x}{L} \right)
+\end{equation}</script>
+</p>
+<p>where $L$ and $H$ are the length of the domain in the $x$ and $y$ directions, respectively.</p>
+<p>We will use <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.meshgrid.html"><code>numpy.meshgrid</code></a> to plot our 2D solutions. This is a function that takes two vectors (<code>x</code> and <code>y</code>, say) and returns two 2D arrays of $x$ and $y$ coordinates that we then use to create the contour plot. Always useful, <a href="https://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.linspace.html"><code>linspace</code></a> creates 1-row arrays of equally spaced numbers: it helps for defining $x$ and $y$ axes in line plots, but now we want the analytical solution plotted for every point in our domain.  To do this, we'll use in the analytical solution the 2D arrays generated by <code>numpy.meshgrid</code>.</p>
+<pre><code class="python">def p_analytical(x, y):
+    X, Y = numpy.meshgrid(x,y)
+
+    p_an = numpy.sinh(1.5*numpy.pi*Y / x[-1]) /\
+    (numpy.sinh(1.5*numpy.pi*y[-1]/x[-1]))*numpy.sin(1.5*numpy.pi*X/x[-1])
+
+    return p_an
+</code></pre>
+
+<p>Ok, let's try out the analytical solution and use it to test the <code>plot_3D</code> function we wrote above.  </p>
+<pre><code class="python">nx = 41
+ny = 41
+
+x = numpy.linspace(0,1,nx)
+y = numpy.linspace(0,1,ny)
+
+p_an = p_analytical(x,y)
+</code></pre>
+
+<pre><code class="python">plot_3D(x,y,p_an)
+</code></pre>
+
+<p><img alt="png" src="../2D_Laplace_equatio_execute_files/2D_Laplace_equatio_execute_25_0.png" /></p>
+<p>It worked!  This is what the solution <em>should</em> look like when we're 'done' relaxing. (And isn't viridis a cool colormap?) </p>
+<h3 id="how-long-do-we-iterate">How long do we iterate?</h3>
+<p>We noted above that there is no time dependence in the Laplace equation.  So it doesn't make a lot of sense to use a <code>for</code> loop with <code>nt</code> iterations.</p>
+<p>Instead, we can use a <code>while</code> loop that continues to iteratively apply the relaxation scheme until the difference between two successive iterations is small enough.  </p>
+<p>But how small is small enough?  That's a good question.  We'll try to work that out as we go along.  </p>
+<p>To compare two successive potential fields, a good option is to use the <a href="http://en.wikipedia.org/wiki/Norm_%28mathematics%29#Euclidean_norm">L2 norm</a> of the difference.  It's defined as</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+|\textbf{x}| = \sqrt{\sum_{i=0, j=0}^k \left|p^{k+1}_{i,j} - p^k_{i,j}\right|^2}
+\end{equation}</script>
+</p>
+<p>But there's one flaw with this formula.  We are summing the difference between successive iterations at each point on the grid. So what happens when the grid grows? (For example, if we're refining the grid, for whatever reason.) There will be more grid points to compare and so more contributions to the sum. The norm will be a larger number just because of the grid size!</p>
+<p>That doesn't seem right.  We'll fix it by normalizing the norm, dividing the above formula by the norm of the potential field at iteration $k$. </p>
+<p>For two successive iterations, the relative L2 norm is then calculated as</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+|\textbf{x}| = \frac{\sqrt{\sum_{i=0, j=0}^k \left|p^{k+1}_{i,j} - p^k_{i,j}\right|^2}}{\sqrt{\sum_{i=0, j=0}^k \left|p^k_{i,j}\right|^2}}
+\end{equation}</script>
+</p>
+<p>Our Python code for this calculation is a one-line function:</p>
+<pre><code class="python">def L2_error(p, pn):
+    return numpy.sqrt(numpy.sum((p - pn)**2)/numpy.sum(pn**2))
+</code></pre>
+
+<p>Now, let's define a function that will apply Jacobi's method for Laplace's equation.  Three of the boundaries are Dirichlet boundaries and so we can simply leave them alone.  Only the Neumann boundary needs to be explicitly calculated at each iteration, and we'll do it by discretizing the derivative in its first order approximation:  </p>
+<pre><code class="python">def laplace2d(p, l2_target):
+    '''Iteratively solves the Laplace equation using the Jacobi method
+
+    Parameters:
+    ----------
+    p: 2D array of float
+        Initial potential distribution
+    l2_target: float
+        target for the difference between consecutive solutions
+
+    Returns:
+    -------
+    p: 2D array of float
+        Potential distribution after relaxation
+    '''
+
+    l2norm = 1
+    pn = numpy.empty_like(p)
+    while l2norm &gt; l2_target:
+        pn = p.copy()
+        p[1:-1,1:-1] = .25 * (pn[1:-1,2:] + pn[1:-1, :-2] \
+                              + pn[2:, 1:-1] + pn[:-2, 1:-1])
+
+        ##Neumann B.C. along x = L
+        p[1:-1, -1] = p[1:-1, -2]     # 1st order approx of a derivative 
+        l2norm = L2_error(p, pn)
+
+    return p
+</code></pre>
+
+<h5 id="rows-and-columns-and-index-order">Rows and columns, and index order</h5>
+<p>The physical problem has two dimensions, so we also store the temperatures in two dimensions: in a 2D array. </p>
+<p>We chose to store it with the $y$ coordinates corresponding to the rows of the array and $x$ coordinates varying with the columns (this is just a code design decision!). If we are consistent with the stencil formula (with $x$ corresponding to index $i$ and $y$ to index $j$), then $p_{i,j}$ will be stored in array format as <code>p[j,i]</code>.</p>
+<p>This might be a little confusing as most of us are used to writing coordinates in the format $(x,y)$, but our preference is to have the data stored so that it matches the physical orientation of the problem. Then, when we make a plot of the solution, the visualization will make sense to us, with respect to the geometry of our set-up. That's just nicer than to have the plot rotated!</p>
+<p><img src="../figures/rowcolumn.svg" width="400px"></p>
+<h4 id="figure-2-row-column-data-storage">Figure 2: Row-column data storage</h4>
+<p>As you can see on Figure 2 above, if we want to access the value $18$ we would write those coordinates as $(x_2, y_3)$.  You can also see that its location is the 3rd row, 2nd column, so its array address would be <code>p[3,2]</code>.</p>
+<p>Again, this is a design decision.  However you can choose to manipulate and store your data however you like; just remember to be consistent!</p>
+<h3 id="lets-relax">Let's relax!</h3>
+<p>The initial values of the potential field are zero everywhere (initial guess), except at the boundary: </p>
+<p>
+<script type="math/tex; mode=display">p = \sin \left(  \frac{\frac{3}{2}\pi x}{L} \right) \text{ at } y=H</script>
+</p>
+<p>To initialize the domain, <code>numpy.zeros</code> will handle everything except that one Dirichlet condition. Let's do it!</p>
+<pre><code class="python">##variable declarations
+nx = 41
+ny = 41
+
+
+##initial conditions
+p = numpy.zeros((ny,nx)) ##create a XxY vector of 0's
+
+
+##plotting aids
+x = numpy.linspace(0,1,nx)
+y = numpy.linspace(0,1,ny)
+
+##Dirichlet boundary conditions
+p[-1,:] = numpy.sin(1.5*numpy.pi*x/x[-1])
+
+</code></pre>
+
+<p>Now let's visualize the initial conditions using the <code>plot_3D</code> function, just to check we've got it right.</p>
+<pre><code class="python">plot_3D(x, y, p)
+</code></pre>
+
+<p><img alt="png" src="../2D_Laplace_equatio_execute_files/2D_Laplace_equatio_execute_39_0.png" /></p>
+<p>The <code>p</code> array is equal to zero everywhere, except along the boundary $y = 1$.  Hopefully you can see how the relaxed solution and this initial condition are related.  </p>
+<p>Now, run the iterative solver with a target L2-norm difference between successive iterations of $10^{-8}$.</p>
+<pre><code class="python">p = laplace2d(p.copy(), 1e-8)
+</code></pre>
+
+<p>Let's make a gorgeous plot of the final field using the newly minted <code>plot_3D</code> function.</p>
+<pre><code class="python">plot_3D(x,y,p)
+</code></pre>
+
+<p><img alt="png" src="../2D_Laplace_equatio_execute_files/2D_Laplace_equatio_execute_43_0.png" /></p>
+<p>Awesome!  That looks pretty good.  But we'll need more than a simple visual check, though. The "eyeball metric" is very forgiving!</p>
+<h2 id="convergence-analysis">Convergence analysis</h2>
+<h3 id="convergence-take-1">Convergence, Take 1</h3>
+<p>We want to make sure that our Jacobi function is working properly.  Since we have an analytical solution, what better way than to do a grid-convergence analysis?  We will run our solver for several grid sizes and look at how fast the L2 norm of the difference between consecutive iterations decreases.</p>
+<p>Let's make our lives easier by writing a function to "reset" the initial guess for each grid so we don't have to keep copying and pasting them.</p>
+<pre><code class="python">def laplace_IG(nx):
+    '''Generates initial guess for Laplace 2D problem for a 
+    given number of grid points (nx) within the domain [0,1]x[0,1]
+
+    Parameters:
+    ----------
+    nx: int
+        number of grid points in x (and implicitly y) direction
+
+    Returns:
+    -------
+    p: 2D array of float
+        Pressure distribution after relaxation
+    x: array of float
+        linspace coordinates in x
+    y: array of float
+        linspace coordinates in y
+    '''
+
+    ##initial conditions
+    p = numpy.zeros((nx,nx)) ##create a XxY vector of 0's
+
+    ##plotting aids
+    x = numpy.linspace(0,1,nx)
+    y = x
+
+    ##Dirichlet boundary conditions
+    p[:,0] = 0
+    p[0,:] = 0
+    p[-1,:] = numpy.sin(1.5*numpy.pi*x/x[-1])
+
+    return p, x, y
+</code></pre>
+
+<p>Now run Jacobi's method on the Laplace equation using four different grids, with the same exit criterion of $10^{-8}$ each time. Then, we look at the error versus the grid size in a log-log plot. What do we get?</p>
+<pre><code class="python">nx_values = [11, 21, 41, 81]
+l2_target = 1e-8
+
+error = numpy.empty_like(nx_values, dtype=numpy.float)
+
+for i, nx in enumerate(nx_values):
+    p, x, y = laplace_IG(nx)
+
+    p = laplace2d(p.copy(), l2_target)
+
+    p_an = p_analytical(x, y)
+
+    error[i] = L2_error(p, p_an)
+
+</code></pre>
+
+<pre><code class="python">pyplot.figure(figsize=(6,6))
+pyplot.grid(True)
+pyplot.xlabel(r'$n_x$', fontsize=18)
+pyplot.ylabel(r'$L_2$-norm of the error', fontsize=18)
+
+pyplot.loglog(nx_values, error, color='k', ls='--', lw=2, marker='o')
+pyplot.axis('equal');
+</code></pre>
+
+<p><img alt="png" src="../2D_Laplace_equatio_execute_files/2D_Laplace_equatio_execute_51_0.png" /></p>
+<p>Hmm. That doesn't look like 2nd-order convergence, but we're using second-order finite differences.  <em>What's going on?</em>  The culprit is the boundary conditions. Dirichlet conditions are order-agnostic (a  set value is a set value), but the scheme we used for the Neumann boundary condition is 1st-order.  </p>
+<p>Remember when we said that the boundaries drive the problem?  One boundary that's 1st-order completely tanked our spatial convergence.  Let's fix it!</p>
+<h3 id="2nd-order-neumann-bcs">2nd-order Neumann BCs</h3>
+<p>Up to this point, we have used the first-order approximation of a derivative to satisfy Neumann B.C.'s. For a boundary located at $x=0$ this reads,</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{p^{k+1}_{1,j} - p^{k+1}_{0,j}}{\Delta x} = 0
+\end{equation}</script>
+</p>
+<p>which, solving for $p^{k+1}_{0,j}$ gives us</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+p^{k+1}_{0,j} = p^{k+1}_{1,j}
+\end{equation}</script>
+</p>
+<p>Using that Neumann condition will limit us to 1st-order convergence.  Instead, we can start with a 2nd-order approximation (the central-difference approximation):</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+\frac{p^{k+1}_{1,j} - p^{k+1}_{-1,j}}{2 \Delta x} = 0
+\end{equation}</script>
+</p>
+<p>That seems problematic, since there is no grid point $p^{k}_{-1,j}$.  But no matter … let's carry on. According to the 2nd-order approximation,</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+p^{k+1}_{-1,j} = p^{k+1}_{1,j}
+\end{equation}</script>
+</p>
+<p>Recall the finite-difference Jacobi equation with $i=0$:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+p^{k+1}_{0,j} = \frac{1}{4} \left(p^{k}_{0,j-1} + p^k_{0,j+1} + p^{k}_{-1,j} + p^k_{1,j} \right)
+\end{equation}</script>
+</p>
+<p>Notice that the equation relies on the troublesome (nonexistent) point $p^k_{-1,j}$, but according to the equality just above, we have a value we can substitute, namely $p^k_{1,j}$. Ah! We've completed the 2nd-order Neumann condition:</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+p^{k+1}_{0,j} = \frac{1}{4} \left(p^{k}_{0,j-1} + p^k_{0,j+1} + 2p^{k}_{1,j} \right)
+\end{equation}</script>
+</p>
+<p>That's a bit more complicated than the first-order version, but it's relatively straightforward to code.</p>
+<h5 id="note_1">Note</h5>
+<p>Do not confuse $p^{k+1}<em>{-1,j}$ with <tt>p[-1]</tt>:
+<tt>p[-1]</tt> is a piece of Python code used to refer to the last element of a list or array named <tt>p</tt>.  $p^{k+1}</em>{-1,j}$ is a 'ghost' point that describes a position that lies outside the actual domain.</p>
+<h3 id="convergence-take-2">Convergence, Take 2</h3>
+<p>We can copy the previous Jacobi function and replace only the line implementing the Neumann boundary condition.  </p>
+<h5 id="careful">Careful!</h5>
+<p>Remember that our problem has the Neumann boundary located at $x = L$ and not $x = 0$ as we assumed in the derivation above.</p>
+<pre><code class="python">def laplace2d_neumann(p, l2_target):
+    '''Iteratively solves the Laplace equation using the Jacobi method
+    with second-order Neumann boundary conditions
+
+    Parameters:
+    ----------
+    p: 2D array of float
+        Initial potential distribution
+    l2_target: float
+        target for the difference between consecutive solutions
+
+    Returns:
+    -------
+    p: 2D array of float
+        Potential distribution after relaxation
+    '''
+
+    l2norm = 1
+    pn = numpy.empty_like(p)
+    while l2norm &gt; l2_target:
+        pn = p.copy()
+        p[1:-1,1:-1] = .25 * (pn[1:-1,2:] + pn[1:-1, :-2] \
+                              + pn[2:, 1:-1] + pn[:-2, 1:-1])
+
+        ##2nd-order Neumann B.C. along x = L
+        p[1:-1,-1] = .25 * (2*pn[1:-1,-2] + pn[2:, -1] + pn[:-2, -1])
+
+        l2norm = L2_error(p, pn)
+
+    return p
+</code></pre>
+
+<p>Again, this is the exact same code as before, but now we're running the Jacobi solver with a 2nd-order Neumann boundary condition.  Let's do a grid-refinement analysis, and plot the error versus the grid spacing.</p>
+<pre><code class="python">nx_values = [11, 21, 41, 81]
+l2_target = 1e-8
+
+error = numpy.empty_like(nx_values, dtype=numpy.float)
+
+
+for i, nx in enumerate(nx_values):
+    p, x, y = laplace_IG(nx)
+
+    p = laplace2d_neumann(p.copy(), l2_target)
+
+    p_an = p_analytical(x, y)
+
+    error[i] = L2_error(p, p_an)
+</code></pre>
+
+<pre><code class="python">pyplot.figure(figsize=(6,6))
+pyplot.grid(True)
+pyplot.xlabel(r'$n_x$', fontsize=18)
+pyplot.ylabel(r'$L_2$-norm of the error', fontsize=18)
+
+pyplot.loglog(nx_values, error, color='k', ls='--', lw=2, marker='o')
+pyplot.axis('equal');
+</code></pre>
+
+<p><img alt="png" src="../2D_Laplace_equatio_execute_files/2D_Laplace_equatio_execute_61_0.png" /></p>
+<p>Nice!  That's much better.  It might not be <em>exactly</em> 2nd-order, but it's awfully close. (What is <a href="http://ianhawke.github.io/blog/close-enough.html">"close enough"</a> in regards to observed convergence rates is a thorny question.)</p>
+<p>Now, notice from this plot that the error on the finest grid is around $0.0002$. Given this, perhaps we didn't need to continue iterating until a target difference between two solutions of $10^{-8}$. The spatial accuracy of the finite difference approximation is much worse than that! But we didn't know it ahead of time, did we? That's the "catch 22" of iterative solution of systems arising from discretization of PDEs.</p>
+<h2 id="final-word">Final word</h2>
+<p>The Jacobi method is the simplest relaxation scheme to explain and to apply. It is also the <em>worst</em> iterative solver! In practice, it is seldom used on its own as a solver, although it is useful as a smoother with multi-grid methods. There are much better iterative methods! If you are curious you can find them in this <a href="http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/05_relax/05_03_Iterate.This.ipynb">lesson</a>. </p>
+<pre><code class="python">try:
+    from IPython.core.display import HTML
+    css_file = '../../styles/custom.css'
+    HTML(open(css_file, &quot;r&quot;).read())
+except:
+    pass
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../numba/1/" class="btn btn-neutral float-right" title="Profiling">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../jupyter/1/" class="btn btn-neutral" title="The Python Scientific Stack"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../jupyter/1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../numba/1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

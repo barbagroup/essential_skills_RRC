@@ -112,6 +112,16 @@
     
         
     <url>
+     <loc>/laplace/1/</loc>
+     <lastmod>2016-12-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/numba/1/</loc>
      <lastmod>2016-12-21</lastmod>
      <changefreq>daily</changefreq>
