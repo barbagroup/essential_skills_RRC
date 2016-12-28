@@ -6,7 +6,7 @@
 
 **Instructors:** Lorena A. Barba, Natalia C. Clementi, Gilbert F. Forsyth
 
-Rendered course website is available [here](https://barbagroup.github.io/essential_skills_RRC/)
+A [rendered course website](https://barbagroup.github.io/essential_skills_RRC/) is also available.
 
 ---
 
