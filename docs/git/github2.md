@@ -12,3 +12,9 @@ different machines but always as a single user.
 ## pull requests
 
 ## adding commits to pull requests
+
+# if there's time
+
+## creating a local fork (e.g. a branch)
+
+## merging branches locally
