@@ -117,11 +117,15 @@ of that symbol, and then click where it says `shutdown`. Finally, go to the
 terminal that we use at the beginning to open the jupyter notebook and type
 `[Ctrl] + [c]` and you are all done!
 
+## Nbviewer
+
+[Nbviewer](http://nbviewer.jupyter.org/) is a free webservice that allows you to share static html versions of hosted notebook files. If a notebook is publicly available, by giving its url to the Viewer, you should be able to view it [2]. You just need to host the notebook file (.ipynb extension) online and enter the public URL to the file on the nbviewer Go! box. The notebook will be rendered like a static webpage: visitors can read everything, but they cannot interact with the code. 
+
 
 ## References:
 
 [1] [Notebook Basics: Modal Editor](http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Notebook%20Basics.html)
 
-
+[2] [Nbviewer](http://nbviewer.jupyter.org/)
 
 
