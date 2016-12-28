@@ -6,6 +6,18 @@ The command line can be a little intimidating at first, but it is a powerful and
 efficient way of interacting with your computer. It's also the lingua franca
 when dealing with computing clusters and remote machines.
 
+## set `HISTFILE`
+
+For almost all of this tutorial we will explain every command as we come across
+it with this one exception. For now, please copy and paste the following command
+into your terminal -- we'll talk more about it later.
+
+```bash
+export HISTFILE=~/terminal_history_$(date -I)
+```
+
+Ok, on with the show!
+
 ## `whoami`
 
 Before we do anything else, let's figure out who we are. We can ask on the
