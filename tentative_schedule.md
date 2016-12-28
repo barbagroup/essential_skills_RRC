@@ -1,18 +1,18 @@
 |           | Tuesday                  | Wednesday                               | Thursday                   | Friday          |   |
 |-----------|--------------------------|-----------------------------------------|----------------------------|-----------------|---|
-|   9:30-10 | Intro + Setup            |                                         |                            |                 |   |
-|     10-12 | UNIX Command line        | git                                     | github workflow #2         | Numba           |   |
+|   9-10 | Intro + Setup            |                                         |                            |                 |   |
+|     10-12 | UNIX Command line        | git                                     | github workflow \#2         | Numba           |   |
 |      12-1 | Lunch                    | Lunch                                   | Lunch                      | Lunch           |   |
-|       1-3 | IPython                  | Jupyter #2: The python scientific stack | Laplace equation: Hands on | xonsh           |   |
+|       1-3 | IPython                  | Jupyter \#2: The python scientific stack | Laplace equation: Hands on | Numba+xonsh           |   |
 |    3-3:30 | Break                    | Break                                   | Break                      | Break           |   |
-| 3:30-4:30 | Jupyter #1: The notebook | github workflow #1                      | Testing                    | Reproducibility |   |
-| 4:30-5:30 | Open licensing           | github workflow #1                      |                            |                 |   |
+| 3:30-4:30 | Jupyter \#1: The notebook | github workflow \#1                      | Testing                    |   |   |
+| 4:30-5:30 | Open licensing           | github workflow \#1                      | Reproducibility            |                 |   |
 
 Notes:
-* Monday: Beginning of Jupyter 1: `mkdir notebooks`
-* Tuesday: at end of git, `git init` notebooks folder, add and commit notebook(s)
-* Tuesday night HW: Read through Laplace lesson on nbviewer
-* Wednesday Lunch: Gil and Naty PR laplace lesson notebook to all students' notebook repos
+* Tuesday: Beginning of Jupyter 1: `mkdir notebooks`
+* Wednesday: at end of git, `git init` notebooks folder, add and commit notebook(s)
+* Wednesday night HW: Read through Laplace lesson on nbviewer
+* Thrusday Lunch: Gil and Naty PR Laplace lesson notebook to all students' notebook repos
 
 
 
