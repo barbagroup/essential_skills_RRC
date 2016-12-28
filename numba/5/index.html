@@ -486,7 +486,7 @@ from snippets.ns_helper import quiver_plot
 <pre><code class="python">u_numba, v_numba, p_numba = run_cavity()
 </code></pre>
 
-<p>We use <code>numpy.allclose</code> to check that each value of the Python and Numba fields match to within a specified tolerance (the default tolerance is 1$\tt{E}^-$08).</p>
+<p>We use <code>numpy.allclose</code> to check that each value of the Python and Numba fields match to within a specified tolerance (the default tolerance is 1<script type="math/tex">\tt{E}^-</script>08).</p>
 <pre><code class="python">assert numpy.allclose(p, p_numba)
 assert numpy.allclose(u, u_numba)
 assert numpy.allclose(v, v_numba)

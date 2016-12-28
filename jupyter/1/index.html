@@ -663,7 +663,7 @@ pyplot.grid();
 <p>
 <script type="math/tex; mode=display">\hat{x}_{i,n} = \frac{1}{n} \sum_{j=1}^{n} x_{i-j}</script>
 </p>
-<p>The only parameter to the moving average is the value $n$. As you can see, the moving average smooths the set of data points by creating a new data set consisting of local averages (of the $n$ previous data points) at each point in the new set.</p>
+<p>The only parameter to the moving average is the value <script type="math/tex">n</script>. As you can see, the moving average smooths the set of data points by creating a new data set consisting of local averages (of the <script type="math/tex">n</script> previous data points) at each point in the new set.</p>
 <p>A moving average is technically a <em>convolution</em>, and luckily NumPy has a built-in function for that, <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.convolve.html"><code>convolve()</code></a>.</p>
 <p>We need to pick <code>N</code> and create the "window" we want to use to smooth the data. but we might want to change <code>N</code> and try different values, so what if we create a simple function so then you can call this function with different parameters and see how the smoothed data varies. </p>
 <pre><code class="python">def smooth_data(N, data):
@@ -693,7 +693,7 @@ pyplot.grid();
 <pre><code class="python">?smooth_data
 </code></pre>
 
-<p>Cool uh? Let's use this information and call our function with the land temperature data and $N=12$, we want each point of the smoothed data to be an average of 12 months. </p>
+<p>Cool uh? Let's use this information and call our function with the land temperature data and <script type="math/tex">N=12</script>, we want each point of the smoothed data to be an average of 12 months. </p>
 <p>We also want the return data to be saved in a variable that we can use to plot afterwards, then:</p>
 <pre><code class="python">smooth = smooth_data(12, T_land[:,1])
 </code></pre>
@@ -726,9 +726,9 @@ pyplot.grid();
 <p>
 <script type="math/tex; mode=display">y = mx+b</script>
 </p>
-<p>that fits our data. Thankfully, Python and NumPy are here to help with the <a href="https://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.polyfit.html"><code>polyfit()</code></a> function and the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html"><code>poly1d()</code></a> class. The <code>polyfit()</code> function takes three arguments: the two array variables $x$ and $y$, and the order of the polynomial for the fit (in this case, 1 for linear regression). The <code>poly1d()</code> class takes an array with the polynomial's coefficient in decreasing power and it gives us back the polynomial itself ready to be used as a function. </p>
+<p>that fits our data. Thankfully, Python and NumPy are here to help with the <a href="https://docs.scipy.org/doc/numpy-1.10.0/reference/generated/numpy.polyfit.html"><code>polyfit()</code></a> function and the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html"><code>poly1d()</code></a> class. The <code>polyfit()</code> function takes three arguments: the two array variables <script type="math/tex">x</script> and <script type="math/tex">y</script>, and the order of the polynomial for the fit (in this case, 1 for linear regression). The <code>poly1d()</code> class takes an array with the polynomial's coefficient in decreasing power and it gives us back the polynomial itself ready to be used as a function. </p>
 <p>To fit our data we will keep using our <code>dummy</code> variable in the abscissa axis. However, if we want to use our linear regression to have an estimate of the temperature anomaly value in a certain year, we need to know which index in the array is the one that correspond to the date we want to give as input. Once we know that index we can evaluate our <code>dummy</code> variable in that index and pass that value to the <em>fitting-function</em>. </p>
-<p>We call <code>polyfit()</code> with our data and we save the coefficients of our linear polynomial into the <code>tuple</code> $(m, b)$. Then, we feed <code>poly1d()</code> with $(m, b)$ to get our linear regression as a function.   </p>
+<p>We call <code>polyfit()</code> with our data and we save the coefficients of our linear polynomial into the <code>tuple</code> <script type="math/tex">(m, b)</script>. Then, we feed <code>poly1d()</code> with <script type="math/tex">(m, b)</script> to get our linear regression as a function.   </p>
 <pre><code class="python">m, b = numpy.polyfit(dummy, T_land[:,1], 1)
 
 f_linear = numpy.poly1d((m, b)) 

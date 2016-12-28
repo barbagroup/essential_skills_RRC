@@ -510,7 +510,7 @@ def trig(a, b):
 </code></pre>
 <h2 id="exercise-clipping-an-array"><a href="../exercises/07.Vectorize.Exercises.ipynb#Exercise:-Clipping-an-array">Exercise: Clipping an array</a></h2>
 <p>Yes, NumPy has a <code>clip</code> ufunc already, but let's pretend it doesn't.  </p>
-<p>Create a Numba vectorized ufunc that takes a vector <code>a</code>, a lower limit <code>amin</code> and an upper limit <code>amax</code>.  It should return the vector <code>a</code> with all values clipped such that $a_{min} &lt; a &lt; a_{max}$:</p>
+<p>Create a Numba vectorized ufunc that takes a vector <code>a</code>, a lower limit <code>amin</code> and an upper limit <code>amax</code>.  It should return the vector <code>a</code> with all values clipped such that <script type="math/tex">a_{min} < a < a_{max}</script>:</p>
 <pre><code class="python"># %load snippets/clip.py
 </code></pre>
 
