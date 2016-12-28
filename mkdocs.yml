@@ -36,7 +36,8 @@ extra_javascript:
     - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 markdown_extensions:
-    - mdx_math
+    - mdx_math:
+        enable_dollar_delimiter: True
 theme: readthedocs
 theme_dir: 'custom_theme'
 docs_dir: docs
