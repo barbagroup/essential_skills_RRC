@@ -69,6 +69,8 @@
             
                 <li class="toctree-l3"><a href="#navigating-the-command-line">Navigating the Command Line</a></li>
                 
+                    <li><a class="toctree-l4" href="#set-histfile">set HISTFILE</a></li>
+                
                     <li><a class="toctree-l4" href="#whoami">whoami</a></li>
                 
                     <li><a class="toctree-l4" href="#pwd">pwd</a></li>
@@ -363,6 +365,14 @@
 <p>The command line can be a little intimidating at first, but it is a powerful and
 efficient way of interacting with your computer. It's also the lingua franca
 when dealing with computing clusters and remote machines.</p>
+<h2 id="set-histfile">set <code>HISTFILE</code></h2>
+<p>For almost all of this tutorial we will explain every command as we come across
+it with this one exception. For now, please copy and paste the following command
+into your terminal -- we'll talk more about it later.</p>
+<pre><code class="bash">export HISTFILE=~/terminal_history_$(date -I)
+</code></pre>
+
+<p>Ok, on with the show!</p>
 <h2 id="whoami"><code>whoami</code></h2>
 <p>Before we do anything else, let's figure out who we are. We can ask on the
 command line:</p>
