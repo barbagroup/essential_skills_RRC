@@ -2,10 +2,10 @@
 
 What happens when we run `ls`? This isn't a trick question. 
 
-```bash
+```text
 $ ls -F
 ```
-```bash
+```text
 Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
 ```
 
@@ -21,13 +21,13 @@ symbol.
 
 Try it out:
 
-```bash
+```text
 $ ls -F > filelist
 ```
 
 No output appeared on the screen (`stdout`). Let's check what's in `filelist`
 
-```bash
+```text
 $ nano filelist
 ```
 
@@ -50,10 +50,10 @@ play with `wc` more later, but for now, let's just count the number of lines in
 `filelist`. To specify that we want the number of _lines_ in a file we use the
 `-l` flag.
 
-```bash
+```text
 $ wc -l filelist
 ```
-```bash
+```text
 8 filelist
 ```
 

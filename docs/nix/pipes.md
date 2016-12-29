@@ -27,10 +27,10 @@ This is the perfect job for `cat`!
 
 Try it out on `filelist` to see what happens.
 
-```bash
+```text
 $ cat filelist
 ```
-```bash
+```text
 Desktop/
 Documents/
 Downloads/
@@ -45,10 +45,10 @@ Videos/
 
 Remember `wc -l`? We used it to count the lines in `filelist`. We did:
 
-```bash
+```text
 $ wc -l filelist
 ```
-```bash
+```text
 8 filelist
 ```
 
@@ -57,10 +57,10 @@ But instead of doing it this way, we can also **pipe** the _contents_ of
 
 Try it out!
 
-```bash
+```text
 $ cat filelist | wc -l
 ```
-```bash
+```text
 8
 ```
 
@@ -78,10 +78,10 @@ steps necessary?
 
 No! How about: 
 
-```bash
+```text
 ls -F | wc -l
 ```
-```bash
+```text
 9
 ```
 
@@ -98,10 +98,10 @@ use it. It's that good.
 
 Try it out by piping the contents of `ls -F` and `grep`ping for "Do"
 
-```bash
+```text
 $ ls -F | grep Do
 ```
-```bash
+```text
 Documents/
 Downloads/
 ```
@@ -116,17 +116,17 @@ Use `ls`, `grep` and any tools we've already learned about to get the command
 line to spit out the number of files/folders that contain `Do` in their title.
 
 ## `sort`
-```bash
+```text
 wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
 ```
 
 Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
 take a look at what the file contains:
 
-```bash
+```text
 $ cat copa_america_goals 
 ```
-```bash
+```text
 1 Miku
 1 Neymar
 1 Robinho
@@ -171,10 +171,10 @@ some players only have one name. How many players scored 4 goals? We can `grep`
 for that, which will definitely work, but we can also sort the list easily using
 the `sort` command.  Try it out!
 
-```bash
+```text
 $ cat copa_america_goals | sort
 ```
-```bash
+```text
 1 Alexis Sanchez
 1 Andrew Carrillo
 1 Christian Cueva
@@ -221,17 +221,17 @@ Now, sorting goal scorers by last name seems a little strange if we care about
 the number of goals scored. Let's save the list of goals but sort it by the
 number of goals. How should we do that?
 
-```bash
+```text
 $ cat copa_america_goals | sort > copa_goals_sorted
 ```
 
 And remember, there's no output to the screen (`stdout`) because we _redirected_
 it to a new file. We can `cat` the new file to make sure it worked as we expect.
 
-```bash
+```text
 $ cat copa_goals_sorted 
 ```
-```bash
+```text
 1 Alexis Sanchez
 1 Andrew Carrillo
 1 Christian Cueva
@@ -271,9 +271,9 @@ $ cat copa_goals_sorted
 4 Paolo Guerrero
 ```
 
-```bash
+```text
 $ cat copa_goals_sorted | grep Alexis
 ```
-```bash
+```text
 1 Alexis Sanchez
 ```

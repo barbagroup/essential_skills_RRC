@@ -11,13 +11,13 @@ simple and easy to use.
 
 Make sure you're in your home directory (use `cd` and `pwd` to confirm) then type
 
-```console
+```text
 $ nano
 ```
 
 This is a no-frills editor. Type something! How about a TODO list?
 
-```console
+```text
 TODO
 * [x] Learn how to navigate using the terminal
 * [ ] Learn how to create files
@@ -35,17 +35,17 @@ Now exit `nano` by typing `Ctrl+x`.
 
 Use `ls` to see what happened:
 
-```console
+```text
 $ ls -F
 ```
-```console
+```text
 Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  TODO  Templates/  Videos/
 ```
 
 There's the TODO list! If you want to edit the todo list, you can open it up in
 `nano` (you can use tab completion for the filename, too!)
 
-```console
+```text
 $ nano TODO
 ```
 
@@ -59,13 +59,13 @@ simply change the name in the `Write Out` bar.
 There are a few ways to create files on the command line. If you want to create
 an "empty" file, you can use `touch`. Try it!
 
-```console
+```text
 $ touch newfile
 ```
-```console
+```text
 $ ls -F
 ```
-```console
+```text
 Desktop/    Downloads/  Pictures/  TODO        Videos/
 Documents/  Music/      Public/    Templates/  newfile
 ```
@@ -78,13 +78,13 @@ using `Ctrl+x` since there's nothing to save!
 To create a new directory, use the `mkdir` command. We can create a `Research/`
 folder in the home directory.
 
-```console
+```text
 $ mkdir Research
 ```
-```console
+```text
 $ ls -F
 ```
-```console
+```text
 Desktop/    Downloads/  Pictures/  Research/  Templates/  newfile
 Documents/  Music/      Public/    TODO       Videos/
 ```
@@ -94,16 +94,16 @@ Documents/  Music/      Public/    TODO       Videos/
 We don't need that empty file sitting around, we can remove it. To remove a
 file, use the `rm` command:
 
-```console
+```text
 $ rm newfile
 ```
 
 Did anything happen?
 
-```console
+```text
 $ ls -F
 ```
-```console
+```text
 Desktop/    Downloads/  Pictures/  Research/  Templates/
 Documents/  Music/      Public/    TODO       Videos/
 ```
@@ -115,10 +115,10 @@ Yes, `newfile` is gone. And this is something to be aware of: there is no
 
 Let's try to remove the `Research` directory we created earlier.
 
-```console
+```text
 $ rm Research
 ```
-```console
+```text
 rm: cannot remove 'Research': Is a directory
 ```
 
@@ -128,13 +128,13 @@ need to use the `-r` flag to specify a _recursive_ removal.
 **This will delete the directory and ALL of its contents. BE CAREFUL WHEN USING
 THIS**
 
-```console
+```text
 $ rm -r Research
 ```
-```console
+```text
 $ ls -F
 ```
-```console
+```text
 Desktop/    Downloads/  Pictures/  TODO        Videos/
 Documents/  Music/      Public/    Templates/
 ```
@@ -151,13 +151,13 @@ a different location.
 To start, let's make the file `TODO` lowercase. The syntax is `mv <old location>
 <new location>`
 
-```console
+```text
 $ mv TODO todo
 ```
-```console
+```text
 $ ls -F
 ```
-```console
+```text
 Desktop/    Downloads/  Pictures/  Templates/  todo
 Documents/  Music/      Public/    Videos/
 ```
@@ -168,28 +168,26 @@ _renamed_ file.
 
 We can also move the `todo` list to a different folder:
 
-```console
+```text
 $ mv todo Desktop/
 ```
-```console
+```text
 $ ls -F
 ```
-```console
+```text
 Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
 ```
 
 We specified `Desktop/` as the `<new location>` in the `mv` command. Since
 `Desktop/` is a folder, `todo` will move inside that folder. 
 
-```console
+```text
 $ ls -F Desktop/
 ```
-```console
+```text
 todo workshop_data.zip
 ```
 
 **Note:** As we see, if `<new location>` is a folder, then the file is moved
 inside the folder. However, if `<new location>` is an existing _file_, then that
 file will be overwritten.
-
-### TODO exercises
