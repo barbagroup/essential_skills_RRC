@@ -1,7 +1,7 @@
 | Command | Description |
 |---------|-------------|
 |**whoami**|who you are logged in as|
-|**pwd**|show current directory|
+|**pwd**|print working directory|
 |**ls**|list items in current directory|
 |**ls -F**|list all items in current directory and show directories with a slash and executables with a star|
 |**ls -a**|list all items in current directory, including hidden files|
