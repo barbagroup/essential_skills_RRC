@@ -3,8 +3,7 @@
 |**whoami**|who you are logged in as|
 |**pwd**|show current directory|
 |**ls**|list items in current directory|
-|**ls -F**|list all items in current directory and show directories with a
- slash and executables with a star|
+|**ls -F**|list all items in current directory and show directories with a slash and executables with a star|
 |**ls -a**|list all items in current directory, including hidden files|
 |**cd dir**|chang directory to *dir*|
 |**cd ..**|go up one directory|
@@ -30,8 +29,7 @@
 |command1 **&#124;** command2|"pipe" the output of *command1* to *command2*|
 |**grep** pattern files| search for *pattern* in *files*|
 |**wget** file|download *file*|
-|**sort** file|print the lines of its input or concatenation of all files
- listed in its argument list in sorted order|
+|**sort** file|print the lines of its input or concatenation of all files listed in its argument list in sorted order|
 |**man** command|show the manual for command|
 |**less** file|view *file* with page navigation|
 |**head** file|output the first 10 lines of *file*|
