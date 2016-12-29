@@ -5,10 +5,10 @@
 |**ls**|list items in current directory|
 |**ls -F**|list all items in current directory and show directories with a slash and executables with a star|
 |**ls -a**|list all items in current directory, including hidden files|
-|**cd dir**|chang directory to *dir*|
+|**cd** dir|change directory to *dir*|
 |**cd ..**|go up one directory|
 |**cd **|go to to your home directory|
-|**cd ~**|go to your home directory|
+|**cd &#126;**|go to your home directory|
 |**cd /**|go to  your root directory|
 |**nano**|open a text editor. See ribbon at bottom for help. ^ means CTRL|
 |**nano** new.txt|open nano to edit a file called *new.txt*|
