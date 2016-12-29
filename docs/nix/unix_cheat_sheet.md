@@ -7,7 +7,7 @@
 |**ls -a**|list all items in current directory, including hidden files|
 |**cd** dir|change directory to *dir*|
 |**cd ..**|go up one directory|
-|**cd**|go to to your home directory|
+|**cd**|go to your home directory|
 |**cd &#126;**|go to your home directory|
 |**cd /**|go to  your root directory|
 |**nano**|open a text editor. See ribbon at bottom for help. ^ means CTRL|
