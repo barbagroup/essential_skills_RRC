@@ -45,7 +45,7 @@ How do we count the number of lines? We use `wc` (wordcount)
 
 ## `wc`
 
-Yes, it's _word_count, but it counts words, characters, lines and more! We'll
+Yes, it's _word_count, but it counts lines, words and characters. We'll
 play with `wc` more later, but for now, let's just count the number of lines in
 `filelist`. To specify that we want the number of _lines_ in a file we use the
 `-l` flag.
