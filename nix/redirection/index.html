@@ -350,10 +350,10 @@
               
                 <h1 id="redirection">Redirection</h1>
 <p>What happens when we run <code>ls</code>? This isn't a trick question. </p>
-<pre><code class="bash">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="bash">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
+<pre><code class="text">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
 </code></pre>
 
 <p>We get a list of the files and folders in the current directory <em>printed</em> to the
@@ -364,11 +364,11 @@ to save it to a file somewhere?</p>
 output). If we want to specify a different location to print to, we use the <code>&gt;</code>
 symbol.</p>
 <p>Try it out:</p>
-<pre><code class="bash">$ ls -F &gt; filelist
+<pre><code class="text">$ ls -F &gt; filelist
 </code></pre>
 
 <p>No output appeared on the screen (<code>stdout</code>). Let's check what's in <code>filelist</code></p>
-<pre><code class="bash">$ nano filelist
+<pre><code class="text">$ nano filelist
 </code></pre>
 
 <p>There it is! </p>
@@ -384,10 +384,10 @@ files there are!</p>
 play with <code>wc</code> more later, but for now, let's just count the number of lines in
 <code>filelist</code>. To specify that we want the number of _lines</em> in a file we use the
 <code>-l</code> flag.</p>
-<pre><code class="bash">$ wc -l filelist
+<pre><code class="text">$ wc -l filelist
 </code></pre>
 
-<pre><code class="bash">8 filelist
+<pre><code class="text">8 filelist
 </code></pre>
 
 <p>Cool! <code>wc</code> tells us that <code>filelist</code> has 8 lines, which means we have 8

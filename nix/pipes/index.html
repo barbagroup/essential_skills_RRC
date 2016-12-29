@@ -375,10 +375,10 @@ look through the contents of a number of files.</p>
 This is the perfect job for <code>cat</code>!</p>
 <p><code>cat</code> dumps the contents of a file into <code>stdout</code> (by default). </p>
 <p>Try it out on <code>filelist</code> to see what happens.</p>
-<pre><code class="bash">$ cat filelist
+<pre><code class="text">$ cat filelist
 </code></pre>
 
-<pre><code class="bash">Desktop/
+<pre><code class="text">Desktop/
 Documents/
 Downloads/
 Music/
@@ -390,19 +390,19 @@ Videos/
 
 <h2 id="time-to-pipe">Time to pipe!</h2>
 <p>Remember <code>wc -l</code>? We used it to count the lines in <code>filelist</code>. We did:</p>
-<pre><code class="bash">$ wc -l filelist
+<pre><code class="text">$ wc -l filelist
 </code></pre>
 
-<pre><code class="bash">8 filelist
+<pre><code class="text">8 filelist
 </code></pre>
 
 <p>But instead of doing it this way, we can also <strong>pipe</strong> the <em>contents</em> of
 <code>filelist</code> to <code>wc</code>.</p>
 <p>Try it out!</p>
-<pre><code class="bash">$ cat filelist | wc -l
+<pre><code class="text">$ cat filelist | wc -l
 </code></pre>
 
-<pre><code class="bash">8
+<pre><code class="text">8
 </code></pre>
 
 <p>What just happened? </p>
@@ -414,10 +414,10 @@ instead fed them into <code>wc</code>. </p>
 contents of <code>filelist</code> and then piped those contents to <code>wc</code>. Are all of these
 steps necessary?</p>
 <p>No! How about: </p>
-<pre><code class="bash">ls -F | wc -l
+<pre><code class="text">ls -F | wc -l
 </code></pre>
 
-<pre><code class="bash">9
+<pre><code class="text">9
 </code></pre>
 
 <p>Any output can be piped to (nearly) any other program. </p>
@@ -428,10 +428,10 @@ something, but it's long and confusing, so just accept that <code>grep</code> is
 most powerful tools in the UNIX toolbox. It's also <em>42 years old</em>. And we still
 use it. It's that good.</p>
 <p>Try it out by piping the contents of <code>ls -F</code> and <code>grep</code>ping for "Do"</p>
-<pre><code class="bash">$ ls -F | grep Do
+<pre><code class="text">$ ls -F | grep Do
 </code></pre>
 
-<pre><code class="bash">Documents/
+<pre><code class="text">Documents/
 Downloads/
 </code></pre>
 
@@ -442,15 +442,15 @@ But what if there were hundreds? How can we count the number of results from a
 <p>Use <code>ls</code>, <code>grep</code> and any tools we've already learned about to get the command
 line to spit out the number of files/folders that contain <code>Do</code> in their title.</p>
 <h2 id="sort"><code>sort</code></h2>
-<pre><code class="bash">wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
+<pre><code class="text">wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
 </code></pre>
 
 <p>Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
 take a look at what the file contains:</p>
-<pre><code class="bash">$ cat copa_america_goals 
+<pre><code class="text">$ cat copa_america_goals 
 </code></pre>
 
-<pre><code class="bash">1 Miku
+<pre><code class="text">1 Miku
 1 Neymar
 1 Robinho
 3 Sergio Aguero
@@ -493,10 +493,10 @@ take a look at what the file contains:</p>
 some players only have one name. How many players scored 4 goals? We can <code>grep</code>
 for that, which will definitely work, but we can also sort the list easily using
 the <code>sort</code> command.  Try it out!</p>
-<pre><code class="bash">$ cat copa_america_goals | sort
+<pre><code class="text">$ cat copa_america_goals | sort
 </code></pre>
 
-<pre><code class="bash">1 Alexis Sanchez
+<pre><code class="text">1 Alexis Sanchez
 1 Andrew Carrillo
 1 Christian Cueva
 1 Claudio Pizarro
@@ -540,15 +540,15 @@ scored 4 goals in the Copa. </p>
 <p>Now, sorting goal scorers by last name seems a little strange if we care about
 the number of goals scored. Let's save the list of goals but sort it by the
 number of goals. How should we do that?</p>
-<pre><code class="bash">$ cat copa_america_goals | sort &gt; copa_goals_sorted
+<pre><code class="text">$ cat copa_america_goals | sort &gt; copa_goals_sorted
 </code></pre>
 
 <p>And remember, there's no output to the screen (<code>stdout</code>) because we <em>redirected</em>
 it to a new file. We can <code>cat</code> the new file to make sure it worked as we expect.</p>
-<pre><code class="bash">$ cat copa_goals_sorted 
+<pre><code class="text">$ cat copa_goals_sorted 
 </code></pre>
 
-<pre><code class="bash">1 Alexis Sanchez
+<pre><code class="text">1 Alexis Sanchez
 1 Andrew Carrillo
 1 Christian Cueva
 1 Claudio Pizarro
@@ -587,10 +587,10 @@ it to a new file. We can <code>cat</code> the new file to make sure it worked as
 4 Paolo Guerrero
 </code></pre>
 
-<pre><code class="bash">$ cat copa_goals_sorted | grep Alexis
+<pre><code class="text">$ cat copa_goals_sorted | grep Alexis
 </code></pre>
 
-<pre><code class="bash">1 Alexis Sanchez
+<pre><code class="text">1 Alexis Sanchez
 </code></pre>
               
             </div>

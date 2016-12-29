@@ -366,11 +366,11 @@ feelings about which of them is the best.</p>
 terminal-friendly editor. In this workshop we are going to use <code>nano</code>. It's
 simple and easy to use.</p>
 <p>Make sure you're in your home directory (use <code>cd</code> and <code>pwd</code> to confirm) then type</p>
-<pre><code class="console">$ nano
+<pre><code class="text">$ nano
 </code></pre>
 
 <p>This is a no-frills editor. Type something! How about a TODO list?</p>
-<pre><code class="console">TODO
+<pre><code class="text">TODO
 * [x] Learn how to navigate using the terminal
 * [ ] Learn how to create files
 * [ ] Learn about pipes and redirects
@@ -383,15 +383,15 @@ in a name (how about "TODO") and then hit <code>Enter</code>. <code>nano</code> 
 wrote some number of lines.</p>
 <p>Now exit <code>nano</code> by typing <code>Ctrl+x</code>.</p>
 <p>Use <code>ls</code> to see what happened:</p>
-<pre><code class="console">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="console">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  TODO  Templates/  Videos/
+<pre><code class="text">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  TODO  Templates/  Videos/
 </code></pre>
 
 <p>There's the TODO list! If you want to edit the todo list, you can open it up in
 <code>nano</code> (you can use tab completion for the filename, too!)</p>
-<pre><code class="console">$ nano TODO
+<pre><code class="text">$ nano TODO
 </code></pre>
 
 <p>Check off the second item on the todo list and then save and exit <code>nano</code>. Notice
@@ -401,13 +401,13 @@ simply change the name in the <code>Write Out</code> bar.</p>
 <h2 id="create-an-empty-file">Create an empty file</h2>
 <p>There are a few ways to create files on the command line. If you want to create
 an "empty" file, you can use <code>touch</code>. Try it!</p>
-<pre><code class="console">$ touch newfile
+<pre><code class="text">$ touch newfile
 </code></pre>
 
-<pre><code class="console">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="console">Desktop/    Downloads/  Pictures/  TODO        Videos/
+<pre><code class="text">Desktop/    Downloads/  Pictures/  TODO        Videos/
 Documents/  Music/      Public/    Templates/  newfile
 </code></pre>
 
@@ -416,27 +416,27 @@ using <code>Ctrl+x</code> since there's nothing to save!</p>
 <h2 id="create-a-directory">Create a directory</h2>
 <p>To create a new directory, use the <code>mkdir</code> command. We can create a <code>Research/</code>
 folder in the home directory.</p>
-<pre><code class="console">$ mkdir Research
+<pre><code class="text">$ mkdir Research
 </code></pre>
 
-<pre><code class="console">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="console">Desktop/    Downloads/  Pictures/  Research/  Templates/  newfile
+<pre><code class="text">Desktop/    Downloads/  Pictures/  Research/  Templates/  newfile
 Documents/  Music/      Public/    TODO       Videos/
 </code></pre>
 
 <h2 id="remove-a-file">Remove a file</h2>
 <p>We don't need that empty file sitting around, we can remove it. To remove a
 file, use the <code>rm</code> command:</p>
-<pre><code class="console">$ rm newfile
+<pre><code class="text">$ rm newfile
 </code></pre>
 
 <p>Did anything happen?</p>
-<pre><code class="console">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="console">Desktop/    Downloads/  Pictures/  Research/  Templates/
+<pre><code class="text">Desktop/    Downloads/  Pictures/  Research/  Templates/
 Documents/  Music/      Public/    TODO       Videos/
 </code></pre>
 
@@ -444,23 +444,23 @@ Documents/  Music/      Public/    TODO       Videos/
 "Recycle Bin". There is no "Undo". That file is gone.</p>
 <h2 id="remove-a-directory">Remove a directory</h2>
 <p>Let's try to remove the <code>Research</code> directory we created earlier.</p>
-<pre><code class="console">$ rm Research
+<pre><code class="text">$ rm Research
 </code></pre>
 
-<pre><code class="console">rm: cannot remove 'Research': Is a directory
+<pre><code class="text">rm: cannot remove 'Research': Is a directory
 </code></pre>
 
 <p><code>rm</code> only works with files by default. If you want to remove the directory you
 need to use the <code>-r</code> flag to specify a <em>recursive</em> removal.</p>
 <p><strong>This will delete the directory and ALL of its contents. BE CAREFUL WHEN USING
 THIS</strong></p>
-<pre><code class="console">$ rm -r Research
+<pre><code class="text">$ rm -r Research
 </code></pre>
 
-<pre><code class="console">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="console">Desktop/    Downloads/  Pictures/  TODO        Videos/
+<pre><code class="text">Desktop/    Downloads/  Pictures/  TODO        Videos/
 Documents/  Music/      Public/    Templates/
 </code></pre>
 
@@ -472,13 +472,13 @@ seem a little bit odd at first, but renaming a file is the same as moving it to
 a different location.</p>
 <p>To start, let's make the file <code>TODO</code> lowercase. The syntax is <code>mv &lt;old location&gt;
 &lt;new location&gt;</code></p>
-<pre><code class="console">$ mv TODO todo
+<pre><code class="text">$ mv TODO todo
 </code></pre>
 
-<pre><code class="console">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="console">Desktop/    Downloads/  Pictures/  Templates/  todo
+<pre><code class="text">Desktop/    Downloads/  Pictures/  Templates/  todo
 Documents/  Music/      Public/    Videos/
 </code></pre>
 
@@ -486,27 +486,26 @@ Documents/  Music/      Public/    Videos/
 <code>/home/&lt;user&gt;/todo</code>. Since the directory doesn't change, the result is a
 <em>renamed</em> file. </p>
 <p>We can also move the <code>todo</code> list to a different folder:</p>
-<pre><code class="console">$ mv todo Desktop/
+<pre><code class="text">$ mv todo Desktop/
 </code></pre>
 
-<pre><code class="console">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="console">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
+<pre><code class="text">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
 </code></pre>
 
 <p>We specified <code>Desktop/</code> as the <code>&lt;new location&gt;</code> in the <code>mv</code> command. Since
 <code>Desktop/</code> is a folder, <code>todo</code> will move inside that folder. </p>
-<pre><code class="console">$ ls -F Desktop/
+<pre><code class="text">$ ls -F Desktop/
 </code></pre>
 
-<pre><code class="console">todo workshop_data.zip
+<pre><code class="text">todo workshop_data.zip
 </code></pre>
 
 <p><strong>Note:</strong> As we see, if <code>&lt;new location&gt;</code> is a folder, then the file is moved
 inside the folder. However, if <code>&lt;new location&gt;</code> is an existing <em>file</em>, then that
 file will be overwritten.</p>
-<h3 id="todo-exercises">TODO exercises</h3>
               
             </div>
           </div>

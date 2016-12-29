@@ -374,37 +374,37 @@ interactively.</p>
 <p>Type in a terminal :</p>
 <p><code>ipython</code></p>
 <h2 id="python-is-awesome">Python is awesome!</h2>
-<pre><code>import this 
+<pre><code class="python">import this 
 import antigravity
 </code></pre>
 
 <h2 id="variable-assignment-types-and-duck-typing">Variable assignment, types and  duck typing</h2>
 <p>In Python is perfectly legal to do:</p>
-<pre><code>In [1]: x = 3
+<pre><code class="python">In [1]: x = 3
 </code></pre>
 
 <p>Try:</p>
-<pre><code>In [2]: x
+<pre><code class="python">In [2]: x
 Out[2]: 3
 </code></pre>
 
-<pre><code>In [3]: print(x)
+<pre><code class="python">In [3]: print(x)
 3
 </code></pre>
 
-<pre><code>In [4]: type(x)
+<pre><code class="python">In [4]: type(x)
 Out[4]: int
 </code></pre>
 
-<pre><code>In [5]: float(x)
+<pre><code class="python">In [5]: float(x)
 Out[5]: 3.0
 </code></pre>
 
-<pre><code>In [6]: complex(x)
+<pre><code class="python">In [6]: complex(x)
 Out[6]: (3+0j)
 </code></pre>
 
-<pre><code>In [7]: z = complex(x)
+<pre><code class="python">In [7]: z = complex(x)
 In [8]: z = z + 1j
 In [9]: print(z)
 (3+1j)
@@ -414,7 +414,7 @@ In [9]: print(z)
 <p>For example, raising <code>x</code> to the power of 2 would be:</p>
 <p><code>x**2</code></p>
 <h3 id="what-about-strings">What about strings?</h3>
-<pre><code>In [9]: y = &quot;hello&quot;
+<pre><code class="python">In [9]: y = &quot;hello&quot;
 
 In [10]: y
 Out[10]: 'hello'
@@ -429,21 +429,21 @@ In [13]: s = &quot;world&quot;
 </code></pre>
 
 <p>What if we try to "sum" strings? </p>
-<pre><code>In [14]: my_string = y+s
+<pre><code class="python">In [14]: my_string = y+s
 
 In [15]: print(my_string)
 helloworld
 </code></pre>
 
 <p>Let's add a space in between:</p>
-<pre><code>In [16]: my_string = y +' '+ s
+<pre><code class="python">In [16]: my_string = y +' '+ s
 
 In [17]: print(my_string)
 hello world
 </code></pre>
 
 <p>We can access the different elements of a string and slices of it, for example:</p>
-<pre><code>In [18]: my_string[0]
+<pre><code class="python">In [18]: my_string[0]
 Out[18]: 'h'
 
 In [19]: my_string[8]
@@ -464,7 +464,7 @@ Out[23]: 'ello worl'
 
 <p><strong> Note that the start index is inclusive and the end one is exclusive!!</strong></p>
 <p>Slices also allow us to pick specific elements from specific slices, for example:</p>
-<pre><code>In [24]: my_string[::2]
+<pre><code class="python">In [24]: my_string[::2]
 Out[24]: 'hlowrd'
 
 In [25]: my_string[1:-1:2]
@@ -480,12 +480,12 @@ Out[27]: 'dlrow olleh'
 
 <p>Strings have different methods that we can apply to them, for example:</p>
 <p>Make all uppercase:</p>
-<pre><code>In [28]: my_string.upper()
+<pre><code class="python">In [28]: my_string.upper()
 Out[28]: 'HELLO WORLD'
 </code></pre>
 
 <p>Find where a character is or starts:</p>
-<pre><code>In [29]: my_string.find('hello')
+<pre><code class="python">In [29]: my_string.find('hello')
 Out[29]: 0
 
 In [30]: my_string.find('l')
@@ -502,7 +502,7 @@ a simple command that will give you that information:</p>
 <p><code>True</code> and <code>False</code>.</p>
 <p>In general, if the value is zero or empty, then it's converted to <code>False</code>.
 Otherwise, it'll be converted to <code>True</code>.</p>
-<pre><code>In [31]: bool(0)
+<pre><code class="python">In [31]: bool(0)
 Out[31]: False
 
 In [32]: bool(&quot;Do we need oxygen?&quot;)
@@ -510,7 +510,7 @@ Out[32]: True
 </code></pre>
 
 <p>It also applies to logic statements, for example:</p>
-<pre><code>In [33]: x = 3
+<pre><code class="python">In [33]: x = 3
 In [34]: y = 5
 In [35]: z = x &gt; y
 
@@ -568,7 +568,7 @@ with a <code>TypeError</code>. (Try it on the shell)</p>
 <li>List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called
   replace for strings but it creates a copy)</li>
 </ul>
-<pre><code>In [38]: my_list = [2, 50, 4, 61]
+<pre><code class="python">In [38]: my_list = [2, 50, 4, 61]
 In [39]: print(my_list)
 [2, 50, 4, 61]
 
@@ -586,7 +586,7 @@ In [41]: print(my_list)
 <p>We can <em>concatenate</em> lists by using the operator <code>+</code>: </p>
 </li>
 </ul>
-<pre><code>In [42]: lst1 = [0,1,2,3]
+<pre><code class="python">In [42]: lst1 = [0,1,2,3]
 
 In [43]: lst2 = ['a','b','c']
 
@@ -601,7 +601,7 @@ In [45]: print(conc)
 <li>There are different methods to apply to a list (check them by typing
   <code>dir(lst1)</code>), an example is <code>append()</code>.</li>
 </ul>
-<pre><code>In [46]: lst1.append(4)
+<pre><code class="python">In [46]: lst1.append(4)
 
 In [47]: print(lst1)
 [0, 1, 2, 3, 4]
@@ -621,7 +621,7 @@ Out[51]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
 <li>Similar to strings we can access elements of a list by doing <code>list[i]</code> and
   also we can do slices.</li>
 </ul>
-<pre><code>In [52]: lst1[-1]
+<pre><code class="python">In [52]: lst1[-1]
 Out[52]: [6, 7, 8]
 
 In [53]: lst1[5:]
@@ -631,7 +631,7 @@ Out[53]: ['five', [6, 7, 8]]
 <ul>
 <li>We can check if something is or not in a list.</li>
 </ul>
-<pre><code>In [54]: my_numbers = [3, 17, 27, 19]
+<pre><code class="python">In [54]: my_numbers = [3, 17, 27, 19]
 
 In [55]: 17 in my_numbers
 Out[55]: True
@@ -647,7 +647,7 @@ Out[57]: True
 <ul>
 <li>A <strong>list</strong> is an ordered sequence. We can change the order by sorting the list. </li>
 </ul>
-<pre><code>In [58]: names = ['Naty', 'Gil', 'Lorena', 'Chris']
+<pre><code class="python">In [58]: names = ['Naty', 'Gil', 'Lorena', 'Chris']
 
 In [59]: names.sort()
 
@@ -658,7 +658,7 @@ In [60]: print(names)
 <ul>
 <li><strong>Strings</strong> and <strong>lists</strong>. The <code>split()</code> function.</li>
 </ul>
-<pre><code>In [61]: string = 'Just three words'
+<pre><code class="python">In [61]: string = 'Just three words'
 
 In [62]: str_list = string.split()
 
@@ -667,7 +667,7 @@ In [63]: print(str_list)
 </code></pre>
 
 <p>Python takes care of long spaces, for example:</p>
-<pre><code>In [64]: line = 'A lot of       space'
+<pre><code class="python">In [64]: line = 'A lot of       space'
 
 In [65]: stuff = line.split()
 
@@ -676,7 +676,7 @@ In [66]: print(stuff)
 </code></pre>
 
 <p>If we specify the delimiter (it can be a space <code>' '</code>, a <code>;</code>, a <code>:</code>, whatever you want).</p>
-<pre><code>In [67]: line = 'A lot of       space'
+<pre><code class="python">In [67]: line = 'A lot of       space'
 
 In [68]: stuff = line.split(' ')
 
@@ -685,7 +685,7 @@ In [69]: print(stuff)
 </code></pre>
 
 <p><code>;</code> and many other characters are not delimiters by default:</p>
-<pre><code>In [70]: s = 'a;b;c'
+<pre><code class="python">In [70]: s = 'a;b;c'
 
 In [71]: thing  = s.split()
 
@@ -709,7 +709,7 @@ In [74]: print(thing)
 <li>Dictionaries don't maintain order, we index the the things we put in the
   dictionary with a "look up" tag. For example:</li>
 </ul>
-<pre><code>In [75]: bag = {}
+<pre><code class="python">In [75]: bag = {}
 
 In [76]: bag['money'] = 12
 
@@ -734,7 +734,7 @@ In [82]: print(bag)
 <li>We can use the operators <code>in</code> and <code>not in</code> to check if a key is or not in a
   dictionary.</li>
 </ul>
-<pre><code>In [83]: 'book' in bag
+<pre><code class="python">In [83]: 'book' in bag
 Out[83]: False
 
 In [84]: 'candy' in bag
@@ -747,7 +747,7 @@ Out[85]: True
 <ul>
 <li>Retrieving keys and values.</li>
 </ul>
-<pre><code>In [86]: ages = {'John': 30, 'Maria': 28, 'Lucas': 23}
+<pre><code class="python">In [86]: ages = {'John': 30, 'Maria': 28, 'Lucas': 23}
 
 In [87]: print(ages.keys())
 dict_keys(['Maria', 'Lucas', 'John'])
@@ -761,7 +761,7 @@ and values are displayed in order.</p>
 <ul>
 <li>We can get a list with pairs (key, value) by doing:</li>
 </ul>
-<pre><code>In [89]: print(ages.items())
+<pre><code class="python">In [89]: print(ages.items())
 dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
 </code></pre>
 
@@ -783,7 +783,7 @@ Python
   element2, ...}</code> and an empty set is created by doing <code>set()</code>)</li>
 </ul>
 <p><strong> Example: look for an element in a list and in a set (%timeit)</strong></p>
-<pre><code>In [90]: rg = range(50000)
+<pre><code class="python">In [90]: rg = range(50000)
 
 In [91]: lst = list(rg)
 
@@ -814,7 +814,7 @@ Out[96]: False
 <h3 id="conditionals">Conditionals</h3>
 <p>The syntax is "If <code>x</code> true, then do something; otherwise, do something else."</p>
 <p><strong>If</strong> statement on its own:</p>
-<pre><code>In [97]: a = 8
+<pre><code class="python">In [97]: a = 8
 
 In [98]: b = 3 
 
@@ -825,7 +825,7 @@ a is bigger than b
 </code></pre>
 
 <p><strong>If-else</strong> statement: </p>
-<pre><code>In [100]: x = float(input('Insert your number: '))
+<pre><code class="python">In [100]: x = float(input('Insert your number: '))
 Insert your number: 711457
 
 In [101]: if x % 17 == 0:
@@ -837,7 +837,7 @@ Your number is not a multiple of 17.
 </code></pre>
 
 <p><strong>If-elif-else</strong> statement:</p>
-<pre><code>In [102]: a = 3
+<pre><code class="python">In [102]: a = 3
 
 In [103]: b = 5
 
@@ -857,7 +857,7 @@ a is smaller than b.
 multiple looping formats: <code>while</code> loops, <code>for</code> loops, and comprehensions.</p>
 <p><strong>While loops</strong></p>
 <p>They are related to an <code>if</code> statement, they will compute <strong>while</strong> a condition is true.</p>
-<pre><code>In [105]: sec = 5
+<pre><code class="python">In [105]: sec = 5
 In [106]: while 0 &lt; sec :
      ...:     print('You have {} seconds'.format(sec))
      ...:     sec -= 1
@@ -874,7 +874,7 @@ Boom!!!
 <p><em>Note:</em> You have to be careful to not generate an infinite loop. </p>
 <p><strong>For loops</strong>
 It is usually more useful to iterate over a certain group of things or an "iterable".</p>
-<pre><code>In [107]: for i in range(5,0,-1):
+<pre><code class="python">In [107]: for i in range(5,0,-1):
     ...:     print('You have {} seconds'.format(i))
     ...: print('Boom!!!')
     ...: 
@@ -887,7 +887,7 @@ Boom!!!
 </code></pre>
 
 <p>Another example:</p>
-<pre><code>In [108]: name = input('Insert your name: ')
+<pre><code class="python">In [108]: name = input('Insert your name: ')
 Insert your name: Naty
 
 In [109]: name
@@ -906,7 +906,7 @@ The 4 letter is y
 </code></pre>
 
 <p>We can loop over dictionaries too:</p>
-<pre><code>In [112]: d = {&quot;name&quot;:&quot;Lionel&quot;, &quot;last_name&quot;: &quot;Messi&quot;, &quot;birthday&quot;: [6, 24, 1987]}
+<pre><code class="python">In [112]: d = {&quot;name&quot;:&quot;Lionel&quot;, &quot;last_name&quot;: &quot;Messi&quot;, &quot;birthday&quot;: [6, 24, 1987]}
 
 In [113]: for item in d.items():
      ...:     print(item)
@@ -930,7 +930,7 @@ etc. This takes at least "three lines". Thankfully, Python is so great that in
 some cases we can reduce these cases to just ONE line! Let's see this with an
 example:</p>
 <p><em>Normal loop:</em></p>
-<pre><code>In [114]: fruits = ['apple', 'orange', 'grape', 'banana', 'pineapple', 'strawberry', 'watermelon']
+<pre><code class="python">In [114]: fruits = ['apple', 'orange', 'grape', 'banana', 'pineapple', 'strawberry', 'watermelon']
 
 In [115]: upper_fruits = []
 
@@ -942,14 +942,14 @@ Out[117]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WAT
 </code></pre>
 
 <p><em>Pythonic way:</em></p>
-<pre><code>In [118]: upper_pythonic = [fruit.upper() for fruit in fruits]
+<pre><code class="python">In [118]: upper_pythonic = [fruit.upper() for fruit in fruits]
 
 In [119]: upper_pythonic
 Out[119]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WATERMELON']
 </code></pre>
 
 <p>We can add a filter, for example:</p>
-<pre><code>In [120]: entries = [2, 11, 49, 3, 57, 33, 9]
+<pre><code class="python">In [120]: entries = [2, 11, 49, 3, 57, 33, 9]
 
 In [121]: entries
 Out[121]: [2, 11, 49, 3, 57, 33, 9]
@@ -993,11 +993,11 @@ Charles Severance)</p>
 <p>2- Write a code that grabs, from each word, all the letters except 'ball' at the
 end of each one. Save the output in a list and print it out.</p>
 <p>The original list is:</p>
-<pre><code>sports = ['Football', 'Volleyball', 'Basketball', 'Baseball', 'Handball', 'Softball']
+<pre><code class="python">sports = ['Football', 'Volleyball', 'Basketball', 'Baseball', 'Handball', 'Softball']
 </code></pre>
 
 <p>And your output should look like:</p>
-<pre><code>['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
+<pre><code class="python">['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
 </code></pre>
 
 <p><a href="../solutions/python.ball.soln/"><em>Solution</em></a></p>
@@ -1008,11 +1008,11 @@ phrase provided.</p>
 repetitions.</p>
 <p>(The idea of the following two exercises was inspired by content from the online
 course "Python Data Structures" by Dr. Charles Severance)</p>
-<pre><code>happy = &quot;I felt happy because I saw the others were happy and because I knew I should feel happy but I was not really happy&quot;
+<pre><code class="python">happy = &quot;I felt happy because I saw the others were happy and because I knew I should feel happy but I was not really happy&quot;
 </code></pre>
 
 <p>Your output should look like:</p>
-<pre><code>{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
+<pre><code class="python">{'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
 </code></pre>
 
 <p>Remember that dictionaries don't preserve order, therefore the items in your

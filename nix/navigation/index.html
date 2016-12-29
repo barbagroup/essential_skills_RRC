@@ -369,52 +369,50 @@ when dealing with computing clusters and remote machines.</p>
 <p>For almost all of this tutorial we will explain every command as we come across
 it with this one exception. For now, please copy and paste the following command
 into your terminal -- we'll talk more about it later.</p>
-<pre><code class="bash">export HISTFILE=~/terminal_history_$(date -I)
+<pre><code class="text">export HISTFILE=~/terminal_history_$(date -I)
 </code></pre>
 
 <p>Ok, on with the show!</p>
 <h2 id="whoami"><code>whoami</code></h2>
 <p>Before we do anything else, let's figure out who we are. We can ask on the
 command line:</p>
-<pre><code class="bash">$ whoami
+<pre><code class="text">$ whoami
 </code></pre>
 
-<pre><code class="bash">gil
+<pre><code class="text">gil
 </code></pre>
 
 <p>That's my username!</p>
 <h2 id="pwd"><code>pwd</code></h2>
 <p>Now that we know who we are, time to figure out <em>where</em> we are.  To do that, we ask the terminal to <code>print working directory</code> or <code>pwd</code></p>
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home/gil/
+<pre><code class="text">/home/gil/
 </code></pre>
 
-<p>We're in the "home directory" for our user. To understand the "home directory",
-let's take a brief moment to look at how the file system is organized.</p>
-<p><strong>Inverted tree diagram a la software carpentry</strong></p>
+<p>We're in the "home directory" for our user. </p>
 <h2 id="ls"><code>ls</code></h2>
 <p>Let's look around</p>
-<pre><code class="bash">$ ls
+<pre><code class="text">$ ls
 </code></pre>
 
-<pre><code class="bash">Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+<pre><code class="text">Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 </code></pre>
 
 <p>I think those are folders?  How can we tell? Use the <code>-F</code> flag</p>
-<pre><code class="bash">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="bash">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
+<pre><code class="text">Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
 </code></pre>
 
 <p>They all have a trailing slash, so they're all folders.
 What other options does <code>ls</code> have?</p>
-<pre><code class="bash">$ ls --help
+<pre><code class="text">$ ls --help
 </code></pre>
 
-<pre><code class="bash">Usage: ls [OPTION]... [FILE]...
+<pre><code class="text">Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
 
@@ -537,112 +535,120 @@ or available locally via: info '(coreutils) ls invocation'
 file at the beginning of the workshop.</p>
 <p>If we want to use <code>ls</code> on a different folder than the <em>current</em> folder, just
 pass the name of the folder you want to look in:</p>
-<pre><code class="bash">$ ls -F Desktop/
+<pre><code class="text">$ ls -F Desktop/
 </code></pre>
 
-<pre><code class="bash">workshop_data.zip
+<pre><code class="text">workshop_data.zip
 </code></pre>
 
 <p>There it is!</p>
 <h2 id="cd"><code>cd</code></h2>
 <p>Ok, we know where the zip file is, time to <em>change directory</em> to the folder <code>Desktop/</code>.  To do this, we use the <code>cd</code> command:</p>
-<pre><code class="bash">$ cd Desktop
+<pre><code class="text">$ cd Desktop
 </code></pre>
 
 <p>Now let's check in with <code>pwd</code> again:</p>
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home/gil/Desktop
+<pre><code class="text">/home/gil/Desktop
 </code></pre>
 
 <p>Ok! Cool! We moved! Now if we run <code>ls</code> we should see the zip file in here.</p>
-<pre><code class="bash">$ ls -F
+<pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="bash">workshop_data.zip
+<pre><code class="text">workshop_data.zip
 </code></pre>
 
 <p>And there it is! Ok. We'll come back here in a second, but first let's explore a
 little more. Let's go back to the "home directory".</p>
 <p>How do we do that...?</p>
 <p>The home directory has the same name as our username. Let's try that!</p>
-<pre><code class="bash">$ cd gil
+<pre><code class="text">$ cd gil
 </code></pre>
 
-<pre><code class="bash">cd: no such file or directory: gil
+<pre><code class="text">cd: no such file or directory: gil
 </code></pre>
 
 <p>That doesn't work. We're at the end of a branch of the tree that makes up the
 filesystem. There has to be a way to go back -- what are we missing?</p>
 <p>Let's use <code>ls</code> again, but this time add in the <code>-a</code> flag for "show all"</p>
-<pre><code class="bash">$ ls -a
+<pre><code class="text">$ ls -a
 </code></pre>
 
-<pre><code class="bash">.  ..  workshop_data.zip
+<pre><code class="text">.  ..  workshop_data.zip
 </code></pre>
 
 <p>AHA! There are two more entries that we didn't see before: <code>.</code> and <code>..</code>
 What are those? Learn by doing, I say:</p>
-<pre><code class="bash">$ cd .
+<pre><code class="text">$ cd .
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home/gil/Desktop
+<pre><code class="text">/home/gil/Desktop
 </code></pre>
 
 <p>We're in the same spot. The <code>.</code> directory is a special directory in every folder
 on the filesystem and it points to the current working directory.</p>
-<pre><code class="bash">$ cd ..
+<pre><code class="text">$ cd ..
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home/gil/
+<pre><code class="text">/home/gil/
 </code></pre>
 
 <p>We made it back <em>home</em>! The <code>..</code> directory is another special directory, but this one always points to the <em>parent</em> of the current directory.</p>
 <p>Let's try moving up a few more times!</p>
-<pre><code class="bash">$ cd ..
+<pre><code class="text">$ cd ..
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home
+<pre><code class="text">/home
 </code></pre>
 
-<pre><code class="bash">$ cd ..
+<pre><code class="text">$ cd ..
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/
+<pre><code class="text">/
 </code></pre>
 
-<pre><code class="bash">$ cd ..
+<pre><code class="text">$ cd ..
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/
+<pre><code class="text">/
 </code></pre>
 
 <p>We can't go back any further because we are at the <em>root</em> of the file <em>tree</em>.</p>
+<p>Let's take a brief moment to look at how the file system is organized.</p>
+<p><img alt="" src="../figures/filetree.svg" /></p>
+<p style="text-align: center;">Figure 1. The inverted tree filesystem</p>
+
+<p>The filesystem is an inverted tree. From <em>root</em> we can see every branch below
+(which is everything). From <em>gil</em>, all of the folders in my home directory are
+visible, but to move <em>up</em> the tree, we need to either know the folder path we
+want to change to, or use the <code>..</code> shortcut.</p>
 <p>Now that we've had a look around, time to go back to the home directory.
 Let's use a little shortcut:</p>
-<pre><code class="bash">$ cd
+<pre><code class="text">$ cd
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home/gil/
+<pre><code class="text">/home/gil/
 </code></pre>
 
 <p>If you don't pass a target to <code>cd</code> it will always take you back to your home
@@ -653,13 +659,13 @@ deep directory tree.</p>
 we want to go to <code>Desktop</code> and so we type <code>cd Desktop</code>. This wouldn't work if we
 were in a different directory.</p>
 <p>One option when you need to jump around is to use <em>absolute</em> paths, like this:</p>
-<pre><code class="bash">$ cd /home/gil/Desktop
+<pre><code class="text">$ cd /home/gil/Desktop
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home/gil/Desktop
+<pre><code class="text">/home/gil/Desktop
 </code></pre>
 
 <p>The benefit of an absolute path is that it will work no matter where you start
@@ -667,24 +673,24 @@ from, which can be helpful if you are deep in a directory tree.</p>
 <p>One useful shortcut when typing out absolute paths is the <code>~</code>. The <code>~</code> is a
 shortcut for your home directory, so you don't need to explicitly write out
 <code>/home/&lt;username&gt;/</code> all the time.</p>
-<pre><code class="bash">$ cd ~/Desktop
+<pre><code class="text">$ cd ~/Desktop
 </code></pre>
 
-<pre><code class="bash">$ pwd
+<pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="bash">/home/gil/Desktop
+<pre><code class="text">/home/gil/Desktop
 </code></pre>
 
 <h2 id="tab-completion">Tab completion</h2>
 <p>Before we go any further, let's take a look at one of the most useful features
 of the *nix command line: tab completion</p>
 <p>Return to the home directory if you aren't there already.</p>
-<pre><code class="bash">$ cd
+<pre><code class="text">$ cd
 </code></pre>
 
 <p>Type</p>
-<pre><code class="bash">$ cd T
+<pre><code class="text">$ cd T
 </code></pre>
 
 <p>then hit the TAB key. Pretty cool, huh?</p>
@@ -693,22 +699,22 @@ the line for you! It can't read minds, though. Since <code>Templates</code> is t
 directory beginning with <code>T</code>, the shell knew what to do. Let's try a different
 example.</p>
 <p>Type</p>
-<pre><code class="bash">$ cd Do
+<pre><code class="text">$ cd Do
 </code></pre>
 
 <p>then hit the TAB key.</p>
 <p>Nothing. But hit it again</p>
-<pre><code class="bash">Documents/  Downloads/
+<pre><code class="text">Documents/  Downloads/
 </code></pre>
 
 <p>There are two possible answers based on a prefix <code>Do</code>. In this case, tab
 completion will only complete up to the common prefix, which is just <code>Do</code>. It
 needs a little more information to finish the completion. Try adding a <code>c</code> and
 hitting TAB again.</p>
-<pre><code class="bash">$ cd Doc
+<pre><code class="text">$ cd Doc
 </code></pre>
 
-<pre><code class="bash">$ cd Documents/
+<pre><code class="text">$ cd Documents/
 </code></pre>
               
             </div>

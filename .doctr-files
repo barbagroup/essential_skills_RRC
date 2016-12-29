@@ -61,6 +61,7 @@
 ./mkdocs/js/search.js
 ./mkdocs/js/text.js
 ./mkdocs/search_index.json
+./nix/figures/filetree.svg
 ./nix/file_handling/index.html
 ./nix/man_and_less/index.html
 ./nix/navigation/index.html
