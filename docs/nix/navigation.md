@@ -12,7 +12,7 @@ For almost all of this tutorial we will explain every command as we come across
 it with this one exception. For now, please copy and paste the following command
 into your terminal -- we'll talk more about it later.
 
-```bash
+```text
 export HISTFILE=~/terminal_history_$(date -I)
 ```
 
@@ -23,10 +23,10 @@ Ok, on with the show!
 Before we do anything else, let's figure out who we are. We can ask on the
 command line:
 
-```bash
+```text
 $ whoami
 ```
-```bash
+```text
 gil
 ```
 
@@ -36,48 +36,45 @@ That's my username!
 
 Now that we know who we are, time to figure out _where_ we are.  To do that, we ask the terminal to `print working directory` or `pwd`
 
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /home/gil/
 ```
 
-We're in the "home directory" for our user. To understand the "home directory",
-let's take a brief moment to look at how the file system is organized.
-
-**Inverted tree diagram a la software carpentry**
+We're in the "home directory" for our user. 
 
 ## `ls`
 
 Let's look around
 
-```bash
+```text
 $ ls
 ```
 
-```bash
+```text
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
 ```
 
 I think those are folders?  How can we tell? Use the `-F` flag
 
-```bash
+```text
 $ ls -F
 ```
 
-```bash
+```text
 Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  Templates/  Videos/
 ```
 
 They all have a trailing slash, so they're all folders.
 What other options does `ls` have?
 
-```bash
+```text
 $ ls --help
 ```
 
-```bash
+```text
 Usage: ls [OPTION]... [FILE]...
 List information about the FILEs (the current directory by default).
 Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
@@ -204,10 +201,10 @@ file at the beginning of the workshop.
 If we want to use `ls` on a different folder than the _current_ folder, just
 pass the name of the folder you want to look in:
 
-```bash
+```text
 $ ls -F Desktop/
 ```
-```bash
+```text
 workshop_data.zip
 ```
 
@@ -217,26 +214,26 @@ There it is!
 
 Ok, we know where the zip file is, time to _change directory_ to the folder `Desktop/`.  To do this, we use the `cd` command:
 
-```bash
+```text
 $ cd Desktop
 ```
 
 Now let's check in with `pwd` again:
 
-```bash
+```text
 $ pwd
 ```
 
-```bash
+```text
 /home/gil/Desktop
 ```
 
 Ok! Cool! We moved! Now if we run `ls` we should see the zip file in here.
 
-```bash
+```text
 $ ls -F
 ```
-```bash
+```text
 workshop_data.zip
 ```
 
@@ -247,10 +244,10 @@ How do we do that...?
 
 The home directory has the same name as our username. Let's try that!
 
-```bash
+```text
 $ cd gil
 ```
-```bash
+```text
 cd: no such file or directory: gil
 ```
 
@@ -259,40 +256,40 @@ filesystem. There has to be a way to go back -- what are we missing?
 
 Let's use `ls` again, but this time add in the `-a` flag for "show all"
 
-```bash
+```text
 $ ls -a
 ```
 
-```bash
+```text
 .  ..  workshop_data.zip
 ```
 
 AHA! There are two more entries that we didn't see before: `.` and `..`
 What are those? Learn by doing, I say:
 
-```bash
+```text
 $ cd .
 ```
 
-```bash
+```text
 $ pwd
 ```
 
-```bash
+```text
 /home/gil/Desktop
 ```
 
 We're in the same spot. The `.` directory is a special directory in every folder
 on the filesystem and it points to the current working directory.
 
-```bash
+```text
 $ cd ..
 ```
 
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /home/gil/
 ```
 
@@ -300,52 +297,63 @@ We made it back _home_! The `..` directory is another special directory, but thi
 
 Let's try moving up a few more times!
 
-```bash
+```text
 $ cd ..
 ```
 
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /home
 ```
 
-```bash
+```text
 $ cd ..
 ```
 
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /
 ```
 
-```bash
+```text
 $ cd ..
 ```
 
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /
 ```
 
 We can't go back any further because we are at the _root_ of the file _tree_.
 
+Let's take a brief moment to look at how the file system is organized.
+
+![](./figures/filetree.svg)
+
+<p style="text-align: center;">Figure 1. The inverted tree filesystem</p>
+
+The filesystem is an inverted tree. From _root_ we can see every branch below
+(which is everything). From _gil_, all of the folders in my home directory are
+visible, but to move _up_ the tree, we need to either know the folder path we
+want to change to, or use the `..` shortcut.
+
 Now that we've had a look around, time to go back to the home directory.
 Let's use a little shortcut:
 
-```bash
+```text
 $ cd
 ```
 
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /home/gil/
 ```
 
@@ -361,13 +369,13 @@ were in a different directory.
 
 One option when you need to jump around is to use _absolute_ paths, like this:
 
-```bash
+```text
 $ cd /home/gil/Desktop
 ```
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /home/gil/Desktop
 ```
 
@@ -378,13 +386,13 @@ One useful shortcut when typing out absolute paths is the `~`. The `~` is a
 shortcut for your home directory, so you don't need to explicitly write out
 `/home/<username>/` all the time.
 
-```bash
+```text
 $ cd ~/Desktop
 ```
-```bash
+```text
 $ pwd
 ```
-```bash
+```text
 /home/gil/Desktop
 ```
 
@@ -394,12 +402,12 @@ Before we go any further, let's take a look at one of the most useful features
 of the *nix command line: tab completion
 
 Return to the home directory if you aren't there already.
-```bash
+```text
 $ cd
 ```
 
 Type
-```bash
+```text
 $ cd T
 ```
 then hit the TAB key. Pretty cool, huh?
@@ -410,13 +418,13 @@ directory beginning with `T`, the shell knew what to do. Let's try a different
 example.
 
 Type
-```bash
+```text
 $ cd Do
 ```
 then hit the TAB key.
 
 Nothing. But hit it again
-```bash
+```text
 Documents/  Downloads/
 ```
 
@@ -425,9 +433,9 @@ completion will only complete up to the common prefix, which is just `Do`. It
 needs a little more information to finish the completion. Try adding a `c` and
 hitting TAB again.
 
-```bash
+```text
 $ cd Doc
 ```
-```bash
+```text
 $ cd Documents/
 ```
