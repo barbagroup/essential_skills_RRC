@@ -4,7 +4,9 @@
 
 *Offered for the first time 2–6 January 2017, at Universidad Técnica Federico Santa María, Valparaíso, Chile.*
 
-Rendered course website is available [here](https://barbagroup.github.io/essential_skills_RRC/)
+**Instructors:** Lorena A. Barba, Natalia C. Clementi, Gilbert F. Forsyth
+
+A [rendered course website](https://barbagroup.github.io/essential_skills_RRC/) is also available.
 
 ---
 
