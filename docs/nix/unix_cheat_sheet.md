@@ -1,5 +1,5 @@
-| Command | Description|
-|---------|------------|
+| Command | Description |
+|---------|-------------|
 |**whoami**|who you are logged in as|
 |**pwd**|show current directory|
 |**ls**|list items in current directory|
@@ -17,8 +17,7 @@
 |**rm** file|remove *file*|
 |**rmdir** dir|remove directory *dir* if it is empty|
 |**rm -r** dir|remove directory *dir* recursively|
-|**mv** file newname|rename *file* to *newname*. If a file called *newname*
- exists, this will overwrite it!|
+|**mv** file newname|rename *file* to *newname*. If a file called *newname* exists, this will overwrite it!|
 |**mv** file newlocdir|move *file* into the destination directory *newlocdir*|
 |command **>** file|redirect the output of *command* writing it to *file*|
 |**wc** file|count lines, words and characters in *file*|
