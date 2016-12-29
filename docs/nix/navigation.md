@@ -43,10 +43,7 @@ $ pwd
 /home/gil/
 ```
 
-We're in the "home directory" for our user. To understand the "home directory",
-let's take a brief moment to look at how the file system is organized.
-
-**Inverted tree diagram a la software carpentry**
+We're in the "home directory" for our user. 
 
 ## `ls`
 
@@ -334,6 +331,17 @@ $ pwd
 ```
 
 We can't go back any further because we are at the _root_ of the file _tree_.
+
+Let's take a brief moment to look at how the file system is organized.
+
+![](./figures/filetree.svg)
+
+<p style="text-align: center;">Figure 1. The inverted tree filesystem</p>
+
+The filesystem is an inverted tree. From _root_ we can see every branch below
+(which is everything). From _gil_, all of the folders in my home directory are
+visible, but to move _up_ the tree, we need to either know the folder path we
+want to change to, or use the `..` shortcut.
 
 Now that we've had a look around, time to go back to the home directory.
 Let's use a little shortcut:
