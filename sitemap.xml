@@ -86,6 +86,16 @@
     
         
     <url>
+     <loc>/openlicenses/openlicensing/</loc>
+     <lastmod>2016-12-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/git/git/</loc>
      <lastmod>2016-12-30</lastmod>
      <changefreq>daily</changefreq>
