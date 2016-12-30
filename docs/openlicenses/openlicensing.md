@@ -40,7 +40,27 @@ It gives software authors the power to share with users, and to collaborate with
 
 > Always add a license to software you plan to make public.
 
+### Free and open-source software (FOSS)
 
+Free and open-source software is under a license that grants the users **freedom**: to access, use or modify the software for their purposes. 
+The most important distinction between the various FOSS licenses is whether they are _permissive_ versus _copyleft_. 
+These terms are often confused. 
+
+A permissive license gives more freedoms: the only restriction of use could be that the original authors receive credit in any distribution of the software or any derivative works. 
+Even commercial uses, or incorporating the software into other proprietary (closed) works, is allowed. 
+Academic software benefit most from permissive licensing. 
+In fact, permissive licenses originated at accademic institutions, including the Berkeley Software Distribution or BSD License, the MIT License and the Apache License.
+
+A copyleft license restricts the use of the software by requiring that any derivative works be _also_ under the license of the original. 
+Another word for this model is "share-alike." 
+Many developers want to ensure open access to their work and all derivatives for all posterity. 
+This may be considered virtuous in some circles, but we should recognize that it is achieved by placing _restrictions_ on the use of software. 
+The typical copyleft license is GPL.
+
+### License compatibility
+
+![](figures/journal.pcbi.1002598.g002.png)
+**Credit:** Figure 2 of Morin et al. (2012). Illustrates compatibility of licenses: permissive licenses (BSD, MIT) are forward-compatible with any other license, whereas copyleft licenses are only forward-compatible with themselves. 
 
 ## References
 
