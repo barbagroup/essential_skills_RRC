@@ -23,8 +23,23 @@ She continues:
 _"It’s a long tradition in science that publication of scientific findings should be accompanied by detailed description of materials and methods, such that another scientist may be able to replicate the findings. […] I frankly cannot see how one can publish a scientific finding that relies on software, without the source code of the software that generated the findings also being public. The code is part of the method and findings cannot be replicated without it."_ 
 
 Stanford professor David Donoho and co-workers appear to be the first ones to publicly state that reproducibility depends on open code and data.<sup>2</sup> 
-They define reproducible computational research that "in which all details of computations—code and data—are made conveniently available to others. 
+They define reproducible computational research as that _"in which all details of computations—code and data—are made conveniently available to others."_ 
 They took inspiration from geophysics professor Jon Claerbout, who said that in computational science _"the actual scholarship is the complete software development environment and the complete set of instructions which generated the figures."_ 
+
+## Guide to licenses
+
+Everyone developing software in an academic setting should have working knowledge of software licenses. 
+We recommend reading: "A Quick Guide to Software Licensing for the Scientist-Programmer," by Morin et al.<sup>3</sup>
+
+The first thing to understand is that simply making the source code public does not make your project open source. 
+Software is a creative work, and **copyright is automatically attached** to it. 
+Without a license, your software is in a legal limbo where readers don't know how they can use it, if at all: 
+a well-informed reader will opt for _not using_ your software, as the only safe behavior. 
+The license is a contract between the authors of software and the users. 
+It gives software authors the power to share with users, and to collaborate with other developers.
+
+> Always add a license to software you plan to make public.
+
 
 
 ## References
@@ -32,4 +47,7 @@ They took inspiration from geophysics professor Jon Claerbout, who said that in 
 <sup>1</sup> The Open Definition, [http://opendefinition.org](http://opendefinition.org)
 
 <sup>2</sup> Donoho et al. (2009), Reproducible Research in Computational Harmonic Analysis, _Comp. Sci. Eng._ 11(1):8–18.
+
+<sup>3</sup> Morin, A., J. Urban and P. Sliz (2012) A Quick Guide to Software Licensing for the Scientist-Programmer, _PLoS Comput. Biol._ 8(7): e1002598 [doi:10.1371/journal.pcbi.1002598](http://dx.doi.org/10.1371/journal.pcbi.1002598)
+
 
