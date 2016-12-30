@@ -63,6 +63,15 @@
             
     
     <li class="toctree-l1 ">
+        <a class="" href="../setup/">Setup</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
         <a class="" href="../navigation/">Navigation</a>
         
     </li>
@@ -347,8 +356,22 @@
             <div class="section">
               
                 <h1 id="uber-example">uber example</h1>
-<p>Download and unzip file from here:</p>
-<p>Should have folder <code>uber-trip-data</code>.  <code>cd</code> to that directory and take a look.</p>
+<p>You downloaded a zip file at the beginning of the workshop. Time to use it!</p>
+<p>First, navigate to the <code>Downloads</code> folder.</p>
+<p>We need to unzip the zip file -- any guesses about what command unzips files?</p>
+<pre><code class="text">unzip uber-trip-data-master.zip
+</code></pre>
+
+<p>By default, <code>unzip</code> will create a folder with the same name as the <code>zip</code> file
+(without the <code>.zip</code> part). If you want to unzip the file to a different
+location, you can use the <code>-d</code> flag.</p>
+<p>For example:</p>
+<pre><code class="text">unzip uber-trip-data-master.zip -d ~/uber-trip-data
+</code></pre>
+
+<p>Now you should have a folder called <code>uber-trip-data</code> or something similar,
+depending on where and how you unzipped it. <code>cd</code> to that directory and take a
+look.</p>
 <pre><code class="text">$ cd uber-trip-data/
 </code></pre>
 
@@ -650,7 +673,7 @@ B02598,2015-01-18 00:47:08,B02617,68
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> and deployed using <a href="https://drdoctr.github.io/doctr">doctr</a>.
 </footer>
 	  
         </div>

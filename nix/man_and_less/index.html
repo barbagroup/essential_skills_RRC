@@ -63,6 +63,15 @@
             
     
     <li class="toctree-l1 ">
+        <a class="" href="../setup/">Setup</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
         <a class="" href="../navigation/">Navigation</a>
         
     </li>
@@ -102,6 +111,12 @@
         <a class="current" href="./">man and less</a>
         
             <ul>
+            
+                <li class="toctree-l3"><a href="#man-pages">man pages</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#less">less</a></li>
+                
             
                 <li class="toctree-l3"><a href="#vi-movement-commands">vi movement commands</a></li>
                 
@@ -346,13 +361,40 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="vi-movement-commands"><code>vi</code> movement commands</h1>
+                <h1 id="man-pages"><code>man</code> pages</h1>
+<p>Earlier we used the command <code>ls --help</code> to display the long list of options that
+<code>ls</code> supports. The more common way to look up how to use a program is to look at
+its "man page", short for manual.</p>
+<p>Try opening the <code>man</code> page for <code>ls</code></p>
+<pre><code class="text">man ls
+</code></pre>
+
+<p>Notice that instead of dumping all of that information to the screen (STDOUT),
+we instead end up in something called a "pager". You can move up and down in the
+<code>man</code> page using the arrow keys. When you want to quit the <code>man</code> page, just hit
+<code>q</code>.</p>
+<h1 id="less"><code>less</code></h1>
+<p>We just used <code>less</code>. When you open a <code>man</code> page, it opens up in <code>less</code>, which is
+a "pager".</p>
+<p>A pager is a program used to view but not edit a text file or text stream. Why
+use a pager instead of a text editor? Sometimes you don't <em>want</em> to be able to
+edit a file (changing <code>man</code> pages is a bad idea). It's also much faster when
+dealing with a very large file. A pager can begin to display the beginning of a
+file while the rest of it is being loaded in to memory. A text editor has to
+first load an entire file before it can display any part of it.</p>
+<p>We'll look at a few more ways that <code>less</code> can help you in the exercises in the next section. First, let's take a quick pass through the movement commands that <code>less</code> supports.</p>
+<p>To do that, we can open up another <code>man</code> page. How about <code>sort</code>?</p>
+<pre><code class="text">man sort
+</code></pre>
+
+<h1 id="vi-movement-commands"><code>vi</code> movement commands</h1>
 <p><code>vi</code> or <code>vim</code> is a popular and powerful command line text editor. It's also
 notoriously difficult for beginners. It's too much to try to learn <code>vi</code> on top
 of everything else we're going to look at, but we do need to look at a few <code>vi</code>
 commands.</p>
 <p>Why? Because a lot of *nix programs inherited parts of their interface from <code>vi</code>
-and you'll need to know how to interact with them.</p>
+and you'll need to know how to interact with them. <code>less</code> is just one of those
+programs.</p>
 <table>
 <thead>
 <tr>
@@ -381,6 +423,10 @@ and you'll need to know how to interact with them.</p>
 <td>G or &gt;</td>
 <td>Go to bottom</td>
 </tr>
+<tr>
+<td>/<text></td>
+<td>Search for <text></td>
+</tr>
 </tbody>
 </table>
               
@@ -407,7 +453,7 @@ and you'll need to know how to interact with them.</p>
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> and deployed using <a href="https://drdoctr.github.io/doctr">doctr</a>.
 </footer>
 	  
         </div>

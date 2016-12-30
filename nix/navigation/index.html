@@ -62,14 +62,21 @@
         
             
     
+    <li class="toctree-l1 ">
+        <a class="" href="../setup/">Setup</a>
+        
+    </li>
+    
+
+        
+            
+    
     <li class="toctree-l1 current">
         <a class="current" href="./">Navigation</a>
         
             <ul>
             
                 <li class="toctree-l3"><a href="#navigating-the-command-line">Navigating the Command Line</a></li>
-                
-                    <li><a class="toctree-l4" href="#set-histfile">set HISTFILE</a></li>
                 
                     <li><a class="toctree-l4" href="#whoami">whoami</a></li>
                 
@@ -365,14 +372,6 @@
 <p>The command line can be a little intimidating at first, but it is a powerful and
 efficient way of interacting with your computer. It's also the lingua franca
 when dealing with computing clusters and remote machines.</p>
-<h2 id="set-histfile">set <code>HISTFILE</code></h2>
-<p>For almost all of this tutorial we will explain every command as we come across
-it with this one exception. For now, please copy and paste the following command
-into your terminal -- we'll talk more about it later.</p>
-<pre><code class="text">export HISTFILE=~/terminal_history_$(date -I)
-</code></pre>
-
-<p>Ok, on with the show!</p>
 <h2 id="whoami"><code>whoami</code></h2>
 <p>Before we do anything else, let's figure out who we are. We can ask on the
 command line:</p>
@@ -531,34 +530,34 @@ or available locally via: info '(coreutils) ls invocation'
 </code></pre>
 
 <p>Oh...  lots... but we aren't going to worry about that.</p>
-<p>For now, let's look inside the <code>Desktop/</code> folder where we downloaded that zip
+<p>For now, let's look inside the <code>Downloads/</code> folder where we downloaded that zip
 file at the beginning of the workshop.</p>
 <p>If we want to use <code>ls</code> on a different folder than the <em>current</em> folder, just
 pass the name of the folder you want to look in:</p>
-<pre><code class="text">$ ls -F Desktop/
+<pre><code class="text">$ ls -F Downloads/
 </code></pre>
 
-<pre><code class="text">workshop_data.zip
+<pre><code class="text">uber-trip-data-master.zip
 </code></pre>
 
 <p>There it is!</p>
 <h2 id="cd"><code>cd</code></h2>
-<p>Ok, we know where the zip file is, time to <em>change directory</em> to the folder <code>Desktop/</code>.  To do this, we use the <code>cd</code> command:</p>
-<pre><code class="text">$ cd Desktop
+<p>Ok, we know where the zip file is, time to <em>change directory</em> to the folder <code>Downloads/</code>.  To do this, we use the <code>cd</code> command:</p>
+<pre><code class="text">$ cd Downloads
 </code></pre>
 
 <p>Now let's check in with <code>pwd</code> again:</p>
 <pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="text">/home/gil/Desktop
+<pre><code class="text">/home/gil/Downloads
 </code></pre>
 
 <p>Ok! Cool! We moved! Now if we run <code>ls</code> we should see the zip file in here.</p>
 <pre><code class="text">$ ls -F
 </code></pre>
 
-<pre><code class="text">workshop_data.zip
+<pre><code class="text">uber-trip-data-master.zip
 </code></pre>
 
 <p>And there it is! Ok. We'll come back here in a second, but first let's explore a
@@ -577,7 +576,7 @@ filesystem. There has to be a way to go back -- what are we missing?</p>
 <pre><code class="text">$ ls -a
 </code></pre>
 
-<pre><code class="text">.  ..  workshop_data.zip
+<pre><code class="text">.  ..  uber-trip-data-master.zip
 </code></pre>
 
 <p>AHA! There are two more entries that we didn't see before: <code>.</code> and <code>..</code>
@@ -588,7 +587,7 @@ What are those? Learn by doing, I say:</p>
 <pre><code class="text">$ pwd
 </code></pre>
 
-<pre><code class="text">/home/gil/Desktop
+<pre><code class="text">/home/gil/Downloads
 </code></pre>
 
 <p>We're in the same spot. The <code>.</code> directory is a special directory in every folder
@@ -726,7 +725,7 @@ hitting TAB again.</p>
         <a href="../file_handling/" class="btn btn-neutral float-right" title="File Creation and Editing">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../setup/" class="btn btn-neutral" title="Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -740,7 +739,7 @@ hitting TAB again.</p>
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> and deployed using <a href="https://drdoctr.github.io/doctr">doctr</a>.
 </footer>
 	  
         </div>
@@ -754,7 +753,7 @@ hitting TAB again.</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../setup/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../file_handling/" style="color: #fcfcfc">Next &raquo;</a></span>

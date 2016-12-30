@@ -63,6 +63,15 @@
             
     
     <li class="toctree-l1 ">
+        <a class="" href="../setup/">Setup</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
         <a class="" href="../navigation/">Navigation</a>
         
     </li>
@@ -442,9 +451,14 @@ But what if there were hundreds? How can we count the number of results from a
 <p>Use <code>ls</code>, <code>grep</code> and any tools we've already learned about to get the command
 line to spit out the number of files/folders that contain <code>Do</code> in their title.</p>
 <h2 id="sort"><code>sort</code></h2>
+<p>In order to learn about <code>sort</code>, we need <em>something</em> to sort. We could download a
+file using the web browser, but why would we? Simpler to use <code>wget</code> on the
+command line!</p>
 <pre><code class="text">wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
 </code></pre>
 
+<p>After <code>wget</code> finishes, use <code>ls</code> to check and make sure that the file has
+downloaded.</p>
 <p>Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
 take a look at what the file contains:</p>
 <pre><code class="text">$ cat copa_america_goals 
@@ -616,7 +630,7 @@ it to a new file. We can <code>cat</code> the new file to make sure it worked as
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> and deployed using <a href="https://drdoctr.github.io/doctr">doctr</a>.
 </footer>
 	  
         </div>

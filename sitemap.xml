@@ -12,6 +12,12 @@
     
         
     <url>
+     <loc>/nix/setup/</loc>
+     <lastmod>2016-12-30</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>/nix/navigation/</loc>
      <lastmod>2016-12-30</lastmod>
      <changefreq>daily</changefreq>
