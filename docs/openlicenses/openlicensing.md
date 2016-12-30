@@ -59,6 +59,13 @@ The typical copyleft license is GPL.
 
 ### License compatibility
 
+Morin et al.<sup>3</sup> give an excellent overview of the important concept of license _compatibility_. 
+Compatible licenses allow source code from different works to be combined to make new software. 
+Not all licenses are compatible! 
+Because incompatible terms can arise from subtle wording, the [Open Source Initiative](https://opensource.org) (OSI) strongly recommends using an existing OSI-approved license, instead of attempting to craft a custom license. 
+Note that comptibility is directional: it behaves differently whether a piece of code is built into or from another. (See the illustration below from Morin et al.)
+Staff at university or laboratory technology offices may be ignorant of these issues, making it even more important for researchers to be well informed.
+
 ![](figures/journal.pcbi.1002598.g002.png)
 **Credit:** Figure 2 of Morin et al. (2012). Illustrates compatibility of licenses: permissive licenses (BSD, MIT) are forward-compatible with any other license, whereas copyleft licenses are only forward-compatible with themselves. 
 
