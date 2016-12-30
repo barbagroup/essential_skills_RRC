@@ -117,7 +117,7 @@ line to spit out the number of files/folders that contain `Do` in their title.
 
 ## `sort`
 ```text
-wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
+wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/resources/copa_america_goals
 ```
 
 Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
