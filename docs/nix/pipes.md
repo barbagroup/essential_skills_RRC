@@ -116,9 +116,17 @@ Use `ls`, `grep` and any tools we've already learned about to get the command
 line to spit out the number of files/folders that contain `Do` in their title.
 
 ## `sort`
+
+In order to learn about `sort`, we need _something_ to sort. We could download a
+file using the web browser, but why would we? Simpler to use `wget` on the
+command line!
+
 ```text
 wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
 ```
+
+After `wget` finishes, use `ls` to check and make sure that the file has
+downloaded.
 
 Ok! We have downloaded a list of goals scored in the 2016 Copa America, let's
 take a look at what the file contains:
