@@ -14,6 +14,8 @@ pages:
         - _slicing_solution: python/solutions/python.slicing.soln.md
         - _dict_solution: python/solutions/python.dict.count.soln.md
         - _ball_solution: python/solutions/python.ball.soln.md
+    - Software Licensing:
+        - Open Licensing: openlicenses/openlicensing.md
     - git:
         - git: git/git.md
         - GitHub:
