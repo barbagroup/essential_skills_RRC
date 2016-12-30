@@ -1,8 +1,28 @@
 # uber example
 
-Download and unzip file from here:
+You downloaded a zip file at the beginning of the workshop. Time to use it!
 
-Should have folder `uber-trip-data`.  `cd` to that directory and take a look.
+First, navigate to the `Downloads` folder.
+
+We need to unzip the zip file -- any guesses about what command unzips files?
+
+```text
+unzip uber-trip-data-master.zip
+```
+
+By default, `unzip` will create a folder with the same name as the `zip` file
+(without the `.zip` part). If you want to unzip the file to a different
+location, you can use the `-d` flag.
+
+For example:
+
+```text
+unzip uber-trip-data-master.zip -d ~/uber-trip-data
+```
+
+Now you should have a folder called `uber-trip-data` or something similar,
+depending on where and how you unzipped it. `cd` to that directory and take a
+look.
 
 ```text
 $ cd uber-trip-data/

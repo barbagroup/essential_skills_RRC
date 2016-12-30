@@ -6,17 +6,6 @@ The command line can be a little intimidating at first, but it is a powerful and
 efficient way of interacting with your computer. It's also the lingua franca
 when dealing with computing clusters and remote machines.
 
-## set `HISTFILE`
-
-For almost all of this tutorial we will explain every command as we come across
-it with this one exception. For now, please copy and paste the following command
-into your terminal -- we'll talk more about it later.
-
-```text
-export HISTFILE=~/terminal_history_$(date -I)
-```
-
-Ok, on with the show!
 
 ## `whoami`
 
@@ -195,27 +184,27 @@ or available locally via: info '(coreutils) ls invocation'
 
 Oh...  lots... but we aren't going to worry about that.
 
-For now, let's look inside the `Desktop/` folder where we downloaded that zip
+For now, let's look inside the `Downloads/` folder where we downloaded that zip
 file at the beginning of the workshop.
 
 If we want to use `ls` on a different folder than the _current_ folder, just
 pass the name of the folder you want to look in:
 
 ```text
-$ ls -F Desktop/
+$ ls -F Downloads/
 ```
 ```text
-workshop_data.zip
+uber-trip-data-master.zip
 ```
 
 There it is!
 
 ## `cd`
 
-Ok, we know where the zip file is, time to _change directory_ to the folder `Desktop/`.  To do this, we use the `cd` command:
+Ok, we know where the zip file is, time to _change directory_ to the folder `Downloads/`.  To do this, we use the `cd` command:
 
 ```text
-$ cd Desktop
+$ cd Downloads
 ```
 
 Now let's check in with `pwd` again:
@@ -225,7 +214,7 @@ $ pwd
 ```
 
 ```text
-/home/gil/Desktop
+/home/gil/Downloads
 ```
 
 Ok! Cool! We moved! Now if we run `ls` we should see the zip file in here.
@@ -234,7 +223,7 @@ Ok! Cool! We moved! Now if we run `ls` we should see the zip file in here.
 $ ls -F
 ```
 ```text
-workshop_data.zip
+uber-trip-data-master.zip
 ```
 
 And there it is! Ok. We'll come back here in a second, but first let's explore a
@@ -261,7 +250,7 @@ $ ls -a
 ```
 
 ```text
-.  ..  workshop_data.zip
+.  ..  uber-trip-data-master.zip
 ```
 
 AHA! There are two more entries that we didn't see before: `.` and `..`
@@ -276,7 +265,7 @@ $ pwd
 ```
 
 ```text
-/home/gil/Desktop
+/home/gil/Downloads
 ```
 
 We're in the same spot. The `.` directory is a special directory in every folder
