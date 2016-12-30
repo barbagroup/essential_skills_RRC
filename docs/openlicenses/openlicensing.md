@@ -69,6 +69,33 @@ Staff at university or laboratory technology offices may be ignorant of these is
 ![](figures/journal.pcbi.1002598.g002.png)
 **Credit:** Figure 2 of Morin et al. (2012). Illustrates compatibility of licenses: permissive licenses (BSD, MIT) are forward-compatible with any other license, whereas copyleft licenses are only forward-compatible with themselves. 
 
+> Directional compatibility of licenses is the reason why you should always be aware of the licensing terms of any code that you are reading and hoping to build upon. 
+
+### Choosing a license for your software
+
+For academic and research software, you are likely to want a simple license that is most permissive. 
+For example, you can use the [MIT Licence](http://choosealicense.com/licenses/mit/). 
+Most of the research code in our group has been released under MIT. 
+
+If you use software by another researcher that was released under MIT, your obligation is to preserve the copyright notice in future distributions of the software, ensuring that rightful credit is given to the original authors (attribution). 
+
+Illustrating how subtle language variations matter, we recently decided to change our pick to the [BSD 3-clause License](http://choosealicense.com/licenses/bsd-3-clause/). 
+It is very similar to the MIT License, but there is a small difference in the wording about attribution (which we learned about from a [comment](https://github.com/github/choosealicense.com/issues/413#issuecomment-243598510) by A. Scopatz on a GitHub discussion thread).
+
+The MIT License says:
+
+> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+
+While BSD 3-clause says:
+
+> Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+As Scopatz noted, this language implies that a user could copy _some_ of an MIT-licensed code (as long as the portion is deemed "not substantial") without attribution. 
+In academia, we always prefer full attribution of any portions of copied works, and BSD 3-clause is more precise in this. 
+
+The website [choosealicense.com](http://choosealicense.com) offers a handy starting point for your choice of licenses. 
+It includes a detailed [Appendix](http://choosealicense.com/appendix/) with a table of FOSS licenses and their features. 
+
 ## References
 
 <sup>1</sup> The Open Definition, [http://opendefinition.org](http://opendefinition.org)
