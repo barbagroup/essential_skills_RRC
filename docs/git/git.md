@@ -14,7 +14,7 @@ We want `git` to know who we are and how to reach us (we'll see why later!).
 We're also going to specify a text editor to use with `git` and we want git
 output to be colorized.
 
-```bash
+```text
 $ git config --global user.name "Gil Forsyth"
 $ git config --global user.email "gilforsyth@gmail.com"
 $ git config --global color.ui "auto"
@@ -24,53 +24,53 @@ $ git config --global core.editor "nano -w"
 ## Create
 
 Let's create a directory for our work and then move into that directory
-```bash
+```text
 $ mkdir wordcount
 ```
 
-```bash
+```text
 $ cd wordcount/
 ```
 
 Now we can use `wget` to download a Python script into the `wordcount` folder.
 
-```bash
-$ wget ...
+```text
+$ wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/resources/word_count.py
 ```
 
 
-```bash
+```text
 $ ls
 ```
-```bash
+```text
 word_count.py
 ```
 
 Now we tell `git` to make `wordcount` a repository--a place where `git` can
 store versions of our files:
 
-```bash
+```text
 $ git init
 ```
-```bash
+```text
 Initialized empty Git repository in /home/gil/wordcount/.git/
 ```
 
 If we use `ls` to check the directory's contents, it appears that nothing has
 changed:
-```bash
+```text
 $ ls
 ```
-```bash
+```text
 word_count.py
 ```
 
 But if we add the `-a` flag to show everything, we can see that `git` has
 created a hidden directory called `.git`
-```bash
+```text
 $ ls -a
 ```
-```bash
+```text
 .  ..  .git  word_count.py
 ```
 
@@ -82,7 +82,7 @@ also means that if you delete the `.git` folder, your history is gone.
 
 This is the most used command in `git`.  Let's try it out!
 
-```bash
+```text
 $ git status
 ```
 
@@ -113,15 +113,16 @@ What about that last line? We can use `git add` to track. Let's try that.
 We have a file in the new repo and we want to start tracking any changes
 made to that file. `git` ignores files until you tell it to look after them. To
 begin tracking, we have to `add` the file to the repository:
-```bash
+
+```text
 $ git add word_count.py
 ```
 
 Did anything happen? Let's check! What command should we use?
-```bash
+
+```text
 $ git status
 ```
-
 
 ```diff
 On branch master
@@ -156,7 +157,7 @@ addition of our new file by creating our first commit!
 
 It's time!  Let's commit the changes to the repo history.
 
-```bash
+```text
 $ git commit
 ```
 
@@ -193,7 +194,7 @@ commit messages matter and how to write them.
 Did we miss anything? Check `git status` to find out the state of the repository
 now.
 
-```bash 
+```text 
 $ git status 
 ``` 
 
@@ -205,11 +206,11 @@ On branch master nothing to commit, working tree clean
 
 How does the script work right now? Let's run it and find out.
 
-```bash
+```text
 $ python word_count.py 
 ```
 
-```bash
+```text
 {'not': 1, 'but': 1, 'because': 2, 'the': 1, 'was': 1, 'others': 1, 'happy': 4, 
 'I': 5, 'really': 1, 'knew': 1, 'feel': 1, 'and': 1, 'felt': 1, 'should': 1, 
 'saw': 1, 'were': 1}
@@ -219,24 +220,24 @@ Ok. This would be more useful if the user could decide what to input, don't you
 think? Edit `word_count.py` and make it accept user input instead of a hardcoded
 sentence.
 
-```bash
+```text
 $ nano word_count.py 
 ```
 
 With those changes saved, let's first see if the script works as expected!
 
-```bash
+```text
 $ python word_count.py 
 I can't quite tell if this is working.  Is it working?
 ```
-```bash
+```text
 {'tell': 1, 'is': 1, 'working.': 1, 'if': 1, 'working?': 1, "can't": 1,
  'quite': 1, 'Is': 1, 'it': 1, 'I': 1, 'this': 1}
 ```
 
 It is working! Time to check in with `git`.
 
-```bash
+```text
 $ git status
 ```
 ```diff
@@ -261,7 +262,7 @@ Now we know what changes were made since we just made them, but what if we want 
 `git diff` examines the _difference_ between the current state of a file and the
 last committed version of the file (by default).
 
-```bash
+```text
 $ git diff word_count.py
 ```
 ```diff
@@ -279,13 +280,13 @@ index 3326ac7..1ac2be0 100644
 Handy! `git` shows which line(s) was changed and colors the replacement text
 green and the old text red. This looks ready to go. Time to stage the changes.
 
-```bash
+```text
 $ git add word_count.py
 ```
 
 And a quick status check...
 
-```bash
+```text
 $ git status
 ```
 ```diff
@@ -299,7 +300,7 @@ Changes to be committed:
 
 Looks good, let's commit.
 
-```bash
+```text
 $ git commit
 ```
 ```diff
@@ -309,7 +310,7 @@ $ git commit
 
 And now the status should be clean.
 
-```bash
+```text
 $ git status
 ```
 
@@ -322,7 +323,7 @@ nothing to commit, working tree clean
 
 `cat` it and find out!
 
-```bash
+```text
 $ cat word_count.py 
 ```
 
@@ -345,23 +346,23 @@ we've made is what we see.
 
 The blank `input` line might be confusing. Let's add some prompt text to help the user understand what's happening:
 
-```bash
+```text
 $ nano word_count.py 
 ```
 
 Ok. Changes made, let's test it out.
 
-```bash
+```text
 $ python word_count.py
 Enter a statement to word count: This is a much better user experience
 ```
-```bash
+```text
 {'This': 1, 'a': 1, 'much': 1, 'is': 1, 'experience': 1, 'user': 1, 'better': 1}
 ```
 
 Check `status`
 
-```bash
+```text
 $ git status
 ```
 ```diff
@@ -376,7 +377,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 Check the `diff`
-```bash
+```text
 $ git diff
 ```
 ```diff
@@ -394,7 +395,7 @@ index 1ac2be0..2689774 100644
 If everything looks ok, then stage the file.
 
 
-```bash
+```text
 $ git add word_count.py
 ```
 
@@ -402,7 +403,7 @@ One helpful shortcut that `git` offers is the `-m` flag, which allows you to
 write your commit message right on the command line. This is great when you are
 making small, relatively simple changes.
 
-```bash
+```text
 $ git commit -m "add helper text to input function"
 ```
 ```diff
@@ -417,7 +418,7 @@ See? No text editor opened, but the commit has been made.
 Now that we have a few "snapshots" of `word_count.py` we can take a look at its
 history. To do that, we use the `git log` command.
 
-```bash
+```text
 $ git log
 ```
 
@@ -456,7 +457,7 @@ between two points in time by specifying the commit hashes to compare.
 
 **Note**: You don't need to type out the _entire_ hash. Just the first 6 characters should do the trick. 
 
-```bash
+```text
 $ git diff 47f748 09633c word_count.py
 ```
 
@@ -482,7 +483,7 @@ mistake somewhere or just like the old way better. People change their minds.
 
 To `checkout` a previous version of a file, we need the commit hashes. We can pass the `--oneline` flag to `git log` for a more compact version:
 
-```bash
+```text
 $ git log --oneline
 ```
 
@@ -496,15 +497,15 @@ As an example, we will restore `word_count.py` to its original state, before we
 made any edits. To do that, we `checkout` to the commit hash of the first commit
 and specify the file `word_count.py`
 
-```bash
+```text
 $ git checkout 47f748 word_count.py 
 ```
 Did it work? Use `cat` to find out:
 
-```bash
+```text
 $ cat word_count.py 
 ```
-```bash
+```text
 happy = "I felt happy because I saw the others were happy and because I knew I should feel happy but I was not really happy"
 
 words = happy.split()
@@ -519,7 +520,7 @@ print(counts)
 Now the file, as it exists in the folder `wordcount`, is restored to its
 original state. Let's check on the `status`.
 
-```bash
+```text
 $ git status
 ```
 
@@ -545,7 +546,7 @@ In any case, we don't really want to restore the old version permanently, the ne
 Consult `git log` again and this time, use `checkout` to go to the most recent
 commit.
 
-```bash
+```text
 $ git log --oneline
 ```
 ```diff
@@ -554,11 +555,11 @@ $ git log --oneline
 47f748f Add initial version of word count script
 ```
 
-```bash 
+```text 
 $ git checkout 09633c8 word_count.py 
 ```
 
-```bash
+```text
 $ git status
 ```
 ```diff

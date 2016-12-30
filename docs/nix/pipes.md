@@ -122,7 +122,7 @@ file using the web browser, but why would we? Simpler to use `wget` on the
 command line!
 
 ```text
-wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/copa_america_goals
+wget https://raw.githubusercontent.com/barbagroup/essential_skills_RRC/master/resources/copa_america_goals
 ```
 
 After `wget` finishes, use `ls` to check and make sure that the file has
