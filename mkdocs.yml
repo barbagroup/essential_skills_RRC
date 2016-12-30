@@ -2,6 +2,7 @@ site_name: Essential skills for reproducible research computing
 pages:
     - Home: index.md
     - UNIX Command Line:
+        - Setup: nix/setup.md
         - Navigation: nix/navigation.md
         - File Creation and Editing: nix/file_handling.md
         - Redirection: nix/redirection.md
