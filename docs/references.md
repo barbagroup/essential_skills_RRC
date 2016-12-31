@@ -1,8 +1,8 @@
 ## References
 
-* **Effective Computation in Physics: Field Guide to Research with Python**. *Anthony Scopatz, Kathryn D. Huff* (2015).
+* *Scopatz, Anthony, and Kathryn D. Huff*. 2015. **Effective Computation in Physics. 1 edition.** S.l.: O’Reilly Media.
 
-* [Python for Everybody: Exploring Data In Python 3](http://www.pythonlearn.com/book.php). *Charles Severance* (2016).
+* *Charles Severance*. 2016 [Python for Everybody: Exploring Data In Python 3](http://www.pythonlearn.com/book.php).
 
 * [Software Carpentry](https://software-carpentry.org/).
  
