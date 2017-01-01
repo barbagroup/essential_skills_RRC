@@ -25,7 +25,7 @@ Type in a terminal :
 
 ## Python is awesome! 
 
-```
+```python
 import this 
 import antigravity
 ```
@@ -34,38 +34,39 @@ import antigravity
 
 In Python is perfectly legal to do:
 
-```
+```python
 In [1]: x = 3
 ```
+
 Try:
 
-```
+```python
 In [2]: x
 Out[2]: 3
 ```
 
-```
+```python
 In [3]: print(x)
 3
 ```
 
-```
+```python
 In [4]: type(x)
 Out[4]: int
 ```
 
 
-```
+```python
 In [5]: float(x)
 Out[5]: 3.0
 ```
 
-```
+```python
 In [6]: complex(x)
 Out[6]: (3+0j)
 ```
 
-```
+```python
 In [7]: z = complex(x)
 In [8]: z = z + 1j
 In [9]: print(z)
@@ -80,7 +81,7 @@ For example, raising `x` to the power of 2 would be:
 
 ### What about strings?
 
-```
+```python
 In [9]: y = "hello"
 
 In [10]: y
@@ -97,15 +98,16 @@ In [13]: s = "world"
 
 What if we try to "sum" strings? 
 
-```
+```python
 In [14]: my_string = y+s
 
 In [15]: print(my_string)
 helloworld
 ```
+
 Let's add a space in between:
 
-```
+```python
 In [16]: my_string = y +' '+ s
 
 In [17]: print(my_string)
@@ -114,7 +116,7 @@ hello world
 
 We can access the different elements of a string and slices of it, for example:
 
-```
+```python
 In [18]: my_string[0]
 Out[18]: 'h'
 
@@ -137,7 +139,7 @@ Out[23]: 'ello worl'
 
 Slices also allow us to pick specific elements from specific slices, for example:
 
-```
+```python
 In [24]: my_string[::2]
 Out[24]: 'hlowrd'
 
@@ -156,13 +158,13 @@ Strings have different methods that we can apply to them, for example:
 
 Make all uppercase:
 
-```
+```python
 In [28]: my_string.upper()
 Out[28]: 'HELLO WORLD'
 ```
 Find where a character is or starts:
 
-```
+```python
 In [29]: my_string.find('hello')
 Out[29]: 0
 
@@ -190,7 +192,7 @@ In general, if the value is zero or empty, then it's converted to `False`.
 Otherwise, it'll be converted to `True`.
 
 
-```
+```python
 In [31]: bool(0)
 Out[31]: False
 
@@ -200,7 +202,7 @@ Out[32]: True
 
 It also applies to logic statements, for example:
 
-```
+```python
 In [33]: x = 3
 In [34]: y = 5
 In [35]: z = x > y
@@ -263,7 +265,7 @@ Lists, dictionaries and tuples are kinds of *Collections*
 * List are MUTABLE, strings are NOT MUTABLE. (Note: there is a method called
   replace for strings but it creates a copy)
 
-```
+```python
 In [38]: my_list = [2, 50, 4, 61]
 In [39]: print(my_list)
 [2, 50, 4, 61]
@@ -278,7 +280,7 @@ In [41]: print(my_list)
 
 * We can *concatenate* lists by using the operator `+`: 
 
-```
+```python
 In [42]: lst1 = [0,1,2,3]
 
 In [43]: lst2 = ['a','b','c']
@@ -293,7 +295,7 @@ In [45]: print(conc)
 * There are different methods to apply to a list (check them by typing
   `dir(lst1)`), an example is `append()`.
 
-```
+```python
 In [46]: lst1.append(4)
 
 In [47]: print(lst1)
@@ -312,7 +314,7 @@ Out[51]: [0, 1, 2, 3, 4, 'five', [6, 7, 8]]
 * Similar to strings we can access elements of a list by doing `list[i]` and
   also we can do slices.
 
-```
+```python
 In [52]: lst1[-1]
 Out[52]: [6, 7, 8]
 
@@ -322,7 +324,7 @@ Out[53]: ['five', [6, 7, 8]]
 
 * We can check if something is or not in a list.
 
-```
+```python
 In [54]: my_numbers = [3, 17, 27, 19]
 
 In [55]: 17 in my_numbers
@@ -334,10 +336,11 @@ Out[56]: False
 In [57]: 13 not in my_numbers
 Out[57]: True
 ```
+
 Note: This operators does NOT modify the list.
 
 * A **list** is an ordered sequence. We can change the order by sorting the list. 
-```
+```python
 In [58]: names = ['Naty', 'Gil', 'Lorena', 'Chris']
 
 In [59]: names.sort()
@@ -347,7 +350,7 @@ In [60]: print(names)
 ```
 
 * **Strings** and **lists**. The `split()` function.
-```
+```python
 In [61]: string = 'Just three words'
 
 In [62]: str_list = string.split()
@@ -355,8 +358,10 @@ In [62]: str_list = string.split()
 In [63]: print(str_list)
 ['Just', 'three', 'words']
 ```
+
 Python takes care of long spaces, for example:
-```
+
+```python
 In [64]: line = 'A lot of       space'
 
 In [65]: stuff = line.split()
@@ -364,8 +369,10 @@ In [65]: stuff = line.split()
 In [66]: print(stuff)
 ['A', 'lot', 'of', 'space']
 ```
+
 If we specify the delimiter (it can be a space `' '`, a `;`, a `:`, whatever you want).
-```
+
+```python
 In [67]: line = 'A lot of       space'
 
 In [68]: stuff = line.split(' ')
@@ -375,7 +382,7 @@ In [69]: print(stuff)
 ```
 `;` and many other characters are not delimiters by default:
 
-```
+```python
 In [70]: s = 'a;b;c'
 
 In [71]: thing  = s.split()
@@ -400,7 +407,7 @@ In [74]: print(thing)
 * Dictionaries don't maintain order, we index the the things we put in the
   dictionary with a "look up" tag. For example:
 
-```
+```python
 In [75]: bag = {}
 
 In [76]: bag['money'] = 12
@@ -425,7 +432,7 @@ In [82]: print(bag)
 * We can use the operators `in` and `not in` to check if a key is or not in a
   dictionary.
 
-```
+```python
 In [83]: 'book' in bag
 Out[83]: False
 
@@ -438,7 +445,7 @@ Out[85]: True
 
 * Retrieving keys and values.
 
-```
+```python
 In [86]: ages = {'John': 30, 'Maria': 28, 'Lucas': 23}
 
 In [87]: print(ages.keys())
@@ -452,7 +459,7 @@ dict_values([28, 23, 30])
 and values are displayed in order.
 
 * We can get a list with pairs (key, value) by doing:
-```
+```python
 In [89]: print(ages.items())
 dict_items([('Maria', 28), ('Lucas', 23), ('John', 30)])
 ```
@@ -477,7 +484,7 @@ Python
 
 ** Example: look for an element in a list and in a set (%timeit)**
 
-```
+```python
 In [90]: rg = range(50000)
 
 In [91]: lst = list(rg)
@@ -513,7 +520,7 @@ The syntax is "If `x` true, then do something; otherwise, do something else."
 
 **If** statement on its own:
 
-```
+```python
 In [97]: a = 8
 
 In [98]: b = 3 
@@ -525,7 +532,7 @@ a is bigger than b
 ```
 
 **If-else** statement: 
-```
+```python
 In [100]: x = float(input('Insert your number: '))
 Insert your number: 711457
 
@@ -539,7 +546,7 @@ Your number is not a multiple of 17.
 
 **If-elif-else** statement:
 
-```
+```python
 In [102]: a = 3
 
 In [103]: b = 5
@@ -553,6 +560,7 @@ In [104]: if a > b:
      ...:
 a is smaller than b.
 ```
+
 *Note:* We can have as many `elif` as we want.
 
 
@@ -565,7 +573,7 @@ multiple looping formats: `while` loops, `for` loops, and comprehensions.
 
 They are related to an `if` statement, they will compute **while** a condition is true.
 
-```
+```python
 In [105]: sec = 5
 In [106]: while 0 < sec :
      ...:     print('You have {} seconds'.format(sec))
@@ -579,12 +587,13 @@ You have 2 seconds
 You have 1 seconds
 Boom!!!
 ```
+
 *Note:* You have to be careful to not generate an infinite loop. 
 
 **For loops**
 It is usually more useful to iterate over a certain group of things or an "iterable".
 
-```
+```python
 In [107]: for i in range(5,0,-1):
     ...:     print('You have {} seconds'.format(i))
     ...: print('Boom!!!')
@@ -598,7 +607,8 @@ Boom!!!
 ```
 
 Another example:
-```
+
+```python
 In [108]: name = input('Insert your name: ')
 Insert your name: Naty
 
@@ -616,9 +626,10 @@ The 2 letter is a
 The 3 letter is t
 The 4 letter is y
 ```
+
 We can loop over dictionaries too:
 
-```
+```python
 In [112]: d = {"name":"Lionel", "last_name": "Messi", "birthday": [6, 24, 1987]}
 
 In [113]: for item in d.items():
@@ -646,7 +657,7 @@ example:
 
 *Normal loop:*
 
-```
+```python
 In [114]: fruits = ['apple', 'orange', 'grape', 'banana', 'pineapple', 'strawberry', 'watermelon']
 
 In [115]: upper_fruits = []
@@ -660,7 +671,7 @@ Out[117]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WAT
 
 *Pythonic way:*
 
-```
+```python
 In [118]: upper_pythonic = [fruit.upper() for fruit in fruits]
 
 In [119]: upper_pythonic
@@ -669,7 +680,7 @@ Out[119]: ['APPLE', 'ORANGE', 'GRAPE', 'BANANA', 'PINEAPPLE', 'STRAWBERRY', 'WAT
 
 We can add a filter, for example:
 
-```
+```python
 In [120]: entries = [2, 11, 49, 3, 57, 33, 9]
 
 In [121]: entries
@@ -731,13 +742,13 @@ end of each one. Save the output in a list and print it out.
 
 The original list is:
 
-```
+```python
 sports = ['Football', 'Volleyball', 'Basketball', 'Baseball', 'Handball', 'Softball']
 ```
 
 And your output should look like:
 
-```
+```python
 ['Foot', 'Volley', 'Basket', 'Base', 'Hand', 'Soft']
 ```
 
@@ -755,13 +766,13 @@ repetitions.
 course "Python Data Structures" by Dr. Charles Severance)
 
 
-```
+```python
 happy = "I felt happy because I saw the others were happy and because I knew I should feel happy but I was not really happy"
 ```
 
 Your output should look like:
 
-```
+```python
 {'happy': 4, 'really': 1, 'and': 1, 'feel': 1, 'others': 1, 'felt': 1, 'not': 1, 'the': 1, 'should': 1, 'knew': 1, 'was': 1, 'saw': 1, 'I': 5, 'but': 1, 'were': 1, 'because': 2}
 ```
 

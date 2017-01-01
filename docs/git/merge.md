@@ -102,7 +102,7 @@ Merge made by the 'recursive' strategy.
 That did something. `git` tells us that there was a "Merge made by the
 'recursive' strategy". And it says that it created a file. Let's check.
 
-```bash
+```text
 $ ls
 README.md  word_count.py
 ```

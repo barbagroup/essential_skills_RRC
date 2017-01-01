@@ -1,18 +1,38 @@
 # uber example
 
-Download and unzip file from here:
+You downloaded a zip file at the beginning of the workshop. Time to use it!
 
-Should have folder `uber-trip-data`.  `cd` to that directory and take a look.
+First, navigate to the `Downloads` folder.
 
-```console
+We need to unzip the zip file -- any guesses about what command unzips files?
+
+```text
+unzip uber-trip-data-master.zip
+```
+
+By default, `unzip` will create a folder with the same name as the `zip` file
+(without the `.zip` part). If you want to unzip the file to a different
+location, you can use the `-d` flag.
+
+For example:
+
+```text
+unzip uber-trip-data-master.zip -d ~/uber-trip-data
+```
+
+Now you should have a folder called `uber-trip-data` or something similar,
+depending on where and how you unzipped it. `cd` to that directory and take a
+look.
+
+```text
 $ cd uber-trip-data/
 ```
 
-```console
+```text
 $ ls
 ```
 
-```console
+```text
 taxi-zone-lookup.csv     uber-raw-data-janjune-15.csv.zip  uber-raw-data-may14.csv
 uber-raw-data-apr14.csv  uber-raw-data-jul14.csv           uber-raw-data-sep14.csv
 uber-raw-data-aug14.csv  uber-raw-data-jun14.csv
@@ -25,11 +45,11 @@ answer about this dataset from the command line?
 First, it would help to know what these files contain. We can use `head` to
 display the first ten lines of one of the raw files.
 
-```console
+```text
 $ head uber-raw-data-apr14.csv
 ```
 
-```console
+```text
 "Date/Time","Lat","Lon","Base"
 "4/1/2014 0:11:00",40.769,-73.9549,"B02512"
 "4/1/2014 0:17:00",40.7267,-74.0345,"B02512"
@@ -53,11 +73,11 @@ during the month of April, 2014. That sounds like interesting information. We
 can use `wc` or `wordcount` to count the number of _lines_ in a file by using
 the `-l` flag.
 
-```console
+```text
 $ wc -l uber-raw-data-apr14.csv
 ```
 
-```console
+```text
 564517 uber-raw-data-apr14.csv
 ```
 
@@ -68,11 +88,11 @@ We can run the same `wc` command but now use the `*` wildcard to get the
 linecount of every file in the directory.
 
 
-```console
+```text
 $ wc -l *
 ```
 
-```console
+```text
         0 taxi-zone-lookup.csv
    564517 uber-raw-data-apr14.csv
    829276 uber-raw-data-aug14.csv
@@ -87,11 +107,11 @@ $ wc -l *
 Cool, but the linecount of a zip file doesn't really make any sense. To be a
 little more specific, restrict `wc` to only look at `csv` files.
 
-```console
+```text
 $ wc -l *.csv
 ```
 
-```console
+```text
         0 taxi-zone-lookup.csv
    564517 uber-raw-data-apr14.csv
    829276 uber-raw-data-aug14.csv
@@ -110,11 +130,11 @@ Let's use the `sort` command to sort the results from `wc`. We can pipe the
 output of `wc` to `sort` using the `|` character. Remember, the pipe takes the
 output from the previous command and hands it off to the following command.
 
-```console
+```text
 $ wc -l *.csv | sort
 ```
 
-```console
+```text
         0 taxi-zone-lookup.csv
   1028137 uber-raw-data-sep14.csv
   4534333 total
@@ -138,11 +158,11 @@ a command using smaller commands. We use the `-l` flag with `wc` to count the
 number of lines, then pipe that output to `sort` where we use the `-n` flag to
 require numerical sorting.
 
-```console
+```text
 $ wc -l *.csv | sort -n
 ```
 
-```console
+```text
         0 taxi-zone-lookup.csv
    564517 uber-raw-data-apr14.csv
    652436 uber-raw-data-may14.csv
@@ -165,11 +185,11 @@ Uber requests in NYC?)
 
 First, unzip the file containing the 2015 data.
 
-```console
+```text
 $ unzip uber-raw-data-janjune-15.csv.zip
 ```
 
-```console
+```text
 Archive:  uber-raw-data-janjune-15.csv.zip
   inflating: uber-raw-data-janjune-15.csv
    creating: __MACOSX/
@@ -179,11 +199,11 @@ Archive:  uber-raw-data-janjune-15.csv.zip
 Now we know that whoever created this zip file uses a Mac. But that's not really
 important. Let's take another look at the line counts.
 
-```console
+```text
 $ wc -l *.csv | sort -n
 ```
 
-```console
+```text
         0 taxi-zone-lookup.csv
    564517 uber-raw-data-apr14.csv
    652436 uber-raw-data-may14.csv
@@ -200,11 +220,11 @@ Wow! 14+ million rides! Impressive! But this data layout is different from the
 
 First, let's see what the data looks like in the combined file.
 
-```console
+```text
 $ head uber-raw-data-janjune-15.csv
 ```
 
-```console
+```text
 Dispatching_base_num,Pickup_date,Affiliated_base_num,locationID
 B02617,2015-05-17 09:47:00,B02617,141
 B02617,2015-05-17 09:47:00,B02617,65
@@ -227,11 +247,11 @@ have.
 We can use `tail` to peek at the _last_ 10 lines in the file. How do those look?
 
 
-```console
+```text
 $ tail uber-raw-data-janjune-15.csv
 ```
 
-```console
+```text
 B02765,2015-05-08 15:42:00,B02764,79
 B02765,2015-05-08 15:42:00,B02765,37
 B02765,2015-05-08 15:42:00,B02765,161
@@ -246,11 +266,11 @@ B02765,2015-05-08 15:44:00,B02682,144
 
 Not looking good.  Is this all just in May?  Let's look through a larger number of lines using `head` and see if we can find a ride that wasn't in May.  Use the `-n` flag with `head` to specify the number of lines to show (the default is 10).
 
-```console
+```text
 $ head -n 500 uber-raw-data-janjune-15.csv
 ```
 
-```console
+```text
 [snip]
 B02598,2015-01-18 11:06:58,B02598,7
 B02598,2015-01-18 18:55:46,B02598,141
@@ -281,7 +301,7 @@ Use the same `head` command we just used, but now, instead of writing it to the
 screen, we can _redirect_ that output to another file using `>`. We'll just call
 that file `test.csv`.
 
-```console
+```text
 $ head -n 500 uber-raw-data-janjune-15.csv > test.csv
 ```
 
@@ -300,7 +320,7 @@ We're going to `cat` all of `test.csv`, pipe that into `sort` and then use the
 `-k2` flag, which will sort the lines of `test.csv` based on the first character
 of the _second_ field/column.
 
-```console
+```text
 $ cat test.csv | sort -k2 | less
 ```
 
@@ -311,26 +331,26 @@ date.
 How can we change the delimiter character that `sort` uses? Let's check the
 `man` page.
 
-```console
+```text
 $ man sort
 ```
 
-```console
+```text
 $ cat test.csv | sort -t "," -k2 | less
 ```
 
 
-```console
+```text
 $ cat test.csv | sort -t "," -k2 > test_sort.csv
 ```
 
 
-```console
+```text
 $ head test_sort.csv
 ```
 
 
-```console
+```text
 B02598,2015-01-18 00:02:54,,144
 
 B02598,2015-01-18 00:05:05,B02598,50
