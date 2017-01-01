@@ -74,7 +74,7 @@ Staff at university or laboratory technology offices may be ignorant of these is
 ### Choosing a license for your software
 
 For academic and research software, you are likely to want a simple license that is most permissive. 
-For example, you can use the [MIT Licence](http://choosealicense.com/licenses/mit/). 
+For example, you can use the [MIT License](http://choosealicense.com/licenses/mit/). 
 Most of the research code in our group has been released under MIT. 
 
 If you use software by another researcher that was released under MIT, your obligation is to preserve the copyright notice in future distributions of the software, ensuring that rightful credit is given to the original authors (attribution). 
