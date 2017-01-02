@@ -954,6 +954,16 @@
             "location": "/references/#references",
             "text": "Scopatz, Anthony, and Kathryn D. Huff . 2015.  Effective Computation in Physics. 1 edition . S.l.: O\u2019Reilly Media.    Charles Severance . 2016  Python for Everybody: Exploring Data In Python 3 .    Software Carpentry .",
             "title": "References"
+        },
+        {
+            "location": "/resources/",
+            "text": "Resources and Tips\n\n\nHere are some useful links to different tools that will help you to make your \nlife easier if you are doing reproducible research computing. \n\n\n\n\n\n\nFor publishing datasets publicly and getting an associated DOI, use \nZenodo\n.\n\n\n\n\n\n\nFor sharing figures, presentations, posters, short reports and more: \nFigshare\n\n\n\n\n\n\nFor publishing research software: submit to the \nJournal of Open Source Software\n\n\n\n\n\n\nFor replication studies: submit to \nThe ReScience Journal\n\n\n\n\n\n\nSubmit preprints! \narXiv\n for physics, computer science, mathematics, quantitative biology, quantitative finance, statistics; \nbioRxiv\n for all subject areas of biology; \nsocArXiv\n for social sciences; \nengrXiv\n for engineering.\n\n\n\n\n\n\nFor collaborative writing  \nAuthorea\n  and \nShareLaTeX",
+            "title": "Resources"
+        },
+        {
+            "location": "/resources/#resources-and-tips",
+            "text": "Here are some useful links to different tools that will help you to make your \nlife easier if you are doing reproducible research computing.     For publishing datasets publicly and getting an associated DOI, use  Zenodo .    For sharing figures, presentations, posters, short reports and more:  Figshare    For publishing research software: submit to the  Journal of Open Source Software    For replication studies: submit to  The ReScience Journal    Submit preprints!  arXiv  for physics, computer science, mathematics, quantitative biology, quantitative finance, statistics;  bioRxiv  for all subject areas of biology;  socArXiv  for social sciences;  engrXiv  for engineering.    For collaborative writing   Authorea   and  ShareLaTeX",
+            "title": "Resources and Tips"
         }
     ]
 }
