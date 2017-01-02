@@ -179,6 +179,13 @@ that it is a fork of an existing repository.
 
 ![fork_title](./gh_images/fork_title.png)
 
+Also note that there is a little info bar right above the file listing:
+
+![fork_even](./gh_images/fork_even_master.png)
+
+The fork is _even_ with the upstream (original) repo. That means the history is
+identical. Now let's make a change!
+
 ## `clone` your fork
 
 Now that you have created a copy of the repo that _you_ control, go ahead and
@@ -198,7 +205,7 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 349 bytes | 0 bytes/s, done.
 Total 3 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
-To github.com:gforsyth/Spoon-Knife.git
+To github.com:gforsyth/wordcount-1.git
    d0dd1f6..31da785  master -> master
 ```
 
@@ -206,13 +213,25 @@ It worked!
 
 Now that we pushed a change to our _fork_, the fork itself is one commit _ahead_
 of the upstream (or original) repository. The history of the two repositories is
-identical except for the commit that we just created. In order to add this
-commit to the original, we open a _pull request_ to propose adding our change to
-the original repository.
+identical except for the commit that we just created. 
+
+Notice that the infobar above the file listing informs us that we are now one commit ahead of the upstream:
+
+![fork_one_ahead](./gh_images/fork_one_ahead.png)
+
 
 ## pull requests
 
-## adding commits to pull requests
+In order to add this commit to the original, we open a _pull request_ to propose
+adding our change to the original repository. 
+
+**Note:** `git` is a version control system. GitHub is an online service that
+provides hosting for `git` repositories. GitHub also has additional features to
+help software collaboration, the most prominent of which is the "Pull Request".
+
+"Pull Requests" are _not_ a feature of `git`, but of GitHub. 
+
+![open_pr](./gh_images/pr_button.png)
 
 # if there's time
 
