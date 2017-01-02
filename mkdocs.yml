@@ -34,6 +34,8 @@ pages:
         - CFD Intro: numba/4.md
         - Cavity Flow: numba/5.md
         - vectorize: numba/6.md
+    - References:
+        - References: references.md
 
 extra_javascript: 
     - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
