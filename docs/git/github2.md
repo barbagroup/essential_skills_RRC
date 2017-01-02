@@ -22,9 +22,142 @@ right-side-up. If we think of the initial commit as the roots of the tree, each
 commit can trace back to the initial commit via all of its ancestors, but has no
 knowledge of any commits that come after it (its descendents).
 
+## `git clone`
+
+`git init` creates a _new_ repository. But often you don't to create a new
+repository, but to copy an existing repository. Maybe you want to work on a
+project at work and also after hours at home?
+
+When you want to create a copy of an existing repository, you use the `git
+clone` command.
+
+## Clone an existing repository
+
+First, visit my copy of the "wordcount" repository on GitHub located
+at
+[https://github.com/gforsyth/wordcount](https://github.com/gforsyth/wordcount)
+
+On the right-hand-side, click the "Clone or Download" button:
+
+![clonebutton](./gh_images/clone_button.png)
+
+Then copy the clone URL (make sure to use HTTPS!):
+
+![cloneurl](./gh_images/clone_url.png)
+
+Now let's clone the repo. In a terminal, do `git clone <URL>`:
+
+```text
+$ git clone https://github.com/gforsyth/wordcount.git
+```
+
+```text
+fatal: destination path 'wordcount' already exists and is not an empty directory
+```
+
+ACK. "fatal" is usually a bad sign. What happened? `clone`, by default, creates
+a folder with the same name as the repository, so `wordcount`. But you already
+have a folder called `wordcount` (right?), so `git` won't overwrite that copy
+(and that's good).
+
+In this case, we can specify a folder name for `git` to create that doesn't
+conflict with the existing folder:
+
+```text
+$ git clone https://github.com/gforsyth/wordcount.git gil_wordcount
+```
+
+```text
+Cloning into 'gil_wordcount'...
+remote: Counting objects: 15, done.
+remote: Total 15 (delta 0), reused 0 (delta 0), pack-reused 15
+Unpacking objects: 100% (15/15), done.
+```
+
+You cloned your first repository! Now `cd` in and look at the repo history.
+
+```text
+$ cd gil_wordcount
+```
+
+```text
+$ git log
+```
+
+```text
+commit 3f62d8fe59fc6cbded99485a3bebec95e8703a7d
+Author: Gil Forsyth <gforsyth@users.noreply.github.com>
+Date:   Thu Dec 15 12:06:58 2016 -0500
+
+    Create README.md
+
+commit de8fbc35961f0b7412a8e862e212a50ea0dff7cc
+Author: Gil Forsyth <gforsyth@users.noreply.github.com>
+Date:   Wed Dec 14 18:02:38 2016 -0500
+
+    Add user-friendly print statement
+
+commit 09633c88bb3f8b40d1c988b1df9004245320462a
+Author: Gil Forsyth <gilforsyth@gmail.com>
+Date:   Tue Dec 13 11:01:11 2016 -0500
+
+    add helper text to input function
+
+commit 97fba8ddd7685e650813675f5b024267af0b94e7
+Author: Gil Forsyth <gilforsyth@gmail.com>
+Date:   Tue Dec 13 10:58:59 2016 -0500
+
+    allow user input of statement to word count
+
+commit 47f748fea14e14ed84452a802dc14a5ea0829949
+Author: Gil Forsyth <gilforsyth@gmail.com>
+Date:   Tue Dec 13 10:53:23 2016 -0500
+
+    Add initial version of word count script
+```
+
+Those are the commits made in the instructor's repository. We have copied the
+entire history of that repo to our own machine.
+
+## Edit the cloned repo
+
+That README.md file is pretty sparse so let's add something to it.
+
+Open `README.md` in `nano` and add a greeting, something like "Welcome to the
+wordcount repo!"
+
+Now save the file, stage it and commit it! ([Need a refresher?](./git.md))
+
+Now push those changes up!
+
+```text
+$ git push
+```
+
+```text
+Permission denied.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+What happened? We don't have write access to that repository because it doesn't
+belong to us. It would be a problem if anyone could overwrite a file on GitHub
+whenever they felt like it.
+
+But how do we propose a change to a repository if we don't have write access?
+
+We fork it!
+
+
 ## forks
 
-## cloning
+A fork is a complete copy of an existing git repository under your account.
+Since it's yours, you now have the ability to make changes to it. Even cooler is
+that once you've made those changes, you can then propose that they be added
+back in to the original repository that you forked! This is the main mechanism
+by which people contribute to other projects on GitHub.
 
 ## pull requests
 
