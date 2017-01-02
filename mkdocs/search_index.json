@@ -944,6 +944,16 @@
             "location": "/numba/6/#performance-of-vectorize-vs-regular-array-wide-operations",
             "text": "@vectorize\ndef discriminant(a, b, c):\n    return b**2 - 4 * a * c  a = numpy.arange(10000)\nb = numpy.arange(10000)\nc = numpy.arange(10000)  %timeit discriminant(a, b, c)  The slowest run took 3182.90 times longer than the fastest. This could mean that an intermediate result is being cached.\n100000 loops, best of 3: 11.7 \u00b5s per loop  %timeit b**2 - 4 * a * c  The slowest run took 5.46 times longer than the fastest. This could mean that an intermediate result is being cached.\n10000 loops, best of 3: 39.4 \u00b5s per loop  What's going on?   Each array operation creates a temporary copy  Each of these arrays are loaded into and out of cache a whole bunch   del a, b, c",
             "title": "Performance of vectorize vs. regular array-wide operations"
+        },
+        {
+            "location": "/references/",
+            "text": "References\n\n\n\n\n\n\nScopatz, Anthony, and Kathryn D. Huff\n. 2015. \nEffective Computation in Physics. 1 edition\n. S.l.: O\u2019Reilly Media.\n\n\n\n\n\n\nCharles Severance\n. 2016 \nPython for Everybody: Exploring Data In Python 3\n.\n\n\n\n\n\n\nSoftware Carpentry\n.",
+            "title": "References"
+        },
+        {
+            "location": "/references/#references",
+            "text": "Scopatz, Anthony, and Kathryn D. Huff . 2015.  Effective Computation in Physics. 1 edition . S.l.: O\u2019Reilly Media.    Charles Severance . 2016  Python for Everybody: Exploring Data In Python 3 .    Software Carpentry .",
+            "title": "References"
         }
     ]
 }
