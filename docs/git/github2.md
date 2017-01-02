@@ -220,18 +220,49 @@ Notice that the infobar above the file listing informs us that we are now one co
 ![fork_one_ahead](./gh_images/fork_one_ahead.png)
 
 
-## pull requests
+## Pull Requests
 
 In order to add this commit to the original, we open a _pull request_ to propose
 adding our change to the original repository. 
 
 **Note:** `git` is a version control system. GitHub is an online service that
 provides hosting for `git` repositories. GitHub also has additional features to
-help software collaboration, the most prominent of which is the "Pull Request".
+help with software collaboration, the most prominent of which is the "Pull
+Request".
 
 "Pull Requests" are _not_ a feature of `git`, but of GitHub. 
 
+To create a Pull Request, click the link indicated in the figure below.
+
 ![open_pr](./gh_images/pr_button.png)
+
+This will open up the following screen:
+
+![create_pr](./gh_images/create_pr.png)
+
+The "base fork" is the upstream location of the repository. It is the original
+version of the repository that we forked. The "head fork" is our version of the
+repo, that contains the changes we are proposing to add to the original.
+
+Click "Create Pull Request".
+
+On the following page, write a description of what you are proposing to add to
+the original project with the changes you have made. In this case, we have made
+a small, somewhat trivial change. In general, though, it is a good idea to write
+a detailed description when you open a PR. 
+
+You should include a description of the pull request's contents. Are you fixing
+a bug that you found? Which bug? Are you adding a new feature to an existing
+project? The more descriptive you are, the easier it is for the maintainers of
+the original project to determine if they want to accept your contribution.
+
+For the small README change, write a message something like:
+
+"I added a greeting to the README to try to make it a little bit friendlier."
+
+Then click "Create Pull Request" once more to finish.
+
+## I opened a pull request, now what?
 
 # if there's time
 
