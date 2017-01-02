@@ -264,6 +264,27 @@ Then click "Create Pull Request" once more to finish.
 
 ## I opened a pull request, now what?
 
+Once you open a pull request, hopefully a member of the upstream repo will
+review your proposed changes. Then, they can either accept them, reject them, or
+request some changes be made before they accept.
+
+This is an example of what a review might look like. There's a specific request
+to add a newline to the README in between the heading and the greeting. 
+
+![pr_review](./gh_images/pr_comments.png)
+
+Also note at the bottom that we can add more commits to this PR by pushing them
+to our fork. If we make the requested change and then push it, this update is
+immediately reflected on the PR page.
+
+![updated_pr](./gh_images/updated_pr.png)
+
+You can see that the new commit and the commit message appear _below_ the
+comments left by @ncclementi. The chronology of comments, requests and
+additional commits is preserved in the PR. You can also see that the original
+comment requesting an extra blank line is now hidden by default, since the file
+it refers to has been updated since the comment was left.
+
 ## creating a local fork (e.g. a branch)
 
 ## merging branches locally
