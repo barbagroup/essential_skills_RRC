@@ -264,18 +264,6 @@ Then click "Create Pull Request" once more to finish.
 
 ## I opened a pull request, now what?
 
-# if there's time
-
 ## creating a local fork (e.g. a branch)
 
 ## merging branches locally
-
-
-## interactive portion
-
-students pair up (or triple, as needed). fork each others repos, clone the fork,
-make a change, push the change up to the fork, then open a PR to the original
-repo.
-
-owner of repo comments on PR, try out line comments, request a change.
-PR opener makes change, pushes that.
