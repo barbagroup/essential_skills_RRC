@@ -150,7 +150,6 @@ But how do we propose a change to a repository if we don't have write access?
 
 We fork it!
 
-
 ## forks
 
 A fork is a complete copy of an existing git repository under your account.
@@ -158,6 +157,58 @@ Since it's yours, you now have the ability to make changes to it. Even cooler is
 that once you've made those changes, you can then propose that they be added
 back in to the original repository that you forked! This is the main mechanism
 by which people contribute to other projects on GitHub.
+
+To create a fork, first go to the GitHub page of the repository that you want to
+fork. If you are in a guided workshop right now, please partner up with someone
+near you and fork each other's repository. If you are following along on your
+own, you can use a repository that GitHub has created specifically for this
+purpose:
+
+[Spoon-Knife Repo](https://github.com/octocat/Spoon-Knife)
+
+To create a fork, click the "Fork" button in the top right of the repo:
+
+![fork_button](./gh_images/fork_button.png)
+
+When you click "Fork", GitHub will take a few moments to create a complete copy
+of the repository under your control, then it will forward you to that page.
+
+Notice that the username on the new page is _your_ username, but the repo name
+is the same. Additionally, there will be a link under the repo name indicating
+that it is a fork of an existing repository.
+
+![fork_title](./gh_images/fork_title.png)
+
+## `clone` your fork
+
+Now that you have created a copy of the repo that _you_ control, go ahead and
+clone it to your local machine. 
+
+As we did earlier, make a small change to the `README.md` file in `nano`, then
+save, stage and commit. Then try again to push your changes back to GitHub.
+
+```text
+$ git push
+```
+
+```text
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 349 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To github.com:gforsyth/Spoon-Knife.git
+   d0dd1f6..31da785  master -> master
+```
+
+It worked! 
+
+Now that we pushed a change to our _fork_, the fork itself is one commit _ahead_
+of the upstream (or original) repository. The history of the two repositories is
+identical except for the commit that we just created. In order to add this
+commit to the original, we open a _pull request_ to propose adding our change to
+the original repository.
 
 ## pull requests
 
