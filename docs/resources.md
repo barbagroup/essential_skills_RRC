@@ -1,7 +1,7 @@
 # Resources and Tips
 
 Here are some useful links to different tools that will help you to make your 
-life easier if you are doing reproducible reasearch computing. 
+life easier if you are doing reproducible research computing. 
 
 * For publishing datasets publicly and getting an associated DOI, use [Zenodo](https://zenodo.org/).
 
