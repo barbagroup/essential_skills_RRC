@@ -96,6 +96,13 @@ In academia, we always prefer full attribution of any portions of copied works, 
 The website [choosealicense.com](http://choosealicense.com) offers a handy starting point for your choice of licenses. 
 It includes a detailed [Appendix](http://choosealicense.com/appendix/) with a table of FOSS licenses and their features. 
 
+## Bonus advice
+
+> Write into your grant proposals that your research software will be released under an OSI-approved license. 
+> If you're lucky to have your grant funded, the condition of open-source code release becomes part of the contract with the university. 
+> This can save you some grief when trying to explain to staff at the tech office why your software needs to be open source. 
+> They often just don't understand the field, and want to default to a proprietary license, imagining some commercial value may exist in your research code.	
+
 ## References
 
 <sup>1</sup> The Open Definition, [http://opendefinition.org](http://opendefinition.org)
