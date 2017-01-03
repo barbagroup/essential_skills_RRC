@@ -36,6 +36,8 @@ pages:
         - vectorize: numba/6.md
     - References:
         - References: references.md
+    - Resources and Tips:
+        - Resources: resources.md
 
 extra_javascript: 
     - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
