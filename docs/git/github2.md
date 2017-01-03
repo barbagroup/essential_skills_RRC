@@ -3,39 +3,20 @@
 We've used GitHub so far as a tool to backup and restore our work across
 different machines but always as a single user.
 
-## how commits work
-
-What exactly is a commit? We've talked about them up to this point as snapshots
-of a file or files at a particular moment. That's an accurate description, but
-it's also worth examining how commits are related to one another. This will help
-develop intuition about why `git` handles certain situations the way that it
-does.
-
-When we learned about navigating the UNIX filesystem, we explained the file
-structure as an inverted tree, where each folder can see all of the files and
-folders below it, but can't see anything above it.
-
-![unix_filetree](./imageplaceholder)
-
-Commits have the exact opposite structure; the tree _isn't_ inverted, it's
-right-side-up. If we think of the initial commit as the roots of the tree, each
-commit can trace back to the initial commit via all of its ancestors, but has no
-knowledge of any commits that come after it (its descendents).
-
 ## `git clone`
 
-`git init` creates a _new_ repository. But often you don't to create a new
+`git init` creates a _new_ repository. But often you don't want to create a new
 repository, but to copy an existing repository. Maybe you want to work on a
-project at work and also after hours at home?
+project at work and or possibly after hours at home(?)
 
 When you want to create a copy of an existing repository, you use the `git
 clone` command.
 
 ## Clone an existing repository
 
-First, visit my copy of the "wordcount" repository on GitHub located
+First, visit the Barba-group copy of the "wordcount" repository on GitHub located
 at
-[https://github.com/gforsyth/wordcount](https://github.com/gforsyth/wordcount)
+[https://github.com/barbagroup/wordcount](https://github.com/barbagroup/wordcount)
 
 On the right-hand-side, click the "Clone or Download" button:
 
@@ -48,7 +29,7 @@ Then copy the clone URL (make sure to use HTTPS!):
 Now let's clone the repo. In a terminal, do `git clone <URL>`:
 
 ```text
-$ git clone https://github.com/gforsyth/wordcount.git
+$ git clone https://github.com/barbagroup/wordcount.git
 ```
 
 ```text
@@ -64,7 +45,7 @@ In this case, we can specify a folder name for `git` to create that doesn't
 conflict with the existing folder:
 
 ```text
-$ git clone https://github.com/gforsyth/wordcount.git gil_wordcount
+$ git clone https://github.com/barbagroup/wordcount.git gil_wordcount
 ```
 
 ```text
@@ -284,7 +265,3 @@ comments left by @ncclementi. The chronology of comments, requests and
 additional commits is preserved in the PR. You can also see that the original
 comment requesting an extra blank line is now hidden by default, since the file
 it refers to has been updated since the comment was left.
-
-## creating a local fork (e.g. a branch)
-
-## merging branches locally
