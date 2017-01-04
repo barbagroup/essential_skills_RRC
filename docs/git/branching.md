@@ -41,15 +41,16 @@ something new out, a branch is an easy way to make a bunch of changes. If you
 decide later that you don't want them, it's easy to get rid of them. If you want
 to keep them, it's easy to merge them into your master branch.
 
-```
+```text
 $ cd git/wordcount
 ```
 
 Now check the status to make sure everything is clean.
-```
+```text
 $ git status
 ```
-```
+
+```text
 On branch master
 nothing to commit, working tree clean
 ```
@@ -59,9 +60,10 @@ nothing to commit, working tree clean
 `git status` tells us we're on the branch `master`, what other branches are
 there? We can check using the `git branch` command:
 
-```
+```text
 $ git branch
 ```
+
 ```
 * master
 ```
@@ -72,18 +74,20 @@ Let's create another branch. The easiest way to do this is using the `checkout`
 command with the `-b` flag. If we use the `-b` flag, then we will create a new
 branch and also switch to that branch. Let's try it:
 
-```
+```text
 $ git checkout -b make_function
 ```
-```
+
+```text
 Switched to a new branch 'make_function'
 ```
 
 Ok, we switched to a new branch! Let's check `git branch` again:
 
-```
+```text
 $ git branch
 ```
+
 ```
 * make_function
   master
@@ -94,20 +98,22 @@ Now we have two branches and the `*` denotes which branch is active.
 A quick `git status` shows us that the repo is clean and no changes have been
 made.
 
-```
+```text
 $ git status
 ```
-```
+
+```text
 On branch make_function
 nothing to commit, working tree clean
 ```
 
 If we look at the contents of the folder, they also haven't changed.
 
-```
+```text
 $ ls
 ```
-```
+
+```text
 README.md  word_count.py
 ```
 
@@ -116,10 +122,11 @@ repository. Let's make some changes.
 
 Now let's check the diff
 
-```
+```text
 $ git diff
 ```
-```
+
+```diff
 diff --git a/word_count.py b/word_count.py
 index 66135a8..5a05630 100644
 --- a/word_count.py
@@ -153,23 +160,26 @@ index 66135a8..5a05630 100644
 
 That's a lot of changes, but I think it looks good. Let's commit it.
 
-```
+```text
 $ git add word_count.py 
 ```
-```
+
+```text
 $ git commit 
 ```
-```
+
+```text
 [make_function 3196a4e] convert wordcount to function and add main function
  1 file changed, 14 insertions(+), 7 deletions(-)
 ```
 
 After the changes, `word_count.py` should look like this:
 
-```
+```text
 $ cat word_count.py 
 ```
-```
+
+```text
 def wordcount(happy):
     """
     Splits the input string and performs a frequency word check
@@ -191,30 +201,32 @@ def main():
 
 Let's switch back to the `master` branch now.
 
-```
+```text
 $ git checkout master
 ```
-```
+
+```text
 Switched to branch 'master'
 ```
 
 What's the status of `master`?
 
-```
+```text
 $ git status
 ```
-```
+
+```text
 On branch master
 nothing to commit, working tree clean
 ```
 
 All clean! What does `word_count.py` look like here?
 
-```
+```text
 $ cat word_count.py 
 ```
 
-```
+```text
 happy = input("Enter a statement to word count: ")
 
 words = happy.split()
@@ -235,18 +247,20 @@ changed here.
 Ok, let's go back to the `make_function` branch. Since the branch already
 exists, we don't need to use the `-b` flag.
 
-```
+```text
 $ git checkout make_function 
 ```
-```
+
+```text
 Switched to branch 'make_function'
 ```
 
 And a quick `git branch` check to make sure we are where we thing we are:
 
-```
+```text
 $ git branch
 ```
+
 ```
 * make_function
   master
@@ -255,17 +269,18 @@ $ git branch
 Ok. We should have checked before to make sure that the new version works. Let's
 do that now.
 
-```
+```text
 $ python word_count.py 
 ```
 
 Oops. We defined `main` and `wordcount` but we forgot to call them!
 Let's fix that and check that it works.
 
-```
+```text
 $ python word_count.py 
 ```
-```
+
+```text
 Enter a statement to word count: oh now it is working that is a good thing
 The word frequency of your statement is: 
 {'thing': 1, 'a': 1, 'now': 1, 'working': 1, 'good': 1, 'oh': 1, 'it': 1, 'is': 2, 'that': 1}
@@ -273,10 +288,11 @@ The word frequency of your statement is:
 
 Better. 
 
-```
+```text
 $ git diff
 ```
-```
+
+```diff
 diff --git a/word_count.py b/word_count.py
 index 5a05630..e66dafd 100644
 --- a/word_count.py
@@ -292,23 +308,26 @@ index 5a05630..e66dafd 100644
 We just had to add the `main()` at the bottom of the script. Now let's commit
 this change:
 
-```
+```text
 $ git add word_count.py 
 ```
-```
+
+```text
 $ git commit
 ```
-```
+
+```text
 [make_function 1071b15] add call to main
  1 file changed, 2 insertions(+)
 ```
 
 Now what does the log look like?
 
-```
+```text
 $ git log --oneline
 ```
-```
+
+```text
 1071b15 add call to main
 3196a4e convert wordcount to function and add main function
 3f62d8f Create README.md
@@ -321,16 +340,19 @@ de8fbc3 Add user-friendly print statement
 Ok, we added two extra commits on the `make_function` branch. 
 What does the log look like on `master`? Let's check it out.
 
-```
+```text
 $ git checkout master
 ```
-```
+
+```text
 Switched to branch 'master'
 ```
-```
+
+```text
 $ git log --oneline
 ```
-```
+
+```text
 3f62d8f Create README.md
 de8fbc3 Add user-friendly print statement
 09633c8 add helper text to input function
@@ -347,10 +369,11 @@ Up to now, we have used `git diff` to compare new changes to the most recent
 commit, but you can also use `diff` to compare the state of two different
 branches. Let's `diff` between `master` and `make_function`.
 
-```
+```text
 $ git diff master make_function 
 ```
-```
+
+```diff
 diff --git a/word_count.py b/word_count.py
 index 66135a8..e66dafd 100644
 --- a/word_count.py
@@ -400,10 +423,11 @@ _FROM_.
 
 We are on the `master` branch and want to merge in `make_function` so we do:
 
-```
+```text
 $ git merge make_function 
 ```
-```
+
+```text
 Updating 3f62d8f..1071b15
 Fast-forward
  word_count.py | 23 ++++++++++++++++-------
@@ -443,10 +467,11 @@ make_function
 
 Confirmed. Now we can delete the `make_function` branch:
 
-```
+```text
 $ git branch -d make_function 
 ```
-```
+
+```text
 Deleted branch make_function (was 1071b15).
 ```
 
