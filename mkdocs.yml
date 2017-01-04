@@ -9,6 +9,7 @@ pages:
         - Piping: nix/pipes.md
         - man and less: nix/man_and_less.md
         - Uber exercise: nix/uber.md
+        - Cheat Sheet: nix/unix_cheat_sheet.md
     - (I)Python: 
         - Python: python/python.md
         - _slicing_solution: python/solutions/python.slicing.soln.md
