@@ -13,13 +13,16 @@ for nb in notebooks:
     with open('{}_execute.ipynb'.format(nb.rstrip('.ipynb')), 'wt') as f:
         nbformat.write(note, f)
 
+cd jupyter
 # convert executed notebooks to markdown
-notebooks = g`jupyter/*_execute.ipynb`
+notebooks = g`*_execute.ipynb`
 for i, nb in enumerate(notebooks):
     print('Converting notebook {} to markdown...'.format(i))
     jupyter nbconvert --to markdown @(nb)
     sed -i 's/\.\/figures/\.\.\/figures/g' *.md
-    mv @(nb.rstrip('.ipynb')+'.md') @('../docs/jupyter/{}.md'.format(i+1))
+    mv @(nb.rstrip('.ipynb')+'.md') @('../../docs/jupyter/{}.md'.format(i+1))
+
+cd ..
 
 print('Removing executed notebooks')
 /usr/bin/rm jupyter/*_execute.ipynb
