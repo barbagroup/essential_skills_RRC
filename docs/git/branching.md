@@ -255,7 +255,7 @@ $ git checkout make_function
 Switched to branch 'make_function'
 ```
 
-And a quick `git branch` check to make sure we are where we thing we are:
+And a quick `git branch` check to make sure we are where we think we are:
 
 ```text
 $ git branch
