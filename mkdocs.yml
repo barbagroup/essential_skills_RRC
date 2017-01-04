@@ -23,6 +23,7 @@ pages:
             - merging: git/merge.md
             - conflicts: git/conflicts.md
         - GitHub Collaboration: git/github2.md
+        - Branch and Merge: git/branching.md
     - Jupyter:
         - Navigating the notebook: jupyter/the_notebook.md
         - The Python Scientific Stack: jupyter/1.md
