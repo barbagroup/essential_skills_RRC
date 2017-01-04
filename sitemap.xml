@@ -53,6 +53,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/nix/unix_cheat_sheet/</loc>
+     <lastmod>2017-01-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     

@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>merging - Essential skills for reproducible research computing</title>
+  <title>Cheat Sheet - Essential skills for reproducible research computing</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "merging";
-    var mkdocs_page_input_path = "git/merge.md";
-    var mkdocs_page_url = "/git/merge/";
+    var mkdocs_page_name = "Cheat Sheet";
+    var mkdocs_page_input_path = "nix/unix_cheat_sheet.md";
+    var mkdocs_page_url = "/nix/unix_cheat_sheet/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -63,7 +63,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../../nix/setup/">Setup</a>
+        <a class="" href="../setup/">Setup</a>
         
     </li>
     
@@ -72,7 +72,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../../nix/navigation/">Navigation</a>
+        <a class="" href="../navigation/">Navigation</a>
         
     </li>
     
@@ -81,7 +81,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        <a class="" href="../file_handling/">File Creation and Editing</a>
         
     </li>
     
@@ -90,7 +90,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../../nix/redirection/">Redirection</a>
+        <a class="" href="../redirection/">Redirection</a>
         
     </li>
     
@@ -99,7 +99,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../../nix/pipes/">Piping</a>
+        <a class="" href="../pipes/">Piping</a>
         
     </li>
     
@@ -108,7 +108,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../../nix/man_and_less/">man and less</a>
+        <a class="" href="../man_and_less/">man and less</a>
         
     </li>
     
@@ -117,7 +117,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../../nix/uber/">Uber exercise</a>
+        <a class="" href="../uber/">Uber exercise</a>
         
     </li>
     
@@ -125,8 +125,12 @@
         
             
     
-    <li class="toctree-l1 ">
-        <a class="" href="../../nix/unix_cheat_sheet/">Cheat Sheet</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Cheat Sheet</a>
+        
+            <ul>
+            
+            </ul>
         
     </li>
     
@@ -189,7 +193,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../git/">git</a>
+        <a class="" href="../../git/git/">git</a>
         
     </li>
     
@@ -203,27 +207,7 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../github1/">push and pull</a>
-        
-    </li>
-    
-
-        
-            
-    
-    <li class="toctree-l1 current">
-        <a class="current" href="./">merging</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#merging">Merging</a></li>
-                
-                    <li><a class="toctree-l4" href="#add-a-readme-to-your-github-repo">Add a README to your GitHub repo</a></li>
-                
-                    <li><a class="toctree-l4" href="#make-a-change-to-the-local-repo">Make a change to the local repo</a></li>
-                
-            
-            </ul>
+        <a class="" href="../../git/github1/">push and pull</a>
         
     </li>
     
@@ -232,7 +216,16 @@
             
     
     <li class="toctree-l1 ">
-        <a class="" href="../conflicts/">conflicts</a>
+        <a class="" href="../../git/merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../git/conflicts/">conflicts</a>
         
     </li>
     
@@ -405,15 +398,11 @@
     
       
         
-          <li>git &raquo;</li>
-        
-      
-        
-          <li>GitHub &raquo;</li>
+          <li>UNIX Command Line &raquo;</li>
         
       
     
-    <li>merging</li>
+    <li>Cheat Sheet</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -423,113 +412,148 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="merging">Merging</h1>
-<p>We can make a commit in the local repo and push it to GitHub. We can also make a
-commit on GitHub and pull it to the local repo. But what happens if we make a
-commit in both places?</p>
-<p>This happens all the time when multiple people are working on the same project.
-Let's investigate how <code>git</code> handles these situations.</p>
-<h2 id="add-a-readme-to-your-github-repo">Add a README to your GitHub repo</h2>
-<p>A README is a plain text file in the root of a repository that usually contains</p>
-<ul>
-<li>a brief description of a project</li>
-<li>installation instructions</li>
-<li>info on how to collaborate</li>
-</ul>
-<p>or whatever else you want. </p>
-<p>Open your GitHub copy of the <code>wordcount</code> repo and then click the "Add README"
-button</p>
-<p><img alt="" src="../gh_images/add_readme.png" /></p>
-<p>Don't worry about adding any additional text beyond what is automatically added
-for you. And the default GitHub commit message for this change is reasonable, so
-you can just click "Commit"</p>
-<p><img alt="" src="../gh_images/readme_added.png" /></p>
-<p>You should see something like the above, where the GitHub copy of the repo now 
-has two files: <code>word_count.py</code> and <code>README.md</code></p>
-<h2 id="make-a-change-to-the-local-repo">Make a change to the local repo</h2>
-<p><strong>Without</strong> performing a <code>git pull</code> now edit <code>word_count.py</code> locally to read:</p>
-<pre><code class="diff">happy = input(&quot;Enter a statement to word count: &quot;)
-
-words = happy.split()  # split user input on spaces
-
-counts = {}
-for word in words:
-    counts[word] = counts.get(word, 0) + 1
-
-print(&quot;The word frequency of your statement is: &quot;)
-print(counts)
-</code></pre>
-
-<p>Stage and commit that change (remember the commands?). If we check the log in
-the local copy of the repo, we should have something like:</p>
-<pre><code class="diff">$ git log --oneline
-671907a add comment for future self
-de8fbc3 Add user-friendly print statement
-09633c8 add helper text to input function
-97fba8d allow user input of statement to word count
-47f748f Add initial version of word count script
-</code></pre>
-
-<p>But on GitHub, where we created the README file, the list of commits looks like</p>
-<p><img alt="" src="../gh_images/gh_readme_commit.png" /></p>
-<p>What can we do? </p>
-<p>Nothing to do but try something out. How about a <code>push</code>?</p>
-<pre><code class="diff"> git push
-To github.com:gforsyth/wordcount.git
- ! [rejected]        master -&gt; master (fetch first)
-error: failed to push some refs to 'git@github.com:gforsyth/wordcount.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-</code></pre>
-
-<p>Ah, that didn't work. But the error message tells us what the problem is. There
-is work on the remote that we don't have locally (the README file). It wants us
-to integrate those changes into the local copy before we can push. Let's try
-that.</p>
-<pre><code class="diff">git pull
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From github.com:gforsyth/wordcount
-   de8fbc3..3f62d8f  master     -&gt; origin/master
-Merge made by the 'recursive' strategy.
- README.md | 1 +
- 1 file changed, 1 insertion(+)
- create mode 100644 README.md
-</code></pre>
-
-<p>That did something. <code>git</code> tells us that there was a "Merge made by the
-'recursive' strategy". And it says that it created a file. Let's check.</p>
-<pre><code class="text">$ ls
-README.md  word_count.py
-</code></pre>
-
-<p>There's the <code>README</code>! Let's take a look at the <code>log</code>.</p>
-<pre><code class="diff">git log --oneline
-aa92e92 Merge branch 'master' of github.com:gforsyth/wordcount
-671907a add comment for future self
-3f62d8f Create README.md
-de8fbc3 Add user-friendly print statement
-09633c8 add helper text to input function
-97fba8d allow user input of statement to word count
-47f748f Add initial version of word count script
-</code></pre>
-
-<p>Interesting. There's a <code>Create README.md</code> commit that we made on GitHub. That
-one is further down in the list because it's older. Then there's the commit we
-made locally, <code>add comment for future self</code>.</p>
-<p>But what's that most recent commit? It's called a "Merge commit". We'll come
-back to that a little bit later, but the quick explanation is that it's a commit
-that helps join the <em>slightly</em> divergent histories of the GitHub repo and the
-local repo. </p>
-<p>One last thing before we move on, now that we have <code>pull</code>ed and <code>merge</code>d these 
-changes, we should <code>push</code> those changes back up to GitHub. </p>
-<p><code>push</code> often!</p>
-<p><img alt="" src="../gh_images/fire.png" /></p>
+                <table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>whoami</strong></td>
+<td>who you are logged in as</td>
+</tr>
+<tr>
+<td><strong>pwd</strong></td>
+<td>print working directory</td>
+</tr>
+<tr>
+<td><strong>ls</strong></td>
+<td>list items in current directory</td>
+</tr>
+<tr>
+<td><strong>ls -F</strong></td>
+<td>list all items in current directory and show directories with a slash and executables with a star</td>
+</tr>
+<tr>
+<td><strong>ls -a</strong></td>
+<td>list all items in current directory, including hidden files</td>
+</tr>
+<tr>
+<td><strong>cd</strong> dir</td>
+<td>change directory to <em>dir</em></td>
+</tr>
+<tr>
+<td><strong>cd ..</strong></td>
+<td>go up one directory</td>
+</tr>
+<tr>
+<td><strong>cd</strong></td>
+<td>go to your home directory</td>
+</tr>
+<tr>
+<td><strong>cd &#126;</strong></td>
+<td>go to your home directory</td>
+</tr>
+<tr>
+<td><strong>cd /</strong></td>
+<td>go to  your root directory</td>
+</tr>
+<tr>
+<td><strong>nano</strong></td>
+<td>open a text editor. See ribbon at bottom for help. ^ means CTRL</td>
+</tr>
+<tr>
+<td><strong>nano</strong> new.txt</td>
+<td>open nano to edit a file called <em>new.txt</em></td>
+</tr>
+<tr>
+<td><strong>touch</strong> newfile</td>
+<td>create or updates <em>newfile</em></td>
+</tr>
+<tr>
+<td><strong>mkdir</strong> newdir</td>
+<td>make directory <em>newdir</em></td>
+</tr>
+<tr>
+<td><strong>rm</strong> file</td>
+<td>remove <em>file</em></td>
+</tr>
+<tr>
+<td><strong>rmdir</strong> dir</td>
+<td>remove directory <em>dir</em> if it is empty</td>
+</tr>
+<tr>
+<td><strong>rm -r</strong> dir</td>
+<td>remove directory <em>dir</em> recursively</td>
+</tr>
+<tr>
+<td><strong>mv</strong> file newname</td>
+<td>rename <em>file</em> to <em>newname</em>. If a file called <em>newname</em> exists, this will overwrite it!</td>
+</tr>
+<tr>
+<td><strong>mv</strong> file newlocdir</td>
+<td>move <em>file</em> into the destination directory <em>newlocdir</em></td>
+</tr>
+<tr>
+<td>command <strong>&gt;</strong> file</td>
+<td>redirect the output of <em>command</em> writing it to <em>file</em></td>
+</tr>
+<tr>
+<td><strong>wc</strong> file</td>
+<td>count lines, words and characters in <em>file</em></td>
+</tr>
+<tr>
+<td><strong>wc -l</strong> file</td>
+<td>count lines in <em>file</em></td>
+</tr>
+<tr>
+<td><strong>wc -w</strong> file</td>
+<td>count words in <em>file</em></td>
+</tr>
+<tr>
+<td><strong>wc -c</strong> file</td>
+<td>count characters in <em>file</em></td>
+</tr>
+<tr>
+<td><strong>cat</strong> file</td>
+<td>displays the content of <em>file</em></td>
+</tr>
+<tr>
+<td>command1 <strong>&#124;</strong> command2</td>
+<td>"pipe" the output of <em>command1</em> to <em>command2</em></td>
+</tr>
+<tr>
+<td><strong>grep</strong> pattern files</td>
+<td>search for <em>pattern</em> in <em>files</em></td>
+</tr>
+<tr>
+<td><strong>wget</strong> file</td>
+<td>download <em>file</em></td>
+</tr>
+<tr>
+<td><strong>sort</strong> file</td>
+<td>print the lines of its input or concatenation of all files listed in its argument list in sorted order</td>
+</tr>
+<tr>
+<td><strong>man</strong> command</td>
+<td>show the manual for command</td>
+</tr>
+<tr>
+<td><strong>less</strong> file</td>
+<td>view <em>file</em> with page navigation</td>
+</tr>
+<tr>
+<td><strong>head</strong> file</td>
+<td>output the first 10 lines of <em>file</em></td>
+</tr>
+<tr>
+<td><strong>tail</strong> file</td>
+<td>output the last 10 lines of <em>file</em></td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
@@ -537,10 +561,10 @@ changes, we should <code>push</code> those changes back up to GitHub. </p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../conflicts/" class="btn btn-neutral float-right" title="conflicts">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../python/python/" class="btn btn-neutral float-right" title="Python">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../github1/" class="btn btn-neutral" title="push and pull"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../uber/" class="btn btn-neutral" title="Uber exercise"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -568,10 +592,10 @@ changes, we should <code>push</code> those changes back up to GitHub. </p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../github1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../uber/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../conflicts/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../python/python/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
