@@ -30,23 +30,70 @@ right-side-up. If we think of the initial commit as the roots of the tree, each
 commit can trace back to the initial commit via all of its ancestors, but has no
 knowledge of any commits that come after it (its descendents).
 
+Slides
+
+## When to branch?
+
+A branch is a good idea if you want to try adding a big feature (for one
+example). Making one small change might not require a whole branch (although you
+_can_ still use a branch), but if you are going out on a limb and trying
+something new out, a branch is an easy way to make a bunch of changes. If you
+decide later that you don't want them, it's easy to get rid of them. If you want
+to keep them, it's easy to merge them into your master branch.
+
 ```
 $ cd git/wordcount
 ```
+
+Now check the status to make sure everything is clean.
 ```
 $ git status
 ```
 ```
-  1 convert wordcount to function and add main function
 On branch master
 nothing to commit, working tree clean
 ```
+
+## `git branch`
+
+`git status` tells us we're on the branch `master`, what other branches are
+there? We can check using the `git branch` command:
+
+```
+$ git branch
+```
+```
+* master
+```
+
+There's only one branch at this point, called `master`. 
+
+Let's create another branch. The easiest way to do this is using the `checkout`
+command with the `-b` flag. If we use the `-b` flag, then we will create a new
+branch and also switch to that branch. Let's try it:
+
 ```
 $ git checkout -b make_function
 ```
 ```
 Switched to a new branch 'make_function'
 ```
+
+Ok, we switched to a new branch! Let's check `git branch` again:
+
+```
+$ git branch
+```
+```
+* make_function
+  master
+```
+
+Now we have two branches and the `*` denotes which branch is active.
+
+A quick `git status` shows us that the repo is clean and no changes have been
+made.
+
 ```
 $ git status
 ```
@@ -54,6 +101,9 @@ $ git status
 On branch make_function
 nothing to commit, working tree clean
 ```
+
+If we look at the contents of the folder, they also haven't changed.
+
 ```
 $ ls
 ```
@@ -61,7 +111,10 @@ $ ls
 README.md  word_count.py
 ```
 
-Edit word_count
+All we have done is change the name of the pointer tracking changes to the
+repository. Let's make some changes.
+
+Now let's check the diff
 
 ```
 $ git diff
@@ -97,6 +150,9 @@ index 66135a8..5a05630 100644
 +    happy = input("Enter a statement to word count: ")
 +    wordcount(happy)
 ```
+
+That's a lot of changes, but I think it looks good. Let's commit it.
+
 ```
 $ git add word_count.py 
 ```
@@ -107,6 +163,9 @@ $ git commit
 [make_function 3196a4e] convert wordcount to function and add main function
  1 file changed, 14 insertions(+), 7 deletions(-)
 ```
+
+After the changes, `word_count.py` should look like this:
+
 ```
 $ cat word_count.py 
 ```
@@ -125,30 +184,22 @@ def wordcount(happy):
     print("The word frequency of your statement is: ")
     print(counts)
 
-  1 def wordcount(happy):
 def main():
     happy = input("Enter a statement to word count: ")
     wordcount(happy)
 ```
-```
-$ git diff
-```
-```
-$ git status
-```
-```
-On branch make_function
-nothing to commit, working tree clean
-```
+
+Let's switch back to the `master` branch now.
+
 ```
 $ git checkout master
 ```
 ```
 Switched to branch 'master'
 ```
-```
-$ git diff
-```
+
+What's the status of `master`?
+
 ```
 $ git status
 ```
@@ -156,9 +207,13 @@ $ git status
 On branch master
 nothing to commit, working tree clean
 ```
+
+All clean! What does `word_count.py` look like here?
+
 ```
 $ cat word_count.py 
 ```
+
 ```
 happy = input("Enter a statement to word count: ")
 
@@ -172,19 +227,23 @@ for word in words:
 print("The word frequency of your statement is: ")
 print(counts)
 ```
-```
-$ git branch
-```
-```
-  make_function
-* master
-```
+
+It looks the same as it did before! We have added a commit on the
+`make_function` branch, but `master` is separate from that so nothing has
+changed here.
+
+Ok, let's go back to the `make_function` branch. Since the branch already
+exists, we don't need to use the `-b` flag.
+
 ```
 $ git checkout make_function 
 ```
 ```
 Switched to branch 'make_function'
 ```
+
+And a quick `git branch` check to make sure we are where we thing we are:
+
 ```
 $ git branch
 ```
@@ -192,17 +251,17 @@ $ git branch
 * make_function
   master
 ```
-```
-$ git status
-```
-```
-On branch make_function
-nothing to commit, working tree clean
-```
+
+Ok. We should have checked before to make sure that the new version works. Let's
+do that now.
+
 ```
 $ python word_count.py 
 ```
-edit to add call to main
+
+Oops. We defined `main` and `wordcount` but we forgot to call them!
+Let's fix that and check that it works.
+
 ```
 $ python word_count.py 
 ```
@@ -211,6 +270,9 @@ Enter a statement to word count: oh now it is working that is a good thing
 The word frequency of your statement is: 
 {'thing': 1, 'a': 1, 'now': 1, 'working': 1, 'good': 1, 'oh': 1, 'it': 1, 'is': 2, 'that': 1}
 ```
+
+Better. 
+
 ```
 $ git diff
 ```
@@ -226,6 +288,10 @@ index 5a05630..e66dafd 100644
 +
 +main()
 ```
+
+We just had to add the `main()` at the bottom of the script. Now let's commit
+this change:
+
 ```
 $ git add word_count.py 
 ```
@@ -236,6 +302,9 @@ $ git commit
 [make_function 1071b15] add call to main
  1 file changed, 2 insertions(+)
 ```
+
+Now what does the log look like?
+
 ```
 $ git log --oneline
 ```
@@ -248,6 +317,10 @@ de8fbc3 Add user-friendly print statement
 97fba8d allow user input of statement to word count
 47f748f Add initial version of word count script
 ```
+
+Ok, we added two extra commits on the `make_function` branch. 
+What does the log look like on `master`? Let's check it out.
+
 ```
 $ git checkout master
 ```
@@ -264,6 +337,16 @@ de8fbc3 Add user-friendly print statement
 97fba8d allow user input of statement to word count
 47f748f Add initial version of word count script
 ```
+
+Right, the `master` branch has the same log as before and doesn't have the two
+commits that we added to the `make_function` branch.
+
+## `diff` across branches
+
+Up to now, we have used `git diff` to compare new changes to the most recent
+commit, but you can also use `diff` to compare the state of two different
+branches. Let's `diff` between `master` and `make_function`.
+
 ```
 $ git diff master make_function 
 ```
@@ -300,6 +383,23 @@ index 66135a8..e66dafd 100644
 +
 +main()
 ```
+
+Cool!
+
+## `git merge`
+
+We have two branches and `make_function` has the new feature, which makes
+`wordcount` a function. That's a better way to write scripts. Since the
+`make_function` branch contains the feature that we want and we think that it's
+ready to go, we can bring the contents of the `make_function` branch into the
+`master` branch by using `git merge`.
+
+To do a merge (locally), `git checkout` the branch you want to merge _INTO_.
+Then type `git merge <branch>` where `<branch>` is the branch you want to merge
+_FROM_.
+
+We are on the `master` branch and want to merge in `make_function` so we do:
+
 ```
 $ git merge make_function 
 ```
@@ -308,25 +408,48 @@ Updating 3f62d8f..1071b15
 Fast-forward
  word_count.py | 23 ++++++++++++++++-------
  1 file changed, 16 insertions(+), 7 deletions(-)
-$ git log --oneline
-1071b15 add call to main
-3196a4e convert wordcount to function and add main function
-3f62d8f Create README.md
-de8fbc3 Add user-friendly print statement
-09633c8 add helper text to input function
-97fba8d allow user input of statement to word count
-47f748f Add initial version of word count script
 ```
+
+Because the history of `master` and the history of `make_function` share common
+ancestors and don't have any divergence descendents, we get a "fast-forward"
+merge. That means that all of the changes we made in `make_function` look as if
+they were made directly in `master`. 
+
+Sometimes, you might want to force `git` to create a merge commit, so that you
+know where a branch was merged in. In that case, you can prevent `git` from
+doing a "fast-forward" by merging with the `-no-ff` flag.
+
+(note that this command won't work now that we have _already_ merged in
+`make_function`) 
+
+``` 
+$ git merge --no-ff make_function 
 ```
-$ git branch
-```
-```
-  make_function
+
+## Deleting your branch
+
+Once you have merged your branch into `master` it doesn't really make sense to
+keep it around. All of its information and history is now contained in `master`. 
+
+Confirm first that you are on the `master` branch:
+
+``` 
+$ git branch 
+``` 
+``` 
+make_function
 * master
 ```
+
+Confirmed. Now we can delete the `make_function` branch:
+
 ```
 $ git branch -d make_function 
 ```
 ```
 Deleted branch make_function (was 1071b15).
 ```
+
+Note that if you use `git branch -d` it will only delete a branch if ALL of the
+commits in that branch are also in `master`, so you won't accidentally lose any
+of your commits.
