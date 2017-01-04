@@ -271,6 +271,12 @@
                     <li><a class="toctree-l4" href="#final-word">Final word</a></li>
                 
             
+                <li class="toctree-l3"><a href="#notebook_panel-main-background">notebook_panel { / main background /</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#notebook-li-more-space-between-bullet-points">notebook li { / More space between bullet points /</a></li>
+                
+            
             </ul>
         
     </li>
@@ -412,7 +418,7 @@
           <div role="main">
             <div class="section">
               
-                <p>Content under Creative Commons Attribution license CC-BY 4.0, code under MIT license © 2016 L.A. Barba, N.C. Clementi, G.F. Forsyth.  Based on https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/05_relax/05_01_2D.Laplace.Equation.ipynb also under CC-BY and MIT licenses, 2015.</p>
+                <p>Content under Creative Commons Attribution license CC-BY 4.0, code under BSD 3-Clause License © 2016 L.A. Barba, N.C. Clementi, G.F. Forsyth.  Based on https://github.com/numerical-mooc/numerical-mooc/blob/master/lessons/05_relax/05_01_2D.Laplace.Equation.ipynb also under CC-BY and MIT licenses, 2015.</p>
 <h1 id="relax-and-hold-steady">Relax and hold steady</h1>
 <p>Many problems in physics have no time dependence, yet are rich with physical meaning: the gravitational field produced by a massive object, the electrostatic potential of a charge distribution, the displacement of a stretched membrane and the steady flow of fluid through a porous medium ... all these can be modeled by <strong>Poisson's equation</strong>:</p>
 <p>
@@ -854,13 +860,147 @@ pyplot.axis('equal');
 <p>Now, notice from this plot that the error on the finest grid is around <script type="math/tex">0.0002</script>. Given this, perhaps we didn't need to continue iterating until a target difference between two solutions of <script type="math/tex">10^{-8}</script>. The spatial accuracy of the finite difference approximation is much worse than that! But we didn't know it ahead of time, did we? That's the "catch 22" of iterative solution of systems arising from discretization of PDEs.</p>
 <h2 id="final-word">Final word</h2>
 <p>The Jacobi method is the simplest relaxation scheme to explain and to apply. It is also the <em>worst</em> iterative solver! In practice, it is seldom used on its own as a solver, although it is useful as a smoother with multi-grid methods. There are much better iterative methods! If you are curious you can find them in this <a href="http://nbviewer.ipython.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/05_relax/05_03_Iterate.This.ipynb">lesson</a>. </p>
-<pre><code class="python">try:
-    from IPython.core.display import HTML
-    css_file = '../../styles/custom.css'
-    HTML(open(css_file, &quot;r&quot;).read())
-except:
-    pass
+<pre><code class="python">#Ignore this cell, It simply loads a style for the notebook.
+
+from IPython.core.display import HTML
+def css_styling():
+    try:
+        styles = open(&quot;../styles/custom.css&quot;, &quot;r&quot;).read()
+        return HTML(styles)
+    except:
+        pass
+css_styling()
 </code></pre>
+
+<p><link href='http://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
+<style></p>
+<p>@font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+}</p>
+<h1 id="notebook_panel-main-background">notebook_panel { /<em> main background </em>/</h1>
+<pre><code>background: rgb(245,245,245);
+</code></pre>
+<p>}</p>
+<p>div.cell { /<em> set cell width </em>/
+    width: 750px;
+}</p>
+<p>div #notebook { /<em> centre the content </em>/
+    background: #fff; /<em> white background for content </em>/
+    width: 1000px;
+    margin: auto;
+    padding-left: 0em;
+}</p>
+<h1 id="notebook-li-more-space-between-bullet-points">notebook li { /<em> More space between bullet points </em>/</h1>
+<p>margin-top:0.8em;
+}</p>
+<p>/<em> draw border around running cells </em>/
+div.cell.border-box-sizing.code_cell.running { 
+    border: 1px solid #111;
+}</p>
+<p>/<em> Put a solid color box around each cell and its output, visually linking them</em>/
+div.cell.code_cell {
+    background-color: rgb(256,256,256); 
+    border-radius: 0px; 
+    padding: 0.5em;
+    margin-left:1em;
+    margin-top: 1em;
+}</p>
+<p>div.text_cell_render{
+    font-family: 'Alegreya Sans' sans-serif;
+    line-height: 140%;
+    font-size: 125%;
+    font-weight: 400;
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}</p>
+<p>/<em> Formatting for header cells </em>/
+.text_cell_render h1 {
+    font-family: 'Fenix', sans-serif;
+    font-style:regular;
+    font-weight: 200;  <br />
+    font-size: 40pt;
+    line-height: 100%;
+    color: #138d75;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: block;
+} <br />
+.text_cell_render h2 {
+    font-family: 'Fenix', serif;
+    font-size: 20pt;
+    line-height: 100%;
+    margin-bottom: 0.1em;
+    color: #1f618d;
+    margin-top: 0.3em;
+    display: block;
+}   </p>
+<p>.text_cell_render h3 {
+    font-family: 'Fenix', serif;
+    margin-top:12px;
+    font-size: 16pt;
+    margin-bottom: 3px;
+    font-style: regular;
+}</p>
+<p>.text_cell_render h4 {    /<em>Use this for captions</em>/
+    font-family: 'Fenix', serif;
+    font-size: 12pt;
+    text-align: center;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    font-style: regular;
+}</p>
+<p>.text_cell_render h5 {  /<em>Use this for small titles</em>/
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    color: #CD2305;
+    font-style: italic;
+    margin-bottom: .5em;
+    margin-top: 0.5em;
+    display: block;
+}</p>
+<p>.text_cell_render h6 { /<em>use this for copyright note</em>/
+    font-family: 'Source Code Pro', sans-serif;
+    font-weight: 300;
+    font-size: 9pt;
+    line-height: 100%;
+    color: grey;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}</p>
+<pre><code>.CodeMirror{
+        font-family: "Source Code Pro";
+        font-size: 90%;
+}
+</code></pre>
+<p>/<em>    .prompt{
+        display: None;
+    }</em>/</p>
+<pre><code>.warning{
+    color: rgb( 240, 20, 20 )
+    }
+</code></pre>
+<p></style>
+<script>
+    MathJax.Hub.Config({
+                        TeX: {
+                           extensions: ["AMSmath.js"], 
+                           equationNumbers: { autoNumber: "AMS", useLabelIds: true}
+                           },
+                tex2jax: {
+                    inlineMath: [ ['<script type="math/tex">','</script>'], ["\(","\)"] ],
+                    displayMath: [ ['<script type="math/tex; mode=display">','</script>'], ["\[","\]"] ]
+                },
+                displayAlign: 'center', // Change this to 'center' to center equations.
+                "HTML-CSS": {
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
+        });
+</script></p>
               
             </div>
           </div>

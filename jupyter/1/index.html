@@ -258,6 +258,12 @@
                     <li><a class="toctree-l4" href="#step-3-smooth-the-data-and-do-regression">Step 3: Smooth the data and do regression</a></li>
                 
             
+                <li class="toctree-l3"><a href="#notebook_panel-main-background">notebook_panel { / main background /</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#notebook-li-more-space-between-bullet-points">notebook li { / More space between bullet points /</a></li>
+                
+            
             </ul>
         
     </li>
@@ -416,7 +422,7 @@
           <div role="main">
             <div class="section">
               
-                <p>Content under Creative Commons Attribution license CC-BY 4.0, code under MIT license © 2016 L.A. Barba, N.C. Clementi, G.F. Forsyth.  Based on <a href="https://github.com/barbagroup/JITcode-MechE">JITcode-MechE</a>, also under CC-BY and MIT licenses, 2014.</p>
+                <p>Content under Creative Commons Attribution license CC-BY 4.0, code under BSD 3-Clause License © 2016 L.A. Barba, N.C. Clementi, G.F. Forsyth.  Based on <a href="https://github.com/barbagroup/JITcode-MechE">JITcode-MechE</a>, also under CC-BY and MIT licenses, 2014.</p>
 <h1 id="jupyter-notebooks">Jupyter Notebooks</h1>
 <h2 id="intro-to-the-python-scientific-stack">Intro to the python scientific stack</h2>
 <p>Welcome to the Jupyter notebook, a place where you can combine markdown text, LaTeX equations, code and results in a single document. </p>
@@ -441,7 +447,7 @@
 YouTubeVideo('lyb4gau3LyI')
 </code></pre>
 
-<iframe width="400" height="300" src="https://www.youtube.com/embed/lyb4gau3LyI" frameborder="0" allowfullscreen> </iframe>
+<iframe width="400" height="300" src="https://www.youtube.com/embed/lyb4gau3LyI" frameborder="0" allowfullscreen></iframe>
 
 <p>How would we go about understanding the <em>trends</em> from the data on global temperature?</p>
 <p>The first step in analyzing unknown data is to generate some simple plots using <strong>matplotlib</strong>. We are going to look at the temperature-anomaly history, contained in a file, and make our first plot to explore this data. </p>
@@ -454,19 +460,19 @@ YouTubeVideo('lyb4gau3LyI')
 <p>This file contains the year and month on the first column and 12 monthly averages of land temperature anomaly listed sequentially on the second column, from 1880 to 2015. We will read the file, then make an initial plot to see what it looks like.</p>
 <p>In the NOAA web page you can select the data that you want to download as  a <code>csv</code> file and this will automatically open another tab with the data. We want to get that data so we will use <code>wget</code> but instead from a terminal we will invoke it from the notebook, yes! from the notebook.</p>
 <p>To run shell commands in the notebook we just need to use an exclamation mark <code>!</code> before the command:</p>
-<pre><code class="python">!wget -O resources/land_global_temperature_anomaly-1880-2015.csv  https://www.ncdc.noaa.gov/cag/time-series/global/globe/land/all/1/1880-2015.csv 
+<pre><code class="python">!wget -O land_global_temperature_anomaly-1880-2015.csv  https://www.ncdc.noaa.gov/cag/time-series/global/globe/land/all/1/1880-2015.csv 
 </code></pre>
 
-<pre><code>--2016-12-15 15:51:35--  https://www.ncdc.noaa.gov/cag/time-series/global/globe/land/all/1/1880-2015.csv
-Resolving www.ncdc.noaa.gov (www.ncdc.noaa.gov)... 205.167.25.171, 205.167.25.172
+<pre><code>--2017-01-04 06:37:59--  https://www.ncdc.noaa.gov/cag/time-series/global/globe/land/all/1/1880-2015.csv
+Resolving www.ncdc.noaa.gov (www.ncdc.noaa.gov)... 205.167.25.171, 205.167.25.172, 2610:20:8040:2::171, ...
 Connecting to www.ncdc.noaa.gov (www.ncdc.noaa.gov)|205.167.25.171|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [text/plain]
-Saving to: ‘resources/land_global_temperature_anomaly-1880-2015.csv’
+Saving to: ‘land_global_temperature_anomaly-1880-2015.csv’
 
-resources/land_glob     [ &lt;=&gt;                ]  23.24K  --.-KB/s    in 0.01s
+land_global_tempera     [ &lt;=&gt;                ]  23.24K   132KB/s    in 0.2s
 
-2016-12-15 15:51:36 (1.72 MB/s) - ‘resources/land_global_temperature_anomaly-1880-2015.csv’ saved [23799]
+2017-01-04 06:38:00 (132 KB/s) - ‘land_global_temperature_anomaly-1880-2015.csv’ saved [23796]
 </code></pre>
 <p>We got the data! Now we need to load it so we can work with it. The first thing to do is to load our favorite library: the <strong>NumPy</strong> library for array operations.</p>
 <pre><code class="python">import numpy
@@ -476,39 +482,39 @@ resources/land_glob     [ &lt;=&gt;                ]  23.24K  --.-KB/s    in 0.0
 <p><code>loadtxt</code> expects every row in the same format, so we need to check that that's true of this data file. 
 We could open it in Python, but we've already learned a useful command for peeking into files, right? 
 Let's use <code>head</code> to show the first ten lines of the <code>csv</code> file, again using a <code>!</code> to denote a shell command.</p>
-<pre><code class="python">!head resources/land_global_temperature_anomaly-1880-2015.csv
+<pre><code class="python">!head land_global_temperature_anomaly-1880-2015.csv
 </code></pre>
 
 <pre><code>Global Land Temperature Anomalies
 Units: Degrees Celsius
 Base Period: 1901-2000
 Year,Value
-188001,-0.1720
-188002,-0.5765
-188003,-0.7504
-188004,-0.3306
-188005,-0.2171
-188006,-0.3052
+188001,-0.1538
+188002,-0.5771
+188003,-0.7250
+188004,-0.2990
+188005,-0.2098
+188006,-0.3002
 </code></pre>
 <p>We see that the first 4 lines of the file are metadata but those will mess up <code>loadtxt</code>. 
 To fix this, we will pass an argument to <code>loadtxt</code> to tell it to skip the first 4 rows.</p>
-<pre><code class="python">numpy.loadtxt(fname='resources/land_global_temperature_anomaly-1880-2015.csv',
+<pre><code class="python">numpy.loadtxt(fname='land_global_temperature_anomaly-1880-2015.csv',
               delimiter=',', skiprows=4)
 </code></pre>
 
-<pre><code>array([[  1.88001000e+05,  -1.72000000e-01],
-       [  1.88002000e+05,  -5.76500000e-01],
-       [  1.88003000e+05,  -7.50400000e-01],
+<pre><code>array([[  1.88001000e+05,  -1.53800000e-01],
+       [  1.88002000e+05,  -5.77100000e-01],
+       [  1.88003000e+05,  -7.25000000e-01],
        ..., 
-       [  2.01510000e+05,   1.34570000e+00],
-       [  2.01511000e+05,   1.29680000e+00],
-       [  2.01512000e+05,   1.87450000e+00]])
+       [  2.01510000e+05,   1.32120000e+00],
+       [  2.01511000e+05,   1.28280000e+00],
+       [  2.01512000e+05,   1.87220000e+00]])
 </code></pre>
 <p>We called the function with three parameters: the file name and path, the delimiter that separates each value on a line (a comma in this case), and <code>skiprows=4</code> which tells Numpy to omit the first 4 rows. 
 Note that the first two parameters are strings (made up of characters) and we put them in quotes.</p>
 <p>As the output of the function, we get an array. Because it's rather big, Python shows only a few rows and columns of the array. </p>
 <p>So far, so good. Now, what if we want to manipulate this data? Or plot it? We need to refer to it with a name. We've only just read the file, but we did not assign the array any name! Let's try again.</p>
-<pre><code class="python">T_land = numpy.loadtxt(fname='resources/land_global_temperature_anomaly-1880-2015.csv', 
+<pre><code class="python">T_land = numpy.loadtxt(fname='land_global_temperature_anomaly-1880-2015.csv', 
                        delimiter=',', skiprows=4)
 </code></pre>
 
@@ -516,13 +522,13 @@ Note that the first two parameters are strings (made up of characters) and we pu
 <pre><code class="python">print(T_land)
 </code></pre>
 
-<pre><code>[[  1.88001000e+05  -1.72000000e-01]
- [  1.88002000e+05  -5.76500000e-01]
- [  1.88003000e+05  -7.50400000e-01]
+<pre><code>[[  1.88001000e+05  -1.53800000e-01]
+ [  1.88002000e+05  -5.77100000e-01]
+ [  1.88003000e+05  -7.25000000e-01]
  ..., 
- [  2.01510000e+05   1.34570000e+00]
- [  2.01511000e+05   1.29680000e+00]
- [  2.01512000e+05   1.87450000e+00]]
+ [  2.01510000e+05   1.32120000e+00]
+ [  2.01511000e+05   1.28280000e+00]
+ [  2.01512000e+05   1.87220000e+00]]
 </code></pre>
 <p>Ah, there it is! Let's find out how big the array is. For that, we use a cool NumPy function called <code>shape()</code>:</p>
 <pre><code class="python">numpy.shape(T_land)
@@ -556,7 +562,7 @@ Note that the first two parameters are strings (made up of characters) and we pu
 <pre><code class="python">pyplot.plot(T_land[:,1])
 </code></pre>
 
-<pre><code>[&lt;matplotlib.lines.Line2D at 0x7f312f6de978&gt;]
+<pre><code>[&lt;matplotlib.lines.Line2D at 0x7fcfd42274a8&gt;]
 </code></pre>
 <p><img alt="png" src="../the_python_scientific_stack_execute_files/the_python_scientific_stack_execute_32_1.png" /></p>
 <p>You can add a semicolon at the end of the plotting command to avoid that stuff that appeared on top of the figure, that <code>Out[x]: [&lt; ...&gt;]</code> ugliness. Try it.</p>
@@ -656,7 +662,7 @@ print('The mean value is {:.5} and the median {:.5}'.format(mean_T,
                                                             median_T))
 </code></pre>
 
-<pre><code>The mean value is 0.04238 and the median -0.02915
+<pre><code>The mean value is 0.04031 and the median -0.0276
 </code></pre>
 <pre><code class="python">variance_T = numpy.var(T_land[:,1])
 sigma_T = numpy.sqrt(variance_T)
@@ -664,7 +670,7 @@ print('The variance is {:.5} and the standard deviation {:.5}'.format(variance_T
                                                                       sigma_T))
 </code></pre>
 
-<pre><code>The variance is 0.28669 and the standard deviation 0.53544
+<pre><code>The variance is 0.28041 and the standard deviation 0.52954
 </code></pre>
 <p>With these data, we can plot the probability density function (pdf) that correspond to this data, compare with the histogram and see how far from a normal distribution we are.</p>
 <p>In order to do that, we need to import the module <a href="https://docs.scipy.org/doc/scipy/reference/stats.html"><code>stats</code></a> from <strong>SciPy</strong>, another great python library that contains tools for scientific computing. </p>
@@ -791,7 +797,7 @@ f_linear = numpy.poly1d((m, b))
 <pre><code class="python">print(f_linear)
 </code></pre>
 
-<pre><code>0.0008475 x - 0.6496
+<pre><code>0.0008322 x - 0.6392
 </code></pre>
 <pre><code class="python">pyplot.figure(figsize=(10, 5))
 
@@ -933,16 +939,16 @@ print('Temp anomaly estimation for 1880-01: {}'.format(reg_first))
 print('Temp anomaly estimation for 2015-12: {}'.format(reg_last))
 </code></pre>
 
-<pre><code>Temp anomaly estimation for 1880-01: -0.6487841104276981
-Temp anomaly estimation for 2015-12: 0.7335441594473067
+<pre><code>Temp anomaly estimation for 1880-01: -0.6383595707557367
+Temp anomaly estimation for 2015-12: 0.7189794236969136
 </code></pre>
 <p>Let's compare that to the actual dataset:</p>
 <pre><code class="python">print('Temp anomaly data for 1880-01: {}'.format(T_land[idx_first,1]))
 print('Temp anomaly data for 2015-12: {}'.format(T_land[idx_last,1]))
 </code></pre>
 
-<pre><code>Temp anomaly data for 1880-01: -0.172
-Temp anomaly data for 2015-12: 1.8745
+<pre><code>Temp anomaly data for 1880-01: -0.1538
+Temp anomaly data for 2015-12: 1.8722
 </code></pre>
 <p>It seems like a linear regression might not be the best way of modeling this data, but what if we try doing the regression in "chunks"? 
 If we take a look at the plot, we see that around the 1970's the slope starts to be more pronounced. 
@@ -1027,15 +1033,15 @@ print('Temp anomaly estimation for 1925-05: {}'.format(mid_reg1))
 print('Temp anomaly estimation for 1990-05: {}'.format(mid_reg2))
 </code></pre>
 
-<pre><code>Temp anomaly estimation for 1925-05: -0.20404280836225513
-Temp anomaly estimation for 1990-05: 0.4571266424582525
+<pre><code>Temp anomaly estimation for 1925-05: -0.20146469691379698
+Temp anomaly estimation for 1990-05: 0.44674762414762137
 </code></pre>
 <pre><code class="python">print('Temp anomaly data for 1925-05: {}'.format(T_land[mid_idx1,1]))
 print('Temp anomaly data for 1990-05: {}'.format(T_land[mid_idx2,1]))
 </code></pre>
 
-<pre><code>Temp anomaly data for 1925-05: -0.2898
-Temp anomaly data for 1990-05: 0.5295
+<pre><code>Temp anomaly data for 1925-05: -0.2339
+Temp anomaly data for 1990-05: 0.5212
 </code></pre>
 <p>That's certainly better than before. Is it good, though? That's hard to know. 
 Later in the course, we'll take a more in-depth look at error analysis and try to answer that question in more detail.</p>
@@ -1053,12 +1059,142 @@ Later in the course, we'll take a more in-depth look at error analysis and try t
 from IPython.core.display import HTML
 def css_styling():
     try:
-        styles = open(&quot;styles/custom.css&quot;, &quot;r&quot;).read()
+        styles = open(&quot;../styles/custom.css&quot;, &quot;r&quot;).read()
         return HTML(styles)
     except:
         pass
 css_styling()
 </code></pre>
+
+<p><link href='http://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
+<style></p>
+<p>@font-face {
+    font-family: "Computer Modern";
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+}</p>
+<h1 id="notebook_panel-main-background">notebook_panel { /<em> main background </em>/</h1>
+<pre><code>background: rgb(245,245,245);
+</code></pre>
+<p>}</p>
+<p>div.cell { /<em> set cell width </em>/
+    width: 750px;
+}</p>
+<p>div #notebook { /<em> centre the content </em>/
+    background: #fff; /<em> white background for content </em>/
+    width: 1000px;
+    margin: auto;
+    padding-left: 0em;
+}</p>
+<h1 id="notebook-li-more-space-between-bullet-points">notebook li { /<em> More space between bullet points </em>/</h1>
+<p>margin-top:0.8em;
+}</p>
+<p>/<em> draw border around running cells </em>/
+div.cell.border-box-sizing.code_cell.running { 
+    border: 1px solid #111;
+}</p>
+<p>/<em> Put a solid color box around each cell and its output, visually linking them</em>/
+div.cell.code_cell {
+    background-color: rgb(256,256,256); 
+    border-radius: 0px; 
+    padding: 0.5em;
+    margin-left:1em;
+    margin-top: 1em;
+}</p>
+<p>div.text_cell_render{
+    font-family: 'Alegreya Sans' sans-serif;
+    line-height: 140%;
+    font-size: 125%;
+    font-weight: 400;
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}</p>
+<p>/<em> Formatting for header cells </em>/
+.text_cell_render h1 {
+    font-family: 'Fenix', sans-serif;
+    font-style:regular;
+    font-weight: 200;  <br />
+    font-size: 40pt;
+    line-height: 100%;
+    color: #138d75;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    display: block;
+} <br />
+.text_cell_render h2 {
+    font-family: 'Fenix', serif;
+    font-size: 20pt;
+    line-height: 100%;
+    margin-bottom: 0.1em;
+    color: #1f618d;
+    margin-top: 0.3em;
+    display: block;
+}   </p>
+<p>.text_cell_render h3 {
+    font-family: 'Fenix', serif;
+    margin-top:12px;
+    font-size: 16pt;
+    margin-bottom: 3px;
+    font-style: regular;
+}</p>
+<p>.text_cell_render h4 {    /<em>Use this for captions</em>/
+    font-family: 'Fenix', serif;
+    font-size: 12pt;
+    text-align: center;
+    margin-top: 0em;
+    margin-bottom: 2em;
+    font-style: regular;
+}</p>
+<p>.text_cell_render h5 {  /<em>Use this for small titles</em>/
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    color: #CD2305;
+    font-style: italic;
+    margin-bottom: .5em;
+    margin-top: 0.5em;
+    display: block;
+}</p>
+<p>.text_cell_render h6 { /<em>use this for copyright note</em>/
+    font-family: 'Source Code Pro', sans-serif;
+    font-weight: 300;
+    font-size: 9pt;
+    line-height: 100%;
+    color: grey;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}</p>
+<pre><code>.CodeMirror{
+        font-family: "Source Code Pro";
+        font-size: 90%;
+}
+</code></pre>
+<p>/<em>    .prompt{
+        display: None;
+    }</em>/</p>
+<pre><code>.warning{
+    color: rgb( 240, 20, 20 )
+    }
+</code></pre>
+<p></style>
+<script>
+    MathJax.Hub.Config({
+                        TeX: {
+                           extensions: ["AMSmath.js"], 
+                           equationNumbers: { autoNumber: "AMS", useLabelIds: true}
+                           },
+                tex2jax: {
+                    inlineMath: [ ['<script type="math/tex">','</script>'], ["\(","\)"] ],
+                    displayMath: [ ['<script type="math/tex; mode=display">','</script>'], ["\[","\]"] ]
+                },
+                displayAlign: 'center', // Change this to 'center' to center equations.
+                "HTML-CSS": {
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
+        });
+</script></p>
               
             </div>
           </div>
