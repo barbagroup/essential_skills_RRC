@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Branch and Merge - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Branch and Merge";
+    var mkdocs_page_input_path = "git/branching.md";
+    var mkdocs_page_url = "/git/branching/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/setup/">Setup</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/unix_cheat_sheet/">Cheat Sheet</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/python/">Python</a>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Software Licensing</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../openlicenses/openlicensing/">Open Licensing</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../conflicts/">conflicts</a>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../github2/">GitHub Collaboration</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Branch and Merge</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#branching-and-merging">Branching and merging</a></li>
+                
+                    <li><a class="toctree-l4" href="#branching-as-a-local-fork">Branching as a local fork</a></li>
+                
+                    <li><a class="toctree-l4" href="#how-commits-work">How commits work</a></li>
+                
+                    <li><a class="toctree-l4" href="#when-to-branch">When to branch?</a></li>
+                
+                    <li><a class="toctree-l4" href="#git-branch">git branch</a></li>
+                
+                    <li><a class="toctree-l4" href="#diff-across-branches">diff across branches</a></li>
+                
+                    <li><a class="toctree-l4" href="#git-merge">git merge</a></li>
+                
+                    <li><a class="toctree-l4" href="#deleting-your-branch">Deleting your branch</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/the_notebook/">Navigating the notebook</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/1/">The Python Scientific Stack</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Laplace</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../laplace/1/">Elliptic PDEs</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>References</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../references/">References</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Resources and Tips</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../resources/">Resources</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>git &raquo;</li>
+        
+      
+    
+    <li>Branch and Merge</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="branching-and-merging">Branching and merging</h1>
+<h2 id="branching-as-a-local-fork">Branching as a local fork</h2>
+<p>We have learned how to use forks and Pull Requests on GitHub in order to
+collaborate with colleagues. The model of forking a personal copy of a repo,
+making an individual change and then folding that change back into the original
+(upstream) source is a very useful workflow. </p>
+<p>The fork and PR model is a version of <code>git</code>'s own branch-and-merge
+functionality, in which commits can follow separate paths (called branches) and
+then be brought back together.</p>
+<h2 id="how-commits-work">How commits work</h2>
+<p>What exactly is a commit? We've talked about them up to this point as snapshots
+of a file or files at a particular moment. That's an accurate description, but
+it's also worth examining how commits are related to one another. This will help
+develop intuition about why <code>git</code> handles certain situations the way that it
+does.</p>
+<p>When we learned about navigating the UNIX filesystem, we explained the file
+structure as an inverted tree, where each folder can see all of the files and
+folders below it, but can't see anything above it.</p>
+<p><img alt="unix_filetree" src="../../nix/figures/filetree.svg" /></p>
+<p>Commits have the exact opposite structure; the tree <em>isn't</em> inverted, it's
+right-side-up. If we think of the initial commit as the roots of the tree, each
+commit can trace back to the initial commit via all of its ancestors, but has no
+knowledge of any commits that come after it (its descendents).</p>
+<p>Slides</p>
+<h2 id="when-to-branch">When to branch?</h2>
+<p>A branch is a good idea if you want to try adding a big feature (for one
+example). Making one small change might not require a whole branch (although you
+<em>can</em> still use a branch), but if you are going out on a limb and trying
+something new out, a branch is an easy way to make a bunch of changes. If you
+decide later that you don't want them, it's easy to get rid of them. If you want
+to keep them, it's easy to merge them into your master branch.</p>
+<pre><code class="text">$ cd git/wordcount
+</code></pre>
+
+<p>Now check the status to make sure everything is clean.</p>
+<pre><code class="text">$ git status
+</code></pre>
+
+<pre><code class="text">On branch master
+nothing to commit, working tree clean
+</code></pre>
+
+<h2 id="git-branch"><code>git branch</code></h2>
+<p><code>git status</code> tells us we're on the branch <code>master</code>, what other branches are
+there? We can check using the <code>git branch</code> command:</p>
+<pre><code class="text">$ git branch
+</code></pre>
+
+<pre><code>* master
+</code></pre>
+
+<p>There's only one branch at this point, called <code>master</code>. </p>
+<p>Let's create another branch. The easiest way to do this is using the <code>checkout</code>
+command with the <code>-b</code> flag. If we use the <code>-b</code> flag, then we will create a new
+branch and also switch to that branch. Let's try it:</p>
+<pre><code class="text">$ git checkout -b make_function
+</code></pre>
+
+<pre><code class="text">Switched to a new branch 'make_function'
+</code></pre>
+
+<p>Ok, we switched to a new branch! Let's check <code>git branch</code> again:</p>
+<pre><code class="text">$ git branch
+</code></pre>
+
+<pre><code>* make_function
+  master
+</code></pre>
+
+<p>Now we have two branches and the <code>*</code> denotes which branch is active.</p>
+<p>A quick <code>git status</code> shows us that the repo is clean and no changes have been
+made.</p>
+<pre><code class="text">$ git status
+</code></pre>
+
+<pre><code class="text">On branch make_function
+nothing to commit, working tree clean
+</code></pre>
+
+<p>If we look at the contents of the folder, they also haven't changed.</p>
+<pre><code class="text">$ ls
+</code></pre>
+
+<pre><code class="text">README.md  word_count.py
+</code></pre>
+
+<p>All we have done is change the name of the pointer tracking changes to the
+repository. Let's make some changes.</p>
+<p>Now let's check the diff</p>
+<pre><code class="text">$ git diff
+</code></pre>
+
+<pre><code class="diff">diff --git a/word_count.py b/word_count.py
+index 66135a8..5a05630 100644
+--- a/word_count.py
++++ b/word_count.py
+@@ -1,10 +1,17 @@
+-happy = input(&quot;Enter a statement to word count: &quot;)
++def wordcount(happy):
++    &quot;&quot;&quot;
++    Splits the input string and performs a frequency word check
++    &quot;&quot;&quot;
+
+-words = happy.split()
++    words = happy.split()
+
+-counts = {}
+-for word in words:
+-    counts[word] = counts.get(word, 0) + 1
++    counts = {}
++    for word in words:
++        counts[word] = counts.get(word, 0) + 1
+
+-print(&quot;The word frequency of your statement is: &quot;)
+-print(counts)
++    print(&quot;The word frequency of your statement is: &quot;)
++    print(counts)
++
++def main():
++    happy = input(&quot;Enter a statement to word count: &quot;)
++    wordcount(happy)
+</code></pre>
+
+<p>That's a lot of changes, but I think it looks good. Let's commit it.</p>
+<pre><code class="text">$ git add word_count.py 
+</code></pre>
+
+<pre><code class="text">$ git commit 
+</code></pre>
+
+<pre><code class="text">[make_function 3196a4e] convert wordcount to function and add main function
+ 1 file changed, 14 insertions(+), 7 deletions(-)
+</code></pre>
+
+<p>After the changes, <code>word_count.py</code> should look like this:</p>
+<pre><code class="text">$ cat word_count.py 
+</code></pre>
+
+<pre><code class="text">def wordcount(happy):
+    &quot;&quot;&quot;
+    Splits the input string and performs a frequency word check
+    &quot;&quot;&quot;
+
+    words = happy.split()
+
+    counts = {}
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+
+    print(&quot;The word frequency of your statement is: &quot;)
+    print(counts)
+
+def main():
+    happy = input(&quot;Enter a statement to word count: &quot;)
+    wordcount(happy)
+</code></pre>
+
+<p>Let's switch back to the <code>master</code> branch now.</p>
+<pre><code class="text">$ git checkout master
+</code></pre>
+
+<pre><code class="text">Switched to branch 'master'
+</code></pre>
+
+<p>What's the status of <code>master</code>?</p>
+<pre><code class="text">$ git status
+</code></pre>
+
+<pre><code class="text">On branch master
+nothing to commit, working tree clean
+</code></pre>
+
+<p>All clean! What does <code>word_count.py</code> look like here?</p>
+<pre><code class="text">$ cat word_count.py 
+</code></pre>
+
+<pre><code class="text">happy = input(&quot;Enter a statement to word count: &quot;)
+
+words = happy.split()
+  1 add call to main
+
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+
+print(&quot;The word frequency of your statement is: &quot;)
+print(counts)
+</code></pre>
+
+<p>It looks the same as it did before! We have added a commit on the
+<code>make_function</code> branch, but <code>master</code> is separate from that so nothing has
+changed here.</p>
+<p>Ok, let's go back to the <code>make_function</code> branch. Since the branch already
+exists, we don't need to use the <code>-b</code> flag.</p>
+<pre><code class="text">$ git checkout make_function 
+</code></pre>
+
+<pre><code class="text">Switched to branch 'make_function'
+</code></pre>
+
+<p>And a quick <code>git branch</code> check to make sure we are where we think we are:</p>
+<pre><code class="text">$ git branch
+</code></pre>
+
+<pre><code>* make_function
+  master
+</code></pre>
+
+<p>Ok. We should have checked before to make sure that the new version works. Let's
+do that now.</p>
+<pre><code class="text">$ python word_count.py 
+</code></pre>
+
+<p>Oops. We defined <code>main</code> and <code>wordcount</code> but we forgot to call them!
+Let's fix that and check that it works.</p>
+<pre><code class="text">$ python word_count.py 
+</code></pre>
+
+<pre><code class="text">Enter a statement to word count: oh now it is working that is a good thing
+The word frequency of your statement is: 
+{'thing': 1, 'a': 1, 'now': 1, 'working': 1, 'good': 1, 'oh': 1, 'it': 1, 'is': 2, 'that': 1}
+</code></pre>
+
+<p>Better. </p>
+<pre><code class="text">$ git diff
+</code></pre>
+
+<pre><code class="diff">diff --git a/word_count.py b/word_count.py
+index 5a05630..e66dafd 100644
+--- a/word_count.py
++++ b/word_count.py
+@@ -15,3 +15,5 @@ def wordcount(happy):
+ def main():
+     happy = input(&quot;Enter a statement to word count: &quot;)
+     wordcount(happy)
++
++main()
+</code></pre>
+
+<p>We just had to add the <code>main()</code> at the bottom of the script. Now let's commit
+this change:</p>
+<pre><code class="text">$ git add word_count.py 
+</code></pre>
+
+<pre><code class="text">$ git commit
+</code></pre>
+
+<pre><code class="text">[make_function 1071b15] add call to main
+ 1 file changed, 2 insertions(+)
+</code></pre>
+
+<p>Now what does the log look like?</p>
+<pre><code class="text">$ git log --oneline
+</code></pre>
+
+<pre><code class="text">1071b15 add call to main
+3196a4e convert wordcount to function and add main function
+3f62d8f Create README.md
+de8fbc3 Add user-friendly print statement
+09633c8 add helper text to input function
+97fba8d allow user input of statement to word count
+47f748f Add initial version of word count script
+</code></pre>
+
+<p>Ok, we added two extra commits on the <code>make_function</code> branch. 
+What does the log look like on <code>master</code>? Let's check it out.</p>
+<pre><code class="text">$ git checkout master
+</code></pre>
+
+<pre><code class="text">Switched to branch 'master'
+</code></pre>
+
+<pre><code class="text">$ git log --oneline
+</code></pre>
+
+<pre><code class="text">3f62d8f Create README.md
+de8fbc3 Add user-friendly print statement
+09633c8 add helper text to input function
+97fba8d allow user input of statement to word count
+47f748f Add initial version of word count script
+</code></pre>
+
+<p>Right, the <code>master</code> branch has the same log as before and doesn't have the two
+commits that we added to the <code>make_function</code> branch.</p>
+<h2 id="diff-across-branches"><code>diff</code> across branches</h2>
+<p>Up to now, we have used <code>git diff</code> to compare new changes to the most recent
+commit, but you can also use <code>diff</code> to compare the state of two different
+branches. Let's <code>diff</code> between <code>master</code> and <code>make_function</code>.</p>
+<pre><code class="text">$ git diff master make_function 
+</code></pre>
+
+<pre><code class="diff">diff --git a/word_count.py b/word_count.py
+index 66135a8..e66dafd 100644
+--- a/word_count.py
++++ b/word_count.py
+@@ -1,10 +1,19 @@
+-happy = input(&quot;Enter a statement to word count: &quot;)
++def wordcount(happy):
++    &quot;&quot;&quot;
++    Splits the input string and performs a frequency word check
++    &quot;&quot;&quot;
+
+-words = happy.split()
++    words = happy.split()
+
+-counts = {}
+-for word in words:
+-    counts[word] = counts.get(word, 0) + 1
++    counts = {}
++    for word in words:
++        counts[word] = counts.get(word, 0) + 1
+
+-print(&quot;The word frequency of your statement is: &quot;)
+-print(counts)
++    print(&quot;The word frequency of your statement is: &quot;)
++    print(counts)
++
++def main():
++    happy = input(&quot;Enter a statement to word count: &quot;)
++    wordcount(happy)
++
++main()
+</code></pre>
+
+<p>Cool!</p>
+<h2 id="git-merge"><code>git merge</code></h2>
+<p>We have two branches and <code>make_function</code> has the new feature, which makes
+<code>wordcount</code> a function. That's a better way to write scripts. Since the
+<code>make_function</code> branch contains the feature that we want and we think that it's
+ready to go, we can bring the contents of the <code>make_function</code> branch into the
+<code>master</code> branch by using <code>git merge</code>.</p>
+<p>To do a merge (locally), <code>git checkout</code> the branch you want to merge <em>INTO</em>.
+Then type <code>git merge &lt;branch&gt;</code> where <code>&lt;branch&gt;</code> is the branch you want to merge
+<em>FROM</em>.</p>
+<p>We are on the <code>master</code> branch and want to merge in <code>make_function</code> so we do:</p>
+<pre><code class="text">$ git merge make_function 
+</code></pre>
+
+<pre><code class="text">Updating 3f62d8f..1071b15
+Fast-forward
+ word_count.py | 23 ++++++++++++++++-------
+ 1 file changed, 16 insertions(+), 7 deletions(-)
+</code></pre>
+
+<p>Because the history of <code>master</code> and the history of <code>make_function</code> share common
+ancestors and don't have any divergence descendents, we get a "fast-forward"
+merge. That means that all of the changes we made in <code>make_function</code> look as if
+they were made directly in <code>master</code>. </p>
+<p>Sometimes, you might want to force <code>git</code> to create a merge commit, so that you
+know where a branch was merged in. In that case, you can prevent <code>git</code> from
+doing a "fast-forward" by merging with the <code>-no-ff</code> flag.</p>
+<p>(note that this command won't work now that we have <em>already</em> merged in
+<code>make_function</code>) </p>
+<pre><code>$ git merge --no-ff make_function 
+</code></pre>
+
+<h2 id="deleting-your-branch">Deleting your branch</h2>
+<p>Once you have merged your branch into <code>master</code> it doesn't really make sense to
+keep it around. All of its information and history is now contained in <code>master</code>. </p>
+<p>Confirm first that you are on the <code>master</code> branch:</p>
+<pre><code>$ git branch 
+</code></pre>
+
+<pre><code>make_function
+* master
+</code></pre>
+
+<p>Confirmed. Now we can delete the <code>make_function</code> branch:</p>
+<pre><code class="text">$ git branch -d make_function 
+</code></pre>
+
+<pre><code class="text">Deleted branch make_function (was 1071b15).
+</code></pre>
+
+<p>Note that if you use <code>git branch -d</code> it will only delete a branch if ALL of the
+commits in that branch are also in <code>master</code>, so you won't accidentally lose any
+of your commits.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../jupyter/the_notebook/" class="btn btn-neutral float-right" title="Navigating the notebook">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../github2/" class="btn btn-neutral" title="GitHub Collaboration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> and deployed using <a href="https://drdoctr.github.io/doctr">doctr</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../github2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../jupyter/the_notebook/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>

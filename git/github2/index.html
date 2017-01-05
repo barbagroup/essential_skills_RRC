@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>GitHub Collaboration - Essential skills for reproducible research computing</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "GitHub Collaboration";
+    var mkdocs_page_input_path = "git/github2.md";
+    var mkdocs_page_url = "/git/github2/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Essential skills for reproducible research computing</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+    
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>UNIX Command Line</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/setup/">Setup</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/navigation/">Navigation</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/file_handling/">File Creation and Editing</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/redirection/">Redirection</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/pipes/">Piping</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/man_and_less/">man and less</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/uber/">Uber exercise</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../nix/unix_cheat_sheet/">Cheat Sheet</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>(I)Python</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../python/python/">Python</a>
+        
+    </li>
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+            
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Software Licensing</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../openlicenses/openlicensing/">Open Licensing</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>git</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../git/">git</a>
+        
+    </li>
+    
+
+        
+            
+    <ul class="subnav">
+    <li><span>GitHub</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../github1/">push and pull</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../merge/">merging</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../conflicts/">conflicts</a>
+        
+    </li>
+    
+
+        
+    </ul>
+
+        
+            
+    
+    <li class="toctree-l1 current">
+        <a class="current" href="./">GitHub Collaboration</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#github-workflow">GitHub Workflow</a></li>
+                
+                    <li><a class="toctree-l4" href="#git-clone">git clone</a></li>
+                
+                    <li><a class="toctree-l4" href="#clone-an-existing-repository">Clone an existing repository</a></li>
+                
+                    <li><a class="toctree-l4" href="#edit-the-cloned-repo">Edit the cloned repo</a></li>
+                
+                    <li><a class="toctree-l4" href="#forks">forks</a></li>
+                
+                    <li><a class="toctree-l4" href="#clone-your-fork">clone your fork</a></li>
+                
+                    <li><a class="toctree-l4" href="#pull-requests">Pull Requests</a></li>
+                
+                    <li><a class="toctree-l4" href="#i-opened-a-pull-request-now-what">I opened a pull request, now what?</a></li>
+                
+            
+            </ul>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../branching/">Branch and Merge</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Jupyter</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/the_notebook/">Navigating the notebook</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../jupyter/1/">The Python Scientific Stack</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Laplace</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../laplace/1/">Elliptic PDEs</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Numba</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/1/">Profiling</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/2/">Intro to JIT</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/3/">Numba Internals</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/4/">CFD Intro</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/5/">Cavity Flow</a>
+        
+    </li>
+    
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../numba/6/">vectorize</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>References</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../references/">References</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Resources and Tips</span></li>
+
+        
+            
+    
+    <li class="toctree-l1 ">
+        <a class="" href="../../resources/">Resources</a>
+        
+    </li>
+    
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Essential skills for reproducible research computing</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>git &raquo;</li>
+        
+      
+    
+    <li>GitHub Collaboration</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="github-workflow">GitHub Workflow</h1>
+<p>We've used GitHub so far as a tool to backup and restore our work across
+different machines but always as a single user.</p>
+<h2 id="git-clone"><code>git clone</code></h2>
+<p><code>git init</code> creates a <em>new</em> repository. But often you don't want to create a new
+repository, but to copy an existing repository. Maybe you want to work on a
+project at work and or possibly after hours at home(?)</p>
+<p>When you want to create a copy of an existing repository, you use the <code>git
+clone</code> command.</p>
+<h2 id="clone-an-existing-repository">Clone an existing repository</h2>
+<p>First, visit the Barba-group copy of the "wordcount" repository on GitHub located
+at
+<a href="https://github.com/barbagroup/wordcount">https://github.com/barbagroup/wordcount</a></p>
+<p>On the right-hand-side, click the "Clone or Download" button:</p>
+<p><img alt="clonebutton" src="../gh_images/clone_button.png" /></p>
+<p>Then copy the clone URL (make sure to use HTTPS!):</p>
+<p><img alt="cloneurl" src="../gh_images/clone_url.png" /></p>
+<p>Now let's clone the repo. In a terminal, do <code>git clone &lt;URL&gt;</code>:</p>
+<pre><code class="text">$ git clone https://github.com/barbagroup/wordcount.git
+</code></pre>
+
+<pre><code class="text">fatal: destination path 'wordcount' already exists and is not an empty directory
+</code></pre>
+
+<p>ACK. "fatal" is usually a bad sign. What happened? <code>clone</code>, by default, creates
+a folder with the same name as the repository, so <code>wordcount</code>. But you already
+have a folder called <code>wordcount</code> (right?), so <code>git</code> won't overwrite that copy
+(and that's good).</p>
+<p>In this case, we can specify a folder name for <code>git</code> to create that doesn't
+conflict with the existing folder:</p>
+<pre><code class="text">$ git clone https://github.com/barbagroup/wordcount.git gil_wordcount
+</code></pre>
+
+<pre><code class="text">Cloning into 'gil_wordcount'...
+remote: Counting objects: 15, done.
+remote: Total 15 (delta 0), reused 0 (delta 0), pack-reused 15
+Unpacking objects: 100% (15/15), done.
+</code></pre>
+
+<p>You cloned your first repository! Now <code>cd</code> in and look at the repo history.</p>
+<pre><code class="text">$ cd gil_wordcount
+</code></pre>
+
+<pre><code class="text">$ git log
+</code></pre>
+
+<pre><code class="text">commit 3f62d8fe59fc6cbded99485a3bebec95e8703a7d
+Author: Gil Forsyth &lt;gforsyth@users.noreply.github.com&gt;
+Date:   Thu Dec 15 12:06:58 2016 -0500
+
+    Create README.md
+
+commit de8fbc35961f0b7412a8e862e212a50ea0dff7cc
+Author: Gil Forsyth &lt;gforsyth@users.noreply.github.com&gt;
+Date:   Wed Dec 14 18:02:38 2016 -0500
+
+    Add user-friendly print statement
+
+commit 09633c88bb3f8b40d1c988b1df9004245320462a
+Author: Gil Forsyth &lt;gilforsyth@gmail.com&gt;
+Date:   Tue Dec 13 11:01:11 2016 -0500
+
+    add helper text to input function
+
+commit 97fba8ddd7685e650813675f5b024267af0b94e7
+Author: Gil Forsyth &lt;gilforsyth@gmail.com&gt;
+Date:   Tue Dec 13 10:58:59 2016 -0500
+
+    allow user input of statement to word count
+
+commit 47f748fea14e14ed84452a802dc14a5ea0829949
+Author: Gil Forsyth &lt;gilforsyth@gmail.com&gt;
+Date:   Tue Dec 13 10:53:23 2016 -0500
+
+    Add initial version of word count script
+</code></pre>
+
+<p>Those are the commits made in the instructor's repository. We have copied the
+entire history of that repo to our own machine.</p>
+<h2 id="edit-the-cloned-repo">Edit the cloned repo</h2>
+<p>That README.md file is pretty sparse so let's add something to it.</p>
+<p>Open <code>README.md</code> in <code>nano</code> and add a greeting, something like "Welcome to the
+wordcount repo!"</p>
+<p>Now save the file, stage it and commit it! (<a href="../git/">Need a refresher?</a>)</p>
+<p>Now push those changes up!</p>
+<pre><code class="text">$ git push
+</code></pre>
+
+<pre><code class="text">Permission denied.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre>
+
+<p>What happened? We don't have write access to that repository because it doesn't
+belong to us. It would be a problem if anyone could overwrite a file on GitHub
+whenever they felt like it.</p>
+<p>But how do we propose a change to a repository if we don't have write access?</p>
+<p>We fork it!</p>
+<h2 id="forks">forks</h2>
+<p>A fork is a complete copy of an existing git repository under your account.
+Since it's yours, you now have the ability to make changes to it. Even cooler is
+that once you've made those changes, you can then propose that they be added
+back in to the original repository that you forked! This is the main mechanism
+by which people contribute to other projects on GitHub.</p>
+<p>To create a fork, first go to the GitHub page of the repository that you want to
+fork. If you are in a guided workshop right now, please partner up with someone
+near you and fork each other's repository. If you are following along on your
+own, you can use a repository that GitHub has created specifically for this
+purpose:</p>
+<p><a href="https://github.com/octocat/Spoon-Knife">Spoon-Knife Repo</a></p>
+<p>To create a fork, click the "Fork" button in the top right of the repo:</p>
+<p><img alt="fork_button" src="../gh_images/fork_button.png" /></p>
+<p>When you click "Fork", GitHub will take a few moments to create a complete copy
+of the repository under your control, then it will forward you to that page.</p>
+<p>Notice that the username on the new page is <em>your</em> username, but the repo name
+is the same. Additionally, there will be a link under the repo name indicating
+that it is a fork of an existing repository.</p>
+<p><img alt="fork_title" src="../gh_images/fork_title.png" /></p>
+<p>Also note that there is a little info bar right above the file listing:</p>
+<p><img alt="fork_even" src="../gh_images/fork_even_master.png" /></p>
+<p>The fork is <em>even</em> with the upstream (original) repo. That means the history is
+identical. Now let's make a change!</p>
+<h2 id="clone-your-fork"><code>clone</code> your fork</h2>
+<p>Now that you have created a copy of the repo that <em>you</em> control, go ahead and
+clone it to your local machine. </p>
+<p>As we did earlier, make a small change to the <code>README.md</code> file in <code>nano</code>, then
+save, stage and commit. Then try again to push your changes back to GitHub.</p>
+<pre><code class="text">$ git push
+</code></pre>
+
+<pre><code class="text">Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 349 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To github.com:gforsyth/wordcount-1.git
+   d0dd1f6..31da785  master -&gt; master
+</code></pre>
+
+<p>It worked! </p>
+<p>Now that we pushed a change to our <em>fork</em>, the fork itself is one commit <em>ahead</em>
+of the upstream (or original) repository. The history of the two repositories is
+identical except for the commit that we just created. </p>
+<p>Notice that the infobar above the file listing informs us that we are now one commit ahead of the upstream:</p>
+<p><img alt="fork_one_ahead" src="../gh_images/fork_one_ahead.png" /></p>
+<h2 id="pull-requests">Pull Requests</h2>
+<p>In order to add this commit to the original, we open a <em>pull request</em> to propose
+adding our change to the original repository. </p>
+<p><strong>Note:</strong> <code>git</code> is a version control system. GitHub is an online service that
+provides hosting for <code>git</code> repositories. GitHub also has additional features to
+help with software collaboration, the most prominent of which is the "Pull
+Request".</p>
+<p>"Pull Requests" are <em>not</em> a feature of <code>git</code>, but of GitHub. </p>
+<p>To create a Pull Request, click the link indicated in the figure below.</p>
+<p><img alt="open_pr" src="../gh_images/pr_button.png" /></p>
+<p>This will open up the following screen:</p>
+<p><img alt="create_pr" src="../gh_images/create_pr.png" /></p>
+<p>The "base fork" is the upstream location of the repository. It is the original
+version of the repository that we forked. The "head fork" is our version of the
+repo, that contains the changes we are proposing to add to the original.</p>
+<p>Click "Create Pull Request".</p>
+<p>On the following page, write a description of what you are proposing to add to
+the original project with the changes you have made. In this case, we have made
+a small, somewhat trivial change. In general, though, it is a good idea to write
+a detailed description when you open a PR. </p>
+<p>You should include a description of the pull request's contents. Are you fixing
+a bug that you found? Which bug? Are you adding a new feature to an existing
+project? The more descriptive you are, the easier it is for the maintainers of
+the original project to determine if they want to accept your contribution.</p>
+<p>For the small README change, write a message something like:</p>
+<p>"I added a greeting to the README to try to make it a little bit friendlier."</p>
+<p>Then click "Create Pull Request" once more to finish.</p>
+<h2 id="i-opened-a-pull-request-now-what">I opened a pull request, now what?</h2>
+<p>Once you open a pull request, hopefully a member of the upstream repo will
+review your proposed changes. Then, they can either accept them, reject them, or
+request some changes be made before they accept.</p>
+<p>This is an example of what a review might look like. There's a specific request
+to add a newline to the README in between the heading and the greeting. </p>
+<p><img alt="pr_review" src="../gh_images/pr_comments.png" /></p>
+<p>Also note at the bottom that we can add more commits to this PR by pushing them
+to our fork. If we make the requested change and then push it, this update is
+immediately reflected on the PR page.</p>
+<p><img alt="updated_pr" src="../gh_images/updated_pr.png" /></p>
+<p>You can see that the new commit and the commit message appear <em>below</em> the
+comments left by @ncclementi. The chronology of comments, requests and
+additional commits is preserved in the PR. You can also see that the original
+comment requesting an extra blank line is now hidden by default, since the file
+it refers to has been updated since the comment was left.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../branching/" class="btn btn-neutral float-right" title="Branch and Merge">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../conflicts/" class="btn btn-neutral" title="conflicts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. <br> Code is licensed under BSD 3-Clause.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a> and deployed using <a href="https://drdoctr.github.io/doctr">doctr</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../conflicts/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../branching/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</body>
+</html>
