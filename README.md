@@ -6,7 +6,10 @@
 
 **Instructors:** Lorena A. Barba, Natalia C. Clementi, Gilbert F. Forsyth
 
-A [rendered course website](https://barbagroup.github.io/essential_skills_RRC/) is also available.
+**Links:**
+* [Course documentation](https://barbagroup.github.io/essential_skills_RRC/) online: renders course notes from this repo.
+* [This repository](https://github.com/barbagroup/essential_skills_RRC): self-link, to come back easily from the course documentation website.
+* [Collection on Figshare](https://dx.doi.org/10.6084/m9.figshare.c.3657389.v1), with the presentation slides used during the workshop.
 
 ---
 
