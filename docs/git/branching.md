@@ -478,3 +478,61 @@ Deleted branch make_function (was 1071b15).
 Note that if you use `git branch -d` it will only delete a branch if ALL of the
 commits in that branch are also in `master`, so you won't accidentally lose any
 of your commits.
+
+## Pushing a branch to GitHub
+
+You can also open Pull Requests between separate branches on GitHub. This often
+presents a good way for collaborating with people who have access to the same
+repository. You don't want to all be pushing to the `master` branch all the
+time. Instead, each person can create their own branch, work separately, and
+then open a pull request to merge that branch into `master.`
+
+If you create a local branch in your repo, you can push it to GitHub as follows:
+
+First, make sure that you are _on_ the branch that you want to push:
+
+```text
+$ git branch
+```
+
+```text
+* make_function
+master
+```
+
+Then run 
+
+```text
+$ git push -u origin <branch_name>
+```
+
+in this case
+
+```text
+$ git push -u origin make_function
+```
+
+to push the branch to GitHub.
+
+## How do I know if I've already pushed a branch to GitHub?
+
+If you have already done a `push -u`, then `git status` will contain an extra
+line of output. For example:
+
+```text
+$ git status
+```
+
+```text
+On branch make_function
+Your branch is up-to-date with 'origin/make_function'.
+nothing to commit, working tree clean
+```
+
+Note the additional line that "Your branch is up-to-date with
+'origin/make_function'". If there is any mention of `origin/make_function` (or
+whatever your branch name) then you have set up the branch on GitHub.
+
+Of course, you can also just browse to your copy of the repo on GitHub and see
+if the branch is there, but do whichever thing seems easiest to you.
+
