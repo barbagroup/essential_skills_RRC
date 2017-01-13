@@ -63,6 +63,37 @@ dot_product.py .
 =========================== 1 passed in 0.05 seconds ===========================
 ```
 
+What if we add another test? Like one that checks for the product of 
+perpendicular vectors. 
 
+```python
+def test_dot_perp():
+    a=[0,1]
+    b=[1,0]
+    assert dot(a,b)==0
+```
+
+Again, we save our file, and in the terminal we run:
+
+```text
+$ pytest dot_product.py`
+```
+
+and the output now looks like this:
+
+```text
+============================= test session starts ==============================
+platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
+rootdir: /home/naty/tmp/testing, inifile: 
+plugins: xonsh-0.5.2
+collected 2 items 
+
+dot_product.py ..
+
+=========================== 2 passed in 0.02 seconds ===========================
+``` 
+
+Do you notice the difference? Now, we collect 2 items (referring to both tests)
+and we have two "." after `dot_product.py` that indicate two passed tests. 
 
 
