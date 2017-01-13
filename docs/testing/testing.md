@@ -34,4 +34,35 @@ def dot_product (a,b):
     return res     
 ```
 
+Right under our function we can add our first test. What can be a good test?
+Let's try checking if the dot product of zero's vectors returns zero.
+
+```python
+def test_dot_zeros():
+    a=[0,0]
+    b=[0,0]
+    assert dot(a,b)==0
+```
+
+We save our file, and in the terminal we run:
+
+```text
+$ pytest dot_product.py`
+```
+and you should see something like this:
+
+```text
+============================= test session starts ==============================
+platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
+rootdir: /home/naty/tmp/testing, inifile: 
+plugins: xonsh-0.5.2
+collected 1 items 
+
+dot_product.py .
+
+=========================== 1 passed in 0.05 seconds ===========================
+```
+
+
+
 
