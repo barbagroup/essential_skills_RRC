@@ -96,4 +96,72 @@ dot_product.py ..
 Do you notice the difference? Now, we collect 2 items (referring to both tests)
 and we have two "." after `dot_product.py` that indicate two passed tests. 
 
+So far our test are passing, but what else can we test, what if we force it to fail? Will our program work if we try to do the dot product of two vectors
+with different length? Let's write a test and try it out. 
+
+To do this we use the raise of errors that pytest provide, therefore we need to
+`import pytest` at the beginning of our script and then we add our "length" 
+tests (when `a` is longest than `b` and viceversa).
+
+```python
+def test_dot_a_lt_b():
+    a = [1,2]
+    b = [1,1,2]
+    with pytest.raises(AssertionError):
+        dot(a,b)
+
+def test_dot_b_lt_a():
+    a = [1,2,1]
+    b = [1,1]
+    with pytest.raises(AssertionError):
+        dot(a,b)
+```
+
+We run it and we see:
+
+```text
+============================= test session starts ==============================
+platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
+rootdir: /home/naty/tmp/testing, inifile: 
+plugins: xonsh-0.5.2
+collected 4 items 
+
+dot_product.py ..FF
+
+=================================== FAILURES ===================================
+_______________________________ test_dot_a_lt_b ________________________________
+
+    def test_dot_a_lt_b():
+        a = [1,2]
+        b = [1,1,2]
+        with pytest.raises(AssertionError):
+>           dot(a,b)
+E           Failed: DID NOT RAISE <class 'AssertionError'>
+
+dot_product.py:25: Failed
+_______________________________ test_dot_b_lt_a ________________________________
+
+    def test_dot_b_lt_a():
+        a = [1,2,1]
+        b = [1,1]
+        with pytest.raises(AssertionError):
+>           dot(a,b)
+
+dot_product.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = [1, 2, 1], b = [1, 1]
+
+    def dot (a,b):
+        res = 0
+        for i in range(len(a)):
+>           res += a[i] * b[i]
+E           IndexError: list index out of range
+
+dot_product.py:6: IndexError
+====================== 2 failed, 2 passed in 0.10 seconds ======================
+```
+
+As we expected two of the tests failed. 
+
 
