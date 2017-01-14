@@ -162,6 +162,32 @@ dot_product.py:6: IndexError
 ====================== 2 failed, 2 passed in 0.10 seconds ======================
 ```
 
-As we expected two of the tests failed. 
+As we expected two of the tests failed. We can fix our function by inserting an
+assertion that checks for same length. We add at the beginning of the function
+that line. Your function should look like this:
 
+```python
+def dot (a,b):
+    assert len(a)==len(b)  #This is the line we added
+    res = 0
+    for i in range(len(a)):
+        res += a[i] * b[i]
+    return res
+```
+
+Let's run the tests again and see what we get now. 
+
+```text
+============================= test session starts ==============================
+platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
+rootdir: /home/naty/tmp/testing, inifile: 
+plugins: xonsh-0.5.2
+collected 4 items 
+
+dot_product.py ....
+
+=========================== 4 passed in 0.03 seconds ===========================
+```
+
+And they all pass! 
 
