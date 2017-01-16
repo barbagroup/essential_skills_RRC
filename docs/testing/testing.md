@@ -185,7 +185,9 @@ dot_product.py ....
 =========================== 4 passed in 0.03 seconds ===========================
 ```
 
-And they all pass! 
+And they all pass! Why?.
+ 
+Well the test says: I expect an assertion error and it gets an assertion error, so that's a pass!
 
 We can keep writing tests, and improving our function but maybe you have noticed that the first two tests are exactly the same, and last two too. Instead of 
 writing them separately we can use some tools that pytest provide and our tests
@@ -217,7 +219,6 @@ dot_product.py .....
 
 =========================== 5 passed in 0.02 seconds ===========================
 ```
-
 
 
   
