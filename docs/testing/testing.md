@@ -244,6 +244,48 @@ dot_product.py .....
 =========================== 5 passed in 0.03 seconds ===========================
 ```
 
+## Keeping the tests in a separate file
+
+For a better organization of your code we strongly recomment having your tests
+in a separate file. In the example we've been working a way to do that can be:
+
+In a file called `dot_product.py` you save just the function:
+
+```python
+def dot (a,b):
+    assert len(a)==len(b)  #This is the line we added
+    res = 0
+    for i in range(len(a)):
+        res += a[i] * b[i]
+    return res
+```
+
+In a separate file that can be named `test_dot.py` you put the tests, and the imports that you need, in this
+case you will `import pytest` and `from dot_product import dot`, therefore your file will look likes:
+
+```python
+import pytest
+from dot_product import dot
+
+@pytest.mark.parametrize("a,b,expected",[
+    ([0,0],[0,0], 0), 
+    ([0,1],[1,0],0),
+    ([1,2],[2,-1],0),])
+
+def test_assert_equal(a,b,expected):
+    assert dot(a,b)==expected
+
+@pytest.mark.parametrize("a,b", [
+    ([1,2],[1,2,3]),
+    ([1,2,3],[42,7]),])
+
+def test_for_assert_error(a,b):
+    with pytest.raises(AssertionError):
+        dot(a,b)
+``` 
+
+Both files should be in the same location and then you just run in you terminal
+`pytest test_dot.py`.
 
 
   
