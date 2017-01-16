@@ -55,7 +55,6 @@ and you should see something like this:
 ============================= test session starts ==============================
 platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
 rootdir: /home/naty/tmp/testing, inifile: 
-plugins: xonsh-0.5.2
 collected 1 items 
 
 dot_product.py .
@@ -85,7 +84,6 @@ and the output now looks like this:
 ============================= test session starts ==============================
 platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
 rootdir: /home/naty/tmp/testing, inifile: 
-plugins: xonsh-0.5.2
 collected 2 items 
 
 dot_product.py ..
@@ -123,7 +121,6 @@ We run it and we see:
 ============================= test session starts ==============================
 platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
 rootdir: /home/naty/tmp/testing, inifile: 
-plugins: xonsh-0.5.2
 collected 4 items 
 
 dot_product.py ..FF
@@ -181,7 +178,6 @@ Let's run the tests again and see what we get now.
 ============================= test session starts ==============================
 platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
 rootdir: /home/naty/tmp/testing, inifile: 
-plugins: xonsh-0.5.2
 collected 4 items 
 
 dot_product.py ....
@@ -215,7 +211,6 @@ test. After we run the tests in the terminal we'll see:
 ============================= test session starts ==============================
 platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
 rootdir: /home/naty/tmp/testing, inifile: 
-plugins: xonsh-0.5.2
 collected 5 items 
 
 dot_product.py .....
