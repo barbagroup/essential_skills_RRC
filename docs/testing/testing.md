@@ -191,3 +191,40 @@ dot_product.py ....
 
 And they all pass! 
 
+We can keep writing tests, and improving our function but maybe you have noticed that the first two tests are exactly the same, and last two too. Instead of 
+writing them separately we can use some tools that pytest provide and our tests
+will look cleaner. 
+
+For the first case, where we want the result of the dot product to match an
+expected value we will re-designed our test in the following way:
+
+```python
+@pytest.mark.parametrize("a,b,expected",[
+    ([0,0],[0,0], 0), 
+    ([0,1],[1,0],0),
+    ([1,2],[2,-1],0),])
+
+def test_assert_equal(a,b,expected):
+    assert dot(a,b)==expected
+```
+
+In this case we have 3 cases `(a,b,expected)` in a list that will go over our 
+test. After we run the tests in the terminal we'll see:  
+
+```text
+============================= test session starts ==============================
+platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
+rootdir: /home/naty/tmp/testing, inifile: 
+plugins: xonsh-0.5.2
+collected 5 items 
+
+dot_product.py .....
+
+=========================== 5 passed in 0.02 seconds ===========================
+```
+
+
+
+  
+   
+
