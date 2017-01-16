@@ -219,6 +219,31 @@ dot_product.py .....
 
 =========================== 5 passed in 0.02 seconds ===========================
 ```
+Following the same idea we can compact the two last tests by doing this:
+
+```python
+@pytest.mark.parametrize("a,b", [
+    ([1,2],[1,2,3]),
+    ([1,2,3],[42,7]),])
+
+def test_for_assert_error(a,b):
+    with pytest.raises(AssertionError):
+        dot(a,b)
+```
+
+Again you should get 5 tests passed, let's see:
+
+```text
+============================= test session starts ==============================
+platform linux -- Python 3.5.2, pytest-3.0.5, py-1.4.31, pluggy-0.4.0
+rootdir: /home/naty/tmp/testing, inifile: 
+collected 5 items 
+
+dot_product.py .....
+
+=========================== 5 passed in 0.03 seconds ===========================
+```
+
 
 
   
