@@ -18,10 +18,10 @@ documentation.
 ## Testing a dot_product function
 
 First of all let's open a terminal and create a new file called
-`my_dot_product.py`. If you are using `nano` type in a terminal:
+`dot_product.py`. If you are using `nano` type in a terminal:
 
 ```text
-$ nano my_dot_product.py`
+$ nano dot_product.py`
 ```
 
 Now, we write our dot product function:
