@@ -31,7 +31,7 @@ pages:
     - Laplace:
         - Elliptic PDEs: laplace/1.md
     - Testing:
-        - Pytest: testing.md
+        - Pytest: testing/testing.md
     - Numba:
         - Profiling: numba/1.md
         - Intro to JIT: numba/2.md
