@@ -284,10 +284,5 @@ def test_for_assert_error(a,b):
         dot(a,b)
 ``` 
 
-Both files should be in the same location and then you just run in you terminal
-`pytest test_dot.py`.
-
-
-  
-   
-
+Both files should be in the same location and then if there's a test file that begins with `test_` then
+you only need to run `pytest` without any other arguments and pytest will detect it.
