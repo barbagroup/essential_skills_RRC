@@ -34,7 +34,7 @@ def dot_product(a,b):
     return res     
 ```
 
-Right under our function we can add our first test. What can be a good test?
+Right under our function we can add our first test. What's a good test?
 Let's try checking if the dot product of zero's vectors returns zero.
 
 ```python
