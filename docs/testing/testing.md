@@ -39,9 +39,9 @@ Let's try checking if the dot product of zero's vectors returns zero.
 
 ```python
 def test_dot_zeros():
-    a=[0,0]
-    b=[0,0]
-    assert dot(a,b)==0
+    a = [0,0]
+    b = [0,0]
+    assert dot(a,b) == 0
 ```
 
 We save our file, and in the terminal we run:
@@ -67,9 +67,9 @@ perpendicular vectors.
 
 ```python
 def test_dot_perp():
-    a=[0,1]
-    b=[1,0]
-    assert dot(a,b)==0
+    a = [0,1]
+    b = [1,0]
+    assert dot(a,b) == 0
 ```
 
 Again, we save our file, and in the terminal we run:
@@ -203,7 +203,7 @@ expected value we will re-designed our test in the following way:
     ([1,2],[2,-1],0),])
 
 def test_assert_equal(a,b,expected):
-    assert dot(a,b)==expected
+    assert dot(a,b) == expected
 ```
 
 In this case we have 3 cases `(a,b,expected)` in a list that will go over our 
@@ -253,7 +253,7 @@ In a file called `dot_product.py` you save just the function:
 
 ```python
 def dot (a,b):
-    assert len(a)==len(b)  #This is the line we added
+    assert len(a) == len(b)  #This is the line we added
     res = 0
     for i in range(len(a)):
         res += a[i] * b[i]
@@ -273,7 +273,7 @@ from dot_product import dot
     ([1,2],[2,-1],0),])
 
 def test_assert_equal(a,b,expected):
-    assert dot(a,b)==expected
+    assert dot(a,b) == expected
 
 @pytest.mark.parametrize("a,b", [
     ([1,2],[1,2,3]),
