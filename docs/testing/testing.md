@@ -194,7 +194,7 @@ writing them separately we can use some tools that pytest provide and our tests
 will look cleaner. 
 
 For the first case, where we want the result of the dot product to match an
-expected value we will re-designed our test in the following way:
+expected value we will redesign our test in the following way:
 
 ```python
 @pytest.mark.parametrize("a,b,expected",[
@@ -246,7 +246,7 @@ dot_product.py .....
 
 ## Keeping the tests in a separate file
 
-For a better organization of your code we strongly recomment having your tests
+For a better organization of your code we strongly recommend having your tests
 in a separate file. In the example we've been working a way to do that can be:
 
 In a file called `dot_product.py` you save just the function:
@@ -261,7 +261,7 @@ def dot (a,b):
 ```
 
 In a separate file that can be named `test_dot.py` you put the tests, and the imports that you need, in this
-case you will `import pytest` and `from dot_product import dot`, therefore your file will look likes:
+case you will `import pytest` and `from dot_product import dot`, therefore your file will look like:
 
 ```python
 import pytest
