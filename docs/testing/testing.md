@@ -27,7 +27,7 @@ $ nano dot_product.py`
 Now, we write our dot product function:
 
 ```python
-def dot_product (a,b):
+def dot_product(a,b):
     res = 0
     for i in range(len(a)):
         res += a[i] * b[i]
